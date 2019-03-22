@@ -16,7 +16,7 @@ It's also important to work up your speech so that all vendors will purchase all
 
 ## Skyrim Grind
 
-The early game grind in Skyrim can be avoided with a simple trick.  It's tedious, but chopping wood for the Bannered Mare in Whiterun, and selling it to Hulda, is a fast and safe way to get cash in the early game.  There's even a chopping block next to the door.  However, the chopping activity takes about 30 seconds of real-time and doing that for an hour is tedious.  You can use an inexpensive microcontroller - like an Arduino Leonardo - to automate this task.  Running it overnight will net you about $20k which is enough to hire a sellsword (like Jenassa, who is usually in The Drunken Huntsman) and get decent armor and weaponry.
+The early game grind in Skyrim can be avoided with a simple trick.  It's tedious, but chopping wood for the Bannered Mare in Whiterun, and selling it to Hulda, is a fast and safe way to get cash in the early game.  There's even a chopping block next to the door.  However, the chopping activity takes about 30 seconds of real-time and doing that for an hour is tedious.  You can use an inexpensive microcontroller - like an Arduino Leonardo - to automate this task.  Running it overnight will net you about $20k which is enough to hire a sellsword (like [Jenassa](https://en.uesp.net/wiki/Skyrim:Jenassa), who is usually in The Drunken Huntsman) and get decent armor and weaponry.
 
 This program works for me on a Leonardo, but you may need to tweak the timing and movement for your system.  Stand in front of the woodcutting block with your cursor on the block itself.  Press "E" to start chopping and immediately plug in the Leonardo.  Just unplug it to stop.
 
