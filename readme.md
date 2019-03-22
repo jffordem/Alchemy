@@ -6,9 +6,9 @@ I don't know what copyright applies to this file.
 
 ## Skyrim Alchemy
 
-Turns out there's only one purpose for making your own potions in Skyrim.  To make money.  And the only way to do that is with the Hearthfire add-on, or Skyrim Special Edition.
+Turns out there's only one purpose for [making your own potions](https://en.uesp.net/wiki/Skyrim:Alchemy) in Skyrim.  To make money.  And the only way to do that is with the Hearthfire add-on, or Skyrim Special Edition.
 
-Purchase the Falkreath property as quickly as possible, and then build a garden & greenhouse.  Plant Creep Cluster (Special Edition has a bug where you can only harvest this from the standalone planters), Mora Tapinella and Scaly Philiota.
+Purchase the [Falkreath property](https://en.uesp.net/wiki/Skyrim:Lakeview_Manor) as quickly as possible, and then build a garden & greenhouse.  Plant [Creep Cluster](https://en.uesp.net/wiki/Skyrim:Creep_Cluster) (Special Edition has a bug where you can only harvest this from the standalone planters), [Mora Tapinella](https://en.uesp.net/wiki/Skyrim:Mora_Tapinella) and [Scaly Philiota](https://en.uesp.net/wiki/Skyrim:Scaly_Pholiota).
 
 Every three in-game days (you can even sleep 24h x 3 to pass the time) harvest these crops and then create the potion.  It's the most valuable farmable potion in the game.  (All other potions you can buy or find.)
 
@@ -44,7 +44,7 @@ void loop() {
 
 ## Skyrim Muffle
 
-Muffle increases your Illusion XP by a crazy amount.  Casting Muffle a few hundres times is enough to roll Illusion up to 100.  Take your level-ups and use Legendary to set Illusion back to 15.  Repeat.  If you don't want to wear out your mouse, you can get an inexpensive microcontroller - like the Arduino Leonardo - that does HID inputs.  You can then program it to do all that tedious clicking for you.
+[Muffle](https://en.uesp.net/wiki/Skyrim:Muffle_(effect)) increases your Illusion XP by a crazy amount.  Casting Muffle a few hundres times is enough to roll Illusion up to 100.  Take your level-ups and use Legendary to set Illusion back to 15.  Repeat.  If you don't want to wear out your mouse, you can get an inexpensive microcontroller - like the Arduino Leonardo - that does HID inputs.  You can then program it to do all that tedious clicking for you.
 
 Here is a program that you can load on a Leonardo to click.  Careful!  Once you've programmed your Leonardo, it will start clicking away as soon as you plug it in, which makes reprogramming it kind of a pain.  I found that about 700ms of mouse-down then 1500ms of mouse-up was about right.  Initially, you'll run out of magicka pretty quickly but that's okay.  Just let it run and check occasionally to see if you've maxed out.
 
