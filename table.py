@@ -49,12 +49,19 @@ def matchAll(row, args):
     return True
 
 class Table:
-    def __init__(self, headers, rows):
+    def __init__(self, headers, rows, sortby = None):
         if headers == None: headers = [ ]
         self.__headers = list(headers)
         self.__rows = list(rows)
+        self.__sortby = sortby
+    def setSortCol(self, sortby):
+        self.__sortby = sortby
     def headers(self): return self.__headers
-    def rows(self): return self.__rows
+    def rows(self):
+        if self.__sortby != None:
+            self.__rows = sorted(self.__rows, key=lambda row: row[self.__sortby])
+            self.__sortby = None
+        return self.__rows
     def select(self, **eqargs):
         return [ row for row in self.rows() if matchAll(row, eqargs) ]
     def find(self, **eqargs):
@@ -63,15 +70,15 @@ class Table:
         return None
     def __len__(self): return len(self.__rows)
     @staticmethod
-    def parseCsv(text, sep=','):
+    def parseCsv(text, sep=',', sortby=None):
         if text == None: return None
-        return Table._processCsv(text.split("\n"), sep)
+        return Table._processCsv(text.split("\n"), sep, sortby)
     @staticmethod
-    def readCsv(file, sep=','):
+    def readCsv(file, sep=',', sortby=None):
         with open(file, 'r') as f:
-            return Table._processCsv(f, sep)
+            return Table._processCsv(f, sep, sortby)
     @staticmethod
-    def _processCsv(lines, sep):
+    def _processCsv(lines, sep, sortby):
         reader = csv.reader(lines, delimiter=sep)
         header = None
         rows = [ ]
@@ -81,12 +88,33 @@ class Table:
                 header = line
             else:
                 rows.append({ header[i]: line[i] for i in range(len(header)) })
-        return Table(header, rows)
+        return Table(header, rows, sortby)
 
 def getValue(d, k):
     if k in d.keys():
         return d[k]
     return " "
+
+class HtmlTableFormat:
+    def __init__(self, style = None):
+        self.__style = style
+        self.__buffer = ""
+    def startTable(self):
+        if self.__style == None:
+            self.__buffer += "<table>"
+        else:
+            self.__buffer += "<table style="+self.__style+">"
+    def endTable(self):
+        self.__buffer += "</table>"
+    def printOuterBorderRow(self, widths, columns):
+        pass
+    def printHeadersRow(self, widths, columns):
+        self.__buffer += "<tr>" + "".join([ "<th>"+col+"</th>" for col in columns ]) + "</tr>"
+    def printHeaderSeperatorRow(self, widths, columns):
+        pass
+    def printDataRow(self, widths, columns, values):
+        self.__buffer += "<tr>" + "".join([ "<td>"+str(getValue(values, col))+"</td>" for col in columns ]) + "</tr>"
+    def __repr__(self): return self.__buffer
 
 class BorderTableFormat:
     def __init__(self, corner = "+", vert = "|", horz = "-"):
@@ -101,6 +129,10 @@ class BorderTableFormat:
         self.printOuterBorderRow(widths, columns)
     def printDataRow(self, widths, columns, values):
         print(self.__vert + self.__vert.join( [ str(getValue(values, col)).ljust(widths[col]) for col in columns ] ) + self.__vert)
+    def startTable(self):
+        pass
+    def endTable(self):
+        pass
 
 class DefaultTableFormat:
     def __init__(self, horz = "="):
@@ -114,6 +146,10 @@ class DefaultTableFormat:
         print(" ".join( [ self.__horz * widths[col] for col in columns ] ))
     def printDataRow(self, widths, columns, values):
         print(" ".join( [ str(getValue(values, col)).ljust(widths[col]) for col in columns ] ))
+    def startTable(self):
+        pass
+    def endTable(self):
+        pass
 
 def printTable(table, format = DefaultTableFormat()):
     def getWidths(rows):
@@ -129,13 +165,15 @@ def printTable(table, format = DefaultTableFormat()):
         columns = table.headers()
         rows = table.rows()
         widths = getWidths(rows)
+        format.startTable()
         format.printOuterBorderRow(widths, columns)
         format.printHeadersRow(widths, columns)
         format.printHeaderSeperatorRow(widths, columns)
         for row in rows:
             format.printDataRow(widths, columns, row)
         format.printOuterBorderRow(widths, columns)
-
+        format.endTable()
+        
 if __name__ == "__main__":
     printTable(Table([ 'a', 'b', 'c' ], [ 
     { 'a': 1, 'b': 2.0, 'c': { 1, 2 } }, 
@@ -147,6 +185,12 @@ if __name__ == "__main__":
     printTable(Table.parseCsv("""a,b,c
 1,2,3
 4,5,6"""))
+
+    fmt = HtmlTableFormat()
+    printTable(Table.parseCsv("""a,b,c
+4,5,6
+1,2,3""", sortby='a'), fmt)
+    print(str(fmt))
 
     #printTable(Table.readCsv("sf_jobs.csv"))
     
