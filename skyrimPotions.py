@@ -108,9 +108,10 @@ def readIngredientsCsv(file):
 def combinedEffects(*ingredients):
     result = dict()
     for i in ingredients:
-        for name,effect in indexOn("name", i["effects"]).items():
-            if name not in result: result[name] = [ ]
-            result[name].append(effect)
+        if i != None:
+            for name,effect in indexOn("name", i["effects"]).items():
+                if name not in result: result[name] = [ ]
+                result[name].append(effect)
     return { k:v for k,v in result.items() if len(v) > 1 }
 
 def hasEffect(ingredient, effectName):
@@ -118,6 +119,16 @@ def hasEffect(ingredient, effectName):
     return effectName in effects
 
 def allCombinations(items):
+    none = {
+        "effects": [ ],
+        "farmable": False,
+        "weight": 0.0,
+        "name": "None",
+        "value": 0
+    }
+    for i in range(len(items)-1):
+        for j in range(i+1, len(items)):
+            yield (items[i], items[j], none)
     for i in range(len(items)-2):
         for j in range(i+1, len(items)-1):
             for k in range(j+1, len(items)):
@@ -169,6 +180,19 @@ def exceptions(ingredient):
     #effects = indexOn("name", ingredient["effects"])
     #return "Paralysis" in effects
 
+def getPotionsTable(ingredient_names):
+    ingredients = [ AllIngredients[name] for name in ingredient_names if name in AllIngredients.keys() ]
+    header = [ "1", "2", "3", "$", "#", "@" ]
+    rows = list()
+    for a, b, c in allCombinations(ingredients):
+        effects = combinedEffects(a, b, c)
+        value = getValue(effects)
+        rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "#": len(effects), "@": ", ".join(effects.keys()) })
+    rows = sorted(rows, key=lambda item: item["$"])
+    for row in rows:
+        row["$"] = "{:10.4f}".format(row["$"]).strip()
+    return table.Table(header, rows)
+
 def printPotionsByValue():
     header = [ "1", "2", "3", "$", "#", "@" ]
     rows = list()
@@ -202,16 +226,17 @@ def printIngredientsByValue():
     rows = sorted(rows, key=lambda item: item["Farmable"])
     table.printTable(table.Table(header, rows))
 
-e = "Waterbreathing"
-print("Ingredients with", e)
-printIngredients(e)
-#printIngredientsByValue()
-#printPotionsByValue()
+if __name__ == "__main__":
+    e = "Waterbreathing"
+    print("Ingredients with", e)
+    printIngredients(e)
+    #printIngredientsByValue()
+    #printPotionsByValue()
 
-# calibration
-#effects = combinedEffects(AllIngredients["Nirnroot"], AllIngredients["Ectoplasm"])
-#value = getValue(effects)
-#print(value)
+    # calibration
+    #effects = combinedEffects(AllIngredients["Nirnroot"], AllIngredients["Ectoplasm"])
+    #value = getValue(effects)
+    #print(value)
 
 """ Calibration!
 Base values: Alchemy=15, no perks or fortification
