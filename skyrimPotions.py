@@ -167,7 +167,7 @@ def getValue(effects):
         effect = AllEffects[name]
         cost = effect["cost"]
         for value in values: 
-            #cost *= (value["power"] * value["value"])
+            cost *= (value["power"] * value["value"])
             cost *= value["power"]
         total += cost
     return total
@@ -186,8 +186,9 @@ def getPotionsTable(ingredient_names):
     rows = list()
     for a, b, c in allCombinations(ingredients):
         effects = combinedEffects(a, b, c)
-        value = getValue(effects)
-        rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "#": len(effects), "@": ", ".join(effects.keys()) })
+        if len(effects) > 0:
+            value = getValue(effects)
+            rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "#": len(effects), "@": ", ".join(effects.keys()) })
     rows = sorted(rows, key=lambda item: item["$"])
     for row in rows:
         row["$"] = "{:10.4f}".format(row["$"]).strip()

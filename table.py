@@ -59,7 +59,13 @@ class Table:
     def headers(self): return self.__headers
     def rows(self):
         if self.__sortby != None:
-            self.__rows = sorted(self.__rows, key=lambda row: row[self.__sortby])
+            reverse = False
+            if self.__sortby.startswith("+"): 
+                self.__sortby = self.__sortby[1:]
+            if self.__sortby.startswith("-"): 
+                self.__sortby = self.__sortby[1:]
+                reverse = True
+            self.__rows = sorted(self.__rows, key=lambda row: row[self.__sortby], reverse=reverse)
             self.__sortby = None
         return self.__rows
     def select(self, **eqargs):

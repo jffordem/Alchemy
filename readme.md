@@ -44,16 +44,17 @@ void loop() {
 
 ## Skyrim Muffle
 
-[Muffle](https://en.uesp.net/wiki/Skyrim:Muffle_(effect)) increases your Illusion XP by a crazy amount.  Casting Muffle a few hundres times is enough to roll Illusion up to 100.  Take your level-ups and use Legendary to set Illusion back to 15.  Repeat.  If you don't want to wear out your mouse, you can get an inexpensive microcontroller - like the Arduino Leonardo - that does HID inputs.  You can then program it to do all that tedious clicking for you.
+[Muffle](https://en.uesp.net/wiki/Skyrim:Muffle_(effect)) increases your Illusion XP by a crazy amount.  Casting Muffle a few hundred times is enough to roll Illusion up to 100.  Take your level-ups and use Legendary to set Illusion back to 15.  Repeat.  If you don't want to wear out your mouse, you can get an inexpensive microcontroller - like the Arduino Leonardo - that does HID inputs.  You can then program it to do all that tedious clicking for you.
 
 Here is a program that you can load on a Leonardo to click.  Careful!  Once you've programmed your Leonardo, it will start clicking away as soon as you plug it in, which makes reprogramming it kind of a pain.  I found that about 700ms of mouse-down then 1500ms of mouse-up was about right.  Initially, you'll run out of magicka pretty quickly but that's okay.  Just let it run and check occasionally to see if you've maxed out.
 
-Once you've programmed your Leonardo with this program, go somewhere safe and put the muffle spell in your right hand.  Plug the microcontroller in to start, and then unplug it to stop.
+Once you've programmed your Leonardo with this program, go somewhere safe and put the muffle spell in your right hand.  Plug the microcontroller in to start, and then unplug it to stop.  For convenience you can add a 10 second delay to the setup so that it's easier to reprogram.
 
 ```C
 #include <Mouse.h>
 void setup() {
   Mouse.begin();
+  // delay(10000); // Include this to add delay at beginning to make controller easier to reprogram.
 }
 void loop() {
   Mouse.press(MOUSE_LEFT);

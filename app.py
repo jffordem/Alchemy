@@ -1,6 +1,6 @@
 # app.py
 
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 from flask.cli import with_appcontext
 import os
 import socket
@@ -9,6 +9,10 @@ from skyrimPotions import AllIngredients, AllEffects, getPotionsTable
 import table
 
 app = Flask(__name__)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.root_path, 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route("/")
 def hello():
@@ -33,7 +37,7 @@ def hello():
     <p>GET /potions
     <p>Params:
     <ul>
-    <li>ingredients={list of ingredients}</li>
+    <li>ingredients={list of ingredients} or all or farmable</li>
     <li>sortby={column}</li>
     </ul>
     """
@@ -112,6 +116,8 @@ def effects():
 def potions():
     if "ingredients" in request.args:
         ingredients = request.args.get("ingredients")
+        if ingredients == "all": ingredients = ",".join(AllIngredients.keys())
+        if ingredients == "farmable": ingredients = ",".join([ ingredient["name"] for ingredient in AllIngredients.values() if ingredient["farmable"] ])
         result = getPotionsTable(ingredients.split(","))
         if "sortby" in request.args:
             result.setSortCol(request.args.get("sortby"))
