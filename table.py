@@ -122,6 +122,20 @@ class HtmlTableFormat:
         self.__buffer += "<tr>" + "".join([ "<td>"+str(getValue(values, col))+"</td>" for col in columns ]) + "</tr>"
     def __repr__(self): return self.__buffer
 
+class MarkdownTableFormat:
+    def __init__(self):
+        self.__buffer = ""
+    def startTable(self): pass
+    def endTable(self): pass
+    def printOuterBorderRow(self, width, columns): pass
+    def printHeadersRow(self, widths, columns):
+        self.__buffer += "|" + "|".join(columns) + "|\r\n"
+    def printHeaderSeperatorRow(self, widths, columns):
+        self.__buffer += "|" + "|".join([ "---" for col in columns ]) + "|\r\n"
+    def printDataRow(self, widths, columns, values):
+        self.__buffer += "|" + "|".join([ str(getValue(values, col)) for col in columns ]) + "|\r\n"
+    def __repr__(self): return self.__buffer
+
 class BorderTableFormat:
     def __init__(self, corner = "+", vert = "|", horz = "-"):
         self.__corner = corner
@@ -198,6 +212,11 @@ if __name__ == "__main__":
 1,2,3""", sortby='a'), fmt)
     print(str(fmt))
 
+    fmt = MarkdownTableFormat()
+    printTable(Table.parseCsv("""a,b,c
+4,5,6
+1,2,3""", sortby='a'), fmt)
+    print(str(fmt))
     #printTable(Table.readCsv("sf_jobs.csv"))
     
     printTable(Table.parseCsv("""a\tb\tc
