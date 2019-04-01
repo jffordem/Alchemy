@@ -5,7 +5,7 @@ from flask.cli import with_appcontext
 import os
 import socket
 import random
-from skyrimPotions import AllIngredients, AllEffects, getPotionsTable
+from skyrimPotions import AllIngredients, AllEffects, getPotionsTable, getPotionsByEffects
 import table
 from madlibs import madlib, calendar_altText, calendar_facts, country_song
 
@@ -166,6 +166,13 @@ def skyrimPotions():
         if ingredients == "all": ingredients = ",".join(AllIngredients.keys())
         if ingredients == "farmable": ingredients = ",".join([ ingredient["name"] for ingredient in AllIngredients.values() if ingredient["farmable"] ])
         result = getPotionsTable(ingredients.split(","))
+        if "sortby" in request.args:
+            result.setSortCol(request.args.get("sortby"))
+        fmt = table.HtmlTableFormat()
+        table.printTable(result, fmt)
+        return "<h1>Potions</h1>" + str(fmt)
+    elif "effects" in request.args:
+        result = getPotionsByEffects(request.args.get("effects").split(","))
         if "sortby" in request.args:
             result.setSortCol(request.args.get("sortby"))
         fmt = table.HtmlTableFormat()

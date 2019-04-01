@@ -182,26 +182,29 @@ def exceptions(ingredient):
 
 def getPotionsTable(ingredient_names):
     ingredients = [ AllIngredients[name] for name in ingredient_names if name in AllIngredients.keys() ]
-    header = [ "1", "2", "3", "$", "#", "@" ]
+    header = [ "1", "2", "3", "$", "N", "E" ]
     rows = list()
     for a, b, c in allCombinations(ingredients):
         effects = combinedEffects(a, b, c)
         if len(effects) > 0:
             value = getValue(effects)
-            rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "#": len(effects), "@": ", ".join(effects.keys()) })
+            rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "N": len(effects), "E": ", ".join(effects.keys()) })
     rows = sorted(rows, key=lambda item: item["$"])
     for row in rows:
         row["$"] = "{:10.4f}".format(row["$"]).strip()
     return table.Table(header, rows)
 
-def printPotionsByValue():
-    header = [ "1", "2", "3", "$", "#", "@" ]
+def printAllPotionsByValue():
+    printPotionsByValue(AllIngredients.values())
+
+def printPotionsByValue(ingredients):
+    header = [ "1", "2", "3", "$", "N", "E" ]
     rows = list()
-    for a, b, c in allCombinations(list(filter(exceptions, data["ingredients"]))):
+    for a, b, c in allCombinations(list(filter(exceptions, ingredients))):
         effects = combinedEffects(a, b, c)
-        if len(effects) > 0 and "Waterbreathing" in effects:
+        if len(effects) > 0:
             value = getValue(effects)
-            rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "#": len(effects), "@": ", ".join(effects.keys()) })
+            rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "N": len(effects), "E": ", ".join(effects.keys()) })
     rows = sorted(rows, key=lambda item: item["$"])
     for row in rows:
         row["$"] = "{:10.4f}".format(row["$"]).strip()
@@ -227,13 +230,33 @@ def printIngredientsByValue():
     rows = sorted(rows, key=lambda item: item["Farmable"])
     table.printTable(table.Table(header, rows))
 
+def getPotionsByEffects(names):
+    def matchEffects(ingredient):
+        return len({ effect["name"] for effect in ingredient["effects"] }.intersection(names)) > 0
+    names = set(names)
+    ingredients = [ ingredient for ingredient in AllIngredients.values() if matchEffects(ingredient) ]
+    header = [ "1", "2", "3", "$", "N", "E" ]
+    rows = list()
+    for a, b, c in allCombinations(ingredients):
+        effects = combinedEffects(a, b, c)
+        if set(effects.keys()).issuperset(names):
+            value = getValue(effects)
+            rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "N": len(effects), "E": ", ".join(effects.keys()) })
+    rows = sorted(rows, key=lambda item: item["$"])
+    for row in rows:
+        row["$"] = "{:10.4f}".format(row["$"]).strip()
+    return table.Table(header, rows)
+
 if __name__ == "__main__":
     e = "Waterbreathing"
-    print("Ingredients with", e)
-    printIngredients(e)
+    #print("Ingredients with", e)
+    #printIngredients(e)
     #printIngredientsByValue()
     #printPotionsByValue()
-
+    ##t = getPotionsByEffects([ "Restore Health", "Restore Magicka", "Restore Stamina" ])
+    t = getPotionsByEffects([ "Restore Health" ])
+    table.printTable(t)
+    
     # calibration
     #effects = combinedEffects(AllIngredients["Nirnroot"], AllIngredients["Ectoplasm"])
     #value = getValue(effects)
