@@ -2404,7 +2404,7 @@
 			"dur": 10
 		}, {
 			"name": "Fortify Smithing",
-			"description": "For {dur} seconds, weapon and armor improving is {mag}% better.",
+			"description": "For {dur} seconds weapon and armor improving is {mag}% better.",
 			"school": "Restoration",
 			"type": "Defensive",
 			"cost": 0.75,
@@ -2564,7 +2564,7 @@
 			"dur": 0
 		}, {
 			"name": "Fortify Enchanting",
-			"description": "For {dur} seconds, items are enchanted {mag}% stronger.",
+			"description": "For {dur} seconds items are enchanted {mag}% stronger.",
 			"school": "Restoration",
 			"type": "Defensive",
 			"cost": 0.6,

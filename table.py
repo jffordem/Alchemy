@@ -103,37 +103,43 @@ def getValue(d, k):
 
 class HtmlTableFormat:
     def __init__(self, style = None):
-        self.__style = style
         self.__buffer = ""
-    def startTable(self):
+        self.__style = style
+    def startTable(self, widths, columns):
         if self.__style == None:
             self.__buffer += "<table>"
         else:
             self.__buffer += "<table style="+self.__style+">"
-    def endTable(self):
+    def endTable(self, widths, columns):
         self.__buffer += "</table>"
-    def printOuterBorderRow(self, widths, columns):
-        pass
-    def printHeadersRow(self, widths, columns):
+    def startHeader(self, widths, columns):
+        self.__buffer += "<thead>"
+    def printHeaderRow(self, widths, columns):
         self.__buffer += "<tr>" + "".join([ "<th>"+col+"</th>" for col in columns ]) + "</tr>"
-    def printHeaderSeperatorRow(self, widths, columns):
-        pass
+    def endHeader(self, widths, columns):
+        self.__buffer += "</thead>"
+    def startBody(self, widths, columns):
+        self.__buffer += "<tbody>"
     def printDataRow(self, widths, columns, values):
         self.__buffer += "<tr>" + "".join([ "<td>"+str(getValue(values, col))+"</td>" for col in columns ]) + "</tr>"
+    def endBody(self, widths, columns):
+        self.__buffer += "</tbody>"
     def __repr__(self): return self.__buffer
 
 class MarkdownTableFormat:
     def __init__(self):
         self.__buffer = ""
-    def startTable(self): pass
-    def endTable(self): pass
-    def printOuterBorderRow(self, width, columns): pass
-    def printHeadersRow(self, widths, columns):
+    def startTable(self, widths, columns): pass
+    def endTable(self, widths, columns): pass
+    def startHeader(self, width, columns): pass
+    def printHeaderRow(self, widths, columns):
         self.__buffer += "|" + "|".join(columns) + "|\r\n"
-    def printHeaderSeperatorRow(self, widths, columns):
+    def endHeader(self, widths, columns): pass
+    def startBody(self, widths, columns):
         self.__buffer += "|" + "|".join([ "---" for col in columns ]) + "|\r\n"
     def printDataRow(self, widths, columns, values):
         self.__buffer += "|" + "|".join([ str(getValue(values, col)) for col in columns ]) + "|\r\n"
+    def endBody(self, widths, columns): pass
     def __repr__(self): return self.__buffer
 
 class BorderTableFormat:
@@ -141,35 +147,52 @@ class BorderTableFormat:
         self.__corner = corner
         self.__vert = vert
         self.__horz = horz
-    def printOuterBorderRow(self, widths, columns):
-        print(self.__corner + self.__corner.join( [ "-" * widths[col] for col in columns ] ) + self.__corner)
-    def printHeadersRow(self, widths, columns):
+    def startTable(self, widths, columns): pass
+    def endTable(self, widths, columns): pass
+    def startHeader(self, widths, columns):
+        self._printBorderRow(widths, columns)
+    def printHeaderRow(self, widths, columns):
         print(self.__vert + self.__vert.join( [ col.center(widths[col]) for col in columns ] ) + self.__vert)
-    def printHeaderSeperatorRow(self, widths, columns):
-        self.printOuterBorderRow(widths, columns)
+    def endHeader(self, widths, columns):
+        self._printBorderRow(widths, columns)
+    def startBody(self, widths, columns): pass
     def printDataRow(self, widths, columns, values):
         print(self.__vert + self.__vert.join( [ str(getValue(values, col)).ljust(widths[col]) for col in columns ] ) + self.__vert)
-    def startTable(self):
+    def endBody(self, widths, columns):
+        self._printBorderRow(widths, columns)
+    def _printBorderRow(self, widths, columns):
+        print(self.__corner + self.__corner.join( [ "-" * widths[col] for col in columns ] ) + self.__corner)
+
+class CsvTableFormat:
+    def __init__(self):
         pass
-    def endTable(self):
-        pass
+    def startTable(self, widths, columns): pass
+    def endTable(self, widths, columns): pass
+    def startHeader(self, width, columns): pass
+    def printHeaderRow(self, widths, columns):
+        print(",".join(columns))
+    def endHeader(self, widths, columns): pass
+    def startBody(self, widths, columns): pass
+    def printDataRow(self, widths, columns, values):
+        print(",".join([ str(getValue(values, col)) for col in columns ]))
+    def endBody(self, widths, columns): pass
 
 class DefaultTableFormat:
     def __init__(self, horz = "="):
         self.__horz = horz
         self.__format = format
-    def printOuterBorderRow(self, widths, columns):
+    def startTable(self, widths, columns): pass
+    def endTable(self, widths, columns): pass
+    def startHeader(self, widths, columns):
         print()
-    def printHeadersRow(self, widths, columns):
+    def printHeaderRow(self, widths, columns):
         print(" ".join( [ col.center(widths[col]) for col in columns ] ))
-    def printHeaderSeperatorRow(self, widths, columns):
+    def endHeader(self, widths, columns):
         print(" ".join( [ self.__horz * widths[col] for col in columns ] ))
+    def startBody(self, widths, columns): pass
     def printDataRow(self, widths, columns, values):
         print(" ".join( [ str(getValue(values, col)).ljust(widths[col]) for col in columns ] ))
-    def startTable(self):
-        pass
-    def endTable(self):
-        pass
+    def endBody(self, widths, columns): pass
 
 def printTable(table, format = DefaultTableFormat()):
     def getWidths(rows):
@@ -185,15 +208,16 @@ def printTable(table, format = DefaultTableFormat()):
         columns = table.headers()
         rows = table.rows()
         widths = getWidths(rows)
-        format.startTable()
-        format.printOuterBorderRow(widths, columns)
-        format.printHeadersRow(widths, columns)
-        format.printHeaderSeperatorRow(widths, columns)
+        format.startTable(widths, columns)
+        format.startHeader(widths, columns)
+        format.printHeaderRow(widths, columns)
+        format.endHeader(widths, columns)
+        format.startBody(widths, columns)
         for row in rows:
             format.printDataRow(widths, columns, row)
-        format.printOuterBorderRow(widths, columns)
-        format.endTable()
-        
+        format.endBody(widths, columns)
+        format.endTable(widths, columns)
+
 if __name__ == "__main__":
     printTable(Table([ 'a', 'b', 'c' ], [ 
     { 'a': 1, 'b': 2.0, 'c': { 1, 2 } }, 
@@ -205,6 +229,10 @@ if __name__ == "__main__":
     printTable(Table.parseCsv("""a,b,c
 1,2,3
 4,5,6"""))
+
+    printTable(Table.parseCsv("""a,b,c
+1,2,3
+4,5,6"""), BorderTableFormat())
 
     fmt = HtmlTableFormat()
     printTable(Table.parseCsv("""a,b,c
@@ -234,8 +262,8 @@ if __name__ == "__main__":
     if table.select(a='1', b='2') != [ { 'a':'1', 'b':'2', 'c':'3' } ]:
         print("Select FAILED returned", table.select(a='1', b='2'))
 
-    if table.find(a='1') != { 'a':'1', 'b':'2', 'c':'3' }:
+    if table.find(c='3') != { 'a':'1', 'b':'2', 'c':'3' }:
         print("Find FAILED returned", table.find(a='1'))
-    
+
     printTable(Table.parseCsv(None))
     printTable(Table.parseCsv(""))

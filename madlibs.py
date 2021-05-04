@@ -47,8 +47,14 @@ She was (sobbin' at the toll booth/drinkin' Dr. Pepper/weighted down with Twinki
 (I promised her/I knew deep down/She asked me if/I told her shrink/The judge declared/My Pooh Bear said/I shrieked in pain/The painters knew/A Klingon said/In a dream I saw/My hamster thought/The blood test showed/Her rabbi said) I'd (stay with her/warp her mind/swear off booze/change my sex/punch her out/live off her/have my rash/stay a dwarf/need my shots/hate her dog/pick my nose/play 'Go Fish'/salivate) forever;
 She said to me (our love would never die/there was no other guy/man wasn't meant to fly/that Nixon didn't lie/her basset hound was shy/that Rolaids made her high/she'd have a swiss on rye/she loved my one blue eye/her brother's name was Hy/she liked 'Spy vs. Spy'/that birthdays made her cry/she couldn't stand my tie);
 But who'd have thought she'd (run off/wind up/boogie/yodel/sky dive/turn green/fall down/freak out/blast off/make it/black out/bobsled/grovel) (with my best friend/in my Edsel/on a surfboard/on 'The Gong Show'/with her dentist/on her 'Workmate'/with a robot/with no clothes on/at her health club/in her Maytag/with her guru/while in labor);
-(You'd think at least that she'd have said/I never had the chance to say/She told her fat friend Grace to say/I now can kiss my credit cards/I guess I was too smashed to say/I watched her melt away and sobbed/She fell beneath the wheels and cried/She sent a hired thug to say/She freaked out on the lawn and screamed/I pushed her off the bridge and waved/But that's the way that pygmies say/She sealed me in the vault and smirked) goodbye.";
+(You'd think at least that she'd have said/I never had the chance to say/She told her fat friend Grace to say/I now can kiss my credit cards/I guess I was too smashed to say/I watched her melt away and sobbed/She fell beneath the wheels and cried/She sent a hired thug to say/She freaked out on the lawn and screamed/I pushed her off the bridge and waved/But that's the way that pygmies say/She sealed me in the vault and smirked) goodbye.;
 """
+
+whip_it = "".join("""
+((Has a good time turned around? You must/Have you ever lived it down? Not unless you/Has anyone gotten away? Not until they)/
+(Has a problem come along?/Has the cream sat out too long?/Is something going wrong?) You must) 
+whip it.
+""".split("\n"))
 
 def all(s):
     result = ""
@@ -94,7 +100,8 @@ def any(s):
     return random.choice(result)
 
 def madlib(pattern):
-    return all(pattern).replace("\r", "").replace("\n", "<p>")
+    #return all(pattern).replace("\r", "").replace("\n", "<p>")
+    return all(pattern).replace("\r", "").split('\n')
 
 if __name__ == "__main__":
     print(all(country_song))
