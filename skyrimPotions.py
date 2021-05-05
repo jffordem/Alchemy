@@ -1,7 +1,7 @@
 import math
 import json
 import csv
-import table
+from table import Table, printTable, CsvTableFormat
 from pprint import pprint
 from alchemyData import indexOn
 
@@ -35,29 +35,17 @@ def matchNumIngredients(n):
 
 def matchFarmableIngredients(ingredients):
     def hasFarmableIngredients(potion):
-        for ingredient in potion["ingredients"]:
-            if not ingredients[ingredient]["farmable"]:
-                return False
-        return True
+        return all(ingredients[ingredient]['farmable'] for ingredient in potion['ingredients'])
     return hasFarmableIngredients
 
 def matchNot(pred):
     return lambda x: not pred(x)
 
 def matchAny(*preds):
-    def hasAny(item):
-        for pred in preds:
-            if pred(item):
-                return True
-        return False
+    return lambda item: any(pred(item) for pred in preds)
 
 def matchAll(*preds):
-    def hasAll(item):
-        for pred in preds:
-            if not pred(item):
-                return False
-        return True
-    return hasAll
+    return lambda item: all(pred(item) for pred in preds)
 
 def findFiveEffectPotions(potions, ingredients):
     for potion in findPotions(potions, matchAll(matchNumIngredients(5), matchFarmableIngredients(ingredients))):
@@ -87,11 +75,22 @@ def readIngredientsCsv(file):
 def combinedEffects(ingredients):
     result = dict()
     for i in ingredients:
-        if i is not None:
-            for name, effect in indexOn("name", i["effects"]).items():
-                if name not in result: result[name] = [ ]
-                result[name].append(effect)
-    return { k:v for k,v in result.items() if len(v) > 1 }
+        for effect in i['effects']:
+            name = effect['name']
+            power = effect['power']
+            value = effect['value']
+            if name not in result:
+                result[name] = {
+                    'name': name,
+                    'count': 1,
+                    'power': power,
+                    'value': value
+                }
+            else:
+                result[name]['count'] += 1
+                result[name]['power'] *= power
+                result[name]['value'] *= value
+    return { name: effect for name, effect in result.items() if effect['count'] > 1 }
 
 def hasEffect(ingredient, effectName):
     effects = { effect["name"] for effect in ingredient["effects"] }
@@ -132,16 +131,12 @@ def New_getValue(effects, effectsByName):
             temp *= value["value"]
         total += temp
     return total
-    
+
 def getValue(effects, effectsByName):
     total = 0
-    for name,values in effects.items():
+    for name, buffs in effects.items():
         effect = effectsByName[name]
-        cost = effect["cost"]
-        for value in values: 
-            cost *= (value["power"] * value["value"])
-            cost *= value["power"]
-        total += cost
+        total += effect["cost"] * buffs['value']
     return total
 
 def exceptions(ingredient):
@@ -168,7 +163,7 @@ def getPotions(ingredient_names, ingredientsByName, effectsByName):
 #def getPotionsTable(ingredient_names):
 #    rows = getPotions(ingredient_names)
 #    header = [ "1", "2", "3", "$", "N", "E" ]
-#    return table.Table(header, rows)
+#    return Table(header, rows)
 
 def printAllPotionsByValue(ingredientsByName, effectsByName):
     printPotionsByValue(ingredientsByName.values(), effectsByName)
@@ -185,7 +180,7 @@ def printPotionsByValue(ingredients, effectsByName):
     rows = sorted(rows, key=lambda item: item["$"])
     for row in rows:
         row["$"] = "{:10.4f}".format(row["$"]).strip()
-    table.printTable(table.Table(header, rows))
+    printTable(Table(header, rows))
 
 def printIngredients(effectName, ingredientsByName):
     names = [ ingredient["name"] for ingredient in ingredientsByName.values() if hasEffect(ingredient, effectName) ]
@@ -205,7 +200,7 @@ def printIngredientsByValue(ingredientsByName):
     for i in ingredientsByName.values():
         rows.append({ "Name": i["name"], "E1": getEffect(i, 0), "E2": getEffect(i, 1), "E3": getEffect(i, 2), "E4": getEffect(i, 3), "Farmable": i["farmable"], "Weight": i["weight"], "Value": i["value"] })
     rows = sorted(rows, key=lambda item: item["Farmable"])
-    table.printTable(table.Table(header, rows))
+    printTable(Table(header, rows))
 
 def getPotionsByEffects(names, ingredientsByName, effectsByName):
     def matchEffects(ingredient):
@@ -223,7 +218,7 @@ def getPotionsByEffects(names, ingredientsByName, effectsByName):
     rows = sorted(rows, key=lambda item: item["$"])
     for row in rows:
         row["$"] = "{:10.4f}".format(row["$"]).strip()
-    return table.Table(header, rows)
+    return Table(header, rows)
 
 def printAllIngredientsCsv(ingredientsByName):
     header = [ 'name', 'value', 'weight', 'farmable', 
@@ -242,13 +237,13 @@ def printAllIngredientsCsv(ingredientsByName):
             row['effect_{}_power'.format(index+1)] = effect['power']
             row['effect_{}_value'.format(index+1)] = effect['value']
         rows.append(row)
-    t = table.Table(header, rows)
-    table.printTable(t, table.CsvTableFormat())
+    t = Table(header, rows)
+    printTable(t, CsvTableFormat())
 
 def printAllEffectsCsv(effectsByName):
     header = [ 'name', 'description', 'school', 'type', 'cost', 'mag', 'dur' ]
     rows = [ ]
     for record in effectsByName.values():
         rows.append({ key:record[key] for key in header })
-    t = table.Table(header, rows)
-    table.printTable(t, table.CsvTableFormat())
+    t = Table(header, rows)
+    printTable(t, CsvTableFormat())

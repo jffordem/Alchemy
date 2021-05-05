@@ -17,7 +17,7 @@
 <h1>Ingredients</h1>
 <table>
     <tr>
-        <th>Name</th><th>Farmable</th><th>Weight</th><th>Value</th>
+        <th>Name</th><th>Farmable</th><th>Weight</th><th>Value</th><!-- th>V/W</th -->
     </tr>
     {% for ingredient in ingredients %}
     <tr>
@@ -25,6 +25,7 @@
         <td>{% if ingredient.farmable %}<a href="{{url_for('skyrimIngredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrimIngredients', farmable=false)}}">False</a>{% endif %}</td>
         <td>{{ingredient.weight}}</td>
         <td>{{ingredient.value}}</td>
+        <!-- td>{{ingredient.value / ingredient.weight}}</td -->
     </tr>
     {% endfor %}
 </table>

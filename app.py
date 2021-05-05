@@ -1,10 +1,11 @@
-from flask import Flask, request, send_from_directory, render_template, jsonify
+from flask import Flask, request, send_from_directory, render_template
 from skyrimPotions import getPotions
-from madlibs import madlib, calendar_altText, calendar_facts, country_song
+from madlibs import madlib, calendar_altText, calendar_facts, country_song, whip_it
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 import random
 from alchemyData import AllEffects, AllIngredients, indexOn
+import json, os
 
 __doc__ = """
 Create a mongodb client, usually as a docker container.
@@ -31,9 +32,20 @@ db = eng.alchemy
 
 app = Flask(__name__)
 
+# Good grief!  flask.jsonify doesn't support ObjectId?!
+class JSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, ObjectId):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
+
+# No thanks, flask.  I've got this.
+def jsonify(data):
+    return JSONEncoder().encode(data)
+
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(app.root_path, 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route("/")
 def home():
@@ -49,7 +61,7 @@ def skyrimIngredients():
     if 'farmable' in request.args:
         farmable = { "True":True, "true":True }.get(request.args.get("farmable"), False)
         filter['farmable'] = farmable
-    ingredients = db.ingredients.find(filter)
+    ingredients = db.ingredients.find(filter, sort=[('value', -1)])
     return render_template('ingredients.html', ingredients=ingredients)
 
 @app.route("/skyrim/ingredients/<name>")
@@ -69,7 +81,7 @@ def skyrimEffects():
     if 'type' in request.args:
         effect_type = request.args.get('type')
         filter['type'] = effect_type
-    return render_template('effects.html', effects=db.effects.find(filter))
+    return render_template('effects.html', effects=db.effects.find(filter, sort=[('cost', -1)]))
 
 @app.route("/skyrim/effects/<name>")
 def skyrimEffect(name):
@@ -78,6 +90,14 @@ def skyrimEffect(name):
         return render_template('effect.html', effect=item)
     else:
         return "Not Found", 404
+
+@app.route('/api/skyrim/potions', methods=['GET'])
+def skyrimPotionsApi():
+    ingredients = request.args.get('ingredients').split(',')
+    ingredientsByName = indexOn('name', db.ingredients.find())
+    effectsByName = indexOn('name', db.effects.find())
+    potions = getPotions(ingredients, ingredientsByName, effectsByName)
+    return jsonify({'potions': potions, 'ingredients': ingredients})
 
 @app.route('/skyrim/potions')
 def skyrimPotions():
@@ -91,16 +111,18 @@ def skyrimPotions():
             ingredients = list(ingredientsByName.keys())
             random.shuffle(ingredients)
             return ingredients[:5]
+    limit = 100
     ingredientsByName = indexOn('name', db.ingredients.find())
     effectsByName = indexOn('name', db.effects.find())
     ingredients = getIngredients(ingredientsByName)
     potions = getPotions(ingredients, ingredientsByName, effectsByName)
-    return render_template('potions.html', potions=potions, ingredients=ingredients)
+    return render_template('potions.html', potions=potions[:limit], ingredients=ingredients)
 
 AllMadlibs = {
     "xkcd": calendar_facts,
     "Country Song": country_song,
-    "Alt Text": calendar_altText
+    "Alt Text": calendar_altText,
+    "Whip It": whip_it
 }
 
 @app.route("/madlibs")
@@ -117,6 +139,9 @@ def madlibs(name):
 def loadDb():
     db.ingredients.insert_many(AllIngredients.values())
     db.effects.insert_many(AllEffects.values())
+    # could also create indexes
+    #db.ingredients.createIndex({'name':1}, {'unique': True})
+    #db.ingredients.createIndex({'farmable':1})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
