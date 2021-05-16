@@ -8,36 +8,54 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <title>Skyrim</title>
 </head>
 <body>
 
 <div class="container">
 
-<h1>{{ingredient.name}}</h1>
+    <div class="row">
+        <section class="col-12">
 
-<table>
-    <tr>
-        <td>Name</td><td>{{ingredient.name}}</td>
-    </tr>
-    <tr>
-        <td>Farmable</td><td>{% if ingredient.farmable %}<a href="{{url_for('skyrimIngredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrimIngredients', farmable=false)}}">False</a>{% endif %}</td>
-    </tr>
-    <tr>
-        <td>Weight</td><td>{{ingredient.weight}}</td>
-    </tr>
-    <tr>
-        <td>Value</td><td>{{ingredient.value}}</td>
-    </tr>
-    {% for i in range(4) %}
-    <tr>
-        <td>Effect {{i+1}}</td><td><a href="{{url_for('skyrimEffect', name=ingredient.effects[i].name)}}">{{ingredient.effects[i].name}}</a></td>
-        <!-- link to effect -->
-    </tr>
-    {% endfor %}
-</table>
+            <nav class="breadcrumb fixed-top">
+                <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
+                <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
+                <a class="breadcrumb-item" href="{{url_for('skyrimIngredients')}}">Ingredients</a>
+                <span class="breadcrumb-item active">{{ingredient.name}}</span>
+            </nav>
 
-<h3><a href="{{url_for('skyrimIngredients')}}">Back to ingredients</a></h3>
+            <div class="mt-5">
+                <h1>{{ingredient.name}}</h1>
+
+                <table class="table">
+                    <tr>
+                        <th>Name</th><td>{{ingredient.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Farmable</th><td>{% if ingredient.farmable %}<a href="{{url_for('skyrimIngredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrimIngredients', farmable=false)}}">False</a>{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th><td>{{ingredient.weight}}</td>
+                    </tr>
+                    <tr>
+                        <th>Value</th><td>{{ingredient.value}}</td>
+                    </tr>
+                    {% for i in range(4) %}
+                    <tr>
+                        <th>Effect {{i+1}}</th><td><a href="{{url_for('skyrimEffect', name=ingredient.effects[i].name)}}">{{ingredient.effects[i].name}}</a> 
+                            {% if ingredient.effects[i].power != 1.0 %}<span class="badge badge-info badge-pill">^{{ingredient.effects[i].power}}</span>{% endif %}
+                            {% if ingredient.effects[i].value != 1.0 %}<span class="badge badge-success badge-pill">${{ingredient.effects[i].value}}</span>{% endif %}</td>
+                        <!-- link to effect -->
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <th>Link</th><td><a href="{{ingredient.link}}">UESP</a></td>
+                    </tr>
+                </table>
+
+            </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

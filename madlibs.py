@@ -31,8 +31,13 @@ time zone legislation in (Indiana/Arizona/Russia)/
 a decree by the Pope in the 1500s/
 (precession/libration/nutation/libation/eccentricity/obliquity) of the (moon/sun/Earth's axis/equator/prime meridian/(international date/Mason-Dixon) line)/
 magnetic field reversal/
-an arbitrary decision by (Benjamin Franklin/Isaac Newton/FDR))? Apparently (
+an arbitrary decision by (Benjamin Franklin/Isaac Newton/FDR/Barack Obama))? Apparently (
+that's why Joe Biden won the election/
+that's why Donald Trump got banned from (Twitter/Facebook/YouTube)/
+it's the latest trend on (TikTok/Facebook/Twitter/Tinder/YouTube/Instagram/Discord/Reddit)/
 it causes a predictable increase in car accidents/
+that's why the world is going to (end/meet an asteroid/get hit by a coronal mass ejection/be invaded by aliens)/
+that's why the (dinosaurs/neanderthals/terror birds/(dire/grey/black/great) wolves) went extinct/
 that's why we have leap seconds/
 scientists are really worried/
 it was even more extreme during the (bronze age/ice age/cretaceous/1990s)/
@@ -77,7 +82,7 @@ def all(s):
             result += ch
         else:
             temp += ch
-    return result;
+    return result
 
 def any(s):
     result = [ ]

@@ -8,34 +8,58 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <title>Skyrim</title>
 </head>
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h1>Ingredients</h1>
-<table>
-    <tr>
-        <th>Name</th><th>Farmable</th><th>Weight</th><th>Value</th><!-- th>V/W</th -->
-    </tr>
-    {% for ingredient in ingredients %}
-    <tr>
-        <td><a href="{{url_for('skyrimIngredient', name=ingredient.name)}}">{{ingredient.name}}</a></td>
-        <td>{% if ingredient.farmable %}<a href="{{url_for('skyrimIngredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrimIngredients', farmable=false)}}">False</a>{% endif %}</td>
-        <td>{{ingredient.weight}}</td>
-        <td>{{ingredient.value}}</td>
-        <!-- td>{{ingredient.value / ingredient.weight}}</td -->
-    </tr>
-    {% endfor %}
-</table>
+        <div class="row">
+            <section class="col-12">
+    
+                <nav class="breadcrumb fixed-top">
+                    <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
+                    <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
+                    <span class="breadcrumb-item active">Ingredients</span>
+                </nav>
 
-<h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3>
+                <nav class="mt-5">
+                    <h1>Ingredients</h1>
+                    <table class="table">
+                        <tr>
+                            <th><a href="{{url_for('skyrimIngredients', sortby='name')}}">Name</a></th>
+                            <th><a href="{{url_for('skyrimIngredients', sortby='farmable')}}">Farmable</a></th>
+                            <th><a href="{{url_for('skyrimIngredients', sortby='weight')}}">Weight</a></th>
+                            <th><a href="{{url_for('skyrimIngredients', sortby='value')}}">Value</a></th>
+                            <th>Modifiers</th>
+                            <th>Link</th>
+                        </tr>
+                        {% for ingredient in ingredients %}
+                        <tr>
+                            <td><a href="{{url_for('skyrimIngredient', name=ingredient.name)}}">{{ingredient.name}}</a></td>
+                            <td>{% if ingredient.farmable %}<a href="{{url_for('skyrimIngredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrimIngredients', farmable=false)}}">False</a>{% endif %}</td>
+                            <td>{{ingredient.weight}}</td>
+                            <td>{{ingredient.value}}</td>
+                            <td style="text-align: center">
+                                {% if buffs[ingredient.name] %}<span class="badge badge-success badge-pill">*</span>{% endif %}
+                                {% if nerfs[ingredient.name] %}<span class="badge badge-danger badge-pill">*</span>{% endif %}
+                            </td>
+                            <td><a href="{{ingredient.link}}">UESP</a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                    <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->
+                </nav>
 
-</div>
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+            </section>
+        </div>
+    </div>
 </body>
 </html>

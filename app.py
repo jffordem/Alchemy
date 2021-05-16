@@ -61,8 +61,19 @@ def skyrimIngredients():
     if 'farmable' in request.args:
         farmable = { "True":True, "true":True }.get(request.args.get("farmable"), False)
         filter['farmable'] = farmable
-    ingredients = db.ingredients.find(filter, sort=[('value', -1)])
-    return render_template('ingredients.html', ingredients=ingredients)
+    sort = ('value', -1)
+    if 'sortby' in request.args:
+        sort = (request.args.get('sortby'), 1)
+    ingredients = list(db.ingredients.find(filter, sort=[sort]))
+    buffs = { i['name']: hasBuffs(i) for i in ingredients }
+    nerfs = { i['name']: hasNerfs(i) for i in ingredients }
+    return render_template('ingredients.html', ingredients=ingredients, buffs=buffs, nerfs=nerfs)
+
+def hasBuffs(ingredient):
+    return any(effect['power'] > 1 for effect in ingredient['effects']) or any(effect['value'] > 1 for effect in ingredient['effects'])
+
+def hasNerfs(ingredient):
+    return any(effect['power']< 1 for effect in ingredient['effects']) or any(effect['value'] < 1 for effect in ingredient['effects'])
 
 @app.route("/skyrim/ingredients/<name>")
 def skyrimIngredient(name):
@@ -119,10 +130,14 @@ def skyrimPotions():
     return render_template('potions.html', potions=potions[:limit], ingredients=ingredients)
 
 AllMadlibs = {
-    "xkcd": calendar_facts,
+    'xkcd Calendar Facts': calendar_facts,
     "Country Song": country_song,
     "Alt Text": calendar_altText,
     "Whip It": whip_it
+}
+
+MadlibRefs = {
+    'xkcd Calendar Facts': 'https://xkcd.com/1930/'
 }
 
 @app.route("/madlibs")
@@ -132,7 +147,7 @@ def all_madlibs():
 @app.route("/madlibs/<name>")
 def madlibs(name):
     if name in AllMadlibs:
-        return render_template('madlib.html', name=name, lines=madlib(AllMadlibs[name]))
+        return render_template('madlib.html', name=name, lines=madlib(AllMadlibs[name]), ref=MadlibRefs.get(name, None))
     return "Not Found", 404
 
 @app.cli.command('db_load')

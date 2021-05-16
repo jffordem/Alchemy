@@ -8,35 +8,50 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <title>Skyrim</title>
 </head>
 <body>
 
 <div class="container">
 
-<h1>{{effect.name}}</h1>
+    <div class="row">
+        <section class="col-12">
 
-<table>
-    <tr>
-        <td>Name</td><td>{{effect.name}}</td>
-    </tr>
-    <tr>
-        <td>Description</td><td>{{effect.description}}</td><!-- add template stuff -->
-    </tr>
-    <tr>
-        <td>School</td><td><a href="{{url_for('skyrimEffects', school=effect.school)}}">{{effect.school}}</a></td>
-    </tr>
-    <tr>
-        <td>Type</td><td><a href="{{url_for('skyrimEffects', type=effect.type)}}">{{effect.type}}</a></td>
-    </tr>
-</table>
+            <nav class="breadcrumb fixed-top">
+                <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
+                <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
+                <a class="breadcrumb-item" href="{{url_for('skyrimEffects')}}">Effects</a>
+                <span class="breadcrumb-item active">{{effect.name}}</span>
+            </nav>
 
-<h3><a href="{{url_for('skyrimEffects')}}">Back to effects</a></h3>
+            <div class="mt-5">
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <h1>{{effect.name}}</h1>
 
+                <table class="table">
+                    <tr>
+                        <th>Name</th><td>{{effect.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th><td>{{effect.description}}</td><!-- add template stuff -->
+                    </tr>
+                    <tr>
+                        <th>School</th><td><a href="{{url_for('skyrimEffects', school=effect.school)}}">{{effect.school}}</a></td>
+                    </tr>
+                    <tr>
+                        <th>Type</th><td><a href="{{url_for('skyrimEffects', type=effect.type)}}">{{effect.type}}</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        </section>
+    </div>
 </div>
 </body>
 </html>

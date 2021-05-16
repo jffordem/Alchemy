@@ -1,0 +1,8 @@
+table.bordered, table.bordered th, table.bordered td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1px 4px;
+}
+table th {
+    text-align: center;
+}
