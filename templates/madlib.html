@@ -25,12 +25,14 @@
             </nav>
 
             <div class="mt-5">
-                {% if ref %}
-                <h1><a href="{{ref}}">{{name}}</a></h1>
-                {% else %}
-                <h1>{{name}}</h1>
-                {% endif %}
                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {% if ref %}
+                        <h1><a href="{{ref}}">{{name}}</a></h1>
+                        {% else %}
+                        <h1>{{name}}</h1>
+                        {% endif %}
+                    </div>
                     <div class="panel-body">
                         {% for line in lines %}
                         <p>{{line}}</p>

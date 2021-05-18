@@ -28,20 +28,24 @@
                 <div class="mt-5">
                     <h1>Effects</h1>
 
-                    <table class="table">
-                        <tr>
-                            <th>Name</th><th>Description</th><th>School</th><th>Type</th><th>Cost</th>
-                        </tr>
-                        <!-- sort? -->
-                        {% for effect in effects %}
-                        <tr>
-                            <td><a href="{{url_for('skyrimEffect', name=effect.name)}}">{{effect.name}}</a></td><!-- link to effect -->
-                            <td>{{effect.description}}</td>
-                            <td><a href="{{url_for('skyrimEffects', school=effect.school)}}">{{effect.school}}</a></td><!-- link to effects of that school -->
-                            <td><a href="{{url_for('skyrimEffects', type=effect.type)}}">{{effect.type}}</a></td><!-- link to effects of that type -->
-                            <td>{{effect.cost}}</td>
-                        </tr>
-                        {% endfor %}
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th><th>Description</th><th>School</th><th>Type</th><th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- sort? -->
+                            {% for effect in effects %}
+                            <tr>
+                                <td><a href="{{url_for('skyrimEffect', name=effect.name)}}">{{effect.name}}</a></td><!-- link to effect -->
+                                <td>{{effect.description}}</td>
+                                <td><a href="{{url_for('skyrimEffects', school=effect.school)}}">{{effect.school}}</a></td><!-- link to effects of that school -->
+                                <td><a href="{{url_for('skyrimEffects', type=effect.type)}}">{{effect.type}}</a></td><!-- link to effects of that type -->
+                                <td>{{effect.cost}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
                     </table>
     
                     <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->    

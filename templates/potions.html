@@ -28,25 +28,29 @@
                 <div class="mt-5">
                     <h1>Potions</h1>
 
-                    <table class="table mb-3">
-                        <tr>
-                            <th>Ingredients</th><th>Value</th><th>Effects</th>
-                        </tr>
-                        {% for potion in potions %}
-                        <tr>
-                            <td>
-                                {% for ingredient in potion.ingredients %}
-                                <a href="{{url_for('skyrimIngredient', name=ingredient.name)}}">{{ingredient.name}}</a>{{ ", " if not loop.last else "" }}
-                                {% endfor %}
-                            </td>
-                            <td>{{potion.value}}</td>
-                            <td>
-                                {% for effect_name in potion.effects.keys() %}
-                                <a href="{{url_for('skyrimEffect', name=effect_name)}}">{{effect_name}}</a>{{ ", " if not loop.last else "" }}
-                                {% endfor %}
-                            </td>
-                        </tr>
-                        {% endfor %}
+                    <table class="table table-striped mb-3">
+                        <thead>
+                            <tr>
+                                <th>Ingredients</th><th>Value</th><th>Effects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for potion in potions %}
+                            <tr>
+                                <td>
+                                    {% for ingredient in potion.ingredients %}
+                                    <a href="{{url_for('skyrimIngredient', name=ingredient.name)}}">{{ingredient.name}}</a>{{ ", " if not loop.last else "" }}
+                                    {% endfor %}
+                                </td>
+                                <td>{{potion.value}}</td>
+                                <td>
+                                    {% for effect_name in potion.effects.keys() %}
+                                    <a href="{{url_for('skyrimEffect', name=effect_name)}}">{{effect_name}}</a>{{ ", " if not loop.last else "" }}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
                     </table>
     
                     <h2>Ingredients</h2>
