@@ -19,7 +19,7 @@ C:> set FLASK_ENV=development
 
 Configure the data.
 
-C:> flask db_load
+C:> flask init
 
 Then you can start the service.  It will be at http://localhost:5000 by default.
 
@@ -57,6 +57,10 @@ def skyrim():
 
 @app.route("/skyrim/ingredients")
 def skyrimIngredients():
+    def hasEffect(ingredient, effectName):
+        return any(effectName in effect['name'].lower() for effect in ingredient['effects'])
+    def hasEffects(ingredient, effectNames):
+        return any(hasEffect(ingredient, effectName.lower()) for effectName in effectNames)
     filter = {}
     if 'farmable' in request.args:
         farmable = { "True":True, "true":True }.get(request.args.get("farmable"), False)
@@ -67,6 +71,9 @@ def skyrimIngredients():
     ingredients = list(db.ingredients.find(filter, sort=[sort]))
     buffs = { i['name']: hasBuffs(i) for i in ingredients }
     nerfs = { i['name']: hasNerfs(i) for i in ingredients }
+    if 'effects' in request.args:
+        effectNames = request.args.get('effects').split(',')
+        ingredients = [ ingredient for ingredient in ingredients if hasEffects(ingredient, effectNames) ]
     return render_template('ingredients.html', ingredients=ingredients, buffs=buffs, nerfs=nerfs)
 
 def hasBuffs(ingredient):
@@ -75,8 +82,8 @@ def hasBuffs(ingredient):
 def hasNerfs(ingredient):
     return any(effect['power']< 1 for effect in ingredient['effects']) or any(effect['value'] < 1 for effect in ingredient['effects'])
 
-@app.route("/skyrim/ingredients/<name>")
-def skyrimIngredient(name):
+@app.route("/skyrim/ingredients/<string:name>")
+def skyrimIngredient(name: str):
     item = db.ingredients.find_one({ 'name': name })
     if item:
         return render_template('ingredient.html', ingredient=item)
@@ -94,8 +101,8 @@ def skyrimEffects():
         filter['type'] = effect_type
     return render_template('effects.html', effects=db.effects.find(filter, sort=[('cost', -1)]))
 
-@app.route("/skyrim/effects/<name>")
-def skyrimEffect(name):
+@app.route("/skyrim/effects/<string:name>")
+def skyrimEffect(name: str):
     item = db.effects.find_one({ 'name': name })
     if item:
         return render_template('effect.html', effect=item)
@@ -112,6 +119,10 @@ def skyrimPotionsApi():
 
 @app.route('/skyrim/potions')
 def skyrimPotions():
+    def hasEffect(potion, effectName):
+        return any(effectName in effect.lower() for effect in potion['effects'].keys())
+    def hasEffects(potion, effectNames):
+        return any(hasEffect(potion, effectName.lower()) for effectName in effectNames)
     def getIngredients(ingredientsByName):
         if 'ingredients' in request.args:
             ingredients = request.args.get('ingredients')
@@ -122,11 +133,16 @@ def skyrimPotions():
             ingredients = list(ingredientsByName.keys())
             random.shuffle(ingredients)
             return ingredients[:5]
-    limit = 100
     ingredientsByName = indexOn('name', db.ingredients.find())
     effectsByName = indexOn('name', db.effects.find())
     ingredients = getIngredients(ingredientsByName)
     potions = getPotions(ingredients, ingredientsByName, effectsByName)
+    if 'effects' in request.args:
+        effectNames = request.args.get('effects').split(',')
+        potions = [ potion for potion in potions if hasEffects(potion, effectNames) ]
+    limit = len(potions)
+    if 'limit' in request.args:
+        limit = int(request.args.get('limit'))
     return render_template('potions.html', potions=potions[:limit], ingredients=ingredients)
 
 AllMadlibs = {
@@ -144,13 +160,32 @@ MadlibRefs = {
 def all_madlibs():
     return render_template('madlibs.html', names=AllMadlibs.keys())
 
-@app.route("/madlibs/<name>")
-def madlibs(name):
+@app.route("/madlibs/<string:name>")
+def madlibs(name: str):
     if name in AllMadlibs:
         return render_template('madlib.html', name=name, lines=madlib(AllMadlibs[name]), ref=MadlibRefs.get(name, None))
     return "Not Found", 404
 
-@app.cli.command('db_load')
+@app.route('/tictactoe')
+def tictactoe():
+    board = makeBoard()
+    session['board'] = board
+    return render_template('tictactoe.html', rows=boardRows(board), result=None)
+
+@app.route('/tictactoe/move/<int:move>')
+def tictactoe_move(move: int):
+    board = session['board']
+    result = None
+    if board[move] == ' ' or board[move] == '-':
+        board = makePlayerMove(board, move)
+        board = makeComputerMove(board)
+        session['board'] = board
+        if isPlayerWin(board): result = "You win!"
+        if isComputerWin(board): result = "You lose."
+        if isGameOver(board): result = "Game over."
+    return render_template('tictactoe.html', rows=boardRows(board), result=result)
+
+@app.cli.command('init')
 def loadDb():
     db.ingredients.insert_many(AllIngredients.values())
     db.effects.insert_many(AllEffects.values())

@@ -60,6 +60,12 @@
                         {% endfor %}
                     </ul>
     
+                    <h2>More Potions</h2>
+                    <ul class="list-group mb-5">
+                        <li class="list-group-item"><a href="{{url_for('skyrimPotions', ingredients='farmable', limit=100)}}">Potions with farmable ingredients</a></li>
+                        <li class="list-group-item"><a href="{{url_for('skyrimPotions', ingredients='all', limit=100)}}">Potions with all ingredients</a></li>
+                        <li class="list-group-item"><a href="{{url_for('skyrimPotions')}}">Potions with random 5 ingredients</a></li>
+                    </ul>
                 </div>
                 <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->
 

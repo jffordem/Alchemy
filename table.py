@@ -29,62 +29,147 @@ format.
 Table
     headers(self) must return array of header strings, like [ 'name', 'title', 'phone' ]
     rows(self) must return a dictionary for each row, like [ { 'name': 'fred', 'title': 'director', 'phone': '123-4556' }, { 'name', 'barney', 'title': 'key grip', 'phone': '123-5678' }, ... ]
-    
+
 TableFormat
     printOuterBorderRow(self, widths, columns)
     printHeadersRow(self, widths, columns)
     printHeaderSeperatorRow(self, widths, columns)
     printDataRow(self, widths, columns, values)
+
+Examples:
+- load and print table from csv file
+    from table import Table, printTable
+    data = Table.readCsv(filename)
+    printTable(data)
+
+Query Language
+    stuff = Table.readCsv(filename).where(sourceOrderId="12345678").sort(timestamp=1)
+    printTable(stuff)
 """
 
 import csv
+import json
 
 def matchAll(row, args):
-    #print("matching", row, 'with', args)
     for k,v in args.items():
         if row[k] != v: 
-            #print("didn't match because", k, v, "didn't match", row)
             return False
-    #print("matched", row, "with", args)
     return True
 
+def matchAllp(row, preds):
+    return all([ pred(row) for pred in preds ])
+
 class Table:
-    def __init__(self, headers, rows, sortby = None):
+    def __init__(self, headers, rows):
         if headers == None: headers = [ ]
         self.__headers = list(headers)
         self.__rows = list(rows)
-        self.__sortby = sortby
-    def setSortCol(self, sortby):
-        self.__sortby = sortby
     def headers(self): return self.__headers
-    def rows(self):
-        if self.__sortby != None:
-            reverse = False
-            if self.__sortby.startswith("+"): 
-                self.__sortby = self.__sortby[1:]
-            if self.__sortby.startswith("-"): 
-                self.__sortby = self.__sortby[1:]
-                reverse = True
-            self.__rows = sorted(self.__rows, key=lambda row: row[self.__sortby], reverse=reverse)
-            self.__sortby = None
-        return self.__rows
+    def rows(self): return self.__rows
     def select(self, **eqargs):
         return [ row for row in self.rows() if matchAll(row, eqargs) ]
+    def selectp(self, *preds):
+        return [ row for row in self.rows() if matchAllp(row, preds) ]
+    def where(self, **args):
+        result = Table(self.__headers, self.__rows)
+        result.__rows = result.select(**args)
+        return result
+    def wherep(self, *preds):
+        result = Table(self.__headers, self.__rows)
+        result.__rows = result.selectp(*preds)
+        return result
     def find(self, **eqargs):
         selected = self.select(**eqargs)
         if len(selected) > 0: return selected[0]
         return None
+    def sort(self, column, reverse=False):
+        self.__rows = sorted(self.__rows, key=lambda row: row[column], reverse=reverse)
+        return self
+    def limit(self, count=10):
+        self.__rows = self.__rows[:count]
+        return self
+    def addColumn(self, name, values):
+        self.__headers.append(name)
+        for row, value in zip(self.__rows, values):
+            row[name] = value
     def __len__(self): return len(self.__rows)
+    def __iter__(self): return iter(self.__rows)
+    def __add__(self, other):
+        if self.headers() == other.headers():
+            return Table(self.headers(), self.rows() + other.rows())
+        return None
+    def writeCsv(self, file, sep=','):
+        with open(file, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=self.__headers)
+            writer.writeheader()
+            for row in self.__rows:
+                writer.writerow(row)
+    def writeJson(self, file):
+        with open(file, 'w', encoding='utf-8') as f:
+            json.dumps(self.__rows)
     @staticmethod
-    def parseCsv(text, sep=',', sortby=None):
+    def parseCsv(text, sep=','):
         if text == None: return None
-        return Table._processCsv(text.split("\n"), sep, sortby)
+        return Table._processCsv(text.split("\n"), sep)
     @staticmethod
-    def readCsv(file, sep=',', sortby=None):
+    def readCsv(file, sep=','):
         with open(file, 'r') as f:
-            return Table._processCsv(f, sep, sortby)
+            return Table._processCsv(f, sep)
     @staticmethod
-    def _processCsv(lines, sep, sortby):
+    def readJson(file):
+        with open(file, 'r', encoding='utf-8') as f:
+            rows = json.load(f)
+            headers = set()
+            for row in rows:
+                for key in row.keys():
+                    headers.add(key)
+            return Table(headers, rows)
+    def parseFixed(lines, hasCaption=False):
+        def getHeaderCols(line):
+            inWord = False
+            lastStart = -1
+            result = dict()
+            headers = []
+            for i in range(len(line)):
+                if not inWord and line[i] != ' ':
+                    if lastStart >= 0:
+                        header = line[lastStart:i].strip()
+                        result[header] = (lastStart, i)
+                        headers.append(header)
+                    lastStart = i
+                    inWord = True
+                elif inWord and line[i] == ' ':
+                    inWord = False
+            header = line[lastStart:len(line)-1].strip()
+            result[header] = (lastStart, len(line)-1)
+            headers.append(header)
+            return headers, result
+        def getField(line, headerCols):
+            return line[headerCols[0]:headerCols[1]].strip().rstrip('-').strip()
+        def isSeparator(line):
+            for field in line.split():
+                if len(field.strip('-')) != 0:
+                    return False
+            return True
+        caption = []
+        if hasCaption: caption = None
+        headers = None
+        headerCols = None
+        rows = []
+        for line in lines:
+            if len(line.strip()) == 0 or isSeparator(line): continue
+            fields = line.strip().split()
+            if len(fields) == 0: continue
+            if caption == None: caption = fields
+            elif headers == None: headers, headerCols = getHeaderCols(line)
+            else: rows.append({ column: getField(line, headerCols[column]) for column in headers })
+        return Table(headers, rows)
+    @staticmethod
+    def readFixed(file, hasCaption=False):
+        with open(file, 'r', encoding='utf-8') as f:
+            return Table.parseFixed(f)
+    @staticmethod
+    def _processCsv(lines, sep):
         reader = csv.reader(lines, delimiter=sep)
         header = None
         rows = [ ]
@@ -94,107 +179,56 @@ class Table:
                 header = line
             else:
                 rows.append({ header[i]: line[i] for i in range(len(header)) })
-        return Table(header, rows, sortby)
+        return Table(header, rows)
+    @staticmethod
+    def fromCursor(cursor):
+        def toDictionary(cols, rows):
+            for row in rows:
+                yield { k: v for k, v in zip(cols, row) }
+        cols = [ col[0] for col in cursor.description ]
+        return Table(cols, toDictionary(cols, cursor.fetchall()))
 
 def getValue(d, k):
     if k in d.keys():
         return d[k]
     return " "
 
-class HtmlTableFormat:
-    def __init__(self, style = None):
-        self.__buffer = ""
-        self.__style = style
-    def startTable(self, widths, columns):
-        if self.__style == None:
-            self.__buffer += "<table>"
-        else:
-            self.__buffer += "<table style="+self.__style+">"
-    def endTable(self, widths, columns):
-        self.__buffer += "</table>"
-    def startHeader(self, widths, columns):
-        self.__buffer += "<thead>"
-    def printHeaderRow(self, widths, columns):
-        self.__buffer += "<tr>" + "".join([ "<th>"+col+"</th>" for col in columns ]) + "</tr>"
-    def endHeader(self, widths, columns):
-        self.__buffer += "</thead>"
-    def startBody(self, widths, columns):
-        self.__buffer += "<tbody>"
-    def printDataRow(self, widths, columns, values):
-        self.__buffer += "<tr>" + "".join([ "<td>"+str(getValue(values, col))+"</td>" for col in columns ]) + "</tr>"
-    def endBody(self, widths, columns):
-        self.__buffer += "</tbody>"
-    def __repr__(self): return self.__buffer
-
-class MarkdownTableFormat:
-    def __init__(self):
-        self.__buffer = ""
-    def startTable(self, widths, columns): pass
-    def endTable(self, widths, columns): pass
-    def startHeader(self, width, columns): pass
-    def printHeaderRow(self, widths, columns):
-        self.__buffer += "|" + "|".join(columns) + "|\r\n"
-    def endHeader(self, widths, columns): pass
-    def startBody(self, widths, columns):
-        self.__buffer += "|" + "|".join([ "---" for col in columns ]) + "|\r\n"
-    def printDataRow(self, widths, columns, values):
-        self.__buffer += "|" + "|".join([ str(getValue(values, col)) for col in columns ]) + "|\r\n"
-    def endBody(self, widths, columns): pass
-    def __repr__(self): return self.__buffer
-
 class BorderTableFormat:
     def __init__(self, corner = "+", vert = "|", horz = "-"):
         self.__corner = corner
         self.__vert = vert
         self.__horz = horz
-    def startTable(self, widths, columns): pass
-    def endTable(self, widths, columns): pass
-    def startHeader(self, widths, columns):
-        self._printBorderRow(widths, columns)
-    def printHeaderRow(self, widths, columns):
+    def printStartTable(self):
+        pass
+    def printEndTable(self):
+        pass
+    def printOuterBorderRow(self, widths, columns):
+        print(self.__corner + self.__corner.join( [ "-" * widths[col] for col in columns ] ) + self.__corner)
+    def printHeadersRow(self, widths, columns):
         print(self.__vert + self.__vert.join( [ col.center(widths[col]) for col in columns ] ) + self.__vert)
-    def endHeader(self, widths, columns):
-        self._printBorderRow(widths, columns)
-    def startBody(self, widths, columns): pass
+    def printHeaderSeperatorRow(self, widths, columns):
+        self.printOuterBorderRow(widths, columns)
     def printDataRow(self, widths, columns, values):
         print(self.__vert + self.__vert.join( [ str(getValue(values, col)).ljust(widths[col]) for col in columns ] ) + self.__vert)
-    def endBody(self, widths, columns):
-        self._printBorderRow(widths, columns)
-    def _printBorderRow(self, widths, columns):
-        print(self.__corner + self.__corner.join( [ "-" * widths[col] for col in columns ] ) + self.__corner)
-
-class CsvTableFormat:
-    def __init__(self):
-        pass
-    def startTable(self, widths, columns): pass
-    def endTable(self, widths, columns): pass
-    def startHeader(self, width, columns): pass
-    def printHeaderRow(self, widths, columns):
-        print(",".join(columns))
-    def endHeader(self, widths, columns): pass
-    def startBody(self, widths, columns): pass
-    def printDataRow(self, widths, columns, values):
-        print(",".join([ str(getValue(values, col)) for col in columns ]))
-    def endBody(self, widths, columns): pass
 
 class DefaultTableFormat:
     def __init__(self, horz = "="):
         self.__horz = horz
         self.__format = format
-    def startTable(self, widths, columns): pass
-    def endTable(self, widths, columns): pass
-    def startHeader(self, widths, columns):
+    def printStartTable(self):
+        pass
+    def printEndTable(self):
+        pass
+    def printOuterBorderRow(self, widths, columns):
         print()
-    def printHeaderRow(self, widths, columns):
+    def printHeadersRow(self, widths, columns):
         print(" ".join( [ col.center(widths[col]) for col in columns ] ))
-    def endHeader(self, widths, columns):
+    def printHeaderSeperatorRow(self, widths, columns):
         print(" ".join( [ self.__horz * widths[col] for col in columns ] ))
-    def startBody(self, widths, columns): pass
     def printDataRow(self, widths, columns, values):
         print(" ".join( [ str(getValue(values, col)).ljust(widths[col]) for col in columns ] ))
-    def endBody(self, widths, columns): pass
 
-def printTable(table, format = DefaultTableFormat()):
+def printTable(table, writer = DefaultTableFormat()):
     def getWidths(rows):
         result = { k: len(k) for k in rows[0].keys() }
         for row in rows:
@@ -208,15 +242,14 @@ def printTable(table, format = DefaultTableFormat()):
         columns = table.headers()
         rows = table.rows()
         widths = getWidths(rows)
-        format.startTable(widths, columns)
-        format.startHeader(widths, columns)
-        format.printHeaderRow(widths, columns)
-        format.endHeader(widths, columns)
-        format.startBody(widths, columns)
+        writer.printStartTable()
+        writer.printOuterBorderRow(widths, columns)
+        writer.printHeadersRow(widths, columns)
+        writer.printHeaderSeperatorRow(widths, columns)
         for row in rows:
-            format.printDataRow(widths, columns, row)
-        format.endBody(widths, columns)
-        format.endTable(widths, columns)
+            writer.printDataRow(widths, columns, row)
+        writer.printOuterBorderRow(widths, columns)
+        writer.printEndTable()
 
 if __name__ == "__main__":
     printTable(Table([ 'a', 'b', 'c' ], [ 
@@ -230,21 +263,6 @@ if __name__ == "__main__":
 1,2,3
 4,5,6"""))
 
-    printTable(Table.parseCsv("""a,b,c
-1,2,3
-4,5,6"""), BorderTableFormat())
-
-    fmt = HtmlTableFormat()
-    printTable(Table.parseCsv("""a,b,c
-4,5,6
-1,2,3""", sortby='a'), fmt)
-    print(str(fmt))
-
-    fmt = MarkdownTableFormat()
-    printTable(Table.parseCsv("""a,b,c
-4,5,6
-1,2,3""", sortby='a'), fmt)
-    print(str(fmt))
     #printTable(Table.readCsv("sf_jobs.csv"))
     
     printTable(Table.parseCsv("""a\tb\tc
@@ -262,8 +280,8 @@ if __name__ == "__main__":
     if table.select(a='1', b='2') != [ { 'a':'1', 'b':'2', 'c':'3' } ]:
         print("Select FAILED returned", table.select(a='1', b='2'))
 
-    if table.find(c='3') != { 'a':'1', 'b':'2', 'c':'3' }:
+    if table.find(a='1') != { 'a':'1', 'b':'2', 'c':'3' }:
         print("Find FAILED returned", table.find(a='1'))
-
+    
     printTable(Table.parseCsv(None))
     printTable(Table.parseCsv(""))
