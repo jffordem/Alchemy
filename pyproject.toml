@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "jfordemwalt-sandbox"
+version = "0.1.0"
+description = ""
+authors = ["James Fordemwalt <jfordemwalt@clearwateranalytics.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.0.3"
+pymongo = "^4.10.1"
+pandas = "^2.2.3"
+rich = "^13.9.4"
+invoke = "^2.2.0"
+uvicorn = "^0.32.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tools.pytest.ini_options]
+markers = [
+    "webtest: a test that requires a specific webserver to pass",
+]

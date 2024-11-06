@@ -10,7 +10,7 @@ import json, os
 __doc__ = """
 Create a mongodb client, usually as a docker container.
 
-C:> docker run -p 27017:27017 -d mongodb
+C:> docker run -p 27017:27017 -d mongodb/mongodb-community-server
 
 Then configure Flask.
 
