@@ -1,4 +1,5 @@
 {
+	"note": "Deprecated.  Use ingredients.yaml and effects.yaml and their helper classes instead.",
 	"ingredients": [{
 			"effects": [{
 					"name": "Damage Health",
