@@ -22,7 +22,7 @@
             <nav class="breadcrumb fixed-top">
                 <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
                 <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
-                <a class="breadcrumb-item" href="{{url_for('skyrimIngredients')}}">Ingredients</a>
+                <a class="breadcrumb-item" href="{{url_for('skyrim_ingredients')}}">Ingredients</a>
                 <span class="breadcrumb-item active">{{ingredient.name}}</span>
             </nav>
 
@@ -34,7 +34,7 @@
                         <th>Name</th><td>{{ingredient.name}}</td>
                     </tr>
                     <tr>
-                        <th>Farmable</th><td>{% if ingredient.farmable %}<a href="{{url_for('skyrimIngredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrimIngredients', farmable=false)}}">False</a>{% endif %}</td>
+                        <th>Farmable</th><td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}">False</a>{% endif %}</td>
                     </tr>
                     <tr>
                         <th>Weight</th><td>{{ingredient.weight}}</td>
@@ -44,7 +44,7 @@
                     </tr>
                     {% for i in range(4) %}
                     <tr>
-                        <th>Effect {{i+1}}</th><td><a href="{{url_for('skyrimEffect', name=ingredient.effects[i].name)}}">{{ingredient.effects[i].name}}</a> 
+                        <th>Effect {{i+1}}</th><td><a href="{{url_for('skyrim_effect', name=ingredient.effects[i].name)}}">{{ingredient.effects[i].name}}</a> 
                             {% if ingredient.effects[i].power != 1.0 %}<span class="badge badge-info badge-pill">^{{ingredient.effects[i].power}}</span>{% endif %}
                             {% if ingredient.effects[i].value != 1.0 %}<span class="badge badge-success badge-pill">${{ingredient.effects[i].value}}</span>{% endif %}</td>
                         <!-- link to effect -->
