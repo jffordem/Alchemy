@@ -22,7 +22,7 @@
             <nav class="breadcrumb fixed-top">
                 <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
                 <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
-                <a class="breadcrumb-item" href="{{url_for('skyrimEffects')}}">Effects</a>
+                <a class="breadcrumb-item" href="{{url_for('skyrim_effects')}}">Effects</a>
                 <span class="breadcrumb-item active">{{effect.name}}</span>
             </nav>
 
@@ -38,10 +38,10 @@
                         <th>Description</th><td>{{effect.description}}</td><!-- add template stuff -->
                     </tr>
                     <tr>
-                        <th>School</th><td><a href="{{url_for('skyrimEffects', school=effect.school)}}">{{effect.school}}</a></td>
+                        <th>School</th><td><a href="{{url_for('skyrim_effects', school=effect.school)}}">{{effect.school}}</a></td>
                     </tr>
                     <tr>
-                        <th>Type</th><td><a href="{{url_for('skyrimEffects', type=effect.type)}}">{{effect.type}}</a></td>
+                        <th>Type</th><td><a href="{{url_for('skyrim_effects', type=effect.type)}}">{{effect.type}}</a></td>
                     </tr>
                 </table>
             </div>

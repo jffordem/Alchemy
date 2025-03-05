@@ -1,0 +1,1854 @@
+- name: Nirnroot
+  effects:
+  - name: Damage Health
+    power: 1.0
+    value: 12.6
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Invisibility
+    power: 1.0
+    value: 1.0
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Nirnroot
+  value: 10
+  weight: 0.2
+- name: Emperor Parasol Moss
+  effects:
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Magicka
+    power: 0.5
+    value: 1.0
+  - name: Regenerate Health
+    power: 1.5
+    value: 19.7
+  - name: Fortify Two-handed
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Emperor_Parasol_Moss
+  value: 1
+  weight: 0.25
+- name: Honeycomb
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Block
+    power: 0.5
+    value: 1.0
+  - name: Fortify Light Armor
+    power: 1.0
+    value: 1.0
+  - name: Ravage Stamina
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Honeycomb
+  value: 5
+  weight: 0.2
+- name: Swamp Fungal Pod
+  effects:
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Paralysis
+    power: 1.0
+    value: 1.0
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Swamp_Fungal_Pod
+  value: 5
+  weight: 0.2
+- name: Deathbell
+  effects:
+  - name: Damage Health
+    power: 1.5
+    value: 1.6
+  - name: Ravage Stamina
+    power: 1.0
+    value: 2.1
+  - name: Slow
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Deathbell
+  value: 4
+  weight: 0.2
+- name: Hawk Feathers
+  effects:
+  - name: Cure Disease
+    power: 1.0
+    value: 0.36
+  - name: Fortify Light Armor
+    power: 1.0
+    value: 1.0
+  - name: Fortify One-handed
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Hawk_Feathers
+  value: 15
+  weight: 0.1
+- name: Human Heart
+  effects:
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Frenzy
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Human_Heart
+  value: 0
+  weight: 1
+- name: Canis Root
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Marksman
+    power: 1.0
+    value: 1.0
+  - name: Fortify One-Handed
+    power: 1.0
+    value: 1.0
+  - name: Paralysis
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Canis_Root
+  value: 5
+  weight: 0.1
+- name: Vampire Dust
+  effects:
+  - name: Invisibility
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Health
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Cure Disease
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Vampire_Dust
+  value: 25
+  weight: 0.2
+- name: Blue Butterfly Wing
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  - name: Fortify Enchanting
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Blue_Butterfly_Wing
+  value: 2
+  weight: 0.1
+- name: Purple Mountain Flower
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Purple_Mountain_Flower
+  value: 2
+  weight: 0.1
+- name: Ice Wraith Teeth
+  effects:
+  - name: Weakness to Frost
+    power: 1.0
+    value: 1.0
+  - name: Fortify Heavy Armor
+    power: 1.0
+    value: 1.0
+  - name: Invisibility
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Fire
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Ice_Wraith_Teeth
+  value: 30
+  weight: 0.25
+- name: Blue Dartwing
+  effects:
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Pickpocket
+    power: 1.0
+    value: 1.0
+  - name: Fear
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Blue_Dartwing
+  value: 1
+  weight: 0.1
+- name: Taproot
+  effects:
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  - name: Fortify Illusion
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Taproot
+  value: 15
+  weight: 0.5
+- name: Pearl
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Block
+    power: 1.0
+    value: 1.0
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Pearl
+  value: 2
+  weight: 0.1
+- name: Juniper Berries
+  effects:
+  - name: Weakness to Fire
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Marksman
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Juniper_Berries
+  value: 1
+  weight: 0.1
+- name: Hanging Moss
+  effects:
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Fortify Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify One-handed
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Hanging_Moss
+  value: 1
+  weight: 0.25
+- name: Jazbay Grapes
+  effects:
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  - name: Fortify Magicka
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  - name: Ravage Health
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Jazbey_Grapes
+  value: 1
+  weight: 0.2
+- name: Bone Meal
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  - name: Ravage Stamina
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Bone_Meal
+  value: 5
+  weight: 0.5
+- name: Creep Cluster
+  effects:
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Creep_Cluster
+  value: 1
+  weight: 0.2
+- name: Garlic
+  effects:
+  - name: Resist Poison
+    power: 1.0
+    value: 1.0
+  - name: Fortify Stamina
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Health
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Garlic
+  value: 1
+  weight: 0.25
+- name: Hawk Beak
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Hawk_Beak
+  value: 15
+  weight: 0.25
+- name: Blue Mountain Flower
+  effects:
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  - name: Fortify Health
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Blue_Mountain_Flower
+  value: 2
+  weight: 0.1
+- name: Spider Egg
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Fortify Lockpicking
+    power: 1.0
+    value: 1.0
+  - name: Fortify Marksman
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Spider_Egg
+  value: 5
+  weight: 0.2
+- name: Powdered Mammoth Tusk
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Fire
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  - name: Fear
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Powdered_Mammoth_Tusk
+  value: 2
+  weight: 0.1
+- name: Void Salts
+  effects:
+  - name: Weakness to Shock
+    power: 1.0
+    value: 1.0
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Void_Salts
+  value: 125
+  weight: 0.2
+- name: Torchbug Thorax
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  - name: Fortify Stamina
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Torchbug_Thorax
+  value: 1
+  weight: 0.1
+- name: Chicken's Egg
+  effects:
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  - name: Waterbreathing
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Stamina
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Chicken%27s_Egg
+  value: 2
+  weight: 0.5
+- name: Small Antlers
+  effects:
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  - name: Fortify Restoration
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Small_Antlers
+  value: 2
+  weight: 0.1
+- name: Bleeding Crown
+  effects:
+  - name: Weakness to Fire
+    power: 1.0
+    value: 1.0
+  - name: Fortify Block
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Bleeding_Crown
+  value: 10
+  weight: 0.3
+- name: Thistle Branch
+  effects:
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  - name: Ravage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Resist Poison
+    power: 0.75
+    value: 1.0
+  - name: Fortify Heavy Armor
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Thistle_Branch
+  value: 1
+  weight: 0.1
+- name: Abecean Longfin
+  effects:
+  - name: Weakness to Frost
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  - name: Fortify Restoration
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Abecean_Longfin
+  value: 15
+  weight: 0.5
+- name: Mudcrab Chitin
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Cure Disease
+    power: 1.0
+    value: 1.0
+  - name: Resist Poison
+    power: 1.0
+    value: 1.0
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Mudcrab_Chitin
+  value: 2
+  weight: 0.25
+- name: Histcarp
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Magicka
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  - name: Waterbreathing
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Histcarp
+  value: 6
+  weight: 0.25
+- name: Beehive Husk
+  effects:
+  - name: Resist Poison
+    power: 0.5
+    value: 1.0
+  - name: Fortify Light Armor
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  - name: Fortify Destruction
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Beehive_Husk
+  value: 5
+  weight: 1
+- name: Poison Bloom
+  effects:
+  - name: Damage Health
+    power: 1.5
+    value: 1.6
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  - name: Slow
+    power: 1.0
+    value: 1.0
+  - name: Fear
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Poison_Bloom
+  value: 5
+  weight: 0.25
+- name: Dragon's Tongue
+  effects:
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  - name: Fortify Barter
+    power: 1.0
+    value: 1.0
+  - name: Fortify Illusion
+    power: 1.0
+    value: 1.0
+  - name: Fortify Two-handed
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Dragon%27s_Tongue
+  value: 5
+  weight: 0.1
+- name: Troll Fat
+  effects:
+  - name: Resist Poison
+    power: 1.0
+    value: 1.0
+  - name: Fortify Two-handed
+    power: 1.0
+    value: 1.0
+  - name: Frenzy
+    power: 1.0
+    value: 1.0
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Troll_Fat
+  value: 15
+  weight: 1
+- name: Orange Dartwing
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Ravage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Pickpocket
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Health
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Orange_Dartwing
+  value: 1
+  weight: 0.1
+- name: Scaly Pholiota
+  effects:
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  - name: Fortify Illusion
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Scaly_Pholiota
+  value: 4
+  weight: 0.25
+- name: Dwarven Oil
+  effects:
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Illusion
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Dwarven_Oil
+  value: 15
+  weight: 0.25
+- name: Cyrodilic Spadetail
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fear
+    power: 1.0
+    value: 1.0
+  - name: Fortify Restoration
+    power: 1.0
+    value: 1.0
+  - name: Ravage Health
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Cyrodilic_Spadetail
+  value: 15
+  weight: 0.25
+- name: Imp Stool
+  effects:
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Paralysis
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Restore Health
+    power: 0.6
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Imp_Stool
+  value: 0
+  weight: 0.3
+- name: Pine Thrush Egg
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Lockpicking
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Pine_Thrush_Egg
+  value: 2
+  weight: 0.5
+- name: Glowing Mushroom
+  effects:
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  - name: Fortify Destruction
+    power: 1.0
+    value: 1.0
+  - name: Fortify Smithing
+    power: 1.0
+    value: 1.0
+  - name: Fortify Health
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Glowing_Mushroom
+  value: 5
+  weight: 0.2
+- name: Slaughterfish Egg
+  effects:
+  - name: Resist Poison
+    power: 1.0
+    value: 1.0
+  - name: Fortify Pickpocket
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Stamina
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Egg
+  value: 3
+  weight: 0.2
+- name: Grass Pod
+  effects:
+  - name: Resist Poison
+    power: 1.0
+    value: 1.0
+  - name: Ravage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Alteration
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Grass_Pod
+  value: 1
+  weight: 0.1
+- name: Giant Lichen
+  effects:
+  - name: Ravage Health
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Shock
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Giant_Lichen
+  value: 5
+  weight: 0.25
+- name: Small Pearl
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify One-handed
+    power: 1.0
+    value: 1.0
+  - name: Fortify Restoration
+    power: 1.0
+    value: 1.0
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Small_Pearl
+  value: 2
+  weight: 0.1
+- name: Nordic Barnacle
+  effects:
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Waterbreathing
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Pickpocket
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Nordic_Barnacle
+  value: 5
+  weight: 0.2
+- name: Butterfly Wing
+  effects:
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Barter
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Butterfly_Wing
+  value: 3
+  weight: 0.1
+- name: Hagraven Feathers
+  effects:
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Frenzy
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Shock
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Hagraven_Feathers
+  value: 20
+  weight: 0.1
+- name: Frost Salts
+  effects:
+  - name: Weakness to Fire
+    power: 1.0
+    value: 1.0
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Frost_Salts
+  value: 100
+  weight: 0.25
+- name: Mora Tapinella
+  effects:
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Illusion
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Mora_Tapinella
+  value: 4
+  weight: 0.25
+- name: Sabre Cat Tooth
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Heavy Armor
+    power: 1.0
+    value: 1.0
+  - name: Fortify Smithing
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Sabre_Cat_Tooth
+  value: 2
+  weight: 0.1
+- name: Bear Claws
+  effects:
+  - name: Restore Stamina
+    power: 0.8
+    value: 1.0
+  - name: Fortify Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify One-Handed
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Bear_Claws
+  value: 2
+  weight: 0.1
+- name: Luna Moth Wing
+  effects:
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Light Armor
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Health
+    power: 1.0
+    value: 1.0
+  - name: Invisibility
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Luna_Moth_Wing
+  value: 5
+  weight: 0.1
+- name: Eye of Sabre Cat
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Ravage Health
+    power: 1.0
+    value: 1.0
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Eye_of_Sabre_Cat
+  value: 2
+  weight: 0.1
+- name: Glow Dust
+  effects:
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Destruction
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Glow_Dust
+  value: 20
+  weight: 0.5
+- name: Fire Salts
+  effects:
+  - name: Weakness to Frost
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Fire_Salts
+  value: 50
+  weight: 0.25
+- name: Human Flesh
+  effects:
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Paralysis
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Human_Fresh
+  value: 1
+  weight: 0.25
+- name: Blisterwort
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Restore Health
+    power: 0.6
+    value: 1.0
+  - name: Frenzy
+    power: 1.0
+    value: 1.0
+  - name: Fortify Smithing
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Blisterwort
+  value: 12
+  weight: 0.2
+- name: Red Mountain Flower
+  effects:
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Ravage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Magicka
+    power: 1.0
+    value: 1.0
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Red_Mountain_Flower
+  value: 2
+  weight: 0.1
+- name: Crimson Nirnroot
+  effects:
+  - name: Damage Health
+    power: 3.0
+    value: 1.0
+  - name: Invisibility
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina
+    power: 3.0
+    value: 1.0
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Crimson_Nirnroot
+  value: 10
+  weight: 0.2
+- name: Jarrin Root
+  effects:
+  - name: Damage Health
+    power: 100.0
+    value: 1.0
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Jarrin_Root
+  value: 10
+  weight: 0.5
+- name: Moon Sugar
+  effects:
+  - name: Weakness to Fire
+    power: 1.0
+    value: 1.0
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Moon_Sugar
+  value: 50
+  weight: 0.25
+- name: Namira's Rot
+  effects:
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fear
+    power: 1.0
+    value: 1.0
+  - name: Fortify Lockpicking
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Health
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Namira%27s_Rot
+  value: 0
+  weight: 0.25
+- name: Snowberries
+  effects:
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  - name: Fortify Enchanting
+    power: 1.0
+    value: 1.0
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Snowberries
+  value: 4
+  weight: 0.1
+- name: Berit's Ashes
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  - name: Ravage Stamina
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Berit%27s_Ashes
+  value: 5
+  weight: 0.2
+- name: Charred Skeever Hide
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Resist Poison
+    power: 1.0
+    value: 1.0
+  - name: Cure Disease
+    power: 1.0
+    value: 0.36
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Charred_Skeever_Hide
+  value: 1
+  weight: 0.5
+- name: Giant's Toe
+  effects:
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 5.9
+  - name: Fortify Health
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Giant%27s_Toe
+  value: 20
+  weight: 1
+- name: Rock Warbler Egg
+  effects:
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify One-handed
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Rock_Warbler_Egg
+  value: 2
+  weight: 0.5
+- name: Fly Amanita
+  effects:
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  - name: Frenzy
+    power: 1.0
+    value: 1.0
+  - name: Fortify Two-handed
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Stamina
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Fly_Amanita
+  value: 2
+  weight: 0.1
+- name: Silverside Perch
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  - name: Ravage Health
+    power: 1.0
+    value: 1.0
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Silverside_Perch
+  value: 15
+  weight: 0.25
+- name: Boar Tusk
+  effects:
+  - name: Fortify Stamina
+    power: 1.25
+    value: 5.9
+  - name: Fortify Health
+    power: 1.0
+    value: 5.9
+  - name: Ravage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Boar_Tusk
+  value: 20
+  weight: 0.5
+- name: Lavender
+  effects:
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  - name: Fortify Stamina
+    power: 1.0
+    value: 1.0
+  - name: Ravage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Conjuration
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Lavender
+  value: 1
+  weight: 0.1
+- name: Hagraven Claw
+  effects:
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Enchanting
+    power: 1.0
+    value: 1.0
+  - name: Fortify Barter
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Hagraven_Claw
+  value: 20
+  weight: 0.25
+- name: Salt Pile
+  effects:
+  - name: Weakness to Magic
+    power: 1.0
+    value: 1.0
+  - name: Fortify Restoration
+    power: 1.0
+    value: 1.0
+  - name: Slow
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Salt_Pile
+  value: 2
+  weight: 0.2
+- name: Ectoplasm
+  effects:
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Destruction
+    power: 0.8
+    value: 1.0
+  - name: Fortify Magicka
+    power: 1.0
+    value: 1.0
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Ectoplasm
+  value: 25
+  weight: 0.1
+- name: White Cap
+  effects:
+  - name: Weakness to Frost
+    power: 1.0
+    value: 1.0
+  - name: Fortify Heavy Armor
+    power: 1.0
+    value: 1.0
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Ravage Magicka
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:White_Cap
+  value: 0
+  weight: 0.3
+- name: Tundra Cotton
+  effects:
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  - name: Fortify Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Block
+    power: 1.0
+    value: 1.0
+  - name: Fortify Barter
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Tundra_Cotton
+  value: 1
+  weight: 0.1
+- name: Large Antlers
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Stamina
+    power: 1.0
+    value: 1.0
+  - name: Slow
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Large_Antlers
+  value: 2
+  weight: 0.1
+- name: Frost Mirriam
+  effects:
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  - name: Ravage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Frost_Mirriam
+  value: 1
+  weight: 0.1
+- name: Wisp Wrappings
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Destruction
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  - name: Resist Magic
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Wist_Wrappings
+  value: 2
+  weight: 0.1
+- name: Netch Jelly
+  effects:
+  - name: Paralysis
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  - name: Restore Stamina
+    power: 2.0
+    value: 1.0
+  - name: Fear
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Netch_Jelly
+  value: 20
+  weight: 0.5
+- name: Salmon Roe
+  effects:
+  - name: Restore Stamina
+    power: 0.4
+    value: 1.0
+  - name: Waterbreathing
+    power: 1.0
+    value: 15.4
+  - name: Fortify Magicka
+    power: 12.5
+    value: 1.05
+  - name: Regenerate Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Salmon_Roe
+  value: 5
+  weight: 0.2
+- name: Hawk's Egg
+  effects:
+  - name: Resist Magicka
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Waterbreathing
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Stamina
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Hawk%27s_Egg
+  value: 5
+  weight: 0.5
+- name: Ashen Grass Pod
+  effects:
+  - name: Resist Fire
+    power: 1.34
+    value: 1.0
+  - name: Weakness to Shock
+    power: 1.0
+    value: 1.0
+  - name: Fortify Lockpicking
+    power: 1.0
+    value: 1.0
+  - name: Fortify Sneak
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Ashen_Grass_Pod
+  value: 1
+  weight: 0.1
+- name: Wheat
+  effects:
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Health
+    power: 1.0
+    value: 1.0
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Magicka
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Wheat
+  value: 5
+  weight: 0.1
+- name: Trama Root
+  effects:
+  - name: Weakness to Shock
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Slow
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Trama_Root
+  value: 1
+  weight: 0.2
+- name: Burnt Spriggan Wood
+  effects:
+  - name: Weakness to Fire
+    power: 1.0
+    value: 1.0
+  - name: Fortify Alteration
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Slow
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Burnt_Spriggan_Wood
+  value: 20
+  weight: 0.5
+- name: Ash Hopper Jelly
+  effects:
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Light Armor
+    power: 1.0
+    value: 1.0
+  - name: Resist Shock
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Frost
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Ash_Hopper_Jelly
+  value: 20
+  weight: 0.25
+- name: Elves Ear
+  effects:
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Frost
+    power: 1.0
+    value: 1.0
+  - name: Fortify Marksman
+    power: 1.0
+    value: 1.0
+  - name: Resist Fire
+    power: 1.0
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Elves_Ear
+  value: 10
+  weight: 0.1
+- name: Spriggan Sap
+  effects:
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Fortify Enchanting
+    power: 1.0
+    value: 1.0
+  - name: Fortify Smithing
+    power: 1.0
+    value: 1.0
+  - name: Fortify Alteration
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Spriggan_Sap
+  value: 15
+  weight: 0.2
+- name: Slaughterfish Scales
+  effects:
+  - name: Resist Frost
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Heavy Armor
+    power: 1.0
+    value: 1.0
+  - name: Fortify Block
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Scales
+  value: 3
+  weight: 0.2
+- name: Briar Heart
+  effects:
+  - name: Restore Magicka
+    power: 1.0
+    value: 1.0
+  - name: Fortify Block
+    power: 0.5
+    value: 1.0
+  - name: Paralysis
+    power: 1.0
+    value: 1.0
+  - name: Fortify Magicka
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Briar_Heart
+  value: 20
+  weight: 0.5
+- name: Bee
+  effects:
+  - name: Restore Stamina
+    power: 1.0
+    value: 1.0
+  - name: Ravage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Regenerate Stamina
+    power: 1.0
+    value: 1.0
+  - name: Weakness to Shock
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Bee
+  value: 3
+  weight: 0.1
+- name: Falmer Ear
+  effects:
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Frenzy
+    power: 1.0
+    value: 1.0
+  - name: Resist Poison
+    power: 1.0
+    value: 1.0
+  - name: Fortify Lockpicking
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Falmer_Ear
+  value: 10
+  weight: 0.2
+- name: Nightshade
+  effects:
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka Regen
+    power: 1.0
+    value: 1.0
+  - name: Lingering Damage Stamina
+    power: 1.0
+    value: 1.0
+  - name: Fortify Destruction
+    power: 0.8
+    value: 1.0
+  farmable: true
+  link: https://en.uesp.net/wiki/Skyrim:Nightshade
+  value: 8
+  weight: 0.1
+- name: River Betty
+  effects:
+  - name: Damage Health
+    power: 2.5
+    value: 34.5
+  - name: Fortify Alteration
+    power: 1.0
+    value: 1.0
+  - name: Slow
+    power: 1.0
+    value: 1.0
+  - name: Fortify Carry Weight
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:River_Betty
+  value: 15
+  weight: 0.25
+- name: Daedra Heart
+  effects:
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Restore Health
+    power: 1.0
+    value: 1.0
+  - name: Fear
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Daedra_Heart
+  value: 250
+  weight: 0.5
+- name: Skeever Tail
+  effects:
+  - name: Damage Stamina Regen
+    power: 1.0
+    value: 1.0
+  - name: Ravage Health
+    power: 1.0
+    value: 1.0
+  - name: Damage Health
+    power: 1.0
+    value: 1.0
+  - name: Fortify Light Armor
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Skeever_Tail
+  value: 3
+  weight: 0.2
+- name: Chaurus Eggs
+  effects:
+  - name: Weakness to Poison
+    power: 1.0
+    value: 1.0
+  - name: Fortify Stamina
+    power: 1.0
+    value: 1.0
+  - name: Damage Magicka
+    power: 1.0
+    value: 1.0
+  - name: Invisibility
+    power: 1.0
+    value: 1.0
+  farmable: false
+  link: https://en.uesp.net/wiki/Skyrim:Charus_Egg
+  value: 10
+  weight: 0.2

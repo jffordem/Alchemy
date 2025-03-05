@@ -1,10 +1,11 @@
 FROM python:3-slim
-# FROM python:2.7-slim
-#ENV http_proxy web-proxy.boi.hp.com:8080
-#ENV https_proxy web-proxy.boi.hp.com:8080
+
 WORKDIR /app
 COPY . /app
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
-#RUN pip install --trusted-host pypi.python.org --proxy http://web-proxy.boi.hp.com:8080 -r requirements.txt
-EXPOSE 80
-CMD ["python", "app.py"]
+RUN pip install "poetry==1.1.4"
+ENV PATH="/root/.poetry/bin:$PATH"
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-dev
+
+EXPOSE 8080
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]

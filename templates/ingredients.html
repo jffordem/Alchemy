@@ -30,10 +30,10 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th><a href="{{url_for('skyrimIngredients', sortby='name')}}">Name</a></th>
-                                <th><a href="{{url_for('skyrimIngredients', sortby='farmable')}}">Farmable</a></th>
-                                <th><a href="{{url_for('skyrimIngredients', sortby='weight')}}">Weight</a></th>
-                                <th><a href="{{url_for('skyrimIngredients', sortby='value')}}">Value</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='name')}}">Name</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='farmable')}}">Farmable</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='weight')}}">Weight</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='value')}}">Value</a></th>
                                 <th>Modifiers</th>
                                 <th>Link</th>
                             </tr>
@@ -41,13 +41,13 @@
                         <tbody>
                             {% for ingredient in ingredients %}
                             <tr>
-                                <td><a href="{{url_for('skyrimIngredient', name=ingredient.name)}}">{{ingredient.name}}</a></td>
-                                <td>{% if ingredient.farmable %}<a href="{{url_for('skyrimIngredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrimIngredients', farmable=false)}}">False</a>{% endif %}</td>
+                                <td><a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a></td>
+                                <td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}">False</a>{% endif %}</td>
                                 <td>{{ingredient.weight}}</td>
                                 <td>{{ingredient.value}}</td>
                                 <td style="text-align: center">
-                                    {% if buffs[ingredient.name] %}<span class="badge badge-success badge-pill">*</span>{% endif %}
-                                    {% if nerfs[ingredient.name] %}<span class="badge badge-danger badge-pill">*</span>{% endif %}
+                                    {% if ingredient.buffed %}<span class="badge badge-success badge-pill">*</span>{% endif %}
+                                    {% if ingredient.nerfed %}<span class="badge badge-danger badge-pill">*</span>{% endif %}
                                 </td>
                                 <td><a href="{{ingredient.link}}">UESP</a></td>
                             </tr>
