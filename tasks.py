@@ -13,20 +13,12 @@ def start_debug(c):
 @task
 def docker_build(c):
     "invoke docker-build"
-    c.run('docker build -t skyrim-alchemy .')
+    c.run('docker build -t alchemy .')
 
 @task
 def docker_run(c):
     "invoke docker-run"
-    c.run('docker run -p 5000:5000 -d skyrim-alchemy')
-
-@task
-def docker_stop(c):
-    "invoke docker-stop"
-    c.run('docker stop $(docker ps -a -q)')
-    c.run('docker rm $(docker ps -a -q)')
-    c.run('docker rmi $(docker images -q)')
-    c.run('docker system prune -a')
+    c.run('docker run -p 8088:8088 -d alchemy')
 
 @task
 def docker_push(c):

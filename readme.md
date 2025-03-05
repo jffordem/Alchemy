@@ -80,13 +80,13 @@ invoke test
 To rebuild the docker container:
 
 ```bash
-docker build -t skyrim-alchemy .
+docker build -t alchemy .
 ```
 
 To run the Flask server in a Docker container:
 
 ```bash
-docker run -p 5000:5000 skyrim-alchemy
+docker run -p 5000:5000 alchemy
 ```
 
 ## Skyrim Muffle
