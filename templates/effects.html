@@ -38,7 +38,11 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Name</th><th>Description</th><th>School</th><th>Type</th><th>Cost</th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='name') }}">Name</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='description') }}">Description</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='school') }}">School</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='type') }}">Type</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='cost') }}">Cost</a></th>
                             </tr>
                         </thead>
                         <tbody>

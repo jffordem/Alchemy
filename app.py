@@ -54,11 +54,20 @@ def skyrim_ingredients():
         predicate = lambda ingredient: ingredient.farmable == farmable
     else:
         predicate = pred_true
-    # sort = { 'field': 'value', 'reverse': True }
-    # if 'sortby' in request.args:
-    #     sort = { 'field': request.args.get('sortby'), 'reverse': False }
+    if 'sortby' in request.args:
+        sortby = request.args.get('sortby')
+        if sortby == 'name':
+            sort, reverse = lambda ingredient: ingredient.name, False
+        elif sortby == 'value':
+            sort, reverse = lambda ingredient: ingredient.value, True
+        elif sortby == 'weight':
+            sort, reverse = lambda ingredient: ingredient.weight, True
+        else:
+            sort, reverse = lambda ingredient: ingredient.name, False
+    else:
+        sort, reverse = lambda ingredient: ingredient.name, False
     ingredients = get_ingredients_by_filter(predicate)
-    #ingredients.sort(key=lambda ingredient: ingredient[sort['field']], reverse=sort['reverse'])
+    ingredients.sort(key=sort, reverse=reverse)
     return render_template('ingredients.html', ingredients=ingredients)
 
 
@@ -73,18 +82,8 @@ def skyrim_ingredient(name):
 
 @app.route("/skyrim/effects")
 def skyrim_effects():
-    if 'school' in request.args:
-        school = request.args.get('school')
-        match_school = lambda effect: effect.school == school
-    else:
-        match_school = pred_true
-    if 'type' in request.args:
-        effect_type = request.args.get('type')
-        match_type = lambda effect: effect.type == effect_type
-    else:
-        match_type = pred_true
-    effects = get_effects_by_filter(pred_and(match_school, match_type))
-    #effects.sort(key=lambda effect: effect.cost, reverse=True)
+    sortby = request.args.get('sortby', 'name')
+    effects = sorted(AllEffectsByName.values(), key=lambda e: getattr(e, sortby))
     return render_template('effects.html', effects=effects)
 
 
