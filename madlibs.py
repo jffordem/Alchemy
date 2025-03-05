@@ -75,7 +75,7 @@ def _any(s):
         elif ch == ')':
             temp += ch
             i -= 1
-        elif i == 0 and ch == '/':
+        elif i == 0 and ch == '|':
             result.append(_all(temp))
             temp = ""
         else:

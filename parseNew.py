@@ -1,7 +1,8 @@
-import table
-from table import Table, printTable
 import re
 import sys
+import csv
+from rich.console import Console
+from rich.table import Table
 
 def parseEffect(effect):
     def parseModifiers(name, mods):
@@ -39,6 +40,29 @@ def parseEffect(effect):
         return (match[1], '1', '1')
     raise Exception(f'could not parse {effect}')
 
+def write_csv(headers, rows, filename):
+    """Write the data to a CSV file."""
+    with open(filename, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(rows)
+
+def display_table(headers, rows):
+    """Display the data in a rich table format."""
+    table = Table(title="Parsed Ingredients")
+    
+    # Add columns
+    for header in headers:
+        table.add_column(header, justify="left", style="cyan")
+    
+    # Add rows
+    for row in rows:
+        table.add_row(*[str(row.get(header, '')) for header in headers])
+    
+    # Display the table
+    console = Console()
+    console.print(table)
+
 if __name__ == '__main__':
     with open('temp-new-ones.txt') as f:
         headers = 'name,weight,value,effect_1_name,effect_1_power,effect_1_value,effect_2_name,effect_2_power,effect_2_value,effect_3_name,effect_3_power,effect_3_value,effect_4_name,effect_4_power,effect_4_value'.split(',')
@@ -55,10 +79,6 @@ if __name__ == '__main__':
                 row['name'] = fields[1].strip()
                 state = 'name'
             elif state == 'name':
-                #if len(fields) == 1:
-                #    row['description'] = fields[0]
-                #elif len(fields) == 2:
-                #    row['description'] = fields[1]
                 state = 'description'
             elif state == 'description':
                 row['effect_1_name'], row['effect_1_power'], row['effect_1_value'] = parseEffect(fields[0])
@@ -71,6 +91,8 @@ if __name__ == '__main__':
         if len(row) > 0:
             rows.append(row)
 
-    t = Table(headers, rows)
-    #printTable(t)
-    t.writeCsv('temp-new-ones.csv')
+    # Display the table
+    display_table(headers, rows)
+    
+    # Write to CSV
+    write_csv(headers, rows, 'temp-new-ones.csv')

@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <title>Skyrim</title>
+    <style>
+        .breadcrumb-right {
+            margin-left: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,10 +24,11 @@
         <div class="row">
             <section class="col-12">
     
-                <nav class="breadcrumb fixed-top">
+                <nav class="breadcrumb fixed-top d-flex">
                     <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
                     <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
                     <span class="breadcrumb-item active">Ingredients</span>
+                    <a class="breadcrumb-right" href="{{url_for('about')}}">About</a>
                 </nav>
 
                 <nav class="mt-5">

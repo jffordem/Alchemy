@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Skyrim</title>
+    <style>
+        .breadcrumb-right {
+            margin-left: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,9 +22,10 @@
     <div class="row">
         <section class="col-12">
 
-            <nav class="breadcrumb fixed-top">
+            <nav class="breadcrumb fixed-top d-flex">
                 <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
                 <span class="breadcrumb-item active">Madlibs</span>
+                <a class="breadcrumb-right" href="{{url_for('about')}}">About</a>
             </nav>
 
             <div class="mt-5">

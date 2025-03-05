@@ -1,6 +1,7 @@
+import os
 from flask import Flask, request, send_from_directory, render_template
 import random
-import json, os
+import json
 
 from madlibs import AllMadlibsByName
 from ingredient import AllIngredientsByName, get_ingredients_by_filter, get_ingredient_by_name
@@ -134,5 +135,14 @@ def madlibs(name):
     return "Not Found", 404
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+@app.route("/about")
+def about():
+    version = os.getenv('APP_VERSION', '1.0.0')
+    build_date = os.getenv('BUILD_DATE', '2023-01-01')
+    return render_template('about.html', version=version, build_date=build_date)
+
+
+if __name__ == '__main__':
+    # Use PORT environment variable if set (e.g., in Docker), otherwise default to 5000
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)

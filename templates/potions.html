@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <title>Skyrim</title>
+
+    <style>
+        .breadcrumb-right {
+            margin-left: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,10 +25,11 @@
         <div class="row">
             <section class="col-12">
     
-                <nav class="breadcrumb fixed-top">
+                <nav class="breadcrumb fixed-top d-flex">
                     <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
                     <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
                     <span class="breadcrumb-item active">Potions</span>
+                    <a class="breadcrumb-right" href="{{url_for('about')}}">About</a>
                 </nav>
 
                 <div class="mt-5">
@@ -62,9 +69,9 @@
     
                     <h2>More Potions</h2>
                     <ul class="list-group mb-5">
-                        <li class="list-group-item"><a href="{{url_for('skyrimPotions', ingredients='farmable', limit=100)}}">Potions with farmable ingredients</a></li>
-                        <li class="list-group-item"><a href="{{url_for('skyrimPotions', ingredients='all', limit=100)}}">Potions with all ingredients</a></li>
-                        <li class="list-group-item"><a href="{{url_for('skyrimPotions')}}">Potions with random 5 ingredients</a></li>
+                        <li class="list-group-item"><a href="{{url_for('skyrim_potions', ingredients='farmable', limit=100)}}">Potions with farmable ingredients</a></li>
+                        <li class="list-group-item"><a href="{{url_for('skyrim_potions', ingredients='all', limit=100)}}">Potions with all ingredients</a></li>
+                        <li class="list-group-item"><a href="{{url_for('skyrim_potions')}}">Potions with random 5 ingredients</a></li>
                     </ul>
                 </div>
                 <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->

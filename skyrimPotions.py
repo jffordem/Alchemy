@@ -1,212 +1,82 @@
-import math
-import json
-import csv
-# from table import Table, printTable, CsvTableFormat
-from pprint import pprint
-# from alchemyData import indexOn
 from potion import Potion
-from ingredient import AllIngredientsByName
+from ingredient import AllIngredientsByName, get_ingredient_by_name, get_ingredients_by_filter
 from rich.console import Console
-from rich.table import Table as Table
+from rich.table import Table
 from rich.progress import track
+import argparse
+from enum import Enum
 
 __doc__ = '''
-Testbed for Potions.  Mostly deprecated now that the Flask app is up and running.
+Utility script for displaying potion information in a tabular format.
+All core potion functionality has been moved to the Potion class.
+
+Usage:
+    python skyrimPotions.py                     # Use all ingredients, sort by value
+    python skyrimPotions.py -i Wheat Garlic     # Specific ingredients
+    python skyrimPotions.py -i Farmable         # Use all farmable ingredients
+    python skyrimPotions.py -s effects          # Sort by number of effects
+    python skyrimPotions.py -f ingredients.txt   # Read ingredients from file
 '''
 
+class SortColumn(str, Enum):
+    """Sort columns for potion display."""
+    VALUE = "value"
+    EFFECTS = "effects"
+    INGREDIENTS = "ingredients"
 
-# def findDuplicates(potions):
-#     def makeIngredientsKey(potion):
-#         return ",".join(sorted(list(potion["ingredients"])))
-#     all = dict()
-#     for potion in potions:
-#         key = makeIngredientsKey(potion)
-#         #print(key)
-#         if key in all:
-#             yield potion
-#         all[key] = potion
+    def __str__(self):
+        return self.value
 
-# def uniquePotions(potions):
-#     def makeIngredientsKey(potion):
-#         return ",".join(sorted(list(potion["ingredients"])))
-#     all = dict()
-#     for potion in potions:
-#         key = makeIngredientsKey(potion)
-#         all[key] = potion
-#     return all.values()
+def get_sort_key(sort_by: SortColumn):
+    """Get the sort key function for a given column."""
+    sort_keys = {
+        SortColumn.VALUE: lambda p: p.value,
+        SortColumn.EFFECTS: lambda p: len(p.active_effects),
+        SortColumn.INGREDIENTS: lambda p: len(p.ingredients)
+    }
+    return sort_keys[sort_by]
 
-# def findPotions(potions, pred):
-#     for potion in potions:
-#         if pred(potion):
-#             yield potion
-
-# def matchNumIngredients(n):
-#     return lambda potion: len(potion["effects"]) == n 
-
-# def matchFarmableIngredients(ingredients):
-#     def hasFarmableIngredients(potion):
-#         return all(ingredients[ingredient]['farmable'] for ingredient in potion['ingredients'])
-#     return hasFarmableIngredients
-
-# def matchNot(pred):
-#     return lambda x: not pred(x)
-
-# def matchAny(*preds):
-#     return lambda item: any(pred(item) for pred in preds)
-
-# def matchAll(*preds):
-#     return lambda item: all(pred(item) for pred in preds)
-
-# def findFiveEffectPotions(potions, ingredients):
-#     for potion in findPotions(potions, matchAll(matchNumIngredients(5), matchFarmableIngredients(ingredients))):
-#         pprint(potion)
-
-# def formatIngredients(ingredientsByName):
-#     for name,type in ingredientsByName.items():
-#         template = """
-#             {{
-#                 "name": "{name}",
-#                 "value": 1,
-#                 "farmable": {farmable},
-#                 "effects": [ ]
-#             }},
-#         """
-#         print(template.format(name=name, farmable=str(type=="Plant").lower()))
-
-# def readIngredientsCsv(file):
-#     with open(file, 'r') as f:
-#         reader = csv.reader(f, delimiter=",")
-#         result = dict()
-#         for line in reader:
-#             if line == None or len(line) == 0: continue
-#             result[line[0]] = line[1:]
-#         return result
-
-# def combineIngredients(ingredients):
-#     result = dict()
-#     for i in ingredients:
-#         for effect in i['effects']:
-#             name = effect['name']
-#             power = effect['power']
-#             value = effect['value']
-#             if name not in result:
-#                 result[name] = {
-#                     'name': name,
-#                     'count': 1,
-#                     'power': power,
-#                     'value': value
-#                 }
-#             else:
-#                 result[name]['count'] += 1
-#                 result[name]['power'] *= power
-#                 result[name]['value'] *= value
-#     return { name: effect for name, effect in result.items() if effect['count'] > 1 }
-
-# def hasEffect(ingredient, effectName):
-#     effects = { effect["name"] for effect in ingredient["effects"] }
-#     return effectName in effects
-
-# def allCombinations(items):
-#     for i in range(len(items)-1):
-#         for j in range(i+1, len(items)):
-#             yield (items[i], items[j])
-#     for i in range(len(items)-2):
-#         for j in range(i+1, len(items)-1):
-#             for k in range(j+1, len(items)):
-#                 yield (items[i], items[j], items[k])
-
-# def getEffectValue(effect):
-#     """
-#     Gold_cost = floor( Base_Cost * (Magnitude^1.1) * 0.0794328 * (Duration^1.1) )
-#     If the magnitude or duration is zero, the corresponding term is dropped from the equation, i.e.:
-
-#     Gold_cost (When Magnitude = 0) = floor( Base_Cost * 0.0794328 * (Duration^1.1) )
-#     Gold_cost (When Duration = 0) = floor( Base_Cost * (Magnitude^1.1) )
-#     If the magnitude or duration is not displayed in game, that does not necessarily mean that the value is zero. The game still has an internal value for each parameter (based on the ingredient's Base_Mag and Base_Dur) which is used in this calculation. These internal values are listed in the following table.
-#     """
-#     result = effect["cost"]
-#     if effect["mag"] > 0:
-#         result *= effect["mag"] ** 1.1
-#     if effect["dur"] > 0:
-#         result *= effect["dur"] ** 1.1 * 0.0794328
-#     print("Value for", effect["name"], "is", result)
-#     return math.floor(result)
-
-# def New_getValue(effects, effectsByName):
-#     total = 0
-#     for name,values in effects.items():
-#         effect = effectsByName[name]
-#         temp = getEffectValue(effect)
-#         for value in values:
-#             temp *= value["value"]
-#         total += temp
-#     return total
-
-# def get_value(effects, effectsByName):
-#     total = 0
-#     for name, buffs in effects.items():
-#         effect = effectsByName[name]
-#         total += effect["cost"] * buffs['value']
-#     return total
-
-def exceptions(ingredient):
-    if ingredient.name in { "Jarrin Root" }: 
-        return False
-    # return ingredient.farmable
-    return True
-    # effects = indexOn("name", ingredient["effects"])
-    # return "Paralysis" in effects
-
-# def getPotions(ingredient_names, ingredientsByName, effectsByName):
-#     ingredients = [ ingredientsByName[name] for name in ingredient_names if name in ingredientsByName.keys() ]
-#     rows = list()
-#     for these in allCombinations(ingredients):
-#         effects = combineIngredients(these)
-#         if len(effects) > 0:
-#             value = get_value(effects, effectsByName)
-#             rows.append({ "ingredients": these, "value": value, "effects": effects })
-#     rows = sorted(rows, key=lambda item: item["value"], reverse=True)
-#     for row in rows:
-#         row["value"] = "{:10.2f}".format(row["value"]).strip()
-#     return rows
-
-#def getPotionsTable(ingredient_names):
-#    rows = getPotions(ingredient_names)
-#    header = [ "1", "2", "3", "$", "N", "E" ]
-#    return Table(header, rows)
-
-# def printAllPotionsByValue(ingredientsByName, effectsByName):
-#     printPotionsByValue(ingredientsByName.values(), effectsByName)
-
-# def printPotionsByValue(ingredients, effectsByName):
-#     header = [ "1", "2", "3", "$", "N", "E" ]
-#     rows = list()
-#     for these in allCombinations(list(filter(exceptions, ingredients))):
-#         effects = combineIngredients(these)
-#         if len(effects) > 0:
-#             value = get_value(effects, effectsByName)
-#             a, b, c = these
-#             rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "N": len(effects), "E": ", ".join(effects.keys()) })
-#     rows = sorted(rows, key=lambda item: item["$"])
-#     for row in rows:
-#         row["$"] = "{:10.4f}".format(row["$"]).strip()
-#     printTable(Table(header, rows))
-
-def print_potions_by_value(ingredients):
-    ingredients = list(filter(exceptions, ingredients))
+def print_potions(ingredients, *, sort_by: SortColumn = SortColumn.VALUE, limit: int = 10):
+    """Print a table of potions sorted by the specified column.
+    
+    Args:
+        ingredients: List of ingredients to brew potions from.
+        sort_by: Column to sort by (value, effects, or ingredients)
+        limit: Maximum number of potions to show. Use -1 to show all potions.
+    """
+    ingredients = list(filter(Potion.is_valid_ingredient, ingredients))
     potions = Potion.brew(ingredients, track=track)
-    table = Table(title="Potions", show_header=True, header_style="bold magenta")
+    table = Table(
+        title=f"Potions (Sorted by {sort_by.value})", 
+        show_header=True, 
+        header_style="bold magenta",
+        padding=(0,1,0,1),  # top, right, bottom, left padding
+        show_lines=True     # Show lines between rows
+    )
 
-    header = [ "1", "2", "3", "$", "N", "E" ]
-    for column in header:
-        table.add_column(column)
+    # Add columns with proper widths
+    table.add_column("Ingredient 1", width=16, no_wrap=True)
+    table.add_column("Ingredient 2", width=16, no_wrap=True)
+    table.add_column("Ingredient 3", width=16, no_wrap=True)
+    table.add_column("$ Value", justify="right", width=8, no_wrap=True)
+    table.add_column("#", justify="right", width=3, no_wrap=True)
+    table.add_column("Effects", min_width=40, no_wrap=False)
 
-    for potion in sorted(potions, key=lambda potion: potion.value):
+    # Sort potions by specified column
+    potions = sorted(potions, key=get_sort_key(sort_by), reverse=True)
+    
+    # Show all potions if limit is -1, otherwise show top N
+    potions_to_show = potions if limit == -1 else potions[:limit]
+    for potion in potions_to_show:
+        ingredients = list(potion.ingredients)
+        while len(ingredients) < 3:
+            ingredients.append(None)
+            
         table.add_row(
-            potion.ingredients[0].name if len(potion.ingredients) > 0 else "",
-            potion.ingredients[1].name if len(potion.ingredients) > 1 else "",
-            potion.ingredients[2].name if len(potion.ingredients) > 2 else "",
-            "{:10.4f}".format(potion.value).strip(),
+            ingredients[0].name if ingredients[0] else "",
+            ingredients[1].name if ingredients[1] else "",
+            ingredients[2].name if ingredients[2] else "",
+            f"{potion.value:8.2f}".strip(),  # Format value with 2 decimal places
             str(len(potion.active_effects)),
             ", ".join(effect.name for effect in potion.active_effects)
         )
@@ -214,71 +84,109 @@ def print_potions_by_value(ingredients):
     console = Console()
     console.print(table)
 
-# def printIngredients(effectName, ingredientsByName):
-#     names = [ ingredient["name"] for ingredient in ingredientsByName.values() if hasEffect(ingredient, effectName) ]
-#     for name in names:
-#         print(name)
+def get_ingredients_from_file(filepath):
+    """Read ingredients from a file, one per line.
+    
+    Args:
+        filepath: Path to ingredients file
+        
+    Returns:
+        List of ingredients
+        
+    Example file format:
+        Wheat
+        Garlic
+        Blue Mountain Flower
+    """
+    try:
+        with open(filepath, 'r') as f:
+            names = [line.strip() for line in f if line.strip()]
+        
+        ingredients = []
+        for name in names:
+            try:
+                ingredient = get_ingredient_by_name(name)
+                ingredients.append(ingredient)
+            except ValueError as e:
+                print(f"Warning: {e}")
+        return ingredients
+    except FileNotFoundError:
+        print(f"Error: Ingredients file '{filepath}' not found")
+        return []
+    except Exception as e:
+        print(f"Error reading ingredients file: {e}")
+        return []
 
-# def printIngredientsByValue(ingredientsByName):
-#     def getEffect(ingredient, index): 
-#         result = ingredient["effects"][index]["name"]
-#         if ingredient["effects"][index]["power"] != 1.0:
-#             result += "(*{:1.1f})".format(ingredient["effects"][index]["power"])
-#         if ingredient["effects"][index]["value"] != 1.0:
-#             result += "(${:1.1f})".format(ingredient["effects"][index]["value"])
-#         return result
-#     header = [ "Name", "E1", "E2", "E3", "E4", "Farmable", "Weight", "Value" ]
-#     rows = list()
-#     for i in ingredientsByName.values():
-#         rows.append({ "Name": i["name"], "E1": getEffect(i, 0), "E2": getEffect(i, 1), "E3": getEffect(i, 2), "E4": getEffect(i, 3), "Farmable": i["farmable"], "Weight": i["weight"], "Value": i["value"] })
-#     rows = sorted(rows, key=lambda item: item["Farmable"])
-#     printTable(Table(header, rows))
+def get_ingredients_from_args(args):
+    """Get list of ingredients based on command line arguments.
+    
+    Special keywords:
+    - Farmable: Use all farmable ingredients
+    - @filename: Read ingredients from file
+    """
+    if not args.ingredients:
+        return list(AllIngredientsByName.values())
+    
+    if len(args.ingredients) == 1:
+        if args.ingredients[0].lower() == "farmable":
+            return get_ingredients_by_filter(lambda i: i.farmable)
+        if args.file:
+            return get_ingredients_from_file(args.file)
+    
+    ingredients = []
+    for name in args.ingredients:
+        try:
+            ingredient = get_ingredient_by_name(name)
+            ingredients.append(ingredient)
+        except ValueError as e:
+            print(f"Warning: {e}")
+    return ingredients
 
-# def getPotionsByEffects(names, ingredientsByName, effectsByName):
-#     def matchEffects(ingredient):
-#         return len({ effect["name"] for effect in ingredient["effects"] }.intersection(names)) > 0
-#     names = set(names)
-#     ingredients = [ ingredient for ingredient in ingredientsByName.values() if matchEffects(ingredient) ]
-#     header = [ "1", "2", "3", "$", "N", "E" ]
-#     rows = list()
-#     for these in allCombinations(ingredients):
-#         effects = combineIngredients(these)
-#         if set(effects.keys()).issuperset(names):
-#             value = get_value(effects, effectsByName)
-#             a, b, c = these
-#             rows.append({ "1": a["name"], "2": b["name"], "3": c["name"], "$": value, "N": len(effects), "E": ", ".join(effects.keys()) })
-#     rows = sorted(rows, key=lambda item: item["$"])
-#     for row in rows:
-#         row["$"] = "{:10.4f}".format(row["$"]).strip()
-#     return Table(header, rows)
-
-# def printAllIngredientsCsv(ingredientsByName):
-#     header = [ 'name', 'value', 'weight', 'farmable', 
-#         'effect_1_name', 'effect_1_power', 'effect_1_value', 
-#         'effect_2_name', 'effect_2_power', 'effect_2_value', 
-#         'effect_3_name', 'effect_3_power', 'effect_3_value' ]
-#     rows = [ ]
-#     for record in ingredientsByName.values():
-#         row = { 'name': record['name'],
-#                 'value': record['value'],
-#                 'weight': record['weight'],
-#                 'farmable': record['farmable'],
-#               }
-#         for index, effect in enumerate(record['effects']):
-#             row['effect_{}_name'.format(index+1)] = effect['name']
-#             row['effect_{}_power'.format(index+1)] = effect['power']
-#             row['effect_{}_value'.format(index+1)] = effect['value']
-#         rows.append(row)
-#     t = Table(header, rows)
-#     printTable(t, CsvTableFormat())
-
-# def printAllEffectsCsv(effectsByName):
-#     header = [ 'name', 'description', 'school', 'type', 'cost', 'mag', 'dur' ]
-#     rows = [ ]
-#     for record in effectsByName.values():
-#         rows.append({ key:record[key] for key in header })
-#     t = Table(header, rows)
-#     printTable(t, CsvTableFormat())
+def parse_args():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description="Display potion combinations and their values in a table format.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+    %(prog)s                      # Use all ingredients, sort by value
+    %(prog)s -i Wheat Garlic     # Use specific ingredients
+    %(prog)s -i Farmable         # Use all farmable ingredients
+    %(prog)s -s effects          # Sort by number of effects
+    %(prog)s -f ingredients.txt   # Read ingredients from file
+    %(prog)s --ingredients "Blue Mountain Flower" "Dragon's Tongue"  # Ingredients with spaces
+        """
+    )
+    parser.add_argument(
+        '-i', '--ingredients',
+        nargs='*',
+        help='List of ingredients to use. Use "Farmable" to select all farmable ingredients. If not specified, all ingredients will be used.',
+        metavar='INGREDIENT'
+    )
+    parser.add_argument(
+        '-f', '--file',
+        help='Read ingredients from file (one ingredient name per line)'
+    )
+    parser.add_argument(
+        '-s', '--sort',
+        type=lambda x: SortColumn(x.lower()),
+        choices=[e.value for e in SortColumn],
+        default=SortColumn.VALUE,
+        help='Column to sort by (default: value)'
+    )
+    parser.add_argument(
+        '-n', '--limit',
+        type=int,
+        default=10,
+        help='Maximum number of potions to show (default: 10, use -1 to show all)'
+    )
+    return parser.parse_args()
 
 if __name__ == '__main__':
-    print_potions_by_value(AllIngredientsByName.values())
+    args = parse_args()
+    ingredients = get_ingredients_from_args(args)
+    
+    if not ingredients:
+        print("No valid ingredients specified. Please check ingredient names and try again.")
+    else:
+        print_potions(ingredients, sort_by=args.sort, limit=args.limit)
