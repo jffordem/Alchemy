@@ -87,8 +87,10 @@ def skyrim_ingredient(name):
 @app.route("/skyrim/effects")
 def skyrim_effects():
     sortby = request.args.get('sortby', 'name')
-    effects = sorted(AllEffectsByName.values(), key=lambda e: getattr(e, sortby))
-    return render_template('effects.html', effects=effects)
+    direction = request.args.get('direction', 'asc')
+    reverse = direction == 'desc'
+    effects = sorted(AllEffectsByName.values(), key=lambda e: getattr(e, sortby), reverse=reverse)
+    return render_template('effects.html', effects=effects, sortby=sortby, direction=direction)
 
 
 @app.route("/skyrim/effects/<string:name>")

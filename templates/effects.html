@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
@@ -15,6 +16,9 @@
     <style>
         .breadcrumb-right {
             margin-left: auto;
+        }
+        .fa-sort-up, .fa-sort-down {
+            margin-left: 5px;
         }
     </style>
 </head>
@@ -38,11 +42,11 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='name') }}">Name</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='description') }}">Description</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='school') }}">School</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='type') }}">Type</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='cost') }}">Cost</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='name', direction='desc' if sortby == 'name' and direction == 'asc' else 'asc') }}">Name {% if sortby == 'name' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='description', direction='desc' if sortby == 'description' and direction == 'asc' else 'asc') }}">Description {% if sortby == 'description' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='school', direction='desc' if sortby == 'school' and direction == 'asc' else 'asc') }}">School {% if sortby == 'school' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='type', direction='desc' if sortby == 'type' and direction == 'asc' else 'asc') }}">Type {% if sortby == 'type' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='cost', direction='desc' if sortby == 'cost' and direction == 'asc' else 'asc') }}">Cost {% if sortby == 'cost' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,8 +62,6 @@
                             {% endfor %}
                         </tbody>
                     </table>
-    
-                    <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->    
                 </div>
 
                 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
