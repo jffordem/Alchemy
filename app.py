@@ -9,17 +9,22 @@ from effect import AllEffectsByName, get_effect_by_name, get_effects_by_filter
 from potion import Potion
 
 NOT_FOUND_MESSAGE = "Not Found"
+NOT_FOUND_STATUS = 404
 DEFAULT_PORT = 5000
 
 __doc__ = """
 Then configure Flask.
 
-C:> set FLASK_APP=app
-C:> set FLASK_ENV=development
+```cmd
+$ set FLASK_APP=app
+$ set FLASK_ENV=development
+```
 
 Then you can start the service.  It will be at http://localhost:5000 by default.
 
-C:> flask run
+```cmd
+$ flask run
+```
 """
 
 # better place for these predicate functions?
@@ -84,7 +89,7 @@ def skyrim_ingredient(name):
     if item:
         return render_template('ingredient.html', ingredient=item)
     else:
-        return NOT_FOUND_MESSAGE, 404
+        return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
 
 
 @app.route("/skyrim/effects")
@@ -102,7 +107,7 @@ def skyrim_effect(name):
     if item:
         return render_template('effect.html', effect=item)
     else:
-        return NOT_FOUND_MESSAGE, 404
+        return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
 
 
 @app.route('/api/skyrim/potions', methods=['GET'])

@@ -47,6 +47,7 @@
                                 <th><a href="{{ url_for('skyrim_effects', sortby='school', direction='desc' if sortby == 'school' and direction == 'asc' else 'asc') }}">School {% if sortby == 'school' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th><a href="{{ url_for('skyrim_effects', sortby='type', direction='desc' if sortby == 'type' and direction == 'asc' else 'asc') }}">Type {% if sortby == 'type' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th><a href="{{ url_for('skyrim_effects', sortby='cost', direction='desc' if sortby == 'cost' and direction == 'asc' else 'asc') }}">Cost {% if sortby == 'cost' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th>Link</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,6 +59,7 @@
                                 <td><a href="{{url_for('skyrim_effects', school=effect.school)}}">{{effect.school}}</a></td><!-- link to effects of that school -->
                                 <td><a href="{{url_for('skyrim_effects', type=effect.type)}}">{{effect.type}}</a></td><!-- link to effects of that type -->
                                 <td>{{effect.cost}}</td>
+                                <td><a href="{{effect.link}}" target="_blank">UESP</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
