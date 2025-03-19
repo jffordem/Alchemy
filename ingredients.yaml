@@ -16,6 +16,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Nirnroot
   value: 10
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png
+  image: //images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png
 - name: Emperor Parasol Moss
   effects:
   - name: Damage Health
@@ -34,6 +36,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Emperor_Parasol_Moss
   value: 1
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png/48px-SR-icon-ingredient-Emperor_Parasol_Moss.png
+  image: //images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png
 - name: Honeycomb
   effects:
   - name: Restore Stamina
@@ -52,6 +56,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Honeycomb
   value: 5
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/e/e0/SR-icon-ingredient-Honeycomb.png/48px-SR-icon-ingredient-Honeycomb.png
+  image: //images.uesp.net/thumb/e/e0/SR-icon-ingredient-Honeycomb.png
 - name: Swamp Fungal Pod
   effects:
   - name: Resist Shock
@@ -70,6 +76,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Swamp_Fungal_Pod
   value: 5
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/9/92/SR-icon-ingredient-Swamp_Fungal_Pod.png/48px-SR-icon-ingredient-Swamp_Fungal_Pod.png
+  image: //images.uesp.net/thumb/9/92/SR-icon-ingredient-Swamp_Fungal_Pod.png
 - name: Deathbell
   effects:
   - name: Damage Health
@@ -88,6 +96,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Deathbell
   value: 4
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/5/58/SR-icon-ingredient-Deathbell.png/48px-SR-icon-ingredient-Deathbell.png
+  image: //images.uesp.net/thumb/5/58/SR-icon-ingredient-Deathbell.png
 - name: Hawk Feathers
   effects:
   - name: Cure Disease
@@ -106,6 +116,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Hawk_Feathers
   value: 15
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/5/5c/SR-icon-ingredient-Hawk_Feathers.png/48px-SR-icon-ingredient-Hawk_Feathers.png
+  image: //images.uesp.net/thumb/5/5c/SR-icon-ingredient-Hawk_Feathers.png
 - name: Human Heart
   effects:
   - name: Damage Health
@@ -124,6 +136,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Human_Heart
   value: 0
   weight: 1
+  thumbnail: //images.uesp.net/thumb/f/f6/SR-icon-ingredient-Human_Heart.png/48px-SR-icon-ingredient-Human_Heart.png
+  image: //images.uesp.net/thumb/f/f6/SR-icon-ingredient-Human_Heart.png
 - name: Canis Root
   effects:
   - name: Damage Stamina
@@ -142,6 +156,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Canis_Root
   value: 5
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/f/f6/SR-icon-ingredient-Canis_Root.png/48px-SR-icon-ingredient-Canis_Root.png
+  image: //images.uesp.net/thumb/f/f6/SR-icon-ingredient-Canis_Root.png
 - name: Vampire Dust
   effects:
   - name: Invisibility
@@ -160,6 +176,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Vampire_Dust
   value: 25
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/2/2f/SR-icon-ingredient-Vampire_Dust.png/48px-SR-icon-ingredient-Vampire_Dust.png
+  image: //images.uesp.net/thumb/2/2f/SR-icon-ingredient-Vampire_Dust.png
 - name: Blue Butterfly Wing
   effects:
   - name: Damage Stamina
@@ -178,6 +196,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Blue_Butterfly_Wing
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/1/16/SR-icon-ingredient-Blue_Butterfly_Wing.png/48px-SR-icon-ingredient-Blue_Butterfly_Wing.png
+  image: //images.uesp.net/thumb/1/16/SR-icon-ingredient-Blue_Butterfly_Wing.png
 - name: Purple Mountain Flower
   effects:
   - name: Restore Stamina
@@ -196,6 +216,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Purple_Mountain_Flower
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/e/e1/SR-icon-ingredient-Purple_Mountain_Flower.png/48px-SR-icon-ingredient-Purple_Mountain_Flower.png
+  image: //images.uesp.net/thumb/e/e1/SR-icon-ingredient-Purple_Mountain_Flower.png
 - name: Ice Wraith Teeth
   effects:
   - name: Weakness to Frost
@@ -214,6 +236,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Ice_Wraith_Teeth
   value: 30
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/9/95/SR-icon-ingredient-Ice_Wraith_Teeth.png/48px-SR-icon-ingredient-Ice_Wraith_Teeth.png
+  image: //images.uesp.net/thumb/9/95/SR-icon-ingredient-Ice_Wraith_Teeth.png
 - name: Blue Dartwing
   effects:
   - name: Resist Shock
@@ -232,6 +256,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Blue_Dartwing
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/e/ee/SR-icon-ingredient-Blue_Dartwing.png/48px-SR-icon-ingredient-Blue_Dartwing.png
+  image: //images.uesp.net/thumb/e/ee/SR-icon-ingredient-Blue_Dartwing.png
 - name: Taproot
   effects:
   - name: Weakness to Magic
@@ -250,6 +276,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Taproot
   value: 15
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/7/78/SR-icon-ingredient-Taproot.png/48px-SR-icon-ingredient-Taproot.png
+  image: //images.uesp.net/thumb/7/78/SR-icon-ingredient-Taproot.png
 - name: Pearl
   effects:
   - name: Restore Stamina
@@ -268,6 +296,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Pearl
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/a/ad/SR-icon-ingredient-Pearl.png/48px-SR-icon-ingredient-Pearl.png
+  image: //images.uesp.net/thumb/a/ad/SR-icon-ingredient-Pearl.png
 - name: Juniper Berries
   effects:
   - name: Weakness to Fire
@@ -286,6 +316,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Juniper_Berries
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/1/10/SR-icon-ingredient-Juniper_Berries.png/48px-SR-icon-ingredient-Juniper_Berries.png
+  image: //images.uesp.net/thumb/1/10/SR-icon-ingredient-Juniper_Berries.png
 - name: Hanging Moss
   effects:
   - name: Damage Magicka
@@ -304,6 +336,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Hanging_Moss
   value: 1
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/2/22/SR-icon-ingredient-Hanging_Moss.png/48px-SR-icon-ingredient-Hanging_Moss.png
+  image: //images.uesp.net/thumb/2/22/SR-icon-ingredient-Hanging_Moss.png
 - name: Jazbay Grapes
   effects:
   - name: Weakness to Magic
@@ -322,6 +356,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Jazbey_Grapes
   value: 1
   weight: 0.2
+  thumbnail: Could not find thumbnail for Jazbay Grapes
+  image: Could not find image for Jazbay Grapes
 - name: Bone Meal
   effects:
   - name: Damage Stamina
@@ -340,6 +376,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Bone_Meal
   value: 5
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png
+  image: //images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png
 - name: Creep Cluster
   effects:
   - name: Restore Magicka
@@ -358,6 +396,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Creep_Cluster
   value: 1
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/1/15/SR-icon-ingredient-Creep_Cluster.png/48px-SR-icon-ingredient-Creep_Cluster.png
+  image: //images.uesp.net/thumb/1/15/SR-icon-ingredient-Creep_Cluster.png
 - name: Garlic
   effects:
   - name: Resist Poison
@@ -376,6 +416,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Garlic
   value: 1
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/e/e5/SR-icon-ingredient-Garlic.png/48px-SR-icon-ingredient-Garlic.png
+  image: //images.uesp.net/thumb/e/e5/SR-icon-ingredient-Garlic.png
 - name: Hawk Beak
   effects:
   - name: Restore Stamina
@@ -394,6 +436,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Hawk_Beak
   value: 15
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/6/69/SR-icon-ingredient-Hawk_Beak.png/48px-SR-icon-ingredient-Hawk_Beak.png
+  image: //images.uesp.net/thumb/6/69/SR-icon-ingredient-Hawk_Beak.png
 - name: Blue Mountain Flower
   effects:
   - name: Restore Health
@@ -412,6 +456,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Blue_Mountain_Flower
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/3/38/SR-icon-ingredient-Blue_Mountain_Flower.png/48px-SR-icon-ingredient-Blue_Mountain_Flower.png
+  image: //images.uesp.net/thumb/3/38/SR-icon-ingredient-Blue_Mountain_Flower.png
 - name: Spider Egg
   effects:
   - name: Damage Stamina
@@ -430,6 +476,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Spider_Egg
   value: 5
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/0/07/SR-icon-ingredient-Spider_Egg.png/48px-SR-icon-ingredient-Spider_Egg.png
+  image: //images.uesp.net/thumb/0/07/SR-icon-ingredient-Spider_Egg.png
 - name: Powdered Mammoth Tusk
   effects:
   - name: Restore Stamina
@@ -448,6 +496,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Powdered_Mammoth_Tusk
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/c/c9/SR-icon-ingredient-Powdered_Mammoth_Tusk.png/48px-SR-icon-ingredient-Powdered_Mammoth_Tusk.png
+  image: //images.uesp.net/thumb/c/c9/SR-icon-ingredient-Powdered_Mammoth_Tusk.png
 - name: Void Salts
   effects:
   - name: Weakness to Shock
@@ -466,6 +516,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Void_Salts
   value: 125
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/7/77/SR-icon-ingredient-Void_Salts.png/48px-SR-icon-ingredient-Void_Salts.png
+  image: //images.uesp.net/thumb/7/77/SR-icon-ingredient-Void_Salts.png
 - name: Torchbug Thorax
   effects:
   - name: Restore Stamina
@@ -484,6 +536,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Torchbug_Thorax
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/9/99/SR-icon-ingredient-Torchbug_Thorax.png/48px-SR-icon-ingredient-Torchbug_Thorax.png
+  image: //images.uesp.net/thumb/9/99/SR-icon-ingredient-Torchbug_Thorax.png
 - name: Chicken's Egg
   effects:
   - name: Resist Magic
@@ -502,6 +556,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Chicken%27s_Egg
   value: 2
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/d/de/SR-icon-ingredient-Chicken%27s_Egg.png/48px-SR-icon-ingredient-Chicken%27s_Egg.png
+  image: //images.uesp.net/thumb/d/de/SR-icon-ingredient-Chicken%27s_Egg.png
 - name: Small Antlers
   effects:
   - name: Weakness to Poison
@@ -520,6 +576,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Small_Antlers
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/4/4e/SR-icon-ingredient-Small_Antlers.png/48px-SR-icon-ingredient-Small_Antlers.png
+  image: //images.uesp.net/thumb/4/4e/SR-icon-ingredient-Small_Antlers.png
 - name: Bleeding Crown
   effects:
   - name: Weakness to Fire
@@ -538,6 +596,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Bleeding_Crown
   value: 10
   weight: 0.3
+  thumbnail: //images.uesp.net/thumb/a/a6/SR-icon-ingredient-Bleeding_Crown.png/48px-SR-icon-ingredient-Bleeding_Crown.png
+  image: //images.uesp.net/thumb/a/a6/SR-icon-ingredient-Bleeding_Crown.png
 - name: Thistle Branch
   effects:
   - name: Resist Frost
@@ -556,6 +616,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Thistle_Branch
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/b/bf/SR-icon-ingredient-Thistle_Branch.png/48px-SR-icon-ingredient-Thistle_Branch.png
+  image: //images.uesp.net/thumb/b/bf/SR-icon-ingredient-Thistle_Branch.png
 - name: Abecean Longfin
   effects:
   - name: Weakness to Frost
@@ -574,6 +636,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Abecean_Longfin
   value: 15
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/7/7a/SR-icon-ingredient-Abecean_Longfin.png/48px-SR-icon-ingredient-Abecean_Longfin.png
+  image: //images.uesp.net/thumb/7/7a/SR-icon-ingredient-Abecean_Longfin.png
 - name: Mudcrab Chitin
   effects:
   - name: Restore Stamina
@@ -592,6 +656,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Mudcrab_Chitin
   value: 2
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/7/74/SR-icon-ingredient-Mudcrab_Chitin.png/48px-SR-icon-ingredient-Mudcrab_Chitin.png
+  image: //images.uesp.net/thumb/7/74/SR-icon-ingredient-Mudcrab_Chitin.png
 - name: Histcarp
   effects:
   - name: Restore Stamina
@@ -610,6 +676,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Histcarp
   value: 6
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/e/ec/SR-icon-ingredient-Histcarp.png/48px-SR-icon-ingredient-Histcarp.png
+  image: //images.uesp.net/thumb/e/ec/SR-icon-ingredient-Histcarp.png
 - name: Beehive Husk
   effects:
   - name: Resist Poison
@@ -628,6 +696,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Beehive_Husk
   value: 5
   weight: 1
+  thumbnail: //images.uesp.net/thumb/8/84/SR-icon-ingredient-Beehive_Husk.png/48px-SR-icon-ingredient-Beehive_Husk.png
+  image: //images.uesp.net/thumb/8/84/SR-icon-ingredient-Beehive_Husk.png
 - name: Poison Bloom
   effects:
   - name: Damage Health
@@ -646,6 +716,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Poison_Bloom
   value: 5
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png/48px-SR-icon-ingredient-Poison_Bloom.png
+  image: //images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png
 - name: Dragon's Tongue
   effects:
   - name: Resist Fire
@@ -664,6 +736,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Dragon%27s_Tongue
   value: 5
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/0/0e/SR-icon-ingredient-Dragons_Tongue.png/48px-SR-icon-ingredient-Dragons_Tongue.png
+  image: //images.uesp.net/thumb/0/0e/SR-icon-ingredient-Dragons_Tongue.png
 - name: Troll Fat
   effects:
   - name: Resist Poison
@@ -682,6 +756,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Troll_Fat
   value: 15
   weight: 1
+  thumbnail: //images.uesp.net/thumb/8/8a/SR-icon-ingredient-Troll_Fat.png/48px-SR-icon-ingredient-Troll_Fat.png
+  image: //images.uesp.net/thumb/8/8a/SR-icon-ingredient-Troll_Fat.png
 - name: Orange Dartwing
   effects:
   - name: Restore Stamina
@@ -700,6 +776,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Orange_Dartwing
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/e/e7/SR-icon-ingredient-Orange_Dartwing.png/48px-SR-icon-ingredient-Orange_Dartwing.png
+  image: //images.uesp.net/thumb/e/e7/SR-icon-ingredient-Orange_Dartwing.png
 - name: Scaly Pholiota
   effects:
   - name: Weakness to Magic
@@ -718,6 +796,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Scaly_Pholiota
   value: 4
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/1/18/SR-icon-ingredient-Scaly_Pholiota.png/48px-SR-icon-ingredient-Scaly_Pholiota.png
+  image: //images.uesp.net/thumb/1/18/SR-icon-ingredient-Scaly_Pholiota.png
 - name: Dwarven Oil
   effects:
   - name: Weakness to Magic
@@ -736,6 +816,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Dwarven_Oil
   value: 15
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/e/e5/SR-icon-ingredient-Dwarven_Oil.png/48px-SR-icon-ingredient-Dwarven_Oil.png
+  image: //images.uesp.net/thumb/e/e5/SR-icon-ingredient-Dwarven_Oil.png
 - name: Cyrodilic Spadetail
   effects:
   - name: Damage Stamina
@@ -754,6 +836,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Cyrodilic_Spadetail
   value: 15
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/a/a9/SR-icon-ingredient-Cyrodilic_Spadetail.png/48px-SR-icon-ingredient-Cyrodilic_Spadetail.png
+  image: //images.uesp.net/thumb/a/a9/SR-icon-ingredient-Cyrodilic_Spadetail.png
 - name: Imp Stool
   effects:
   - name: Damage Health
@@ -772,6 +856,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Imp_Stool
   value: 0
   weight: 0.3
+  thumbnail: //images.uesp.net/thumb/7/77/SR-icon-ingredient-Imp_Stool.png/48px-SR-icon-ingredient-Imp_Stool.png
+  image: //images.uesp.net/thumb/7/77/SR-icon-ingredient-Imp_Stool.png
 - name: Pine Thrush Egg
   effects:
   - name: Restore Stamina
@@ -790,6 +876,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Pine_Thrush_Egg
   value: 2
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/0/0f/SR-icon-ingredient-Pine_Thrush_Egg.png/48px-SR-icon-ingredient-Pine_Thrush_Egg.png
+  image: //images.uesp.net/thumb/0/0f/SR-icon-ingredient-Pine_Thrush_Egg.png
 - name: Glowing Mushroom
   effects:
   - name: Resist Shock
@@ -808,6 +896,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Glowing_Mushroom
   value: 5
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/7/71/SR-icon-ingredient-Glowing_Mushroom.png/48px-SR-icon-ingredient-Glowing_Mushroom.png
+  image: //images.uesp.net/thumb/7/71/SR-icon-ingredient-Glowing_Mushroom.png
 - name: Slaughterfish Egg
   effects:
   - name: Resist Poison
@@ -826,6 +916,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Egg
   value: 3
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/8/84/SR-icon-ingredient-Slaughterfish_Egg.png/48px-SR-icon-ingredient-Slaughterfish_Egg.png
+  image: //images.uesp.net/thumb/8/84/SR-icon-ingredient-Slaughterfish_Egg.png
 - name: Grass Pod
   effects:
   - name: Resist Poison
@@ -844,6 +936,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Grass_Pod
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/7/78/SR-icon-ingredient-Grass_Pod.png/48px-SR-icon-ingredient-Grass_Pod.png
+  image: //images.uesp.net/thumb/7/78/SR-icon-ingredient-Grass_Pod.png
 - name: Giant Lichen
   effects:
   - name: Ravage Health
@@ -862,6 +956,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Giant_Lichen
   value: 5
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/8/8b/SR-icon-ingredient-Giant_Lichen.png/48px-SR-icon-ingredient-Giant_Lichen.png
+  image: //images.uesp.net/thumb/8/8b/SR-icon-ingredient-Giant_Lichen.png
 - name: Small Pearl
   effects:
   - name: Restore Stamina
@@ -880,6 +976,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Small_Pearl
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/8/8f/SR-icon-ingredient-Small_Pearl.png/48px-SR-icon-ingredient-Small_Pearl.png
+  image: //images.uesp.net/thumb/8/8f/SR-icon-ingredient-Small_Pearl.png
 - name: Nordic Barnacle
   effects:
   - name: Damage Magicka
@@ -898,6 +996,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Nordic_Barnacle
   value: 5
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/7/75/SR-icon-ingredient-Nordic_Barnacle.png/48px-SR-icon-ingredient-Nordic_Barnacle.png
+  image: //images.uesp.net/thumb/7/75/SR-icon-ingredient-Nordic_Barnacle.png
 - name: Butterfly Wing
   effects:
   - name: Restore Health
@@ -916,6 +1016,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Butterfly_Wing
   value: 3
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/f/f8/SR-icon-ingredient-Butterfly_Wing.png/48px-SR-icon-ingredient-Butterfly_Wing.png
+  image: //images.uesp.net/thumb/f/f8/SR-icon-ingredient-Butterfly_Wing.png
 - name: Hagraven Feathers
   effects:
   - name: Damage Magicka
@@ -934,6 +1036,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Hagraven_Feathers
   value: 20
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/d/d8/SR-icon-ingredient-Hagraven_Feathers.png/48px-SR-icon-ingredient-Hagraven_Feathers.png
+  image: //images.uesp.net/thumb/d/d8/SR-icon-ingredient-Hagraven_Feathers.png
 - name: Frost Salts
   effects:
   - name: Weakness to Fire
@@ -952,6 +1056,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Frost_Salts
   value: 100
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/5/58/SR-icon-ingredient-Frost_Salts.png/48px-SR-icon-ingredient-Frost_Salts.png
+  image: //images.uesp.net/thumb/5/58/SR-icon-ingredient-Frost_Salts.png
 - name: Mora Tapinella
   effects:
   - name: Restore Magicka
@@ -970,6 +1076,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Mora_Tapinella
   value: 4
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/5/51/SR-icon-ingredient-Mora_Tapinella.png/48px-SR-icon-ingredient-Mora_Tapinella.png
+  image: //images.uesp.net/thumb/5/51/SR-icon-ingredient-Mora_Tapinella.png
 - name: Sabre Cat Tooth
   effects:
   - name: Restore Stamina
@@ -988,6 +1096,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Sabre_Cat_Tooth
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/1/1b/SR-icon-ingredient-Sabre_Cat_Tooth.png/48px-SR-icon-ingredient-Sabre_Cat_Tooth.png
+  image: //images.uesp.net/thumb/1/1b/SR-icon-ingredient-Sabre_Cat_Tooth.png
 - name: Bear Claws
   effects:
   - name: Restore Stamina
@@ -1006,6 +1116,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Bear_Claws
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/0/04/SR-icon-ingredient-Bear_Claws.png/48px-SR-icon-ingredient-Bear_Claws.png
+  image: //images.uesp.net/thumb/0/04/SR-icon-ingredient-Bear_Claws.png
 - name: Luna Moth Wing
   effects:
   - name: Damage Magicka
@@ -1024,6 +1136,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Luna_Moth_Wing
   value: 5
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/f/f6/SR-icon-ingredient-Luna_Moth_Wing.png/48px-SR-icon-ingredient-Luna_Moth_Wing.png
+  image: //images.uesp.net/thumb/f/f6/SR-icon-ingredient-Luna_Moth_Wing.png
 - name: Eye of Sabre Cat
   effects:
   - name: Restore Stamina
@@ -1042,6 +1156,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Eye_of_Sabre_Cat
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/4/4e/SR-icon-ingredient-Eye_of_Sabre_Cat.png/48px-SR-icon-ingredient-Eye_of_Sabre_Cat.png
+  image: //images.uesp.net/thumb/4/4e/SR-icon-ingredient-Eye_of_Sabre_Cat.png
 - name: Glow Dust
   effects:
   - name: Damage Magicka
@@ -1060,6 +1176,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Glow_Dust
   value: 20
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/f/f8/SR-icon-ingredient-Glow_Dust.png/48px-SR-icon-ingredient-Glow_Dust.png
+  image: //images.uesp.net/thumb/f/f8/SR-icon-ingredient-Glow_Dust.png
 - name: Fire Salts
   effects:
   - name: Weakness to Frost
@@ -1078,6 +1196,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Fire_Salts
   value: 50
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/c/cc/SR-icon-ingredient-Fire_Salts.png/48px-SR-icon-ingredient-Fire_Salts.png
+  image: //images.uesp.net/thumb/c/cc/SR-icon-ingredient-Fire_Salts.png
 - name: Human Flesh
   effects:
   - name: Damage Health
@@ -1093,9 +1213,11 @@
     power: 1.0
     value: 1.0
   farmable: false
-  link: https://en.uesp.net/wiki/Skyrim:Human_Fresh
+  link: https://en.uesp.net/wiki/Skyrim:Human_Flesh
   value: 1
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/9/9d/SR-icon-ingredient-Human_Flesh.png/48px-SR-icon-ingredient-Human_Flesh.png
+  image: //images.uesp.net/thumb/9/9d/SR-icon-ingredient-Human_Flesh.png
 - name: Blisterwort
   effects:
   - name: Damage Stamina
@@ -1114,6 +1236,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Blisterwort
   value: 12
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/2/2b/SR-icon-ingredient-Blisterwort.png/48px-SR-icon-ingredient-Blisterwort.png
+  image: //images.uesp.net/thumb/2/2b/SR-icon-ingredient-Blisterwort.png
 - name: Red Mountain Flower
   effects:
   - name: Restore Magicka
@@ -1132,6 +1256,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Red_Mountain_Flower
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/b/bb/SR-icon-ingredient-Red_Mountain_Flower.png/48px-SR-icon-ingredient-Red_Mountain_Flower.png
+  image: //images.uesp.net/thumb/b/bb/SR-icon-ingredient-Red_Mountain_Flower.png
 - name: Crimson Nirnroot
   effects:
   - name: Damage Health
@@ -1150,6 +1276,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Crimson_Nirnroot
   value: 10
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/5/55/SR-icon-ingredient-Crimson_Nirnroot.png/48px-SR-icon-ingredient-Crimson_Nirnroot.png
+  image: //images.uesp.net/thumb/5/55/SR-icon-ingredient-Crimson_Nirnroot.png
 - name: Jarrin Root
   effects:
   - name: Damage Health
@@ -1168,6 +1296,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Jarrin_Root
   value: 10
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/9/95/SR-icon-ingredient-Jarrin_Root.png/48px-SR-icon-ingredient-Jarrin_Root.png
+  image: //images.uesp.net/thumb/9/95/SR-icon-ingredient-Jarrin_Root.png
 - name: Moon Sugar
   effects:
   - name: Weakness to Fire
@@ -1186,6 +1316,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Moon_Sugar
   value: 50
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/4/48/SR-icon-ingredient-Moon_Sugar.png/48px-SR-icon-ingredient-Moon_Sugar.png
+  image: //images.uesp.net/thumb/4/48/SR-icon-ingredient-Moon_Sugar.png
 - name: Namira's Rot
   effects:
   - name: Damage Magicka
@@ -1204,6 +1336,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Namira%27s_Rot
   value: 0
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/5/59/SR-icon-ingredient-Namira%27s_Rot.png/48px-SR-icon-ingredient-Namira%27s_Rot.png
+  image: //images.uesp.net/thumb/5/59/SR-icon-ingredient-Namira%27s_Rot.png
 - name: Snowberries
   effects:
   - name: Resist Fire
@@ -1222,6 +1356,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Snowberries
   value: 4
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/d/d3/SR-icon-ingredient-Snowberries.png/48px-SR-icon-ingredient-Snowberries.png
+  image: //images.uesp.net/thumb/d/d3/SR-icon-ingredient-Snowberries.png
 - name: Berit's Ashes
   effects:
   - name: Damage Stamina
@@ -1240,6 +1376,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Berit%27s_Ashes
   value: 5
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png
+  image: //images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png
 - name: Charred Skeever Hide
   effects:
   - name: Restore Stamina
@@ -1258,6 +1396,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Charred_Skeever_Hide
   value: 1
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/7/71/SR-icon-ingredient-Charred_Skeever_Hide.png/48px-SR-icon-ingredient-Charred_Skeever_Hide.png
+  image: //images.uesp.net/thumb/7/71/SR-icon-ingredient-Charred_Skeever_Hide.png
 - name: Giant's Toe
   effects:
   - name: Damage Stamina
@@ -1276,6 +1416,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Giant%27s_Toe
   value: 20
   weight: 1
+  thumbnail: //images.uesp.net/thumb/b/bc/SR-icon-ingredient-Giants_Toe.png/48px-SR-icon-ingredient-Giants_Toe.png
+  image: //images.uesp.net/thumb/b/bc/SR-icon-ingredient-Giants_Toe.png
 - name: Rock Warbler Egg
   effects:
   - name: Restore Health
@@ -1294,6 +1436,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Rock_Warbler_Egg
   value: 2
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/f/fc/SR-icon-ingredient-Rock_Warbler_Egg.png/48px-SR-icon-ingredient-Rock_Warbler_Egg.png
+  image: //images.uesp.net/thumb/f/fc/SR-icon-ingredient-Rock_Warbler_Egg.png
 - name: Fly Amanita
   effects:
   - name: Resist Fire
@@ -1312,6 +1456,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Fly_Amanita
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/7/76/SR-icon-ingredient-Fly_Amanita.png/48px-SR-icon-ingredient-Fly_Amanita.png
+  image: //images.uesp.net/thumb/7/76/SR-icon-ingredient-Fly_Amanita.png
 - name: Silverside Perch
   effects:
   - name: Restore Stamina
@@ -1330,6 +1476,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Silverside_Perch
   value: 15
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/3/32/SR-icon-ingredient-Silverside_Perch.png/48px-SR-icon-ingredient-Silverside_Perch.png
+  image: //images.uesp.net/thumb/3/32/SR-icon-ingredient-Silverside_Perch.png
 - name: Boar Tusk
   effects:
   - name: Fortify Stamina
@@ -1348,6 +1496,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Boar_Tusk
   value: 20
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png/48px-SR-icon-ingredient-Boar_Tusk.png
+  image: //images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png
 - name: Lavender
   effects:
   - name: Resist Magic
@@ -1366,6 +1516,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Lavender
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/3/30/SR-icon-ingredient-Lavender.png/48px-SR-icon-ingredient-Lavender.png
+  image: //images.uesp.net/thumb/3/30/SR-icon-ingredient-Lavender.png
 - name: Hagraven Claw
   effects:
   - name: Resist Magic
@@ -1384,6 +1536,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Hagraven_Claw
   value: 20
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/3/30/SR-icon-ingredient-Hagraven_Claw.png/48px-SR-icon-ingredient-Hagraven_Claw.png
+  image: //images.uesp.net/thumb/3/30/SR-icon-ingredient-Hagraven_Claw.png
 - name: Salt Pile
   effects:
   - name: Weakness to Magic
@@ -1402,6 +1556,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Salt_Pile
   value: 2
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/3/36/SR-icon-ingredient-Salt_Pile.png/48px-SR-icon-ingredient-Salt_Pile.png
+  image: //images.uesp.net/thumb/3/36/SR-icon-ingredient-Salt_Pile.png
 - name: Ectoplasm
   effects:
   - name: Restore Magicka
@@ -1420,6 +1576,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Ectoplasm
   value: 25
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/f/f1/SR-icon-ingredient-Ectoplasm.png/48px-SR-icon-ingredient-Ectoplasm.png
+  image: //images.uesp.net/thumb/f/f1/SR-icon-ingredient-Ectoplasm.png
 - name: White Cap
   effects:
   - name: Weakness to Frost
@@ -1438,6 +1596,8 @@
   link: https://en.uesp.net/wiki/Skyrim:White_Cap
   value: 0
   weight: 0.3
+  thumbnail: //images.uesp.net/thumb/f/fa/SR-icon-ingredient-White_Cap.png/48px-SR-icon-ingredient-White_Cap.png
+  image: //images.uesp.net/thumb/f/fa/SR-icon-ingredient-White_Cap.png
 - name: Tundra Cotton
   effects:
   - name: Resist Magic
@@ -1456,6 +1616,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Tundra_Cotton
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/7/7e/SR-icon-ingredient-Tundra_Cotton.png/48px-SR-icon-ingredient-Tundra_Cotton.png
+  image: //images.uesp.net/thumb/7/7e/SR-icon-ingredient-Tundra_Cotton.png
 - name: Large Antlers
   effects:
   - name: Restore Stamina
@@ -1474,6 +1636,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Large_Antlers
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/6/69/SR-icon-ingredient-Large_Antlers.png/48px-SR-icon-ingredient-Large_Antlers.png
+  image: //images.uesp.net/thumb/6/69/SR-icon-ingredient-Large_Antlers.png
 - name: Frost Mirriam
   effects:
   - name: Resist Frost
@@ -1492,6 +1656,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Frost_Mirriam
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/9/99/SR-icon-ingredient-Frost_Mirriam.png/48px-SR-icon-ingredient-Frost_Mirriam.png
+  image: //images.uesp.net/thumb/9/99/SR-icon-ingredient-Frost_Mirriam.png
 - name: Wisp Wrappings
   effects:
   - name: Restore Stamina
@@ -1507,9 +1673,11 @@
     power: 1.0
     value: 1.0
   farmable: false
-  link: https://en.uesp.net/wiki/Skyrim:Wist_Wrappings
+  link: https://en.uesp.net/wiki/Skyrim:Wisp_Wrappings
   value: 2
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/9/9d/SR-icon-ingredient-Wisp_Wrappings.png/48px-SR-icon-ingredient-Wisp_Wrappings.png
+  image: //images.uesp.net/thumb/9/9d/SR-icon-ingredient-Wisp_Wrappings.png
 - name: Netch Jelly
   effects:
   - name: Paralysis
@@ -1528,6 +1696,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Netch_Jelly
   value: 20
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png/48px-SR-icon-ingredient-Netch_Jelly.png
+  image: //images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png
 - name: Salmon Roe
   effects:
   - name: Restore Stamina
@@ -1546,6 +1716,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Salmon_Roe
   value: 5
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png/48px-SR-icon-ingredient-Salmon_Roe.png
+  image: //images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png
 - name: Hawk's Egg
   effects:
   - name: Resist Magicka
@@ -1564,6 +1736,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Hawk%27s_Egg
   value: 5
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png/48px-SR-icon-ingredient-Hawk%27s_Egg.png
+  image: //images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png
 - name: Ashen Grass Pod
   effects:
   - name: Resist Fire
@@ -1582,6 +1756,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Ashen_Grass_Pod
   value: 1
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png/48px-SR-icon-ingredient-Ashen_Grass_Pod.png
+  image: //images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png
 - name: Wheat
   effects:
   - name: Restore Health
@@ -1600,6 +1776,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Wheat
   value: 5
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/7/7f/SR-icon-ingredient-Wheat.png/48px-SR-icon-ingredient-Wheat.png
+  image: //images.uesp.net/thumb/7/7f/SR-icon-ingredient-Wheat.png
 - name: Trama Root
   effects:
   - name: Weakness to Shock
@@ -1618,6 +1796,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Trama_Root
   value: 1
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png/48px-SR-icon-ingredient-Trama_Root.png
+  image: //images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png
 - name: Burnt Spriggan Wood
   effects:
   - name: Weakness to Fire
@@ -1636,6 +1816,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Burnt_Spriggan_Wood
   value: 20
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png/48px-SR-icon-ingredient-Burnt_Spriggan_Wood.png
+  image: //images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png
 - name: Ash Hopper Jelly
   effects:
   - name: Restore Health
@@ -1654,6 +1836,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Ash_Hopper_Jelly
   value: 20
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png/48px-SR-icon-ingredient-Ash_Hopper_Jelly.png
+  image: //images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png
 - name: Elves Ear
   effects:
   - name: Restore Magicka
@@ -1672,6 +1856,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Elves_Ear
   value: 10
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/7/7a/SR-icon-ingredient-Elves_Ear.png/48px-SR-icon-ingredient-Elves_Ear.png
+  image: //images.uesp.net/thumb/7/7a/SR-icon-ingredient-Elves_Ear.png
 - name: Spriggan Sap
   effects:
   - name: Damage Magicka Regen
@@ -1690,6 +1876,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Spriggan_Sap
   value: 15
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/d/d6/SR-icon-ingredient-Spriggan_Sap.png/48px-SR-icon-ingredient-Spriggan_Sap.png
+  image: //images.uesp.net/thumb/d/d6/SR-icon-ingredient-Spriggan_Sap.png
 - name: Slaughterfish Scales
   effects:
   - name: Resist Frost
@@ -1708,6 +1896,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Scales
   value: 3
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/0/0f/SR-icon-ingredient-Slaughterfish_Scales.png/48px-SR-icon-ingredient-Slaughterfish_Scales.png
+  image: //images.uesp.net/thumb/0/0f/SR-icon-ingredient-Slaughterfish_Scales.png
 - name: Briar Heart
   effects:
   - name: Restore Magicka
@@ -1726,6 +1916,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Briar_Heart
   value: 20
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/6/6a/SR-icon-ingredient-Briar_Heart.png/48px-SR-icon-ingredient-Briar_Heart.png
+  image: //images.uesp.net/thumb/6/6a/SR-icon-ingredient-Briar_Heart.png
 - name: Bee
   effects:
   - name: Restore Stamina
@@ -1744,6 +1936,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Bee
   value: 3
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/b/b8/SR-icon-ingredient-Bee.png/48px-SR-icon-ingredient-Bee.png
+  image: //images.uesp.net/thumb/b/b8/SR-icon-ingredient-Bee.png
 - name: Falmer Ear
   effects:
   - name: Damage Health
@@ -1762,6 +1956,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Falmer_Ear
   value: 10
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/6/6e/SR-icon-ingredient-Falmer_Ear.png/48px-SR-icon-ingredient-Falmer_Ear.png
+  image: //images.uesp.net/thumb/6/6e/SR-icon-ingredient-Falmer_Ear.png
 - name: Nightshade
   effects:
   - name: Damage Health
@@ -1780,6 +1976,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Nightshade
   value: 8
   weight: 0.1
+  thumbnail: //images.uesp.net/thumb/6/6f/SR-icon-ingredient-Nightshade.png/48px-SR-icon-ingredient-Nightshade.png
+  image: //images.uesp.net/thumb/6/6f/SR-icon-ingredient-Nightshade.png
 - name: River Betty
   effects:
   - name: Damage Health
@@ -1798,6 +1996,8 @@
   link: https://en.uesp.net/wiki/Skyrim:River_Betty
   value: 15
   weight: 0.25
+  thumbnail: //images.uesp.net/thumb/2/25/SR-icon-ingredient-River_Betty.png/48px-SR-icon-ingredient-River_Betty.png
+  image: //images.uesp.net/thumb/2/25/SR-icon-ingredient-River_Betty.png
 - name: Daedra Heart
   effects:
   - name: Damage Stamina Regen
@@ -1816,6 +2016,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Daedra_Heart
   value: 250
   weight: 0.5
+  thumbnail: //images.uesp.net/thumb/b/b1/SR-icon-ingredient-Daedra_Heart.png/48px-SR-icon-ingredient-Daedra_Heart.png
+  image: //images.uesp.net/thumb/b/b1/SR-icon-ingredient-Daedra_Heart.png
 - name: Skeever Tail
   effects:
   - name: Damage Stamina Regen
@@ -1834,6 +2036,8 @@
   link: https://en.uesp.net/wiki/Skyrim:Skeever_Tail
   value: 3
   weight: 0.2
+  thumbnail: //images.uesp.net/thumb/d/dc/SR-icon-ingredient-Skeever_Tail.png/48px-SR-icon-ingredient-Skeever_Tail.png
+  image: //images.uesp.net/thumb/d/dc/SR-icon-ingredient-Skeever_Tail.png
 - name: Chaurus Eggs
   effects:
   - name: Weakness to Poison
@@ -1849,6 +2053,8 @@
     power: 1.0
     value: 1.0
   farmable: false
-  link: https://en.uesp.net/wiki/Skyrim:Charus_Egg
+  link: https://en.uesp.net/wiki/Skyrim:Chaurus_Egg
   value: 10
   weight: 0.2
+  thumbnail: Could not find thumbnail for Chaurus Eggs
+  image: Could not find image for Chaurus Eggs

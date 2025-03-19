@@ -8,6 +8,7 @@
     has to be corrected for by GPS satellites|
     cannot be used as an excuse for tax cuts|
     is now recognized as a major cause of World War I).
+    
 - name: Calendar Facts
   ref: https://xkcd.com/1930/
   text: >
@@ -40,6 +41,7 @@
     it was even more extreme during the (bronze age|ice age|cretaceous|1990s)|
     there's a proposal to fix it, but it (will never happen|actually makes things worse|is stalled in congress|might be unconstitutional)|
     it's getting worse and no one knows why).
+
 - name: Country Song
   ref: ~
   text: |
@@ -50,11 +52,13 @@
     She said to me (our love would never die|there was no other guy|man wasn't meant to fly|that Nixon didn't lie|her basset hound was shy|that Rolaids made her high|she'd have a swiss on rye|she loved my one blue eye|her brother's name was Hy|she liked 'Spy vs. Spy'|that birthdays made her cry|she couldn't stand my tie);
     But who'd have thought she'd (run off|wind up|boogie|yodel|sky dive|turn green|fall down|freak out|blast off|make it|black out|bobsled|grovel) (with my best friend|in my Edsel|on a surfboard|on 'The Gong Show'|with her dentist|on her 'Workmate'|with a robot|with no clothes on|at her health club|in her Maytag|with her guru|while in labor);
     (You'd think at least that she'd have said|I never had the chance to say|She told her fat friend Grace to say|I now can kiss my credit cards|I guess I was too smashed to say|I watched her melt away and sobbed|She fell beneath the wheels and cried|She sent a hired thug to say|She freaked out on the lawn and screamed|I pushed her off the bridge and waved|But that's the way that pygmies say|She sealed me in the vault and smirked) goodbye.;
+
 - name: Whip It
   ref: https://www.youtube.com/watch?v=j_QLzthSkfM
   text: >
     ((Has a good time turned around? You must|Have you ever lived it down? Not unless you|Has anyone gotten away? Not until they)|
     (Has a problem come along?|Has the cream sat out too long?|Is something going wrong?) You must) whip it.
+
 - name: Codeium Windsurf
   ref: ~
   text: >
@@ -80,3 +84,45 @@
     a time machine for my keyboard|
     my code therapist and life coach|
     what happens when you give an AI too much coffee).
+
+- name: Cursor Choice
+  ref: ~
+  text: >
+    Dear (Visual Studio|Sublime|PyCharm|Eclipse|Atom), I've made my choice. Cursor is like having (
+    a coding wizard in my pocket|
+    an AI that actually gets my jokes|
+    a pair programmer who never needs coffee breaks|
+    Stack Overflow but it actually works) and (
+    debugs faster than I can create bugs|
+    reads documentation so I don't have to|
+    writes tests that even my manager approves of|
+    turns my TODO comments into actual code).
+
+    Other IDEs now feel like (
+    coding with oven mitts on|
+    trying to debug with a magic 8-ball|
+    pair programming with a sleepy cat|
+    writing code in interpretive dance). With Cursor, my code (
+    practically writes itself|
+    is so clean it squeaks|
+    makes senior developers jealous|
+    deserves its own GitHub star) because it's basically (
+    an AI that learned to code by watching Chuck Norris|
+    what happens when you give GPT a computer science degree|
+    Stack Overflow's final form|
+    the IDE that coding bootcamps don't want you to know about).
+
+- name: Magic 8 Ball
+  ref: ~
+  text: >
+    You shake the magic 8 ball and ask: "Will my code (compile|run|deploy|merge|refactor|debug) successfully?"
+
+    The 8 ball replies: (
+    Signs point to yes, but you'll need to (update your dependencies|clear your cache|restart your IDE|sacrifice a rubber duck) first|
+    Without a doubt, but only after you (fix the linter errors|update the documentation|write the tests|delete node_modules)|
+    My sources say no, unless you (check the logs|read the manual|consult Stack Overflow|bribe the compiler)|
+    Outlook not so good, but you could try (using a different framework|switching to Python|asking ChatGPT|turning it off and on again)|
+    Reply hazy, try (checking the console|reading the error message|googling the error code|asking your rubber duck)|
+    It is decidedly so, but first you must (commit your changes|pull the latest code|update your branch|clean your workspace)|
+    Don't count on it, unless you're willing to (rewrite it in Rust|start from scratch|hire a consultant|learn assembly)|
+    Most likely, after you (fix the syntax error|update the API key|check the permissions|clear the browser cache)).

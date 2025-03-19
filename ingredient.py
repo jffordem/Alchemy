@@ -101,6 +101,7 @@ class Ingredient(BaseModel):
     link: str
     value: int
     weight: float
+    thumbnail: str
 
     def has_effect(self, effect_name: str) -> bool:
         """Check if this ingredient has an effect of the given name."""

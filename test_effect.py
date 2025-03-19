@@ -24,22 +24,24 @@ def test_effect_data_class():
         type="Zooble Type",
         cost=10.0,
         dur=30,
-        mag=5
+        mag=5,
+        link="https://en.uesp.net/wiki/Skyrim:Zooble_Effect"
     )
     assert effect.name == "Zooble Effect"
     assert effect.school == "Zooble School"
     assert effect.type == "Zooble Type"
-    assert effect.cost == 10.0
+    assert effect.cost == pytest.approx(10.0)
     assert effect.dur == 30
     assert effect.mag == 5
     assert effect.verbose == "Zooble someone at 5 for 30"
+    assert effect.link == "https://en.uesp.net/wiki/Skyrim:Zooble_Effect"
 
 def test_effect_value_calculation():
     # Test value calculation with different parameters
     effects = [
-        Effect(name="E1", description="D1", school="S", type="T", cost=10, dur=0, mag=1),  # No duration
-        Effect(name="E2", description="D2", school="S", type="T", cost=10, dur=30, mag=0),  # No magnitude
-        Effect(name="E3", description="D3", school="S", type="T", cost=10, dur=30, mag=5),  # Both dur and mag
+        Effect(name="E1", description="D1", school="S", type="T", cost=10, dur=0, mag=1, link="https://en.uesp.net/wiki/Skyrim:E1"),  # No duration
+        Effect(name="E2", description="D2", school="S", type="T", cost=10, dur=30, mag=0, link="https://en.uesp.net/wiki/Skyrim:E2"),  # No magnitude
+        Effect(name="E3", description="D3", school="S", type="T", cost=10, dur=30, mag=5, link="https://en.uesp.net/wiki/Skyrim:E3"),  # Both dur and mag
     ]
     
     # Individual values
@@ -56,9 +58,10 @@ def test_yaml_loading():
     restore_health = get_effect_by_name("Restore Health")
     assert restore_health.school == "Restoration"
     assert restore_health.type == "Restorative"
-    assert restore_health.cost == 0.5
+    assert restore_health.cost == pytest.approx(0.5)
     assert restore_health.mag == 5
     assert restore_health.dur == 0
+    assert restore_health.link == "https://en.uesp.net/wiki/Skyrim:Restore_Health"
 
 def test_effect_filtering():
     # Test filtering effects by various criteria

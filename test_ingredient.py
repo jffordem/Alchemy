@@ -36,7 +36,8 @@ def test_ingredient_data_class():
         farmable=True,
         link="https://test.com",
         value=10,
-        weight=0.5
+        weight=0.5,
+        thumbnail="https://test.com/thumbnail.png"
     )
     
     assert ingredient.name == "Test Ingredient"
@@ -44,7 +45,8 @@ def test_ingredient_data_class():
     assert ingredient.farmable is True
     assert ingredient.link == "https://test.com"
     assert ingredient.value == 10
-    assert ingredient.weight == 0.5
+    assert ingredient.weight == pytest.approx(0.5)
+    assert ingredient.thumbnail == "https://test.com/thumbnail.png"
 
 def test_active_effect_combine():
     # Test combining multiple ActiveEffects
@@ -56,8 +58,8 @@ def test_active_effect_combine():
     
     combined = ActiveEffect.combine(effects)
     assert combined.name == "Restore Health"
-    assert combined.power == 3.0  # 1.0 * 1.5 * 2.0
-    assert combined.value == 3.0  # 1.0 * 2.0 * 1.5
+    assert combined.power == pytest.approx(3.0)  # 1.0 * 1.5 * 2.0
+    assert combined.value == pytest.approx(3.0)  # 1.0 * 2.0 * 1.5
 
     # Test combining different effects (should raise error)
     with pytest.raises(ValueError):
@@ -72,9 +74,9 @@ def test_ingredient_buff_nerf_status():
     buffed_effects = [ActiveEffect(name="Buffed", power=1.5, value=1.0)]
     nerfed_effects = [ActiveEffect(name="Nerfed", power=0.5, value=1.0)]
     
-    normal_ingredient = Ingredient(name="Normal", effects=normal_effects, farmable=True, link="", value=1, weight=1.0)
-    buffed_ingredient = Ingredient(name="Buffed", effects=buffed_effects, farmable=True, link="", value=1, weight=1.0)
-    nerfed_ingredient = Ingredient(name="Nerfed", effects=nerfed_effects, farmable=True, link="", value=1, weight=1.0)
+    normal_ingredient = Ingredient(name="Normal", effects=normal_effects, farmable=True, link="", thumbnail="", value=1, weight=1.0)
+    buffed_ingredient = Ingredient(name="Buffed", effects=buffed_effects, farmable=True, link="", thumbnail="", value=1, weight=1.0)
+    nerfed_ingredient = Ingredient(name="Nerfed", effects=nerfed_effects, farmable=True, link="", thumbnail="", value=1, weight=1.0)
     
     assert not normal_ingredient.buffed and not normal_ingredient.nerfed
     assert buffed_ingredient.buffed and not buffed_ingredient.nerfed
@@ -103,8 +105,9 @@ def test_yaml_loading():
     assert len(nirnroot.effects) == 4
     assert not nirnroot.farmable
     assert nirnroot.value == 10
-    assert nirnroot.weight == 0.2
-    assert any(effect.name == "Damage Health" and effect.value == 12.6 for effect in nirnroot.effects)
+    assert nirnroot.weight == pytest.approx(0.2)
+    assert nirnroot.thumbnail == "//images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png"
+    assert any(effect.name == "Damage Health" and effect.value == pytest.approx(12.6) for effect in nirnroot.effects)
 
     # Test ingredient filtering
     farmable = get_ingredients_by_filter(lambda i: i.farmable)

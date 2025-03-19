@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
@@ -24,22 +25,22 @@
         <div class="row">
             <section class="col-12">
     
-                <nav class="breadcrumb fixed-top d-flex">
+                <nav class="breadcrumb fixed-top d-flex" aria-label="breadcrumb">
                     <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
                     <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
                     <span class="breadcrumb-item active">Ingredients</span>
                     <a class="breadcrumb-right" href="{{url_for('about')}}">About</a>
                 </nav>
 
-                <nav class="mt-5">
+                <nav class="mt-5" aria-label="ingredients table">
                     <h1>Ingredients</h1>
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='name')}}">Name</a></th>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='farmable')}}">Farmable</a></th>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='weight')}}">Weight</a></th>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='value')}}">Value</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='name', direction='desc' if sortby == 'name' and direction == 'asc' else 'asc')}}">Name {% if sortby == 'name' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='farmable', direction='desc' if sortby == 'farmable' and direction == 'asc' else 'asc')}}">Farmable {% if sortby == 'farmable' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='weight', direction='desc' if sortby == 'weight' and direction == 'asc' else 'asc')}}">Weight {% if sortby == 'weight' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='value', direction='desc' if sortby == 'value' and direction == 'asc' else 'asc')}}">Value {% if sortby == 'value' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th>Modifiers</th>
                                 <th>Link</th>
                             </tr>
@@ -47,7 +48,12 @@
                         <tbody>
                             {% for ingredient in ingredients %}
                             <tr>
-                                <td><a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ingredient.thumbnail}}" alt="{{ingredient.name}}" class="mr-2" style="width: 32px; height: 32px; object-fit: contain;">
+                                        <a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a>
+                                    </div>
+                                </td>
                                 <td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}">False</a>{% endif %}</td>
                                 <td>{{ingredient.weight}}</td>
                                 <td>{{ingredient.value}}</td>
@@ -55,13 +61,11 @@
                                     {% if ingredient.buffed %}<span class="badge badge-success badge-pill">*</span>{% endif %}
                                     {% if ingredient.nerfed %}<span class="badge badge-danger badge-pill">*</span>{% endif %}
                                 </td>
-                                <td><a href="{{ingredient.link}}">UESP</a></td>
+                                <td><a href="{{ingredient.link}}" target="_blank">UESP</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
-
-                    <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->
                 </nav>
 
                 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

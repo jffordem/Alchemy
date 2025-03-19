@@ -33,34 +33,41 @@
             </nav>
 
             <div class="mt-5">
-                <h1>{{ingredient.name}}</h1>
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="{{ingredient.thumbnail}}" alt="{{ingredient.name}}" class="img-fluid">
+                    </div>
+                    <div class="col-md-10">
+                        <h1>{{ingredient.name}}</h1>
 
-                <table class="table">
-                    <tr>
-                        <th>Name</th><td>{{ingredient.name}}</td>
-                    </tr>
-                    <tr>
-                        <th>Farmable</th><td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}">False</a>{% endif %}</td>
-                    </tr>
-                    <tr>
-                        <th>Weight</th><td>{{ingredient.weight}}</td>
-                    </tr>
-                    <tr>
-                        <th>Value</th><td>{{ingredient.value}}</td>
-                    </tr>
-                    {% for i in range(4) %}
-                    <tr>
-                        <th>Effect {{i+1}}</th><td><a href="{{url_for('skyrim_effect', name=ingredient.effects[i].name)}}">{{ingredient.effects[i].name}}</a> 
-                            {% if ingredient.effects[i].power != 1.0 %}<span class="badge badge-info badge-pill">^{{ingredient.effects[i].power}}</span>{% endif %}
-                            {% if ingredient.effects[i].value != 1.0 %}<span class="badge badge-success badge-pill">${{ingredient.effects[i].value}}</span>{% endif %}</td>
-                        <!-- link to effect -->
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        <th>Link</th><td><a href="{{ingredient.link}}">UESP</a></td>
-                    </tr>
-                </table>
+                        <table class="table">
+                            <tr>
+                                <th>Name</th><td>{{ingredient.name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Farmable</th><td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}">False</a>{% endif %}</td>
+                            </tr>
+                            <tr>
+                                <th>Weight</th><td>{{ingredient.weight}}</td>
+                            </tr>
+                            <tr>
+                                <th>Value</th><td>{{ingredient.value}}</td>
+                            </tr>
+                            {% for i in range(4) %}
+                            <tr>
+                                <th>Effect {{i+1}}</th><td><a href="{{url_for('skyrim_effect', name=ingredient.effects[i].name)}}">{{ingredient.effects[i].name}}</a> 
+                                    {% if ingredient.effects[i].power != 1.0 %}<span class="badge badge-info badge-pill">^{{ingredient.effects[i].power}}</span>{% endif %}
+                                    {% if ingredient.effects[i].value != 1.0 %}<span class="badge badge-success badge-pill">${{ingredient.effects[i].value}}</span>{% endif %}</td>
+                                <!-- link to effect -->
+                            </tr>
+                            {% endfor %}
+                            <tr>
+                                <th>Link</th><td><a href="{{ingredient.link}}">UESP</a></td>
+                            </tr>
+                        </table>
 
+                    </div>
+                </div>
             </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

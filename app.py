@@ -54,21 +54,25 @@ def skyrim_ingredients():
         predicate = lambda ingredient: ingredient.farmable == farmable
     else:
         predicate = pred_true
-    if 'sortby' in request.args:
-        sortby = request.args.get('sortby')
-        if sortby == 'name':
-            sort, reverse = lambda ingredient: ingredient.name, False
-        elif sortby == 'value':
-            sort, reverse = lambda ingredient: ingredient.value, True
-        elif sortby == 'weight':
-            sort, reverse = lambda ingredient: ingredient.weight, True
-        else:
-            sort, reverse = lambda ingredient: ingredient.name, False
+
+    # Get sort parameters
+    sortby = request.args.get('sortby', 'name')
+    direction = request.args.get('direction', 'asc')
+    reverse = direction == 'desc'
+
+    # Set sort function based on sortby
+    if sortby == 'name':
+        sort = lambda ingredient: ingredient.name
+    elif sortby == 'value':
+        sort = lambda ingredient: ingredient.value
+    elif sortby == 'weight':
+        sort = lambda ingredient: ingredient.weight
     else:
-        sort, reverse = lambda ingredient: ingredient.name, False
+        sort = lambda ingredient: ingredient.name
+
     ingredients = get_ingredients_by_filter(predicate)
     ingredients.sort(key=sort, reverse=reverse)
-    return render_template('ingredients.html', ingredients=ingredients)
+    return render_template('ingredients.html', ingredients=ingredients, sortby=sortby, direction=direction)
 
 
 @app.route("/skyrim/ingredients/<string:name>")
@@ -105,7 +109,7 @@ def skyrim_potions_api():
 
 @app.route('/skyrim/potions')
 def skyrim_potions():
-    def getIngredients():
+    def get_ingredients():
         if 'ingredients' in request.args:
             ingredients = request.args.get('ingredients')
             if ingredients == "all": return list(AllIngredientsByName.keys())
@@ -116,7 +120,7 @@ def skyrim_potions():
             random.shuffle(ingredients)
             return ingredients[:5]
     limit = 100
-    ingredients = getIngredients()
+    ingredients = get_ingredients()
     potions = Potion.brew(ingredients)
     return render_template('potions.html', potions=potions[:limit], ingredients=ingredients)
 
