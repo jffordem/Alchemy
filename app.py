@@ -8,6 +8,9 @@ from ingredient import AllIngredientsByName, get_ingredients_by_filter, get_ingr
 from effect import AllEffectsByName, get_effect_by_name, get_effects_by_filter
 from potion import Potion
 
+NOT_FOUND_MESSAGE = "Not Found"
+DEFAULT_PORT = 5000
+
 __doc__ = """
 Then configure Flask.
 
@@ -81,7 +84,7 @@ def skyrim_ingredient(name):
     if item:
         return render_template('ingredient.html', ingredient=item)
     else:
-        return "Not Found", 404
+        return NOT_FOUND_MESSAGE, 404
 
 
 @app.route("/skyrim/effects")
@@ -99,7 +102,7 @@ def skyrim_effect(name):
     if item:
         return render_template('effect.html', effect=item)
     else:
-        return "Not Found", 404
+        return NOT_FOUND_MESSAGE, 404
 
 
 @app.route('/api/skyrim/potions', methods=['GET'])
@@ -137,7 +140,7 @@ def madlibs(name):
     if name in AllMadlibsByName:
         item = AllMadlibsByName[name]
         return render_template('madlib.html', name=name, lines=item.render(), ref=item.ref)
-    return "Not Found", 404
+    return NOT_FOUND_MESSAGE, 404
 
 
 @app.route("/about")
@@ -149,5 +152,5 @@ def about():
 
 if __name__ == '__main__':
     # Use PORT environment variable if set (e.g., in Docker), otherwise default to 5000
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', DEFAULT_PORT))
     app.run(host='0.0.0.0', port=port)
