@@ -36,7 +36,8 @@
                     <h1>Ingredients</h1>
                     <form method="get" action="{{ url_for('skyrim_ingredients') }}" class="form-inline mb-3">
                         <input type="text" name="search" class="form-control mr-2" placeholder="Search ingredients" value="{{ request.args.get('search', '') }}">
-                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="submit" class="btn btn-primary mr-2">Search</button>
+                        <a href="{{ url_for('skyrim_ingredients') }}" class="btn btn-secondary">Clear</a>
                     </form>
                     <table class="table table-striped">
                         <thead>

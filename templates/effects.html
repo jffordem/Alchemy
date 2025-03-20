@@ -42,18 +42,19 @@
                     <!-- Search bar -->
                     <form method="get" action="{{ url_for('skyrim_effects') }}" class="form-inline mb-3">
                         <input type="text" name="search" class="form-control mr-2" placeholder="Search effects" value="{{ request.args.get('search', '') }}">
-                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="submit" class="btn btn-primary mr-2">Search</button>
+                        <a href="{{ url_for('skyrim_effects') }}" class="btn btn-secondary">Clear</a>
                     </form>
                     <!-- End of search bar -->
 
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='name', direction='desc' if sortby == 'name' and direction == 'asc' else 'asc') }}">Name {% if sortby == 'name' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='description', direction='desc' if sortby == 'description' and direction == 'asc' else 'asc') }}">Description {% if sortby == 'description' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='school', direction='desc' if sortby == 'school' and direction == 'asc' else 'asc') }}">School {% if sortby == 'school' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='type', direction='desc' if sortby == 'type' and direction == 'asc' else 'asc') }}">Type {% if sortby == 'type' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
-                                <th><a href="{{ url_for('skyrim_effects', sortby='cost', direction='desc' if sortby == 'cost' and direction == 'asc' else 'asc') }}">Cost {% if sortby == 'cost' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='name', direction='desc' if sortby == 'name' and direction == 'asc' else 'asc', search=request.args.get('search', ''), school=request.args.get('school', ''), type=request.args.get('type', '')) }}">Name {% if sortby == 'name' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='description', direction='desc' if sortby == 'description' and direction == 'asc' else 'asc', search=request.args.get('search', ''), school=request.args.get('school', ''), type=request.args.get('type', '')) }}">Description {% if sortby == 'description' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='school', direction='desc' if sortby == 'school' and direction == 'asc' else 'asc', search=request.args.get('search', ''), school=request.args.get('school', ''), type=request.args.get('type', '')) }}">School {% if sortby == 'school' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='type', direction='desc' if sortby == 'type' and direction == 'asc' else 'asc', search=request.args.get('search', ''), school=request.args.get('school', ''), type=request.args.get('type', '')) }}">Type {% if sortby == 'type' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{ url_for('skyrim_effects', sortby='cost', direction='desc' if sortby == 'cost' and direction == 'asc' else 'asc', search=request.args.get('search', ''), school=request.args.get('school', ''), type=request.args.get('type', '')) }}">Cost {% if sortby == 'cost' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th>Link</th>
                             </tr>
                         </thead>
