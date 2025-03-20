@@ -137,7 +137,7 @@ def skyrim_potions_api():
     return json.dumps({'potions': potions, 'ingredients': ingredient_names})
 
 
-@app.route('/skyrim/potions')
+@app.route('/skyrim/potions', methods=['GET'])
 def skyrim_potions():
     def get_ingredients() -> list[Ingredient]:
         if 'ingredients' in request.args:
@@ -153,6 +153,14 @@ def skyrim_potions():
     ingredients = get_ingredients()
     potions = Potion.brew(ingredients)
     return render_template('potions.html', potions=potions[:limit], ingredients=ingredients)
+
+
+@app.route('/skyrim/potions', methods=['POST'])
+def skyrim_potions_post():
+    ingredient_names = request.form.get('ingredients', '').split(',')
+    ingredients = [get_ingredient_by_name(name) for name in ingredient_names if get_ingredient_by_name(name)]
+    potions = Potion.brew(ingredients)
+    return render_template('potions.html', potions=potions, ingredients=ingredients)
 
 
 @app.route("/madlibs")

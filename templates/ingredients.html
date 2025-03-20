@@ -32,12 +32,16 @@
                     <a class="breadcrumb-right" href="{{url_for('about')}}">About</a>
                 </nav>
 
-                <nav class="mt-5" aria-label="ingredients table">
+                <nav class="mt-5 d-flex justify-content-between align-items-center" aria-label="ingredients table">
                     <h1>Ingredients</h1>
-                    <form method="get" action="{{ url_for('skyrim_ingredients') }}" class="form-inline mb-3">
+                </nav>
+                <nav aria-label="ingredients table">
+                    <form method="post" action="{{ url_for('skyrim_potions') }}" class="form-inline mb-3">
                         <input type="text" name="search" class="form-control mr-2" placeholder="Search ingredients" value="{{ request.args.get('search', '') }}">
-                        <button type="submit" class="btn btn-primary mr-2">Search</button>
-                        <a href="{{ url_for('skyrim_ingredients') }}" class="btn btn-secondary">Clear</a>
+                        <button type="submit" formaction="{{ url_for('skyrim_ingredients') }}" formmethod="get" class="btn btn-primary mr-2">Search</button>
+                        <a href="{{ url_for('skyrim_ingredients') }}" class="btn btn-secondary mr-2">Clear</a>
+                        <input type="hidden" name="ingredients" value="{{ ingredients | map(attribute='name') | join(',') }}">
+                        <button type="submit" class="btn btn-success">Brew</button>
                     </form>
                     <table class="table table-striped">
                         <thead>
