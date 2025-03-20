@@ -353,7 +353,7 @@
     power: 1.0
     value: 1.0
   farmable: true
-  link: https://en.uesp.net/wiki/Skyrim:Jazbey_Grapes
+  link: https://en.uesp.net/wiki/Skyrim:Jazbay_Grapes
   value: 1
   weight: 0.2
   thumbnail: Could not find thumbnail for Jazbay Grapes
@@ -2053,7 +2053,7 @@
     power: 1.0
     value: 1.0
   farmable: false
-  link: https://en.uesp.net/wiki/Skyrim:Chaurus_Egg
+  link: https://en.uesp.net/wiki/Skyrim:Chaurus_Eggs
   value: 10
   weight: 0.2
   thumbnail: Could not find thumbnail for Chaurus Eggs
