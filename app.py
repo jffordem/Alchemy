@@ -65,8 +65,8 @@ def skyrim_ingredients():
 
     # Add search functionality
     if 'search' in request.args:
-        search = request.args.get('search').lower()
-        predicate = pred_and(predicate, lambda ingredient: search in ingredient.name.lower())
+        search_terms = [term.strip().lower() for term in request.args.get('search').split(' ')]
+        predicate = pred_and(predicate, lambda ingredient: any(term in ingredient.name.lower() for term in search_terms))
 
     # Get sort parameters
     sortby = request.args.get('sortby', 'name')
@@ -108,7 +108,8 @@ def skyrim_effects():
     pred = pred_true
 
     if search_query:
-        pred = pred_and(pred, lambda effect: search_query in effect.name.lower() or search_query in effect.description.lower())
+        search_terms = [term.strip().lower() for term in search_query.split(' ')]
+        pred = pred_and(pred, lambda effect: any(term in effect.name.lower() for term in search_terms) or any(term in effect.description.lower() for term in search_terms))
 
     if effect_type:
         pred = pred_and(pred, lambda effect: effect.type.lower() == effect_type)
