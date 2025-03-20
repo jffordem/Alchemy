@@ -63,6 +63,11 @@ def skyrim_ingredients():
     else:
         predicate = pred_true
 
+    # Add search functionality
+    if 'search' in request.args:
+        search = request.args.get('search').lower()
+        predicate = pred_and(predicate, lambda ingredient: search in ingredient.name.lower())
+
     # Get sort parameters
     sortby = request.args.get('sortby', 'name')
     direction = request.args.get('direction', 'asc')

@@ -34,6 +34,10 @@
 
                 <nav class="mt-5" aria-label="ingredients table">
                     <h1>Ingredients</h1>
+                    <form method="get" action="{{ url_for('skyrim_ingredients') }}" class="form-inline mb-3">
+                        <input type="text" name="search" class="form-control mr-2" placeholder="Search ingredients" value="{{ request.args.get('search', '') }}">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
                     <table class="table table-striped">
                         <thead>
                             <tr>
