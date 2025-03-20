@@ -39,6 +39,13 @@
                 <div class="mt-5">
                     <h1>Effects</h1>
 
+                    <!-- Search bar -->
+                    <form method="get" action="{{ url_for('skyrim_effects') }}" class="form-inline mb-3">
+                        <input type="text" name="search" class="form-control mr-2" placeholder="Search effects" value="{{ request.args.get('search', '') }}">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                    <!-- End of search bar -->
+
                     <table class="table table-striped">
                         <thead>
                             <tr>

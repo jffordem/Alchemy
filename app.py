@@ -103,6 +103,9 @@ def skyrim_effects():
     direction = request.args.get('direction', 'asc')
     reverse = direction == 'desc'
     effects = sorted(AllEffectsByName.values(), key=lambda e: getattr(e, sortby), reverse=reverse)
+    search_query = request.args.get('search', '').lower()
+    if search_query:
+        effects = [effect for effect in effects if search_query in effect.name.lower() or search_query in effect.description.lower()]
     return render_template('effects.html', effects=effects, sortby=sortby, direction=direction)
 
 
