@@ -109,7 +109,7 @@ def test_yaml_loading():
     assert nirnroot.value == 10
     assert nirnroot.weight == pytest.approx(0.2)
     assert nirnroot.thumbnail == "https://images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png"
-    assert nirnroot.image == "https://images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/96px-SR-icon-ingredient-Nirnroot.png"
+    assert nirnroot.image == "https://images.uesp.net/thumb/4/4a/SR-flora-Nirnroot.jpg/1200px-SR-flora-Nirnroot.jpg"
     assert any(effect.name == "Damage Health" and effect.value == pytest.approx(12.6) for effect in nirnroot.effects)
 
     # Test ingredient filtering
