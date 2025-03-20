@@ -4,7 +4,7 @@ import random
 import json
 
 from madlibs import AllMadlibsByName
-from ingredient import AllIngredientsByName, get_ingredients_by_filter, get_ingredient_by_name
+from ingredient import AllIngredientsByName, Ingredient, get_ingredients_by_filter, get_ingredient_by_name
 from effect import AllEffectsByName, get_effect_by_name, get_effects_by_filter
 from potion import Potion
 
@@ -112,21 +112,21 @@ def skyrim_effect(name):
 
 @app.route('/api/skyrim/potions', methods=['GET'])
 def skyrim_potions_api():
-    ingredients = request.args.get('ingredients').split(',')
-    potions = Potion.brew(ingredients)
-    return json.dumps({'potions': potions, 'ingredients': ingredients})
+    ingredient_names = request.args.get('ingredients').split(',')
+    potions = Potion.brew(ingredient_names)
+    return json.dumps({'potions': potions, 'ingredients': ingredient_names})
 
 
 @app.route('/skyrim/potions')
 def skyrim_potions():
-    def get_ingredients():
+    def get_ingredients() -> list[Ingredient]:
         if 'ingredients' in request.args:
             ingredients = request.args.get('ingredients')
             if ingredients == "all": return list(AllIngredientsByName.keys())
-            if ingredients == "farmable": return [ ingredient.name for ingredient in AllIngredientsByName.values() if ingredient.farmable]
-            return ingredients.split(',')
+            if ingredients == "farmable": return [ ingredient for ingredient in AllIngredientsByName.values() if ingredient.farmable]
+            return [ get_ingredient_by_name(name) for name in ingredients.split(',') ]
         else:
-            ingredients = list(AllIngredientsByName.keys())
+            ingredients = list(AllIngredientsByName.values())
             random.shuffle(ingredients)
             return ingredients[:5]
     limit = 100
