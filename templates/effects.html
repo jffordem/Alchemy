@@ -62,12 +62,12 @@
                             <!-- sort? -->
                             {% for effect in effects %}
                             <tr>
-                                <td><a href="{{url_for('skyrim_effect', name=effect.name)}}">{{effect.name}}</a></td><!-- link to effect -->
+                                <td><a href="{{url_for('skyrim_effect', name=effect.name)}}">{{effect.name}}</a></td>
                                 <td>{{effect.description}}</td>
-                                <td><a href="{{url_for('skyrim_effects', school=effect.school)}}">{{effect.school}}</a></td><!-- link to effects of that school -->
-                                <td><a href="{{url_for('skyrim_effects', type=effect.type)}}">{{effect.type}}</a></td><!-- link to effects of that type -->
+                                <td><a href="{{url_for('skyrim_effects', school=effect.school)}}">{{effect.school}}</a></td>
+                                <td><a href="{{url_for('skyrim_effects', type=effect.type)}}">{{effect.type}}</a></td>
                                 <td>{{effect.cost}}</td>
-                                <td><a href="{{effect.link}}" target="_blank">UESP</a></td>
+                                <td><a href="{{effect.link_url}}" target="_blank">UESP</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>

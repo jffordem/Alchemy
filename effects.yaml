@@ -5,7 +5,7 @@
   cost: 12
   dur: 10
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Health
 - name: Fortify Marksman
   description: Bows do {mag}% more damage for {dur} seconds.
   school: Restoration
@@ -13,7 +13,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Marksman
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Marksman
 - name: Fortify Destruction
   description: Destruction spells are {mag}% stronger for {dur} seconds.
   school: Restoration
@@ -21,7 +21,7 @@
   cost: 0.5
   dur: 60
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Destruction
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Destruction
 - name: Ravage Magicka
   description: Concentrated poison damages maximum magicka by {mag} points.
   school: Destruction
@@ -29,7 +29,7 @@
   cost: 1
   dur: 10
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Ravage_Magicka
+  link_url: https://en.uesp.net/wiki/Skyrim:Ravage_Magicka
 - name: Fortify Smithing
   description: For {dur} seconds weapon and armor improving is {mag}% better.
   school: Restoration
@@ -37,7 +37,7 @@
   cost: 0.75
   dur: 30
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Smithing
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Smithing
 - name: Fortify One-Handed
   description: One-handed weapons do {mag}% more damage for {dur} seconds.
   school: Restoration
@@ -45,7 +45,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_One-Handed
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_One-Handed
 - name: Weakness to Shock
   description: Target is {mag}% weaker to shock damage for {dur} seconds.
   school: Destruction
@@ -53,7 +53,7 @@
   cost: 0.7
   dur: 30
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Weakness_to_Shock
+  link_url: https://en.uesp.net/wiki/Skyrim:Weakness_to_Shock
 - name: Frenzy
   description: Creatures and people up to level {mag} will attack anything nearby for {dur} seconds.
   school: Illusion
@@ -61,7 +61,7 @@
   cost: 15
   dur: 10
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Frenzy
+  link_url: https://en.uesp.net/wiki/Skyrim:Frenzy
 - name: Fortify Sneak
   description: You are {mag}% harder to detect for {dur} seconds.
   school: Restoration
@@ -69,7 +69,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Sneak
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Sneak
 - name: Fortify Stamina
   description: Stamina is increased by {mag} points for {dur} seconds.
   school: Restoration
@@ -77,7 +77,7 @@
   cost: 0.3
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Stamina
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Stamina
 - name: Cure Disease
   description: Cures all diseases.
   school: Restoration
@@ -85,7 +85,7 @@
   cost: 0.5
   dur: 0
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Cure_Disease
+  link_url: https://en.uesp.net/wiki/Skyrim:Cure_Disease
 - name: Fortify Conjuration
   description: Conjurations spells last {mag}% longer for {dur} seconds.
   school: Restoration
@@ -93,7 +93,7 @@
   cost: 0.25
   dur: 60
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Conjuration
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Conjuration
 - name: Restore Magicka
   description: Restore {mag} points of Magicka.
   school: Restoration
@@ -101,7 +101,7 @@
   cost: 0.6
   dur: 0
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Restore_Magicka
+  link_url: https://en.uesp.net/wiki/Skyrim:Restore_Magicka
 - name: Damage Magicka
   description: Drains the target's Magicka by {mag} points.
   school: Destruction
@@ -109,7 +109,7 @@
   cost: 2.2
   dur: 0
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Damage_Magicka
+  link_url: https://en.uesp.net/wiki/Skyrim:Damage_Magicka
 - name: Paralysis
   description: Target is paralyzed for {dur} seconds.
   school: Alteration
@@ -117,7 +117,7 @@
   cost: 500
   dur: 1
   mag: 0
-  link: https://en.uesp.net/wiki/Skyrim:Paralysis
+  link_url: https://en.uesp.net/wiki/Skyrim:Paralysis
 - name: Regenerate Stamina
   description: Stamina regenerates {mag}% faster for {dur} seconds.
   school: Restoration
@@ -125,7 +125,7 @@
   cost: 0.1
   dur: 300
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Regenerate_Stamina
+  link_url: https://en.uesp.net/wiki/Skyrim:Regenerate_Stamina
 - name: Fortify Heavy Armor
   description: Increase Heavy Armor skill by {mag} points for {dur} seconds.
   school: Restoration
@@ -133,7 +133,7 @@
   cost: 0.5
   dur: 60
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Heavy_Armor
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Heavy_Armor
 - name: Weakness to Fire
   description: Target is {mag}% weaker to fire damage for {dur} seconds.
   school: Destruction
@@ -141,7 +141,7 @@
   cost: 0.6
   dur: 30
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Weakness_to_Fire
+  link_url: https://en.uesp.net/wiki/Skyrim:Weakness_to_Fire
 - name: Slow
   description: Target moves at 50% speed for {dur} seconds.
   school: Destruction
@@ -149,7 +149,7 @@
   cost: 1
   dur: 5
   mag: 50
-  link: https://en.uesp.net/wiki/Skyrim:Slow
+  link_url: https://en.uesp.net/wiki/Skyrim:Slow
 - name: Fortify Health
   description: Health is increased by {mag} points for {dur} seconds.
   school: Restoration
@@ -157,7 +157,7 @@
   cost: 0.35
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Health
 - name: Regenerate Magicka
   description: Magicka regenerates {mag}% faster for {dur} seconds.
   school: Restoration
@@ -165,7 +165,7 @@
   cost: 0.1
   dur: 300
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Regenerate_Magicka
+  link_url: https://en.uesp.net/wiki/Skyrim:Regenerate_Magicka
 - name: Regenerate Health
   description: Health regenerates {mag}% faster for {dur} seconds.
   school: Restoration
@@ -173,7 +173,7 @@
   cost: 0.1
   dur: 300
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Regenerate_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Regenerate_Health
 - name: Invisibility
   description: Invisibility for {dur} seconds.
   school: Illusion
@@ -181,7 +181,7 @@
   cost: 100
   dur: 4
   mag: 0
-  link: https://en.uesp.net/wiki/Skyrim:Invisibility
+  link_url: https://en.uesp.net/wiki/Skyrim:Invisibility
 - name: Restore Health
   description: Restore {mag} points of Health.
   school: Restoration
@@ -189,7 +189,7 @@
   cost: 0.5
   dur: 0
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Restore_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Restore_Health
 - name: Fortify Enchanting
   description: For {dur} seconds items are enchanted {mag}% stronger.
   school: Restoration
@@ -197,7 +197,7 @@
   cost: 0.6
   dur: 30
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Enchanting
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Enchanting
 - name: Lingering Damage Magicka
   description: Drains the target's Magicka by {mag} points per second for {dur} seconds.
   school: Destruction
@@ -205,7 +205,7 @@
   cost: 10
   dur: 10
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Magicka
+  link_url: https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Magicka
 - name: Weakness to Magic
   description: Target is {mag}% weaker to magic for {dur} seconds.
   school: Destruction
@@ -213,7 +213,7 @@
   cost: 1
   dur: 30
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Weakness_to_Magic
+  link_url: https://en.uesp.net/wiki/Skyrim:Weakness_to_Magic
 - name: Fortify Magicka
   description: Magicka is increased by {mag} points for {dur} seconds.
   school: Restoration
@@ -221,7 +221,7 @@
   cost: 0.3
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Magicka
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Magicka
 - name: Weakness to Poison
   description: Target is {mag}% weaker to poison for {dur} seconds.
   school: Destruction
@@ -229,7 +229,7 @@
   cost: 1
   dur: 30
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Weakness_to_Poison
+  link_url: https://en.uesp.net/wiki/Skyrim:Weakness_to_Poison
 - name: Fortify Block
   description: Blocking absorbs {mag}% more damage for {dur} seconds.
   school: Restoration
@@ -237,7 +237,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Block
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Block
 - name: Regenerate Health
   description: Health regenerates {mag}% faster for {dur} seconds.
   school: Restoration
@@ -245,7 +245,7 @@
   cost: 0.1
   dur: 300
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Regenerate_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Regenerate_Health
 - name: Fortify Illusion
   description: Illusion spells are {mag}% stronger for {dur} seconds.
   school: Restoration
@@ -253,7 +253,7 @@
   cost: 0.4
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Illusion
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Illusion
 - name: Fortify Carry Weight
   description: Carrying capacity increases by {mag} for {dur} seconds.
   school: Restoration
@@ -261,7 +261,7 @@
   cost: 0.15
   dur: 300
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Carry_Weight
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Carry_Weight
 - name: Fortify Lockpicking
   description: Lockpicking is {mag}% easier for {dur} seconds.
   school: Restoration
@@ -269,7 +269,7 @@
   cost: 0.5
   dur: 30
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Lockpicking
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Lockpicking
 - name: Damage Health
   description: Causes {mag} points of poison damage.
   school: Destruction
@@ -277,7 +277,7 @@
   cost: 3
   dur: 1
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Damage_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Damage_Health
 - name: Damage Stamina
   description: Drain the target's Stamina by {mag} points.
   school: Destruction
@@ -285,7 +285,7 @@
   cost: 1.8
   dur: 0
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Damage_Stamina
+  link_url: https://en.uesp.net/wiki/Skyrim:Damage_Stamina
 - name: Resist Poison
   description: Resist {mag}% of poison for {dur} seconds.
   school: Restoration
@@ -293,7 +293,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Resist_Poison
+  link_url: https://en.uesp.net/wiki/Skyrim:Resist_Poison
 - name: Fear
   description: Creatures and people up to level {mag} flee from combat for {dur} seconds.
   school: Illusion
@@ -301,7 +301,7 @@
   cost: 5
   dur: 30
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Fear
+  link_url: https://en.uesp.net/wiki/Skyrim:Fear
 - name: Resist Frost
   description: Resist {mag}% of frost damage for {dur} seconds.
   school: Restoration
@@ -309,7 +309,7 @@
   cost: 0.5
   dur: 60
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Resist_Frost
+  link_url: https://en.uesp.net/wiki/Skyrim:Resist_Frost
 - name: Ravage Health
   description: Causes {mag} points of concentrated poison damage.
   school: Destruction
@@ -317,7 +317,7 @@
   cost: 0.4
   dur: 10
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Ravage_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Ravage_Health
 - name: Resist Fire
   description: Resist {mag}% of fire damage for {dur} seconds.
   school: Restoration
@@ -325,7 +325,7 @@
   cost: 0.5
   dur: 60
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Resist_Fire
+  link_url: https://en.uesp.net/wiki/Skyrim:Resist_Fire
 - name: Lingering Damage Stamina
   description: Drain the target's Stamina by {mag} points per second for {dur} seconds.
   school: Destruction
@@ -333,7 +333,7 @@
   cost: 1.8
   dur: 10
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Stamina
+  link_url: https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Stamina
 - name: Fortify Pickpocket
   description: Pickpocketing is {mag}% easier for {dur} seconds.
   school: Restoration
@@ -341,7 +341,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Pickpocket
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Pickpocket
 - name: Resist Magic
   description: Resist {mag}% of magic for {dur} seconds.
   school: Restoration
@@ -349,7 +349,7 @@
   cost: 1
   dur: 60
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Resist_Magic
+  link_url: https://en.uesp.net/wiki/Skyrim:Resist_Magic
 - name: Fortify Restoration
   description: Restoration spells are {mag}% stronger for {dur} seconds.
   school: Restoration
@@ -357,7 +357,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Restoration
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Restoration
 - name: Fortify One-handed
   description: One-handed weapons do {mag}% more damage for {dur} seconds.
   school: Restoration
@@ -365,7 +365,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_One-Handed
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_One-Handed
 - name: Resist Shock
   description: Resist {mag}% of shock damage for {dur} seconds.
   school: Restoration
@@ -373,7 +373,7 @@
   cost: 0.5
   dur: 60
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Resist_Shock
+  link_url: https://en.uesp.net/wiki/Skyrim:Resist_Shock
 - name: Ravage Stamina
   description: Concentrated poison damages maximum stamina by {mag} points.
   school: Destruction
@@ -381,7 +381,7 @@
   cost: 1.6
   dur: 10
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Ravage_Stamina
+  link_url: https://en.uesp.net/wiki/Skyrim:Ravage_Stamina
 - name: Fortify Light Armor
   description: Increases Light Armor skill by {mag} points for {dur} seconds.
   school: Restoration
@@ -389,7 +389,7 @@
   cost: 0.5
   dur: 60
   mag: 2
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Light_Armor
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Light_Armor
 - name: Regenerate Health
   description: Health regenerates {mag}% faster for {dur} seconds.
   school: Restoration
@@ -397,7 +397,7 @@
   cost: 0.1
   dur: 300
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Regenerate_Health
+  link_url: https://en.uesp.net/wiki/Skyrim:Regenerate_Health
 - name: Fortify Alteration
   description: Alteration spells last {mag}% longer for {dur} seconds.
   school: Restoration
@@ -405,7 +405,7 @@
   cost: 0.2
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Alteration
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Alteration
 - name: Fortify Two-handed
   description: Two-handed weapons do {mag}% more damage for {dur} seconds.
   school: Restoration
@@ -413,7 +413,7 @@
   cost: 0.5
   dur: 60
   mag: 4
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Two-Handed
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Two-Handed
 - name: Damage Stamina Regen
   description: Decrease the target's Stamina regeneration by {mag}% for {dur} seconds.
   school: Destruction
@@ -421,7 +421,7 @@
   cost: 0.3
   dur: 5
   mag: 100
-  link: https://en.uesp.net/wiki/Skyrim:Damage_Stamina_Regen
+  link_url: https://en.uesp.net/wiki/Skyrim:Damage_Stamina_Regen
 - name: Restore Stamina
   description: Restore {mag} Stamina.
   school: Restoration
@@ -429,7 +429,7 @@
   cost: 0.6
   dur: 0
   mag: 5
-  link: https://en.uesp.net/wiki/Skyrim:Restore_Stamina
+  link_url: https://en.uesp.net/wiki/Skyrim:Restore_Stamina
 - name: Damage Magicka Regen
   description: Decrease the target's Magicka regeneration by {mag}% for {dur} seconds.
   school: Destruction
@@ -437,7 +437,7 @@
   cost: 0.5
   dur: 5
   mag: 100
-  link: https://en.uesp.net/wiki/Skyrim:Damage_Magicka_Regen
+  link_url: https://en.uesp.net/wiki/Skyrim:Damage_Magicka_Regen
 - name: Weakness to Frost
   description: Target is {mag}% weaker to frost damage for {dur} seconds.
   school: Destruction
@@ -445,7 +445,7 @@
   cost: 0.5
   dur: 30
   mag: 3
-  link: https://en.uesp.net/wiki/Skyrim:Weakness_to_Frost
+  link_url: https://en.uesp.net/wiki/Skyrim:Weakness_to_Frost
 - name: Waterbreathing
   description: Can breathe underwater for {dur} seconds.
   school: Alteration
@@ -453,7 +453,7 @@
   cost: 30
   dur: 5
   mag: 0
-  link: https://en.uesp.net/wiki/Skyrim:Waterbreathing
+  link_url: https://en.uesp.net/wiki/Skyrim:Waterbreathing
 - name: Fortify Barter
   description: You haggle for {mag}% better prices for {dur} seconds.
   school: Restoration
@@ -461,4 +461,4 @@
   cost: 2
   dur: 30
   mag: 1
-  link: https://en.uesp.net/wiki/Skyrim:Fortify_Barter
+  link_url: https://en.uesp.net/wiki/Skyrim:Fortify_Barter

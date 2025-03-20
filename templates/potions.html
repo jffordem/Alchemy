@@ -65,7 +65,7 @@
                     <h2>Ingredients</h2>
                     <ul class="list-group mb-5">
                         {% for ingredient in ingredients %}
-                        <li class="list-group-item"><img src="{{ingredient.thumbnail}}" alt="{{ingredient.name}}" class="mr-2" style="width: 32px; height: 32px; object-fit: contain;"><a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a></li>
+                        <li class="list-group-item"><img src="{{ingredient.thumbnail_url}}" alt="{{ingredient.name}}" class="mr-2" style="width: 32px; height: 32px; object-fit: contain;"><a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a></li>
                         {% endfor %}
                     </ul>
     

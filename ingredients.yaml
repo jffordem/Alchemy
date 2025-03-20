@@ -12,10 +12,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/4/4a/SR-flora-Nirnroot.jpg/1200px-SR-flora-Nirnroot.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Nirnroot
+  image_url: https://images.uesp.net/thumb/4/4a/SR-flora-Nirnroot.jpg/1200px-SR-flora-Nirnroot.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Nirnroot
   name: Nirnroot
-  thumbnail: https://images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png
+  thumbnail_url: https://images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png
   value: 10
   weight: 0.2
 - effects:
@@ -32,10 +32,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/e/ed/SR-flora-Emperor_Parasol_Moss.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Emperor_Parasol_Moss
+  image_url: https://images.uesp.net/e/ed/SR-flora-Emperor_Parasol_Moss.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Emperor_Parasol_Moss
   name: Emperor Parasol Moss
-  thumbnail: https://images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png/48px-SR-icon-ingredient-Emperor_Parasol_Moss.png
+  thumbnail_url: https://images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png/48px-SR-icon-ingredient-Emperor_Parasol_Moss.png
   value: 1
   weight: 0.25
 - effects:
@@ -52,10 +52,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/d/dd/SR-ingredient-Honeycomb.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Honeycomb
+  image_url: https://images.uesp.net/d/dd/SR-ingredient-Honeycomb.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Honeycomb
   name: Honeycomb
-  thumbnail: https://images.uesp.net/thumb/e/e0/SR-icon-ingredient-Honeycomb.png/48px-SR-icon-ingredient-Honeycomb.png
+  thumbnail_url: https://images.uesp.net/thumb/e/e0/SR-icon-ingredient-Honeycomb.png/48px-SR-icon-ingredient-Honeycomb.png
   value: 5
   weight: 0.2
 - effects:
@@ -72,10 +72,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/7/7c/SR-flora-Swamp_Fungal_Pod.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Swamp_Fungal_Pod
+  image_url: https://images.uesp.net/7/7c/SR-flora-Swamp_Fungal_Pod.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Swamp_Fungal_Pod
   name: Swamp Fungal Pod
-  thumbnail: https://images.uesp.net/thumb/9/92/SR-icon-ingredient-Swamp_Fungal_Pod.png/48px-SR-icon-ingredient-Swamp_Fungal_Pod.png
+  thumbnail_url: https://images.uesp.net/thumb/9/92/SR-icon-ingredient-Swamp_Fungal_Pod.png/48px-SR-icon-ingredient-Swamp_Fungal_Pod.png
   value: 5
   weight: 0.2
 - effects:
@@ -92,10 +92,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/5/5d/SR-flora-Deathbell.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Deathbell
+  image_url: https://images.uesp.net/5/5d/SR-flora-Deathbell.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Deathbell
   name: Deathbell
-  thumbnail: https://images.uesp.net/thumb/5/58/SR-icon-ingredient-Deathbell.png/48px-SR-icon-ingredient-Deathbell.png
+  thumbnail_url: https://images.uesp.net/thumb/5/58/SR-icon-ingredient-Deathbell.png/48px-SR-icon-ingredient-Deathbell.png
   value: 4
   weight: 0.2
 - effects:
@@ -112,10 +112,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/6d/SR-ingredient-Hawk_Feathers.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Hawk_Feathers
+  image_url: https://images.uesp.net/6/6d/SR-ingredient-Hawk_Feathers.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Hawk_Feathers
   name: Hawk Feathers
-  thumbnail: https://images.uesp.net/thumb/5/5c/SR-icon-ingredient-Hawk_Feathers.png/48px-SR-icon-ingredient-Hawk_Feathers.png
+  thumbnail_url: https://images.uesp.net/thumb/5/5c/SR-icon-ingredient-Hawk_Feathers.png/48px-SR-icon-ingredient-Hawk_Feathers.png
   value: 15
   weight: 0.1
 - effects:
@@ -132,10 +132,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/e/e3/SR-ingredient-Human_Heart.jpg/1200px-SR-ingredient-Human_Heart.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Human_Heart
+  image_url: https://images.uesp.net/thumb/e/e3/SR-ingredient-Human_Heart.jpg/1200px-SR-ingredient-Human_Heart.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Human_Heart
   name: Human Heart
-  thumbnail: https://images.uesp.net/thumb/f/f6/SR-icon-ingredient-Human_Heart.png/48px-SR-icon-ingredient-Human_Heart.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f6/SR-icon-ingredient-Human_Heart.png/48px-SR-icon-ingredient-Human_Heart.png
   value: 0
   weight: 1
 - effects:
@@ -152,10 +152,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/d/d8/SR-flora-Canis-Root.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Canis_Root
+  image_url: https://images.uesp.net/d/d8/SR-flora-Canis-Root.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Canis_Root
   name: Canis Root
-  thumbnail: https://images.uesp.net/thumb/f/f6/SR-icon-ingredient-Canis_Root.png/48px-SR-icon-ingredient-Canis_Root.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f6/SR-icon-ingredient-Canis_Root.png/48px-SR-icon-ingredient-Canis_Root.png
   value: 5
   weight: 0.1
 - effects:
@@ -172,10 +172,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/e/e3/SR-ingredient-Vampire_Dust.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Vampire_Dust
+  image_url: https://images.uesp.net/e/e3/SR-ingredient-Vampire_Dust.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Vampire_Dust
   name: Vampire Dust
-  thumbnail: https://images.uesp.net/thumb/2/2f/SR-icon-ingredient-Vampire_Dust.png/48px-SR-icon-ingredient-Vampire_Dust.png
+  thumbnail_url: https://images.uesp.net/thumb/2/2f/SR-icon-ingredient-Vampire_Dust.png/48px-SR-icon-ingredient-Vampire_Dust.png
   value: 25
   weight: 0.2
 - effects:
@@ -192,10 +192,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/3/36/SR-ingredient-Blue_Butterfly.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Blue_Butterfly_Wing
+  image_url: https://images.uesp.net/3/36/SR-ingredient-Blue_Butterfly.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Blue_Butterfly_Wing
   name: Blue Butterfly Wing
-  thumbnail: https://images.uesp.net/thumb/1/16/SR-icon-ingredient-Blue_Butterfly_Wing.png/48px-SR-icon-ingredient-Blue_Butterfly_Wing.png
+  thumbnail_url: https://images.uesp.net/thumb/1/16/SR-icon-ingredient-Blue_Butterfly_Wing.png/48px-SR-icon-ingredient-Blue_Butterfly_Wing.png
   value: 2
   weight: 0.1
 - effects:
@@ -212,10 +212,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/9/9f/SR-flora-Purple_Mountain_Flower_Plant.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Purple_Mountain_Flower
+  image_url: https://images.uesp.net/9/9f/SR-flora-Purple_Mountain_Flower_Plant.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Purple_Mountain_Flower
   name: Purple Mountain Flower
-  thumbnail: https://images.uesp.net/thumb/e/e1/SR-icon-ingredient-Purple_Mountain_Flower.png/48px-SR-icon-ingredient-Purple_Mountain_Flower.png
+  thumbnail_url: https://images.uesp.net/thumb/e/e1/SR-icon-ingredient-Purple_Mountain_Flower.png/48px-SR-icon-ingredient-Purple_Mountain_Flower.png
   value: 2
   weight: 0.1
 - effects:
@@ -232,10 +232,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/5/59/SR-ingredient-Ice_Wraith_Teeth.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Ice_Wraith_Teeth
+  image_url: https://images.uesp.net/5/59/SR-ingredient-Ice_Wraith_Teeth.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Ice_Wraith_Teeth
   name: Ice Wraith Teeth
-  thumbnail: https://images.uesp.net/thumb/9/95/SR-icon-ingredient-Ice_Wraith_Teeth.png/48px-SR-icon-ingredient-Ice_Wraith_Teeth.png
+  thumbnail_url: https://images.uesp.net/thumb/9/95/SR-icon-ingredient-Ice_Wraith_Teeth.png/48px-SR-icon-ingredient-Ice_Wraith_Teeth.png
   value: 30
   weight: 0.25
 - effects:
@@ -252,10 +252,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/8/86/SR-ingredient-Blue_Dartwing.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Blue_Dartwing
+  image_url: https://images.uesp.net/8/86/SR-ingredient-Blue_Dartwing.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Blue_Dartwing
   name: Blue Dartwing
-  thumbnail: https://images.uesp.net/thumb/e/ee/SR-icon-ingredient-Blue_Dartwing.png/48px-SR-icon-ingredient-Blue_Dartwing.png
+  thumbnail_url: https://images.uesp.net/thumb/e/ee/SR-icon-ingredient-Blue_Dartwing.png/48px-SR-icon-ingredient-Blue_Dartwing.png
   value: 1
   weight: 0.1
 - effects:
@@ -272,10 +272,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/3/3c/SR-ingredient-Taproot.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Taproot
+  image_url: https://images.uesp.net/3/3c/SR-ingredient-Taproot.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Taproot
   name: Taproot
-  thumbnail: https://images.uesp.net/thumb/7/78/SR-icon-ingredient-Taproot.png/48px-SR-icon-ingredient-Taproot.png
+  thumbnail_url: https://images.uesp.net/thumb/7/78/SR-icon-ingredient-Taproot.png/48px-SR-icon-ingredient-Taproot.png
   value: 15
   weight: 0.5
 - effects:
@@ -292,10 +292,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/4/4d/SR-ingredient-Pearl.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Pearl
+  image_url: https://images.uesp.net/4/4d/SR-ingredient-Pearl.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Pearl
   name: Pearl
-  thumbnail: https://images.uesp.net/thumb/a/ad/SR-icon-ingredient-Pearl.png/48px-SR-icon-ingredient-Pearl.png
+  thumbnail_url: https://images.uesp.net/thumb/a/ad/SR-icon-ingredient-Pearl.png/48px-SR-icon-ingredient-Pearl.png
   value: 2
   weight: 0.1
 - effects:
@@ -312,10 +312,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/1/18/SR-flora-Juniper.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Juniper_Berries
+  image_url: https://images.uesp.net/1/18/SR-flora-Juniper.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Juniper_Berries
   name: Juniper Berries
-  thumbnail: https://images.uesp.net/thumb/1/10/SR-icon-ingredient-Juniper_Berries.png/48px-SR-icon-ingredient-Juniper_Berries.png
+  thumbnail_url: https://images.uesp.net/thumb/1/10/SR-icon-ingredient-Juniper_Berries.png/48px-SR-icon-ingredient-Juniper_Berries.png
   value: 1
   weight: 0.1
 - effects:
@@ -332,10 +332,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/9/9f/SR-flora-Hanging_Moss.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Hanging_Moss
+  image_url: https://images.uesp.net/9/9f/SR-flora-Hanging_Moss.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Hanging_Moss
   name: Hanging Moss
-  thumbnail: https://images.uesp.net/thumb/2/22/SR-icon-ingredient-Hanging_Moss.png/48px-SR-icon-ingredient-Hanging_Moss.png
+  thumbnail_url: https://images.uesp.net/thumb/2/22/SR-icon-ingredient-Hanging_Moss.png/48px-SR-icon-ingredient-Hanging_Moss.png
   value: 1
   weight: 0.25
 - effects:
@@ -352,10 +352,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/9/9a/SR-flora-Jazbay_Plant.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Jazbay_Grapes
+  image_url: https://images.uesp.net/9/9a/SR-flora-Jazbay_Plant.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Jazbay_Grapes
   name: Jazbay Grapes
-  thumbnail: https://images.uesp.net/thumb/5/50/SR-icon-ingredient-Jazbay_Grapes.png/48px-SR-icon-ingredient-Jazbay_Grapes.png
+  thumbnail_url: https://images.uesp.net/thumb/5/50/SR-icon-ingredient-Jazbay_Grapes.png/48px-SR-icon-ingredient-Jazbay_Grapes.png
   value: 1
   weight: 0.2
 - effects:
@@ -372,10 +372,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/8/89/SR-ingredient-Bone_Meal.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Bone_Meal
+  image_url: https://images.uesp.net/8/89/SR-ingredient-Bone_Meal.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Bone_Meal
   name: Bone Meal
-  thumbnail: https://images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png
   value: 5
   weight: 0.5
 - effects:
@@ -392,10 +392,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/5/54/SR-flora-Creep_Cluster.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Creep_Cluster
+  image_url: https://images.uesp.net/5/54/SR-flora-Creep_Cluster.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Creep_Cluster
   name: Creep Cluster
-  thumbnail: https://images.uesp.net/thumb/1/15/SR-icon-ingredient-Creep_Cluster.png/48px-SR-icon-ingredient-Creep_Cluster.png
+  thumbnail_url: https://images.uesp.net/thumb/1/15/SR-icon-ingredient-Creep_Cluster.png/48px-SR-icon-ingredient-Creep_Cluster.png
   value: 1
   weight: 0.2
 - effects:
@@ -412,10 +412,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/a/ad/SR-ingredient-Garlic.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Garlic
+  image_url: https://images.uesp.net/a/ad/SR-ingredient-Garlic.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Garlic
   name: Garlic
-  thumbnail: https://images.uesp.net/thumb/e/e5/SR-icon-ingredient-Garlic.png/48px-SR-icon-ingredient-Garlic.png
+  thumbnail_url: https://images.uesp.net/thumb/e/e5/SR-icon-ingredient-Garlic.png/48px-SR-icon-ingredient-Garlic.png
   value: 1
   weight: 0.25
 - effects:
@@ -432,10 +432,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/64/SR-ingredient-Hawk_Beak.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Hawk_Beak
+  image_url: https://images.uesp.net/6/64/SR-ingredient-Hawk_Beak.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Hawk_Beak
   name: Hawk Beak
-  thumbnail: https://images.uesp.net/thumb/6/69/SR-icon-ingredient-Hawk_Beak.png/48px-SR-icon-ingredient-Hawk_Beak.png
+  thumbnail_url: https://images.uesp.net/thumb/6/69/SR-icon-ingredient-Hawk_Beak.png/48px-SR-icon-ingredient-Hawk_Beak.png
   value: 15
   weight: 0.25
 - effects:
@@ -452,10 +452,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/9/97/SR-flora-Blue_Mountain_Flower.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Blue_Mountain_Flower
+  image_url: https://images.uesp.net/9/97/SR-flora-Blue_Mountain_Flower.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Blue_Mountain_Flower
   name: Blue Mountain Flower
-  thumbnail: https://images.uesp.net/thumb/3/38/SR-icon-ingredient-Blue_Mountain_Flower.png/48px-SR-icon-ingredient-Blue_Mountain_Flower.png
+  thumbnail_url: https://images.uesp.net/thumb/3/38/SR-icon-ingredient-Blue_Mountain_Flower.png/48px-SR-icon-ingredient-Blue_Mountain_Flower.png
   value: 2
   weight: 0.1
 - effects:
@@ -472,10 +472,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/a/a5/SR-ingredient-Spider_Eggs.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Spider_Egg
+  image_url: https://images.uesp.net/a/a5/SR-ingredient-Spider_Eggs.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Spider_Egg
   name: Spider Egg
-  thumbnail: https://images.uesp.net/thumb/0/07/SR-icon-ingredient-Spider_Egg.png/48px-SR-icon-ingredient-Spider_Egg.png
+  thumbnail_url: https://images.uesp.net/thumb/0/07/SR-icon-ingredient-Spider_Egg.png/48px-SR-icon-ingredient-Spider_Egg.png
   value: 5
   weight: 0.2
 - effects:
@@ -492,10 +492,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/e/eb/SR-ingredient-Powdered_Mammoth_Tusk.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Powdered_Mammoth_Tusk
+  image_url: https://images.uesp.net/e/eb/SR-ingredient-Powdered_Mammoth_Tusk.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Powdered_Mammoth_Tusk
   name: Powdered Mammoth Tusk
-  thumbnail: https://images.uesp.net/thumb/c/c9/SR-icon-ingredient-Powdered_Mammoth_Tusk.png/48px-SR-icon-ingredient-Powdered_Mammoth_Tusk.png
+  thumbnail_url: https://images.uesp.net/thumb/c/c9/SR-icon-ingredient-Powdered_Mammoth_Tusk.png/48px-SR-icon-ingredient-Powdered_Mammoth_Tusk.png
   value: 2
   weight: 0.1
 - effects:
@@ -512,10 +512,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/61/SR-ingredient-Void_Salts.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Void_Salts
+  image_url: https://images.uesp.net/6/61/SR-ingredient-Void_Salts.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Void_Salts
   name: Void Salts
-  thumbnail: https://images.uesp.net/thumb/7/77/SR-icon-ingredient-Void_Salts.png/48px-SR-icon-ingredient-Void_Salts.png
+  thumbnail_url: https://images.uesp.net/thumb/7/77/SR-icon-ingredient-Void_Salts.png/48px-SR-icon-ingredient-Void_Salts.png
   value: 125
   weight: 0.2
 - effects:
@@ -532,10 +532,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/6d/SR-ingredient-Torchbug.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Torchbug_Thorax
+  image_url: https://images.uesp.net/6/6d/SR-ingredient-Torchbug.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Torchbug_Thorax
   name: Torchbug Thorax
-  thumbnail: https://images.uesp.net/thumb/9/99/SR-icon-ingredient-Torchbug_Thorax.png/48px-SR-icon-ingredient-Torchbug_Thorax.png
+  thumbnail_url: https://images.uesp.net/thumb/9/99/SR-icon-ingredient-Torchbug_Thorax.png/48px-SR-icon-ingredient-Torchbug_Thorax.png
   value: 1
   weight: 0.1
 - effects:
@@ -552,10 +552,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/a/ad/SR-ingredient-Chicken%27s_Egg.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Chicken%27s_Egg
+  image_url: https://images.uesp.net/a/ad/SR-ingredient-Chicken%27s_Egg.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Chicken%27s_Egg
   name: Chicken's Egg
-  thumbnail: https://images.uesp.net/thumb/d/de/SR-icon-ingredient-Chicken%27s_Egg.png/48px-SR-icon-ingredient-Chicken%27s_Egg.png
+  thumbnail_url: https://images.uesp.net/thumb/d/de/SR-icon-ingredient-Chicken%27s_Egg.png/48px-SR-icon-ingredient-Chicken%27s_Egg.png
   value: 2
   weight: 0.5
 - effects:
@@ -572,10 +572,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/7/79/SR-ingredient-Small_Antlers.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Small_Antlers
+  image_url: https://images.uesp.net/7/79/SR-ingredient-Small_Antlers.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Small_Antlers
   name: Small Antlers
-  thumbnail: https://images.uesp.net/thumb/4/4e/SR-icon-ingredient-Small_Antlers.png/48px-SR-icon-ingredient-Small_Antlers.png
+  thumbnail_url: https://images.uesp.net/thumb/4/4e/SR-icon-ingredient-Small_Antlers.png/48px-SR-icon-ingredient-Small_Antlers.png
   value: 2
   weight: 0.1
 - effects:
@@ -592,10 +592,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/0/08/SR-flora-Bleeding_Crown_Plant.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Bleeding_Crown
+  image_url: https://images.uesp.net/0/08/SR-flora-Bleeding_Crown_Plant.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Bleeding_Crown
   name: Bleeding Crown
-  thumbnail: https://images.uesp.net/thumb/a/a6/SR-icon-ingredient-Bleeding_Crown.png/48px-SR-icon-ingredient-Bleeding_Crown.png
+  thumbnail_url: https://images.uesp.net/thumb/a/a6/SR-icon-ingredient-Bleeding_Crown.png/48px-SR-icon-ingredient-Bleeding_Crown.png
   value: 10
   weight: 0.3
 - effects:
@@ -612,10 +612,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/2/22/SR-flora-Thistle.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Thistle_Branch
+  image_url: https://images.uesp.net/2/22/SR-flora-Thistle.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Thistle_Branch
   name: Thistle Branch
-  thumbnail: https://images.uesp.net/thumb/b/bf/SR-icon-ingredient-Thistle_Branch.png/48px-SR-icon-ingredient-Thistle_Branch.png
+  thumbnail_url: https://images.uesp.net/thumb/b/bf/SR-icon-ingredient-Thistle_Branch.png/48px-SR-icon-ingredient-Thistle_Branch.png
   value: 1
   weight: 0.1
 - effects:
@@ -632,10 +632,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/5/5c/SR-ingredient-Abacean_Longfin.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Abecean_Longfin
+  image_url: https://images.uesp.net/5/5c/SR-ingredient-Abacean_Longfin.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Abecean_Longfin
   name: Abecean Longfin
-  thumbnail: https://images.uesp.net/thumb/7/7a/SR-icon-ingredient-Abecean_Longfin.png/48px-SR-icon-ingredient-Abecean_Longfin.png
+  thumbnail_url: https://images.uesp.net/thumb/7/7a/SR-icon-ingredient-Abecean_Longfin.png/48px-SR-icon-ingredient-Abecean_Longfin.png
   value: 15
   weight: 0.5
 - effects:
@@ -652,10 +652,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/7/7d/SR-ingredient-Mudcrab_Chitin.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Mudcrab_Chitin
+  image_url: https://images.uesp.net/7/7d/SR-ingredient-Mudcrab_Chitin.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Mudcrab_Chitin
   name: Mudcrab Chitin
-  thumbnail: https://images.uesp.net/thumb/7/74/SR-icon-ingredient-Mudcrab_Chitin.png/48px-SR-icon-ingredient-Mudcrab_Chitin.png
+  thumbnail_url: https://images.uesp.net/thumb/7/74/SR-icon-ingredient-Mudcrab_Chitin.png/48px-SR-icon-ingredient-Mudcrab_Chitin.png
   value: 2
   weight: 0.25
 - effects:
@@ -672,10 +672,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/64/SR-ingredient-Histcarp.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Histcarp
+  image_url: https://images.uesp.net/6/64/SR-ingredient-Histcarp.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Histcarp
   name: Histcarp
-  thumbnail: https://images.uesp.net/thumb/e/ec/SR-icon-ingredient-Histcarp.png/48px-SR-icon-ingredient-Histcarp.png
+  thumbnail_url: https://images.uesp.net/thumb/e/ec/SR-icon-ingredient-Histcarp.png/48px-SR-icon-ingredient-Histcarp.png
   value: 6
   weight: 0.25
 - effects:
@@ -692,10 +692,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/8/81/SR-ingredient-Beehive_Husk.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Beehive_Husk
+  image_url: https://images.uesp.net/8/81/SR-ingredient-Beehive_Husk.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Beehive_Husk
   name: Beehive Husk
-  thumbnail: https://images.uesp.net/thumb/8/84/SR-icon-ingredient-Beehive_Husk.png/48px-SR-icon-ingredient-Beehive_Husk.png
+  thumbnail_url: https://images.uesp.net/thumb/8/84/SR-icon-ingredient-Beehive_Husk.png/48px-SR-icon-ingredient-Beehive_Husk.png
   value: 5
   weight: 1
 - effects:
@@ -712,10 +712,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/1/1b/SR-flora-Poison_Bloom.jpg/1200px-SR-flora-Poison_Bloom.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Poison_Bloom
+  image_url: https://images.uesp.net/thumb/1/1b/SR-flora-Poison_Bloom.jpg/1200px-SR-flora-Poison_Bloom.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Poison_Bloom
   name: Poison Bloom
-  thumbnail: https://images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png/48px-SR-icon-ingredient-Poison_Bloom.png
+  thumbnail_url: https://images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png/48px-SR-icon-ingredient-Poison_Bloom.png
   value: 5
   weight: 0.25
 - effects:
@@ -732,10 +732,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/2/29/SR-flora-Dragon%27s_Tongue.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Dragon%27s_Tongue
+  image_url: https://images.uesp.net/2/29/SR-flora-Dragon%27s_Tongue.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Dragon%27s_Tongue
   name: Dragon's Tongue
-  thumbnail: https://images.uesp.net/thumb/0/0e/SR-icon-ingredient-Dragons_Tongue.png/48px-SR-icon-ingredient-Dragons_Tongue.png
+  thumbnail_url: https://images.uesp.net/thumb/0/0e/SR-icon-ingredient-Dragons_Tongue.png/48px-SR-icon-ingredient-Dragons_Tongue.png
   value: 5
   weight: 0.1
 - effects:
@@ -752,10 +752,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/4/44/SR-ingredient-Troll_Fat.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Troll_Fat
+  image_url: https://images.uesp.net/4/44/SR-ingredient-Troll_Fat.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Troll_Fat
   name: Troll Fat
-  thumbnail: https://images.uesp.net/thumb/8/8a/SR-icon-ingredient-Troll_Fat.png/48px-SR-icon-ingredient-Troll_Fat.png
+  thumbnail_url: https://images.uesp.net/thumb/8/8a/SR-icon-ingredient-Troll_Fat.png/48px-SR-icon-ingredient-Troll_Fat.png
   value: 15
   weight: 1
 - effects:
@@ -772,10 +772,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/6f/SR-ingredient-OrangeDartwing.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Orange_Dartwing
+  image_url: https://images.uesp.net/6/6f/SR-ingredient-OrangeDartwing.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Orange_Dartwing
   name: Orange Dartwing
-  thumbnail: https://images.uesp.net/thumb/e/e7/SR-icon-ingredient-Orange_Dartwing.png/48px-SR-icon-ingredient-Orange_Dartwing.png
+  thumbnail_url: https://images.uesp.net/thumb/e/e7/SR-icon-ingredient-Orange_Dartwing.png/48px-SR-icon-ingredient-Orange_Dartwing.png
   value: 1
   weight: 0.1
 - effects:
@@ -792,10 +792,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/a/a4/SR-flora-Scaly_Pholiota.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Scaly_Pholiota
+  image_url: https://images.uesp.net/a/a4/SR-flora-Scaly_Pholiota.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Scaly_Pholiota
   name: Scaly Pholiota
-  thumbnail: https://images.uesp.net/thumb/1/18/SR-icon-ingredient-Scaly_Pholiota.png/48px-SR-icon-ingredient-Scaly_Pholiota.png
+  thumbnail_url: https://images.uesp.net/thumb/1/18/SR-icon-ingredient-Scaly_Pholiota.png/48px-SR-icon-ingredient-Scaly_Pholiota.png
   value: 4
   weight: 0.25
 - effects:
@@ -812,10 +812,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/1/1f/SR-ingredient-Dwarven_Oil.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Dwarven_Oil
+  image_url: https://images.uesp.net/1/1f/SR-ingredient-Dwarven_Oil.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Dwarven_Oil
   name: Dwarven Oil
-  thumbnail: https://images.uesp.net/thumb/e/e5/SR-icon-ingredient-Dwarven_Oil.png/48px-SR-icon-ingredient-Dwarven_Oil.png
+  thumbnail_url: https://images.uesp.net/thumb/e/e5/SR-icon-ingredient-Dwarven_Oil.png/48px-SR-icon-ingredient-Dwarven_Oil.png
   value: 15
   weight: 0.25
 - effects:
@@ -832,10 +832,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/a/a7/SR-ingredient-Cyrodilic_Spadetail.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Cyrodilic_Spadetail
+  image_url: https://images.uesp.net/a/a7/SR-ingredient-Cyrodilic_Spadetail.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Cyrodilic_Spadetail
   name: Cyrodilic Spadetail
-  thumbnail: https://images.uesp.net/thumb/a/a9/SR-icon-ingredient-Cyrodilic_Spadetail.png/48px-SR-icon-ingredient-Cyrodilic_Spadetail.png
+  thumbnail_url: https://images.uesp.net/thumb/a/a9/SR-icon-ingredient-Cyrodilic_Spadetail.png/48px-SR-icon-ingredient-Cyrodilic_Spadetail.png
   value: 15
   weight: 0.25
 - effects:
@@ -852,10 +852,10 @@
     power: 0.6
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/d/d8/SR-flora-Imp_Stool.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Imp_Stool
+  image_url: https://images.uesp.net/d/d8/SR-flora-Imp_Stool.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Imp_Stool
   name: Imp Stool
-  thumbnail: https://images.uesp.net/thumb/7/77/SR-icon-ingredient-Imp_Stool.png/48px-SR-icon-ingredient-Imp_Stool.png
+  thumbnail_url: https://images.uesp.net/thumb/7/77/SR-icon-ingredient-Imp_Stool.png/48px-SR-icon-ingredient-Imp_Stool.png
   value: 0
   weight: 0.3
 - effects:
@@ -872,10 +872,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/7/78/SR-ingredient-Pine_Thrush_Egg.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Pine_Thrush_Egg
+  image_url: https://images.uesp.net/7/78/SR-ingredient-Pine_Thrush_Egg.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Pine_Thrush_Egg
   name: Pine Thrush Egg
-  thumbnail: https://images.uesp.net/thumb/0/0f/SR-icon-ingredient-Pine_Thrush_Egg.png/48px-SR-icon-ingredient-Pine_Thrush_Egg.png
+  thumbnail_url: https://images.uesp.net/thumb/0/0f/SR-icon-ingredient-Pine_Thrush_Egg.png/48px-SR-icon-ingredient-Pine_Thrush_Egg.png
   value: 2
   weight: 0.5
 - effects:
@@ -892,10 +892,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/6/68/SR-flora-Glowing_Mushroom.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Glowing_Mushroom
+  image_url: https://images.uesp.net/6/68/SR-flora-Glowing_Mushroom.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Glowing_Mushroom
   name: Glowing Mushroom
-  thumbnail: https://images.uesp.net/thumb/7/71/SR-icon-ingredient-Glowing_Mushroom.png/48px-SR-icon-ingredient-Glowing_Mushroom.png
+  thumbnail_url: https://images.uesp.net/thumb/7/71/SR-icon-ingredient-Glowing_Mushroom.png/48px-SR-icon-ingredient-Glowing_Mushroom.png
   value: 5
   weight: 0.2
 - effects:
@@ -912,10 +912,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/69/SR-ingredient-Slaughterfish_Egg_Nest.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Egg
+  image_url: https://images.uesp.net/6/69/SR-ingredient-Slaughterfish_Egg_Nest.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Egg
   name: Slaughterfish Egg
-  thumbnail: https://images.uesp.net/thumb/8/84/SR-icon-ingredient-Slaughterfish_Egg.png/48px-SR-icon-ingredient-Slaughterfish_Egg.png
+  thumbnail_url: https://images.uesp.net/thumb/8/84/SR-icon-ingredient-Slaughterfish_Egg.png/48px-SR-icon-ingredient-Slaughterfish_Egg.png
   value: 3
   weight: 0.2
 - effects:
@@ -932,10 +932,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/2/2c/SR-flora-Spiky_Grass.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Grass_Pod
+  image_url: https://images.uesp.net/2/2c/SR-flora-Spiky_Grass.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Grass_Pod
   name: Grass Pod
-  thumbnail: https://images.uesp.net/thumb/7/78/SR-icon-ingredient-Grass_Pod.png/48px-SR-icon-ingredient-Grass_Pod.png
+  thumbnail_url: https://images.uesp.net/thumb/7/78/SR-icon-ingredient-Grass_Pod.png/48px-SR-icon-ingredient-Grass_Pod.png
   value: 1
   weight: 0.1
 - effects:
@@ -952,10 +952,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/1/19/SR-flora-Giant_Lichen.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Giant_Lichen
+  image_url: https://images.uesp.net/1/19/SR-flora-Giant_Lichen.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Giant_Lichen
   name: Giant Lichen
-  thumbnail: https://images.uesp.net/thumb/8/8b/SR-icon-ingredient-Giant_Lichen.png/48px-SR-icon-ingredient-Giant_Lichen.png
+  thumbnail_url: https://images.uesp.net/thumb/8/8b/SR-icon-ingredient-Giant_Lichen.png/48px-SR-icon-ingredient-Giant_Lichen.png
   value: 5
   weight: 0.25
 - effects:
@@ -972,10 +972,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/d/d5/SR-ingredient-Small_Pearl.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Small_Pearl
+  image_url: https://images.uesp.net/d/d5/SR-ingredient-Small_Pearl.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Small_Pearl
   name: Small Pearl
-  thumbnail: https://images.uesp.net/thumb/8/8f/SR-icon-ingredient-Small_Pearl.png/48px-SR-icon-ingredient-Small_Pearl.png
+  thumbnail_url: https://images.uesp.net/thumb/8/8f/SR-icon-ingredient-Small_Pearl.png/48px-SR-icon-ingredient-Small_Pearl.png
   value: 2
   weight: 0.1
 - effects:
@@ -992,10 +992,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/a/a0/SR-ingredient-Nordic_Barnacle_Cluster.jpg/1200px-SR-ingredient-Nordic_Barnacle_Cluster.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Nordic_Barnacle
+  image_url: https://images.uesp.net/thumb/a/a0/SR-ingredient-Nordic_Barnacle_Cluster.jpg/1200px-SR-ingredient-Nordic_Barnacle_Cluster.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Nordic_Barnacle
   name: Nordic Barnacle
-  thumbnail: https://images.uesp.net/thumb/7/75/SR-icon-ingredient-Nordic_Barnacle.png/48px-SR-icon-ingredient-Nordic_Barnacle.png
+  thumbnail_url: https://images.uesp.net/thumb/7/75/SR-icon-ingredient-Nordic_Barnacle.png/48px-SR-icon-ingredient-Nordic_Barnacle.png
   value: 5
   weight: 0.2
 - effects:
@@ -1012,10 +1012,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/3/3d/SR-ingredient-Monarch_Butterfly.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Butterfly_Wing
+  image_url: https://images.uesp.net/3/3d/SR-ingredient-Monarch_Butterfly.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Butterfly_Wing
   name: Butterfly Wing
-  thumbnail: https://images.uesp.net/thumb/f/f8/SR-icon-ingredient-Butterfly_Wing.png/48px-SR-icon-ingredient-Butterfly_Wing.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f8/SR-icon-ingredient-Butterfly_Wing.png/48px-SR-icon-ingredient-Butterfly_Wing.png
   value: 3
   weight: 0.1
 - effects:
@@ -1032,10 +1032,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/5/5b/SR-ingredient-Hagraven_Feathers.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Hagraven_Feathers
+  image_url: https://images.uesp.net/5/5b/SR-ingredient-Hagraven_Feathers.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Hagraven_Feathers
   name: Hagraven Feathers
-  thumbnail: https://images.uesp.net/thumb/d/d8/SR-icon-ingredient-Hagraven_Feathers.png/48px-SR-icon-ingredient-Hagraven_Feathers.png
+  thumbnail_url: https://images.uesp.net/thumb/d/d8/SR-icon-ingredient-Hagraven_Feathers.png/48px-SR-icon-ingredient-Hagraven_Feathers.png
   value: 20
   weight: 0.1
 - effects:
@@ -1052,10 +1052,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/f/fd/SR-ingredient-Frost_Salts.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Frost_Salts
+  image_url: https://images.uesp.net/f/fd/SR-ingredient-Frost_Salts.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Frost_Salts
   name: Frost Salts
-  thumbnail: https://images.uesp.net/thumb/5/58/SR-icon-ingredient-Frost_Salts.png/48px-SR-icon-ingredient-Frost_Salts.png
+  thumbnail_url: https://images.uesp.net/thumb/5/58/SR-icon-ingredient-Frost_Salts.png/48px-SR-icon-ingredient-Frost_Salts.png
   value: 100
   weight: 0.25
 - effects:
@@ -1072,10 +1072,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/c/c8/SR-flora-Mora_Tapinella.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Mora_Tapinella
+  image_url: https://images.uesp.net/c/c8/SR-flora-Mora_Tapinella.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Mora_Tapinella
   name: Mora Tapinella
-  thumbnail: https://images.uesp.net/thumb/5/51/SR-icon-ingredient-Mora_Tapinella.png/48px-SR-icon-ingredient-Mora_Tapinella.png
+  thumbnail_url: https://images.uesp.net/thumb/5/51/SR-icon-ingredient-Mora_Tapinella.png/48px-SR-icon-ingredient-Mora_Tapinella.png
   value: 4
   weight: 0.25
 - effects:
@@ -1092,10 +1092,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/c/cd/SR-ingredient-Sabre_Cat_Tooth.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Sabre_Cat_Tooth
+  image_url: https://images.uesp.net/c/cd/SR-ingredient-Sabre_Cat_Tooth.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Sabre_Cat_Tooth
   name: Sabre Cat Tooth
-  thumbnail: https://images.uesp.net/thumb/1/1b/SR-icon-ingredient-Sabre_Cat_Tooth.png/48px-SR-icon-ingredient-Sabre_Cat_Tooth.png
+  thumbnail_url: https://images.uesp.net/thumb/1/1b/SR-icon-ingredient-Sabre_Cat_Tooth.png/48px-SR-icon-ingredient-Sabre_Cat_Tooth.png
   value: 2
   weight: 0.1
 - effects:
@@ -1112,10 +1112,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/9/95/SR-ingredient-Bear_Claws.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Bear_Claws
+  image_url: https://images.uesp.net/9/95/SR-ingredient-Bear_Claws.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Bear_Claws
   name: Bear Claws
-  thumbnail: https://images.uesp.net/thumb/0/04/SR-icon-ingredient-Bear_Claws.png/48px-SR-icon-ingredient-Bear_Claws.png
+  thumbnail_url: https://images.uesp.net/thumb/0/04/SR-icon-ingredient-Bear_Claws.png/48px-SR-icon-ingredient-Bear_Claws.png
   value: 2
   weight: 0.1
 - effects:
@@ -1132,10 +1132,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/0/0e/SR-ingredient-Luna_Moth.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Luna_Moth_Wing
+  image_url: https://images.uesp.net/0/0e/SR-ingredient-Luna_Moth.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Luna_Moth_Wing
   name: Luna Moth Wing
-  thumbnail: https://images.uesp.net/thumb/f/f6/SR-icon-ingredient-Luna_Moth_Wing.png/48px-SR-icon-ingredient-Luna_Moth_Wing.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f6/SR-icon-ingredient-Luna_Moth_Wing.png/48px-SR-icon-ingredient-Luna_Moth_Wing.png
   value: 5
   weight: 0.1
 - effects:
@@ -1152,10 +1152,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/0/0f/SR-creature-Sabre_Cat.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Eye_of_Sabre_Cat
+  image_url: https://images.uesp.net/0/0f/SR-creature-Sabre_Cat.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Eye_of_Sabre_Cat
   name: Eye of Sabre Cat
-  thumbnail: https://images.uesp.net/thumb/4/4e/SR-icon-ingredient-Eye_of_Sabre_Cat.png/48px-SR-icon-ingredient-Eye_of_Sabre_Cat.png
+  thumbnail_url: https://images.uesp.net/thumb/4/4e/SR-icon-ingredient-Eye_of_Sabre_Cat.png/48px-SR-icon-ingredient-Eye_of_Sabre_Cat.png
   value: 2
   weight: 0.1
 - effects:
@@ -1172,10 +1172,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/b/b9/SR-ingredient-Glow_Dust.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Glow_Dust
+  image_url: https://images.uesp.net/b/b9/SR-ingredient-Glow_Dust.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Glow_Dust
   name: Glow Dust
-  thumbnail: https://images.uesp.net/thumb/f/f8/SR-icon-ingredient-Glow_Dust.png/48px-SR-icon-ingredient-Glow_Dust.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f8/SR-icon-ingredient-Glow_Dust.png/48px-SR-icon-ingredient-Glow_Dust.png
   value: 20
   weight: 0.5
 - effects:
@@ -1192,10 +1192,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/c/ce/SR-ingredient-Fire_Salts.jpg/1200px-SR-ingredient-Fire_Salts.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Fire_Salts
+  image_url: https://images.uesp.net/thumb/c/ce/SR-ingredient-Fire_Salts.jpg/1200px-SR-ingredient-Fire_Salts.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Fire_Salts
   name: Fire Salts
-  thumbnail: https://images.uesp.net/thumb/c/cc/SR-icon-ingredient-Fire_Salts.png/48px-SR-icon-ingredient-Fire_Salts.png
+  thumbnail_url: https://images.uesp.net/thumb/c/cc/SR-icon-ingredient-Fire_Salts.png/48px-SR-icon-ingredient-Fire_Salts.png
   value: 50
   weight: 0.25
 - effects:
@@ -1212,10 +1212,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/c/c3/SR-ingredient-Human_Flesh.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Human_Flesh
+  image_url: https://images.uesp.net/c/c3/SR-ingredient-Human_Flesh.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Human_Flesh
   name: Human Flesh
-  thumbnail: https://images.uesp.net/thumb/9/9d/SR-icon-ingredient-Human_Flesh.png/48px-SR-icon-ingredient-Human_Flesh.png
+  thumbnail_url: https://images.uesp.net/thumb/9/9d/SR-icon-ingredient-Human_Flesh.png/48px-SR-icon-ingredient-Human_Flesh.png
   value: 1
   weight: 0.25
 - effects:
@@ -1232,10 +1232,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/7/7f/SR-flora-Blisterwort_Cluster.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Blisterwort
+  image_url: https://images.uesp.net/7/7f/SR-flora-Blisterwort_Cluster.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Blisterwort
   name: Blisterwort
-  thumbnail: https://images.uesp.net/thumb/2/2b/SR-icon-ingredient-Blisterwort.png/48px-SR-icon-ingredient-Blisterwort.png
+  thumbnail_url: https://images.uesp.net/thumb/2/2b/SR-icon-ingredient-Blisterwort.png/48px-SR-icon-ingredient-Blisterwort.png
   value: 12
   weight: 0.2
 - effects:
@@ -1252,10 +1252,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/b/b7/SR-flora-Mountain_Flower.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Red_Mountain_Flower
+  image_url: https://images.uesp.net/b/b7/SR-flora-Mountain_Flower.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Red_Mountain_Flower
   name: Red Mountain Flower
-  thumbnail: https://images.uesp.net/thumb/b/bb/SR-icon-ingredient-Red_Mountain_Flower.png/48px-SR-icon-ingredient-Red_Mountain_Flower.png
+  thumbnail_url: https://images.uesp.net/thumb/b/bb/SR-icon-ingredient-Red_Mountain_Flower.png/48px-SR-icon-ingredient-Red_Mountain_Flower.png
   value: 2
   weight: 0.1
 - effects:
@@ -1272,10 +1272,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/4/46/SR-flora-Crimson_Nirnroot.jpg/1200px-SR-flora-Crimson_Nirnroot.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Crimson_Nirnroot
+  image_url: https://images.uesp.net/thumb/4/46/SR-flora-Crimson_Nirnroot.jpg/1200px-SR-flora-Crimson_Nirnroot.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Crimson_Nirnroot
   name: Crimson Nirnroot
-  thumbnail: https://images.uesp.net/thumb/5/55/SR-icon-ingredient-Crimson_Nirnroot.png/48px-SR-icon-ingredient-Crimson_Nirnroot.png
+  thumbnail_url: https://images.uesp.net/thumb/5/55/SR-icon-ingredient-Crimson_Nirnroot.png/48px-SR-icon-ingredient-Crimson_Nirnroot.png
   value: 10
   weight: 0.2
 - effects:
@@ -1292,10 +1292,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/d/db/SR-ingredient-Jarrin_Root.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Jarrin_Root
+  image_url: https://images.uesp.net/d/db/SR-ingredient-Jarrin_Root.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Jarrin_Root
   name: Jarrin Root
-  thumbnail: https://images.uesp.net/thumb/9/95/SR-icon-ingredient-Jarrin_Root.png/48px-SR-icon-ingredient-Jarrin_Root.png
+  thumbnail_url: https://images.uesp.net/thumb/9/95/SR-icon-ingredient-Jarrin_Root.png/48px-SR-icon-ingredient-Jarrin_Root.png
   value: 10
   weight: 0.5
 - effects:
@@ -1312,10 +1312,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/9/94/SR-ingredient-Moon_Sugar.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Moon_Sugar
+  image_url: https://images.uesp.net/9/94/SR-ingredient-Moon_Sugar.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Moon_Sugar
   name: Moon Sugar
-  thumbnail: https://images.uesp.net/thumb/4/48/SR-icon-ingredient-Moon_Sugar.png/48px-SR-icon-ingredient-Moon_Sugar.png
+  thumbnail_url: https://images.uesp.net/thumb/4/48/SR-icon-ingredient-Moon_Sugar.png/48px-SR-icon-ingredient-Moon_Sugar.png
   value: 50
   weight: 0.25
 - effects:
@@ -1332,10 +1332,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/5/58/SR-flora-Namira%27s_Rot.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Namira%27s_Rot
+  image_url: https://images.uesp.net/5/58/SR-flora-Namira%27s_Rot.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Namira%27s_Rot
   name: Namira's Rot
-  thumbnail: https://images.uesp.net/thumb/5/59/SR-icon-ingredient-Namira%27s_Rot.png/48px-SR-icon-ingredient-Namira%27s_Rot.png
+  thumbnail_url: https://images.uesp.net/thumb/5/59/SR-icon-ingredient-Namira%27s_Rot.png/48px-SR-icon-ingredient-Namira%27s_Rot.png
   value: 0
   weight: 0.25
 - effects:
@@ -1352,10 +1352,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/5/5e/SR-flora-Snowberries.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Snowberries
+  image_url: https://images.uesp.net/5/5e/SR-flora-Snowberries.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Snowberries
   name: Snowberries
-  thumbnail: https://images.uesp.net/thumb/d/d3/SR-icon-ingredient-Snowberries.png/48px-SR-icon-ingredient-Snowberries.png
+  thumbnail_url: https://images.uesp.net/thumb/d/d3/SR-icon-ingredient-Snowberries.png/48px-SR-icon-ingredient-Snowberries.png
   value: 4
   weight: 0.1
 - effects:
@@ -1372,10 +1372,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/7/7d/SR-ingredient-Berit%27s_Ashes.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Berit%27s_Ashes
+  image_url: https://images.uesp.net/7/7d/SR-ingredient-Berit%27s_Ashes.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Berit%27s_Ashes
   name: Berit's Ashes
-  thumbnail: https://images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png
   value: 5
   weight: 0.2
 - effects:
@@ -1392,10 +1392,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/8/8f/SR-ingredient-Charred_Skeever_Hide.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Charred_Skeever_Hide
+  image_url: https://images.uesp.net/8/8f/SR-ingredient-Charred_Skeever_Hide.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Charred_Skeever_Hide
   name: Charred Skeever Hide
-  thumbnail: https://images.uesp.net/thumb/7/71/SR-icon-ingredient-Charred_Skeever_Hide.png/48px-SR-icon-ingredient-Charred_Skeever_Hide.png
+  thumbnail_url: https://images.uesp.net/thumb/7/71/SR-icon-ingredient-Charred_Skeever_Hide.png/48px-SR-icon-ingredient-Charred_Skeever_Hide.png
   value: 1
   weight: 0.5
 - effects:
@@ -1412,10 +1412,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/2/24/SR-ingredient-Giant%27s_Toe.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Giant%27s_Toe
+  image_url: https://images.uesp.net/2/24/SR-ingredient-Giant%27s_Toe.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Giant%27s_Toe
   name: Giant's Toe
-  thumbnail: https://images.uesp.net/thumb/b/bc/SR-icon-ingredient-Giants_Toe.png/48px-SR-icon-ingredient-Giants_Toe.png
+  thumbnail_url: https://images.uesp.net/thumb/b/bc/SR-icon-ingredient-Giants_Toe.png/48px-SR-icon-ingredient-Giants_Toe.png
   value: 20
   weight: 1
 - effects:
@@ -1432,10 +1432,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/b/bb/SR-ingredient-Rock_Warbler_Egg.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Rock_Warbler_Egg
+  image_url: https://images.uesp.net/b/bb/SR-ingredient-Rock_Warbler_Egg.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Rock_Warbler_Egg
   name: Rock Warbler Egg
-  thumbnail: https://images.uesp.net/thumb/f/fc/SR-icon-ingredient-Rock_Warbler_Egg.png/48px-SR-icon-ingredient-Rock_Warbler_Egg.png
+  thumbnail_url: https://images.uesp.net/thumb/f/fc/SR-icon-ingredient-Rock_Warbler_Egg.png/48px-SR-icon-ingredient-Rock_Warbler_Egg.png
   value: 2
   weight: 0.5
 - effects:
@@ -1452,10 +1452,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/8/80/SR-flora-Fly_Amanita_Plant.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Fly_Amanita
+  image_url: https://images.uesp.net/8/80/SR-flora-Fly_Amanita_Plant.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Fly_Amanita
   name: Fly Amanita
-  thumbnail: https://images.uesp.net/thumb/7/76/SR-icon-ingredient-Fly_Amanita.png/48px-SR-icon-ingredient-Fly_Amanita.png
+  thumbnail_url: https://images.uesp.net/thumb/7/76/SR-icon-ingredient-Fly_Amanita.png/48px-SR-icon-ingredient-Fly_Amanita.png
   value: 2
   weight: 0.1
 - effects:
@@ -1472,10 +1472,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/2/2e/SR-ingredient-Silverside_Perch.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Silverside_Perch
+  image_url: https://images.uesp.net/2/2e/SR-ingredient-Silverside_Perch.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Silverside_Perch
   name: Silverside Perch
-  thumbnail: https://images.uesp.net/thumb/3/32/SR-icon-ingredient-Silverside_Perch.png/48px-SR-icon-ingredient-Silverside_Perch.png
+  thumbnail_url: https://images.uesp.net/thumb/3/32/SR-icon-ingredient-Silverside_Perch.png/48px-SR-icon-ingredient-Silverside_Perch.png
   value: 15
   weight: 0.25
 - effects:
@@ -1492,10 +1492,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/6/6f/SR-creature-Bristleback.jpg/1200px-SR-creature-Bristleback.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Boar_Tusk
+  image_url: https://images.uesp.net/thumb/6/6f/SR-creature-Bristleback.jpg/1200px-SR-creature-Bristleback.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Boar_Tusk
   name: Boar Tusk
-  thumbnail: https://images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png/48px-SR-icon-ingredient-Boar_Tusk.png
+  thumbnail_url: https://images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png/48px-SR-icon-ingredient-Boar_Tusk.png
   value: 20
   weight: 0.5
 - effects:
@@ -1512,10 +1512,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/c/c0/SR-flora-Lavender_Plant.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Lavender
+  image_url: https://images.uesp.net/c/c0/SR-flora-Lavender_Plant.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Lavender
   name: Lavender
-  thumbnail: https://images.uesp.net/thumb/3/30/SR-icon-ingredient-Lavender.png/48px-SR-icon-ingredient-Lavender.png
+  thumbnail_url: https://images.uesp.net/thumb/3/30/SR-icon-ingredient-Lavender.png/48px-SR-icon-ingredient-Lavender.png
   value: 1
   weight: 0.1
 - effects:
@@ -1532,10 +1532,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/d/d3/SR-ingredient-Hagraven_Claw.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Hagraven_Claw
+  image_url: https://images.uesp.net/d/d3/SR-ingredient-Hagraven_Claw.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Hagraven_Claw
   name: Hagraven Claw
-  thumbnail: https://images.uesp.net/thumb/3/30/SR-icon-ingredient-Hagraven_Claw.png/48px-SR-icon-ingredient-Hagraven_Claw.png
+  thumbnail_url: https://images.uesp.net/thumb/3/30/SR-icon-ingredient-Hagraven_Claw.png/48px-SR-icon-ingredient-Hagraven_Claw.png
   value: 20
   weight: 0.25
 - effects:
@@ -1552,10 +1552,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/3/3b/SR-ingredient-Salt_Pile.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Salt_Pile
+  image_url: https://images.uesp.net/3/3b/SR-ingredient-Salt_Pile.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Salt_Pile
   name: Salt Pile
-  thumbnail: https://images.uesp.net/thumb/3/36/SR-icon-ingredient-Salt_Pile.png/48px-SR-icon-ingredient-Salt_Pile.png
+  thumbnail_url: https://images.uesp.net/thumb/3/36/SR-icon-ingredient-Salt_Pile.png/48px-SR-icon-ingredient-Salt_Pile.png
   value: 2
   weight: 0.2
 - effects:
@@ -1572,10 +1572,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/b/b4/SR-ingredient-Ectoplasm.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Ectoplasm
+  image_url: https://images.uesp.net/b/b4/SR-ingredient-Ectoplasm.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Ectoplasm
   name: Ectoplasm
-  thumbnail: https://images.uesp.net/thumb/f/f1/SR-icon-ingredient-Ectoplasm.png/48px-SR-icon-ingredient-Ectoplasm.png
+  thumbnail_url: https://images.uesp.net/thumb/f/f1/SR-icon-ingredient-Ectoplasm.png/48px-SR-icon-ingredient-Ectoplasm.png
   value: 25
   weight: 0.1
 - effects:
@@ -1592,10 +1592,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/thumb/6/60/SR-flora-White_Cap.jpg/1200px-SR-flora-White_Cap.jpg
-  link: https://en.uesp.net/wiki/Skyrim:White_Cap
+  image_url: https://images.uesp.net/thumb/6/60/SR-flora-White_Cap.jpg/1200px-SR-flora-White_Cap.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:White_Cap
   name: White Cap
-  thumbnail: https://images.uesp.net/thumb/f/fa/SR-icon-ingredient-White_Cap.png/48px-SR-icon-ingredient-White_Cap.png
+  thumbnail_url: https://images.uesp.net/thumb/f/fa/SR-icon-ingredient-White_Cap.png/48px-SR-icon-ingredient-White_Cap.png
   value: 0
   weight: 0.3
 - effects:
@@ -1612,10 +1612,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/6/67/SR-flora-Tundra_Cotton_Plant.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Tundra_Cotton
+  image_url: https://images.uesp.net/6/67/SR-flora-Tundra_Cotton_Plant.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Tundra_Cotton
   name: Tundra Cotton
-  thumbnail: https://images.uesp.net/thumb/7/7e/SR-icon-ingredient-Tundra_Cotton.png/48px-SR-icon-ingredient-Tundra_Cotton.png
+  thumbnail_url: https://images.uesp.net/thumb/7/7e/SR-icon-ingredient-Tundra_Cotton.png/48px-SR-icon-ingredient-Tundra_Cotton.png
   value: 1
   weight: 0.1
 - effects:
@@ -1632,10 +1632,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/8/83/SR-ingredient-Large_Antlers.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Large_Antlers
+  image_url: https://images.uesp.net/8/83/SR-ingredient-Large_Antlers.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Large_Antlers
   name: Large Antlers
-  thumbnail: https://images.uesp.net/thumb/6/69/SR-icon-ingredient-Large_Antlers.png/48px-SR-icon-ingredient-Large_Antlers.png
+  thumbnail_url: https://images.uesp.net/thumb/6/69/SR-icon-ingredient-Large_Antlers.png/48px-SR-icon-ingredient-Large_Antlers.png
   value: 2
   weight: 0.1
 - effects:
@@ -1652,10 +1652,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/7/7b/SR-ingredient-Dried_Frost_Mirram.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Frost_Mirriam
+  image_url: https://images.uesp.net/7/7b/SR-ingredient-Dried_Frost_Mirram.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Frost_Mirriam
   name: Frost Mirriam
-  thumbnail: https://images.uesp.net/thumb/9/99/SR-icon-ingredient-Frost_Mirriam.png/48px-SR-icon-ingredient-Frost_Mirriam.png
+  thumbnail_url: https://images.uesp.net/thumb/9/99/SR-icon-ingredient-Frost_Mirriam.png/48px-SR-icon-ingredient-Frost_Mirriam.png
   value: 1
   weight: 0.1
 - effects:
@@ -1672,10 +1672,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/9/9c/SR-ingredient-Wisp_Wrappings.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Wisp_Wrappings
+  image_url: https://images.uesp.net/9/9c/SR-ingredient-Wisp_Wrappings.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Wisp_Wrappings
   name: Wisp Wrappings
-  thumbnail: https://images.uesp.net/thumb/9/9d/SR-icon-ingredient-Wisp_Wrappings.png/48px-SR-icon-ingredient-Wisp_Wrappings.png
+  thumbnail_url: https://images.uesp.net/thumb/9/9d/SR-icon-ingredient-Wisp_Wrappings.png/48px-SR-icon-ingredient-Wisp_Wrappings.png
   value: 2
   weight: 0.1
 - effects:
@@ -1692,10 +1692,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/b/b0/SR-creature-Bull_Netch.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Netch_Jelly
+  image_url: https://images.uesp.net/b/b0/SR-creature-Bull_Netch.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Netch_Jelly
   name: Netch Jelly
-  thumbnail: https://images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png/48px-SR-icon-ingredient-Netch_Jelly.png
+  thumbnail_url: https://images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png/48px-SR-icon-ingredient-Netch_Jelly.png
   value: 20
   weight: 0.5
 - effects:
@@ -1712,10 +1712,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/d/dd/SR-ingredient-Salmon_Roe.jpg/1200px-SR-ingredient-Salmon_Roe.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Salmon_Roe
+  image_url: https://images.uesp.net/thumb/d/dd/SR-ingredient-Salmon_Roe.jpg/1200px-SR-ingredient-Salmon_Roe.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Salmon_Roe
   name: Salmon Roe
-  thumbnail: https://images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png/48px-SR-icon-ingredient-Salmon_Roe.png
+  thumbnail_url: https://images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png/48px-SR-icon-ingredient-Salmon_Roe.png
   value: 5
   weight: 0.2
 - effects:
@@ -1732,10 +1732,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/thumb/2/29/SR-ingredient-Hawk%27s_Egg.jpg/1200px-SR-ingredient-Hawk%27s_Egg.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Hawk%27s_Egg
+  image_url: https://images.uesp.net/thumb/2/29/SR-ingredient-Hawk%27s_Egg.jpg/1200px-SR-ingredient-Hawk%27s_Egg.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Hawk%27s_Egg
   name: Hawk's Egg
-  thumbnail: https://images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png/48px-SR-icon-ingredient-Hawk%27s_Egg.png
+  thumbnail_url: https://images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png/48px-SR-icon-ingredient-Hawk%27s_Egg.png
   value: 5
   weight: 0.5
 - effects:
@@ -1752,10 +1752,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/3/36/SR-flora-Spiky_Grass_2.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Ashen_Grass_Pod
+  image_url: https://images.uesp.net/3/36/SR-flora-Spiky_Grass_2.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Ashen_Grass_Pod
   name: Ashen Grass Pod
-  thumbnail: https://images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png/48px-SR-icon-ingredient-Ashen_Grass_Pod.png
+  thumbnail_url: https://images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png/48px-SR-icon-ingredient-Ashen_Grass_Pod.png
   value: 1
   weight: 0.1
 - effects:
@@ -1772,10 +1772,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/a/a8/SR-flora-Wheat.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Wheat
+  image_url: https://images.uesp.net/a/a8/SR-flora-Wheat.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Wheat
   name: Wheat
-  thumbnail: https://images.uesp.net/thumb/7/7f/SR-icon-ingredient-Wheat.png/48px-SR-icon-ingredient-Wheat.png
+  thumbnail_url: https://images.uesp.net/thumb/7/7f/SR-icon-ingredient-Wheat.png/48px-SR-icon-ingredient-Wheat.png
   value: 5
   weight: 0.1
 - effects:
@@ -1792,10 +1792,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/5/52/SR-flora-Trama_Root.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Trama_Root
+  image_url: https://images.uesp.net/5/52/SR-flora-Trama_Root.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Trama_Root
   name: Trama Root
-  thumbnail: https://images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png/48px-SR-icon-ingredient-Trama_Root.png
+  thumbnail_url: https://images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png/48px-SR-icon-ingredient-Trama_Root.png
   value: 1
   weight: 0.2
 - effects:
@@ -1812,10 +1812,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/2/2c/SR-creature-Burnt_Spriggan.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Burnt_Spriggan_Wood
+  image_url: https://images.uesp.net/2/2c/SR-creature-Burnt_Spriggan.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Burnt_Spriggan_Wood
   name: Burnt Spriggan Wood
-  thumbnail: https://images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png/48px-SR-icon-ingredient-Burnt_Spriggan_Wood.png
+  thumbnail_url: https://images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png/48px-SR-icon-ingredient-Burnt_Spriggan_Wood.png
   value: 20
   weight: 0.5
 - effects:
@@ -1832,10 +1832,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/6/62/SR-ingredient-Ash_Hopper_Jelly.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Ash_Hopper_Jelly
+  image_url: https://images.uesp.net/6/62/SR-ingredient-Ash_Hopper_Jelly.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Ash_Hopper_Jelly
   name: Ash Hopper Jelly
-  thumbnail: https://images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png/48px-SR-icon-ingredient-Ash_Hopper_Jelly.png
+  thumbnail_url: https://images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png/48px-SR-icon-ingredient-Ash_Hopper_Jelly.png
   value: 20
   weight: 0.25
 - effects:
@@ -1852,10 +1852,10 @@
     power: 1.0
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/3/37/SR-ingredient-Elves_Ear.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Elves_Ear
+  image_url: https://images.uesp.net/3/37/SR-ingredient-Elves_Ear.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Elves_Ear
   name: Elves Ear
-  thumbnail: https://images.uesp.net/thumb/7/7a/SR-icon-ingredient-Elves_Ear.png/48px-SR-icon-ingredient-Elves_Ear.png
+  thumbnail_url: https://images.uesp.net/thumb/7/7a/SR-icon-ingredient-Elves_Ear.png/48px-SR-icon-ingredient-Elves_Ear.png
   value: 10
   weight: 0.1
 - effects:
@@ -1872,10 +1872,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/2/27/SR-ingredient-Spriggan_Sap.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Spriggan_Sap
+  image_url: https://images.uesp.net/2/27/SR-ingredient-Spriggan_Sap.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Spriggan_Sap
   name: Spriggan Sap
-  thumbnail: https://images.uesp.net/thumb/d/d6/SR-icon-ingredient-Spriggan_Sap.png/48px-SR-icon-ingredient-Spriggan_Sap.png
+  thumbnail_url: https://images.uesp.net/thumb/d/d6/SR-icon-ingredient-Spriggan_Sap.png/48px-SR-icon-ingredient-Spriggan_Sap.png
   value: 15
   weight: 0.2
 - effects:
@@ -1892,10 +1892,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/1/14/SR-ingredient-Slaughterfish_Scales.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Scales
+  image_url: https://images.uesp.net/1/14/SR-ingredient-Slaughterfish_Scales.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Slaughterfish_Scales
   name: Slaughterfish Scales
-  thumbnail: https://images.uesp.net/thumb/0/0f/SR-icon-ingredient-Slaughterfish_Scales.png/48px-SR-icon-ingredient-Slaughterfish_Scales.png
+  thumbnail_url: https://images.uesp.net/thumb/0/0f/SR-icon-ingredient-Slaughterfish_Scales.png/48px-SR-icon-ingredient-Slaughterfish_Scales.png
   value: 3
   weight: 0.2
 - effects:
@@ -1912,10 +1912,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/b/be/SR-ingredient-Briar_Heart.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Briar_Heart
+  image_url: https://images.uesp.net/b/be/SR-ingredient-Briar_Heart.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Briar_Heart
   name: Briar Heart
-  thumbnail: https://images.uesp.net/thumb/6/6a/SR-icon-ingredient-Briar_Heart.png/48px-SR-icon-ingredient-Briar_Heart.png
+  thumbnail_url: https://images.uesp.net/thumb/6/6a/SR-icon-ingredient-Briar_Heart.png/48px-SR-icon-ingredient-Briar_Heart.png
   value: 20
   weight: 0.5
 - effects:
@@ -1932,10 +1932,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/9/9a/SR-ingredient-Bee.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Bee
+  image_url: https://images.uesp.net/9/9a/SR-ingredient-Bee.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Bee
   name: Bee
-  thumbnail: https://images.uesp.net/thumb/b/b8/SR-icon-ingredient-Bee.png/48px-SR-icon-ingredient-Bee.png
+  thumbnail_url: https://images.uesp.net/thumb/b/b8/SR-icon-ingredient-Bee.png/48px-SR-icon-ingredient-Bee.png
   value: 3
   weight: 0.1
 - effects:
@@ -1952,10 +1952,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/b/b2/SR-ingredient-Falmer_Ear.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Falmer_Ear
+  image_url: https://images.uesp.net/b/b2/SR-ingredient-Falmer_Ear.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Falmer_Ear
   name: Falmer Ear
-  thumbnail: https://images.uesp.net/thumb/6/6e/SR-icon-ingredient-Falmer_Ear.png/48px-SR-icon-ingredient-Falmer_Ear.png
+  thumbnail_url: https://images.uesp.net/thumb/6/6e/SR-icon-ingredient-Falmer_Ear.png/48px-SR-icon-ingredient-Falmer_Ear.png
   value: 10
   weight: 0.2
 - effects:
@@ -1972,10 +1972,10 @@
     power: 0.8
     value: 1.0
   farmable: true
-  image: https://images.uesp.net/8/83/SR-flora-Nightshade.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Nightshade
+  image_url: https://images.uesp.net/8/83/SR-flora-Nightshade.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Nightshade
   name: Nightshade
-  thumbnail: https://images.uesp.net/thumb/6/6f/SR-icon-ingredient-Nightshade.png/48px-SR-icon-ingredient-Nightshade.png
+  thumbnail_url: https://images.uesp.net/thumb/6/6f/SR-icon-ingredient-Nightshade.png/48px-SR-icon-ingredient-Nightshade.png
   value: 8
   weight: 0.1
 - effects:
@@ -1992,10 +1992,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/4/4c/SR-item-River_Betty.jpg
-  link: https://en.uesp.net/wiki/Skyrim:River_Betty
+  image_url: https://images.uesp.net/4/4c/SR-item-River_Betty.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:River_Betty
   name: River Betty
-  thumbnail: https://images.uesp.net/thumb/2/25/SR-icon-ingredient-River_Betty.png/48px-SR-icon-ingredient-River_Betty.png
+  thumbnail_url: https://images.uesp.net/thumb/2/25/SR-icon-ingredient-River_Betty.png/48px-SR-icon-ingredient-River_Betty.png
   value: 15
   weight: 0.25
 - effects:
@@ -2012,10 +2012,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/8/8a/SR-ingredient-Daedra_Heart.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Daedra_Heart
+  image_url: https://images.uesp.net/8/8a/SR-ingredient-Daedra_Heart.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Daedra_Heart
   name: Daedra Heart
-  thumbnail: https://images.uesp.net/thumb/b/b1/SR-icon-ingredient-Daedra_Heart.png/48px-SR-icon-ingredient-Daedra_Heart.png
+  thumbnail_url: https://images.uesp.net/thumb/b/b1/SR-icon-ingredient-Daedra_Heart.png/48px-SR-icon-ingredient-Daedra_Heart.png
   value: 250
   weight: 0.5
 - effects:
@@ -2032,10 +2032,10 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/b/bc/SR-creature-Skeever.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Skeever_Tail
+  image_url: https://images.uesp.net/b/bc/SR-creature-Skeever.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Skeever_Tail
   name: Skeever Tail
-  thumbnail: https://images.uesp.net/thumb/d/dc/SR-icon-ingredient-Skeever_Tail.png/48px-SR-icon-ingredient-Skeever_Tail.png
+  thumbnail_url: https://images.uesp.net/thumb/d/dc/SR-icon-ingredient-Skeever_Tail.png/48px-SR-icon-ingredient-Skeever_Tail.png
   value: 3
   weight: 0.2
 - effects:
@@ -2052,9 +2052,9 @@
     power: 1.0
     value: 1.0
   farmable: false
-  image: https://images.uesp.net/e/e1/SR-ingredient-Chaurus_Eggs.jpg
-  link: https://en.uesp.net/wiki/Skyrim:Chaurus_Eggs
+  image_url: https://images.uesp.net/e/e1/SR-ingredient-Chaurus_Eggs.jpg
+  link_url: https://en.uesp.net/wiki/Skyrim:Chaurus_Eggs
   name: Chaurus Eggs
-  thumbnail: https://images.uesp.net/thumb/4/47/SR-icon-ingredient-Chaurus_Eggs.png/48px-SR-icon-ingredient-Chaurus_Eggs.png
+  thumbnail_url: https://images.uesp.net/thumb/4/47/SR-icon-ingredient-Chaurus_Eggs.png/48px-SR-icon-ingredient-Chaurus_Eggs.png
   value: 10
   weight: 0.2

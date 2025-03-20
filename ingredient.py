@@ -23,7 +23,7 @@ YAML format for ingredients:
       power: 1.0
       value: 1.0
   farmable: true
-  link: "URL"
+  link_url: "URL"
   value: 1
   weight: 1.0
 
@@ -37,7 +37,7 @@ Example ingredient:
       power: 1.0
       value: 1.0
   farmable: true
-  link: "https://en.uesp.net/wiki/Skyrim:Wheat"
+  link_url: "https://en.uesp.net/wiki/Skyrim:Wheat"
   value: 5
   weight: 0.1
 
@@ -98,11 +98,11 @@ class Ingredient(BaseModel):
     name: str
     effects: list[ActiveEffect]
     farmable: bool
-    link: str
+    link_url: str
     value: int
     weight: float
-    thumbnail: str
-    image: str
+    thumbnail_url: str
+    image_url: str
 
     def has_effect(self, effect_name: str) -> bool:
         """Check if this ingredient has an effect of the given name."""

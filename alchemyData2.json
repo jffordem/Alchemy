@@ -22,7 +22,7 @@
 			"name": "Nirnroot",
 			"weight": 0.2,
 			"value": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Nirnroot"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Nirnroot"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -46,7 +46,7 @@
 			"weight": 0.25,
 			"name": "Emperor Parasol Moss",
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Emperor_Parasol_Moss"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Emperor_Parasol_Moss"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -70,7 +70,7 @@
 			"weight": 0.2,
 			"name": "Honeycomb",
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Honeycomb"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Honeycomb"
 		}, {
 			"effects": [{
 					"name": "Resist Shock",
@@ -94,7 +94,7 @@
 			"weight": 0.2,
 			"name": "Swamp Fungal Pod",
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Swamp_Fungal_Pod"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Swamp_Fungal_Pod"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -118,7 +118,7 @@
 			"weight": 0.2,
 			"name": "Deathbell",
 			"value": 4,
-			"link": "https://en.uesp.net/wiki/Skyrim:Deathbell"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Deathbell"
 		}, {
 			"effects": [{
 					"name": "Cure Disease",
@@ -142,7 +142,7 @@
 			"weight": 0.1,
 			"name": "Hawk Feathers",
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Hawk_Feathers"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Hawk_Feathers"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -166,7 +166,7 @@
 			"name": "Human Heart",
 			"weight": 1,
 			"value": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Human_Heart"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Human_Heart"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -190,7 +190,7 @@
 			"name": "Canis Root",
 			"weight": 0.1,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Canis_Root"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Canis_Root"
 		}, {
 			"effects": [{
 					"name": "Invisibility",
@@ -214,7 +214,7 @@
 			"name": "Vampire Dust",
 			"weight": 0.2,
 			"value": 25,
-			"link": "https://en.uesp.net/wiki/Skyrim:Vampire_Dust"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Vampire_Dust"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -238,7 +238,7 @@
 			"name": "Blue Butterfly Wing",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Blue_Butterfly_Wing"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Blue_Butterfly_Wing"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -262,7 +262,7 @@
 			"name": "Purple Mountain Flower",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Purple_Mountain_Flower"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Purple_Mountain_Flower"
 		}, {
 			"effects": [{
 					"name": "Weakness to Frost",
@@ -286,7 +286,7 @@
 			"name": "Ice Wraith Teeth",
 			"weight": 0.25,
 			"value": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Ice_Wraith_Teeth"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Ice_Wraith_Teeth"
 		}, {
 			"effects": [{
 					"name": "Resist Shock",
@@ -310,7 +310,7 @@
 			"name": "Blue Dartwing",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Blue_Dartwing"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Blue_Dartwing"
 		}, {
 			"effects": [{
 					"name": "Weakness to Magic",
@@ -334,7 +334,7 @@
 			"name": "Taproot",
 			"weight": 0.5,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Taproot"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Taproot"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -358,7 +358,7 @@
 			"name": "Pearl",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Pearl"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Pearl"
 		}, {
 			"effects": [{
 					"name": "Weakness to Fire",
@@ -382,7 +382,7 @@
 			"name": "Juniper Berries",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Juniper_Berries"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Juniper_Berries"
 		}, {
 			"effects": [{
 					"name": "Damage Magicka",
@@ -406,7 +406,7 @@
 			"name": "Hanging Moss",
 			"weight": 0.25,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Hanging_Moss"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Hanging_Moss"
 		}, {
 			"effects": [{
 					"name": "Weakness to Magic",
@@ -430,7 +430,7 @@
 			"name": "Jazbay Grapes",
 			"weight": 0.2,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Jazbay_Grapes"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Jazbay_Grapes"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -454,7 +454,7 @@
 			"name": "Bone Meal",
 			"weight": 0.5,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Bone_Meal"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Bone_Meal"
 		}, {
 			"effects": [{
 					"name": "Restore Magicka",
@@ -478,7 +478,7 @@
 			"name": "Creep Cluster",
 			"weight": 0.2,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Creep_Cluster"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Creep_Cluster"
 		}, {
 			"effects": [{
 					"name": "Resist Poison",
@@ -502,7 +502,7 @@
 			"name": "Garlic",
 			"weight": 0.25,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Garlic"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Garlic"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -526,7 +526,7 @@
 			"name": "Hawk Beak",
 			"weight": 0.25,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Hawk_Beak"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Hawk_Beak"
 		}, {
 			"effects": [{
 					"name": "Restore Health",
@@ -550,7 +550,7 @@
 			"name": "Blue Mountain Flower",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Blue_Mountain_Flower"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Blue_Mountain_Flower"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -574,7 +574,7 @@
 			"name": "Spider Egg",
 			"weight": 0.2,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Spider_Egg"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Spider_Egg"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -598,7 +598,7 @@
 			"name": "Powdered Mammoth Tusk",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Powdered_Mammoth_Tusk"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Powdered_Mammoth_Tusk"
 		}, {
 			"effects": [{
 					"name": "Weakness to Shock",
@@ -622,7 +622,7 @@
 			"name": "Void Salts",
 			"weight": 0.2,
 			"value": 125,
-			"link": "https://en.uesp.net/wiki/Skyrim:Void_Salts"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Void_Salts"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -646,7 +646,7 @@
 			"weight": 0.1,
 			"name": "Torchbug Thorax",
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Torchbug_Thorax"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Torchbug_Thorax"
 		}, {
 			"effects": [{
 					"name": "Resist Magic",
@@ -670,7 +670,7 @@
 			"weight": 0.5,
 			"name": "Chicken's Egg",
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Chicken%27s_Egg"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Chicken%27s_Egg"
 		}, {
 			"effects": [{
 					"name": "Weakness to Poison",
@@ -694,7 +694,7 @@
 			"name": "Small Antlers",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Small_Antlers"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Small_Antlers"
 		}, {
 			"effects": [{
 					"name": "Weakness to Fire",
@@ -718,7 +718,7 @@
 			"name": "Bleeding Crown",
 			"weight": 0.3,
 			"value": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Bleeding_Crown"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Bleeding_Crown"
 		}, {
 			"effects": [{
 					"name": "Resist Frost",
@@ -742,7 +742,7 @@
 			"name": "Thistle Branch",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Thistle_Branch"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Thistle_Branch"
 		}, {
 			"effects": [{
 					"name": "Weakness to Frost",
@@ -766,7 +766,7 @@
 			"name": "Abecean Longfin",
 			"weight": 0.5,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Abecean_Longfin"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Abecean_Longfin"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -790,7 +790,7 @@
 			"name": "Mudcrab Chitin",
 			"weight": 0.25,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Mudcrab_Chitin"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Mudcrab_Chitin"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -814,7 +814,7 @@
 			"name": "Histcarp",
 			"weight": 0.25,
 			"value": 6,
-			"link": "https://en.uesp.net/wiki/Skyrim:Histcarp"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Histcarp"
 		}, {
 			"effects": [{
 					"name": "Resist Poison",
@@ -838,7 +838,7 @@
 			"name": "Beehive Husk",
 			"weight": 1,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Beehive_Husk"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Beehive_Husk"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -862,7 +862,7 @@
 			"name": "Poison Bloom",
 			"weight": 0.25,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Poison_Bloom"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Poison_Bloom"
 		}, {
 			"effects": [{
 					"name": "Resist Fire",
@@ -886,7 +886,7 @@
 			"name": "Dragon's Tongue",
 			"weight": 0.1,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Dragon%27s_Tongue"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Dragon%27s_Tongue"
 		}, {
 			"effects": [{
 					"name": "Resist Poison",
@@ -910,7 +910,7 @@
 			"name": "Troll Fat",
 			"weight": 1,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Troll_Fat"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Troll_Fat"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -934,7 +934,7 @@
 			"name": "Orange Dartwing",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Orange_Dartwing"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Orange_Dartwing"
 		}, {
 			"effects": [{
 					"name": "Weakness to Magic",
@@ -958,7 +958,7 @@
 			"name": "Scaly Pholiota",
 			"weight": 0.25,
 			"value": 4,
-			"link": "https://en.uesp.net/wiki/Skyrim:Scaly_Pholiota"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Scaly_Pholiota"
 		}, {
 			"effects": [{
 					"name": "Weakness to Magic",
@@ -982,7 +982,7 @@
 			"name": "Dwarven Oil",
 			"weight": 0.25,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Dwarven_Oil"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Dwarven_Oil"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -1006,7 +1006,7 @@
 			"name": "Cyrodilic Spadetail",
 			"weight": 0.25,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Cyrodilic_Spadetail"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Cyrodilic_Spadetail"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -1030,7 +1030,7 @@
 			"name": "Imp Stool",
 			"weight": 0.3,
 			"value": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Imp_Stool"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Imp_Stool"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1054,7 +1054,7 @@
 			"name": "Pine Thrush Egg",
 			"weight": 0.5,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Pine_Thrush_Egg"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Pine_Thrush_Egg"
 		}, {
 			"effects": [{
 					"name": "Resist Shock",
@@ -1078,7 +1078,7 @@
 			"name": "Glowing Mushroom",
 			"weight": 0.2,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Glowing_Mushroom"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Glowing_Mushroom"
 		}, {
 			"effects": [{
 					"name": "Resist Poison",
@@ -1102,7 +1102,7 @@
 			"name": "Slaughterfish Egg",
 			"weight": 0.2,
 			"value": 3,
-			"link": "https://en.uesp.net/wiki/Skyrim:Slaughterfish_Egg"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Slaughterfish_Egg"
 		}, {
 			"effects": [{
 					"name": "Resist Poison",
@@ -1126,7 +1126,7 @@
 			"name": "Grass Pod",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Grass_Pod"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Grass_Pod"
 		}, {
 			"effects": [{
 					"name": "Ravage Health",
@@ -1150,7 +1150,7 @@
 			"name": "Giant Lichen",
 			"weight": 0.25,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Giant_Lichen"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Giant_Lichen"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1174,7 +1174,7 @@
 			"name": "Small Pearl",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Small_Pearl"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Small_Pearl"
 		}, {
 			"effects": [{
 					"name": "Damage Magicka",
@@ -1198,7 +1198,7 @@
 			"name": "Nordic Barnacle",
 			"weight": 0.2,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Nordic_Barnacle"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Nordic_Barnacle"
 		}, {
 			"effects": [{
 					"name": "Restore Health",
@@ -1222,7 +1222,7 @@
 			"name": "Butterfly Wing",
 			"weight": 0.1,
 			"value": 3,
-			"link": "https://en.uesp.net/wiki/Skyrim:Butterfly_Wing"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Butterfly_Wing"
 		}, {
 			"effects": [{
 					"name": "Damage Magicka",
@@ -1246,7 +1246,7 @@
 			"name": "Hagraven Feathers",
 			"weight": 0.1,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Hagraven_Feathers"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Hagraven_Feathers"
 		}, {
 			"effects": [{
 					"name": "Weakness to Fire",
@@ -1270,7 +1270,7 @@
 			"name": "Frost Salts",
 			"weight": 0.25,
 			"value": 100,
-			"link": "https://en.uesp.net/wiki/Skyrim:Frost_Salts"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Frost_Salts"
 		}, {
 			"effects": [{
 					"name": "Restore Magicka",
@@ -1294,7 +1294,7 @@
 			"name": "Mora Tapinella",
 			"weight": 0.25,
 			"value": 4,
-			"link": "https://en.uesp.net/wiki/Skyrim:Mora_Tapinella"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Mora_Tapinella"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1318,7 +1318,7 @@
 			"name": "Sabre Cat Tooth",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Sabre_Cat_Tooth"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Sabre_Cat_Tooth"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1342,7 +1342,7 @@
 			"name": "Bear Claws",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Bear_Claws"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Bear_Claws"
 		}, {
 			"effects": [{
 					"name": "Damage Magicka",
@@ -1366,7 +1366,7 @@
 			"name": "Luna Moth Wing",
 			"weight": 0.1,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Luna_Moth_Wing"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Luna_Moth_Wing"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1390,7 +1390,7 @@
 			"name": "Eye of Sabre Cat",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Eye_of_Sabre_Cat"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Eye_of_Sabre_Cat"
 		}, {
 			"effects": [{
 					"name": "Damage Magicka",
@@ -1414,7 +1414,7 @@
 			"name": "Glow Dust",
 			"weight": 0.5,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Glow_Dust"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Glow_Dust"
 		}, {
 			"effects": [{
 					"name": "Weakness to Frost",
@@ -1438,7 +1438,7 @@
 			"name": "Fire Salts",
 			"weight": 0.25,
 			"value": 50,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fire_Salts"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fire_Salts"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -1462,7 +1462,7 @@
 			"name": "Human Flesh",
 			"weight": 0.25,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Human_Fresh"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Human_Fresh"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -1486,7 +1486,7 @@
 			"name": "Blisterwort",
 			"weight": 0.2,
 			"value": 12,
-			"link": "https://en.uesp.net/wiki/Skyrim:Blisterwort"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Blisterwort"
 		}, {
 			"effects": [{
 					"name": "Restore Magicka",
@@ -1510,7 +1510,7 @@
 			"name": "Red Mountain Flower",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Red_Mountain_Flower"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Red_Mountain_Flower"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -1534,7 +1534,7 @@
 			"name": "Crimson Nirnroot",
 			"weight": 0.2,
 			"value": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Crimson_Nirnroot"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Crimson_Nirnroot"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -1558,7 +1558,7 @@
 			"name": "Jarrin Root",
 			"weight": 0.5,
 			"value": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Jarrin_Root"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Jarrin_Root"
 		}, {
 			"effects": [{
 					"name": "Weakness to Fire",
@@ -1582,7 +1582,7 @@
 			"name": "Moon Sugar",
 			"weight": 0.25,
 			"value": 50,
-			"link": "https://en.uesp.net/wiki/Skyrim:Moon_Sugar"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Moon_Sugar"
 		}, {
 			"effects": [{
 					"name": "Damage Magicka",
@@ -1606,7 +1606,7 @@
 			"name": "Namira's Rot",
 			"weight": 0.25,
 			"value": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Namira%27s_Rot"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Namira%27s_Rot"
 		}, {
 			"effects": [{
 					"name": "Resist Fire",
@@ -1630,7 +1630,7 @@
 			"name": "Snowberries",
 			"weight": 0.1,
 			"value": 4,
-			"link": "https://en.uesp.net/wiki/Skyrim:Snowberries"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Snowberries"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -1654,7 +1654,7 @@
 			"name": "Berit's Ashes",
 			"weight": 0.2,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Berit%27s_Ashes"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Berit%27s_Ashes"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1678,7 +1678,7 @@
 			"name": "Charred Skeever Hide",
 			"weight": 0.5,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Charred_Skeever_Hide"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Charred_Skeever_Hide"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina",
@@ -1702,7 +1702,7 @@
 			"name": "Giant's Toe",
 			"weight": 1,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Giant%27s_Toe"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Giant%27s_Toe"
 		}, {
 			"effects": [{
 					"name": "Restore Health",
@@ -1726,7 +1726,7 @@
 			"name": "Rock Warbler Egg",
 			"weight": 0.5,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Rock_Warbler_Egg"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Rock_Warbler_Egg"
 		}, {
 			"effects": [{
 					"name": "Resist Fire",
@@ -1750,7 +1750,7 @@
 			"name": "Fly Amanita",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fly_Amanita"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fly_Amanita"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1774,7 +1774,7 @@
 			"name": "Silverside Perch",
 			"weight": 0.25,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Silverside_Perch"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Silverside_Perch"
 		}, {
 			"effects": [{
 					"name": "Fortify Stamina",
@@ -1798,7 +1798,7 @@
 			"name": "Boar Tusk",
 			"weight": 0.5,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Boar_Tusk"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Boar_Tusk"
 		}, {
 			"effects": [{
 					"name": "Resist Magic",
@@ -1822,7 +1822,7 @@
 			"name": "Lavender",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Lavender"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Lavender"
 		}, {
 			"effects": [{
 					"name": "Resist Magic",
@@ -1846,7 +1846,7 @@
 			"name": "Hagraven Claw",
 			"weight": 0.25,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Hagraven_Claw"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Hagraven_Claw"
 		}, {
 			"effects": [{
 					"name": "Weakness to Magic",
@@ -1870,7 +1870,7 @@
 			"name": "Salt Pile",
 			"weight": 0.2,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Salt_Pile"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Salt_Pile"
 		}, {
 			"effects": [{
 					"name": "Restore Magicka",
@@ -1894,7 +1894,7 @@
 			"name": "Ectoplasm",
 			"weight": 0.1,
 			"value": 25,
-			"link": "https://en.uesp.net/wiki/Skyrim:Ectoplasm"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Ectoplasm"
 		}, {
 			"effects": [{
 					"name": "Weakness to Frost",
@@ -1918,7 +1918,7 @@
 			"name": "White Cap",
 			"weight": 0.3,
 			"value": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:White_Cap"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:White_Cap"
 		}, {
 			"effects": [{
 					"name": "Resist Magic",
@@ -1942,7 +1942,7 @@
 			"name": "Tundra Cotton",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Tundra_Cotton"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Tundra_Cotton"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -1966,7 +1966,7 @@
 			"name": "Large Antlers",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Large_Antlers"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Large_Antlers"
 		}, {
 			"effects": [{
 					"name": "Resist Frost",
@@ -1990,7 +1990,7 @@
 			"name": "Frost Mirriam",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Frost_Mirriam"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Frost_Mirriam"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -2014,7 +2014,7 @@
 			"name": "Wisp Wrappings",
 			"weight": 0.1,
 			"value": 2,
-			"link": "https://en.uesp.net/wiki/Skyrim:Wist_Wrappings"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Wist_Wrappings"
 		}, {
 			"effects": [{
 					"name": "Paralysis",
@@ -2038,7 +2038,7 @@
 			"name": "Netch Jelly",
 			"weight": 0.5,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Netch_Jelly"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Netch_Jelly"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -2062,7 +2062,7 @@
 			"name": "Salmon Roe",
 			"weight": 0.2,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Salmon_Roe"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Salmon_Roe"
 		}, {
 			"effects": [{
 					"name": "Resist Magicka",
@@ -2086,7 +2086,7 @@
 			"name": "Hawk's Egg",
 			"weight": 0.5,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Hawk%27s_Egg"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Hawk%27s_Egg"
 		}, {
 			"effects": [{
 					"name": "Resist Fire",
@@ -2110,7 +2110,7 @@
 			"name": "Ashen Grass Pod",
 			"weight": 0.1,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Ashen_Grass_Pod"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Ashen_Grass_Pod"
 		}, {
 			"effects": [{
 					"name": "Restore Health",
@@ -2134,7 +2134,7 @@
 			"name": "Wheat",
 			"weight": 0.1,
 			"value": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Wheat"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Wheat"
 		}, {
 			"effects": [{
 					"name": "Weakness to Shock",
@@ -2158,7 +2158,7 @@
 			"name": "Trama Root",
 			"weight": 0.2,
 			"value": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Trama_Root"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Trama_Root"
 		}, {
 			"effects": [{
 					"name": "Weakness to Fire",
@@ -2182,7 +2182,7 @@
 			"name": "Burnt Spriggan Wood",
 			"weight": 0.5,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Burnt_Spriggan_Wood"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Burnt_Spriggan_Wood"
 		}, {
 			"effects": [{
 					"name": "Restore Health",
@@ -2206,7 +2206,7 @@
 			"name": "Ash Hopper Jelly",
 			"weight": 0.25,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Ash_Hopper_Jelly"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Ash_Hopper_Jelly"
 		}, {
 			"effects": [{
 					"name": "Restore Magicka",
@@ -2230,7 +2230,7 @@
 			"name": "Elves Ear",
 			"weight": 0.1,
 			"value": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Elves_Ear"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Elves_Ear"
 		}, {
 			"effects": [{
 					"name": "Damage Magicka Regen",
@@ -2254,7 +2254,7 @@
 			"name": "Spriggan Sap",
 			"weight": 0.2,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:Spriggan_Sap"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Spriggan_Sap"
 		}, {
 			"effects": [{
 					"name": "Resist Frost",
@@ -2278,7 +2278,7 @@
 			"name": "Slaughterfish Scales",
 			"weight": 0.2,
 			"value": 3,
-			"link": "https://en.uesp.net/wiki/Skyrim:Slaughterfish_Scales"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Slaughterfish_Scales"
 		}, {
 			"effects": [{
 					"name": "Restore Magicka",
@@ -2302,7 +2302,7 @@
 			"name": "Briar Heart",
 			"weight": 0.5,
 			"value": 20,
-			"link": "https://en.uesp.net/wiki/Skyrim:Briar_Heart"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Briar_Heart"
 		}, {
 			"effects": [{
 					"name": "Restore Stamina",
@@ -2326,7 +2326,7 @@
 			"weight": 0.1,
 			"name": "Bee",
 			"value": 3,
-			"link": "https://en.uesp.net/wiki/Skyrim:Bee"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Bee"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -2350,7 +2350,7 @@
 			"name": "Falmer Ear",
 			"weight": 0.2,
 			"value": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Falmer_Ear"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Falmer_Ear"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -2374,7 +2374,7 @@
 			"name": "Nightshade",
 			"weight": 0.1,
 			"value": 8,
-			"link": "https://en.uesp.net/wiki/Skyrim:Nightshade"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Nightshade"
 		}, {
 			"effects": [{
 					"name": "Damage Health",
@@ -2398,7 +2398,7 @@
 			"name": "River Betty",
 			"weight": 0.25,
 			"value": 15,
-			"link": "https://en.uesp.net/wiki/Skyrim:River_Betty"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:River_Betty"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina Regen",
@@ -2422,7 +2422,7 @@
 			"name": "Daedra Heart",
 			"weight": 0.5,
 			"value": 250,
-			"link": "https://en.uesp.net/wiki/Skyrim:Daedra_Heart"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Daedra_Heart"
 		}, {
 			"effects": [{
 					"name": "Damage Stamina Regen",
@@ -2446,7 +2446,7 @@
 			"name": "Skeever Tail",
 			"weight": 0.2,
 			"value": 3,
-			"link": "https://en.uesp.net/wiki/Skyrim:Skeever_Tail"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Skeever_Tail"
 		}, {
 			"effects": [{
 					"name": "Weakness to Poison",
@@ -2470,7 +2470,7 @@
 			"name": "Chaurus Eggs",
 			"weight": 0.2,
 			"value": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Charus_Egg"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Charus_Egg"
 		}
 	],
 	"effects": [{
@@ -2481,7 +2481,7 @@
 			"cost": 12,
 			"mag": 1,
 			"dur": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Health"
 		}, {
 			"name": "Fortify Marksman",
 			"description": "Bows do {mag}% more damage for {dur} seconds.",
@@ -2490,7 +2490,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Marksman"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Marksman"
 		}, {
 			"name": "Fortify Destruction",
 			"description": "Destruction spells are {mag}% stronger for {dur} seconds.",
@@ -2499,7 +2499,7 @@
 			"cost": 0.5,
 			"mag": 5,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Destruction"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Destruction"
 		}, {
 			"name": "Ravage Magicka",
 			"description": "Concentrated poison damages maximum magicka by {mag} points.",
@@ -2508,7 +2508,7 @@
 			"cost": 1,
 			"mag": 2,
 			"dur": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Ravage_Magicka"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Ravage_Magicka"
 		}, {
 			"name": "Fortify Smithing",
 			"description": "For {dur} seconds weapon and armor improving is {mag}% better.",
@@ -2517,7 +2517,7 @@
 			"cost": 0.75,
 			"mag": 4,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Smithing"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Smithing"
 		}, {
 			"name": "Fortify One-Handed",
 			"description": "One-handed weapons do {mag}% more damage for {dur} seconds.",
@@ -2526,7 +2526,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_One-Handed"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_One-Handed"
 		}, {
 			"name": "Weakness to Shock",
 			"description": "Target is {mag}% weaker to shock damage for {dur} seconds.",
@@ -2535,7 +2535,7 @@
 			"cost": 0.7,
 			"mag": 3,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Shock"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Shock"
 		}, {
 			"name": "Frenzy",
 			"description": "Creatures and people up to level {mag} will attack anything nearby for {dur} seconds.",
@@ -2544,7 +2544,7 @@
 			"cost": 15,
 			"mag": 1,
 			"dur": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Frenzy"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Frenzy"
 		}, {
 			"name": "Fortify Sneak",
 			"description": "You are {mag}% harder to detect for {dur} seconds.",
@@ -2553,7 +2553,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Sneak"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Sneak"
 		}, {
 			"name": "Fortify Stamina",
 			"description": "Stamina is increased by {mag} points for {dur} seconds.",
@@ -2562,7 +2562,7 @@
 			"cost": 0.3,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Stamina"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Stamina"
 		}, {
 			"name": "Cure Disease",
 			"description": "Cures all diseases.",
@@ -2571,7 +2571,7 @@
 			"cost": 0.5,
 			"mag": 5,
 			"dur": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Cure_Disease"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Cure_Disease"
 		}, {
 			"name": "Fortify Conjuration",
 			"description": "Conjurations spells last {mag}% longer for {dur} seconds.",
@@ -2580,7 +2580,7 @@
 			"cost": 0.25,
 			"mag": 5,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Conjuration"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Conjuration"
 		}, {
 			"name": "Restore Magicka",
 			"description": "Restore {mag} points of Magicka.",
@@ -2589,7 +2589,7 @@
 			"cost": 0.6,
 			"mag": 5,
 			"dur": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Restore_Magicka"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Restore_Magicka"
 		}, {
 			"name": "Damage Magicka",
 			"description": "Drains the target's Magicka by {mag} points.",
@@ -2598,7 +2598,7 @@
 			"cost": 2.2,
 			"mag": 3,
 			"dur": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Damage_Magicka"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Damage_Magicka"
 		}, {
 			"name": "Paralysis",
 			"description": "Target is paralyzed for {dur} seconds.",
@@ -2607,7 +2607,7 @@
 			"cost": 500,
 			"mag": 0,
 			"dur": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Paralysis"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Paralysis"
 		}, {
 			"name": "Regenerate Stamina",
 			"description": "Stamina regenerates {mag}% faster for {dur} seconds.",
@@ -2616,7 +2616,7 @@
 			"cost": 0.1,
 			"mag": 5,
 			"dur": 300,
-			"link": "https://en.uesp.net/wiki/Skyrim:Regenerate_Stamina"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Regenerate_Stamina"
 		}, {
 			"name": "Fortify Heavy Armor",
 			"description": "Increase Heavy Armor skill by {mag} points for {dur} seconds.",
@@ -2625,7 +2625,7 @@
 			"cost": 0.5,
 			"mag": 2,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Heavy_Armor"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Heavy_Armor"
 		}, {
 			"name": "Weakness to Fire",
 			"description": "Target is {mag}% weaker to fire damage for {dur} seconds.",
@@ -2634,7 +2634,7 @@
 			"cost": 0.6,
 			"mag": 3,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Fire"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Fire"
 		}, {
 			"name": "Slow",
 			"description": "Target moves at 50% speed for {dur} seconds.",
@@ -2643,7 +2643,7 @@
 			"cost": 1,
 			"mag": 50,
 			"dur": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Slow"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Slow"
 		}, {
 			"name": "Fortify Health",
 			"description": "Health is increased by {mag} points for {dur} seconds.",
@@ -2652,7 +2652,7 @@
 			"cost": 0.35,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Health"
 		}, {
 			"name": "Regenerate Magicka",
 			"description": "Magicka regenerates {mag}% faster for {dur} seconds.",
@@ -2661,7 +2661,7 @@
 			"cost": 0.1,
 			"mag": 5,
 			"dur": 300,
-			"link": "https://en.uesp.net/wiki/Skyrim:Regenerate_Magicka"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Regenerate_Magicka"
 		}, {
 			"name": "Regenerate Health",
 			"description": "Health regenerates {mag}% faster for {dur} seconds.",
@@ -2670,7 +2670,7 @@
 			"cost": 0.1,
 			"mag": 5,
 			"dur": 300,
-			"link": "https://en.uesp.net/wiki/Skyrim:Regenerate_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Regenerate_Health"
 		}, {
 			"name": "Invisibility",
 			"description": "Invisibility for {dur} seconds.",
@@ -2679,7 +2679,7 @@
 			"cost": 100,
 			"mag": 0,
 			"dur": 4,
-			"link": "https://en.uesp.net/wiki/Skyrim:Invisibility"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Invisibility"
 		}, {
 			"name": "Restore Health",
 			"description": "Restore {mag} points of Health.",
@@ -2688,7 +2688,7 @@
 			"cost": 0.5,
 			"mag": 5,
 			"dur": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Restore_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Restore_Health"
 		}, {
 			"name": "Fortify Enchanting",
 			"description": "For {dur} seconds items are enchanted {mag}% stronger.",
@@ -2697,7 +2697,7 @@
 			"cost": 0.6,
 			"mag": 1,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Enchanting"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Enchanting"
 		}, {
 			"name": "Lingering Damage Magicka",
 			"description": "Drains the target's Magicka by {mag} points per second for {dur} seconds.",
@@ -2706,7 +2706,7 @@
 			"cost": 10,
 			"mag": 1,
 			"dur": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Magicka"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Magicka"
 		}, {
 			"name": "Weakness to Magic",
 			"description": "Target is {mag}% weaker to magic for {dur} seconds.",
@@ -2715,7 +2715,7 @@
 			"cost": 1,
 			"mag": 2,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Magic"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Magic"
 		}, {
 			"name": "Fortify Magicka",
 			"description": "Magicka is increased by {mag} points for {dur} seconds.",
@@ -2724,7 +2724,7 @@
 			"cost": 0.3,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Magicka"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Magicka"
 		}, {
 			"name": "Weakness to Poison",
 			"description": "Target is {mag}% weaker to poison for {dur} seconds.",
@@ -2733,7 +2733,7 @@
 			"cost": 1,
 			"mag": 2,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Poison"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Poison"
 		}, {
 			"name": "Fortify Block",
 			"description": "Blocking absorbs {mag}% more damage for {dur} seconds.",
@@ -2742,7 +2742,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Block"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Block"
 		}, {
 			"name": "Regenerate Health",
 			"description": "Health regenerates {mag}% faster for {dur} seconds.",
@@ -2751,7 +2751,7 @@
 			"cost": 0.1,
 			"mag": 5,
 			"dur": 300,
-			"link": "https://en.uesp.net/wiki/Skyrim:Regenerate_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Regenerate_Health"
 		}, {
 			"name": "Fortify Illusion",
 			"description": "Illusion spells are {mag}% stronger for {dur} seconds.",
@@ -2760,7 +2760,7 @@
 			"cost": 0.4,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Illusion"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Illusion"
 		}, {
 			"name": "Fortify Carry Weight",
 			"description": "Carrying capacity increases by {mag} for {dur} seconds.",
@@ -2769,7 +2769,7 @@
 			"cost": 0.15,
 			"mag": 4,
 			"dur": 300,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Carry_Weight"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Carry_Weight"
 		}, {
 			"name": "Fortify Lockpicking",
 			"description": "Lockpicking is {mag}% easier for {dur} seconds.",
@@ -2778,7 +2778,7 @@
 			"cost": 0.5,
 			"mag": 2,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Lockpicking"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Lockpicking"
 		}, {
 			"name": "Damage Health",
 			"description": "Causes {mag} points of poison damage.",
@@ -2787,7 +2787,7 @@
 			"cost": 3,
 			"mag": 2,
 			"dur": 1,
-			"link": "https://en.uesp.net/wiki/Skyrim:Damage_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Damage_Health"
 		}, {
 			"name": "Damage Stamina",
 			"description": "Drain the target's Stamina by {mag} points.",
@@ -2796,7 +2796,7 @@
 			"cost": 1.8,
 			"mag": 3,
 			"dur": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Damage_Stamina"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Damage_Stamina"
 		}, {
 			"name": "Resist Poison",
 			"description": "Resist {mag}% of poison for {dur} seconds.",
@@ -2805,7 +2805,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Resist_Poison"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Resist_Poison"
 		}, {
 			"name": "Fear",
 			"description": "Creatures and people up to level {mag} flee from combat for {dur} seconds.",
@@ -2814,7 +2814,7 @@
 			"cost": 5,
 			"mag": 1,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fear"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fear"
 		}, {
 			"name": "Resist Frost",
 			"description": "Resist {mag}% of frost damage for {dur} seconds.",
@@ -2823,7 +2823,7 @@
 			"cost": 0.5,
 			"mag": 3,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Resist_Frost"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Resist_Frost"
 		}, {
 			"name": "Ravage Health",
 			"description": "Causes {mag} points of concentrated poison damage.",
@@ -2832,7 +2832,7 @@
 			"cost": 0.4,
 			"mag": 2,
 			"dur": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Ravage_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Ravage_Health"
 		}, {
 			"name": "Resist Fire",
 			"description": "Resist {mag}% of fire damage for {dur} seconds.",
@@ -2841,7 +2841,7 @@
 			"cost": 0.5,
 			"mag": 3,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Resist_Fire"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Resist_Fire"
 		}, {
 			"name": "Lingering Damage Stamina",
 			"description": "Drain the target's Stamina by {mag} points per second for {dur} seconds.",
@@ -2850,7 +2850,7 @@
 			"cost": 1.8,
 			"mag": 1,
 			"dur": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Stamina"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Lingering_Damage_Stamina"
 		}, {
 			"name": "Fortify Pickpocket",
 			"description": "Pickpocketing is {mag}% easier for {dur} seconds.",
@@ -2859,7 +2859,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Pickpocket"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Pickpocket"
 		}, {
 			"name": "Resist Magic",
 			"description": "Resist {mag}% of magic for {dur} seconds.",
@@ -2868,7 +2868,7 @@
 			"cost": 1,
 			"mag": 1,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Resist_Magic"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Resist_Magic"
 		}, {
 			"name": "Fortify Restoration",
 			"description": "Restoration spells are {mag}% stronger for {dur} seconds.",
@@ -2877,7 +2877,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Restoration"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Restoration"
 		}, {
 			"name": "Fortify One-handed",
 			"description": "One-handed weapons do {mag}% more damage for {dur} seconds.",
@@ -2886,7 +2886,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_One-handed"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_One-handed"
 		}, {
 			"name": "Resist Shock",
 			"description": "Resist {mag}% of shock damage for {dur} seconds.",
@@ -2895,7 +2895,7 @@
 			"cost": 0.5,
 			"mag": 3,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Resist_Shock"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Resist_Shock"
 		}, {
 			"name": "Ravage Stamina",
 			"description": "Concentrated poison damages maximum stamina by {mag} points.",
@@ -2904,7 +2904,7 @@
 			"cost": 1.6,
 			"mag": 2,
 			"dur": 10,
-			"link": "https://en.uesp.net/wiki/Skyrim:Ravage_Stamina"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Ravage_Stamina"
 		}, {
 			"name": "Fortify Light Armor",
 			"description": "Increases Light Armor skill by {mag} points for {dur} seconds.",
@@ -2913,7 +2913,7 @@
 			"cost": 0.5,
 			"mag": 2,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Light_Armor"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Light_Armor"
 		}, {
 			"name": "Regenerate Health",
 			"description": "Health regenerates {mag}% faster for {dur} seconds.",
@@ -2922,7 +2922,7 @@
 			"cost": 0.1,
 			"mag": 5,
 			"dur": 300,
-			"link": "https://en.uesp.net/wiki/Skyrim:Regenerate_Health"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Regenerate_Health"
 		}, {
 			"name": "Fortify Alteration",
 			"description": "Alteration spells last {mag}% longer for {dur} seconds.",
@@ -2931,7 +2931,7 @@
 			"cost": 0.2,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Alteration"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Alteration"
 		}, {
 			"name": "Fortify Two-handed",
 			"description": "Two-handed weapons do {mag}% more damage for {dur} seconds.",
@@ -2940,7 +2940,7 @@
 			"cost": 0.5,
 			"mag": 4,
 			"dur": 60,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Two-handed"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Two-handed"
 		}, {
 			"name": "Damage Stamina Regen",
 			"description": "Decrease the target's Stamina regeneration by {mag}% for {dur} seconds.",
@@ -2949,7 +2949,7 @@
 			"cost": 0.3,
 			"mag": 100,
 			"dur": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Damage_Stamina_Regen"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Damage_Stamina_Regen"
 		}, {
 			"name": "Restore Stamina",
 			"description": "Restore {mag} Stamina.",
@@ -2958,7 +2958,7 @@
 			"cost": 0.6,
 			"mag": 5,
 			"dur": 0,
-			"link": "https://en.uesp.net/wiki/Skyrim:Restore_Stamina"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Restore_Stamina"
 		}, {
 			"name": "Damage Magicka Regen",
 			"description": "Decrease the target's Magicka regeneration by {mag}% for {dur} seconds.",
@@ -2967,7 +2967,7 @@
 			"cost": 0.5,
 			"mag": 100,
 			"dur": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Damage_Magicka_Regen"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Damage_Magicka_Regen"
 		}, {
 			"name": "Weakness to Frost",
 			"description": "Target is {mag}% weaker to frost damage for {dur} seconds.",
@@ -2976,7 +2976,7 @@
 			"cost": 0.5,
 			"mag": 3,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Frost"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Weakness_to_Frost"
 		}, {
 			"name": "Waterbreathing",
 			"description": "Can breathe underwater for {dur} seconds.",
@@ -2985,7 +2985,7 @@
 			"cost": 30,
 			"mag": 0,
 			"dur": 5,
-			"link": "https://en.uesp.net/wiki/Skyrim:Waterbreathing"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Waterbreathing"
 		}, {
 			"name": "Fortify Barter",
 			"description": "You haggle for {mag}% better prices for {dur} seconds.",
@@ -2994,7 +2994,7 @@
 			"cost": 2,
 			"mag": 1,
 			"dur": 30,
-			"link": "https://en.uesp.net/wiki/Skyrim:Fortify_Barter"
+			"link_url": "https://en.uesp.net/wiki/Skyrim:Fortify_Barter"
 		}
 	]
 }

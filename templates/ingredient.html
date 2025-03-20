@@ -35,7 +35,7 @@
             <div class="mt-5">
                 <div class="row">
                     <div class="col-md-2">
-                        <img src="{{ingredient.image}}" alt="{{ingredient.name}}" class="img-fluid">
+                        <img src="{{ingredient.image_url}}" alt="{{ingredient.name}}" class="img-fluid">
                     </div>
                     <div class="col-md-10">
                         <h1>{{ingredient.name}}</h1>
@@ -62,7 +62,7 @@
                             </tr>
                             {% endfor %}
                             <tr>
-                                <th>Link</th><td><a href="{{ingredient.link}}" target="_blank">UESP</a></td>
+                                <th>Link</th><td><a href="{{ingredient.link_url}}" target="_blank">UESP</a></td>
                             </tr>
                         </table>
 

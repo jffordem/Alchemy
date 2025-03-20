@@ -24,7 +24,7 @@ YAML format for effects:
   cost: 1.0
   dur: 1
   mag: 1
-  link: "Link"
+  link_url: "Link"
 
 Example effect:
 - name: "Restore Health"
@@ -34,7 +34,7 @@ Example effect:
   cost: 1.0
   dur: 1
   mag: 1
-  link: "https://en.uesp.net/wiki/Skyrim:Restore_Health"
+  link_url: "https://en.uesp.net/wiki/Skyrim:Restore_Health"
 
 Usage:
     from effect import Effect, get_effect_by_name
@@ -50,7 +50,7 @@ class Effect(BaseModel):
     cost: float
     dur: int
     mag: int
-    link: str
+    link_url: str
 
     @property
     def value(self) -> float:
