@@ -37,7 +37,8 @@ def test_ingredient_data_class():
         link="https://test.com",
         value=10,
         weight=0.5,
-        thumbnail="https://test.com/thumbnail.png"
+        thumbnail="https://test.com/thumbnail.png",
+        image="https://test.com/image.png"
     )
     
     assert ingredient.name == "Test Ingredient"
@@ -47,6 +48,7 @@ def test_ingredient_data_class():
     assert ingredient.value == 10
     assert ingredient.weight == pytest.approx(0.5)
     assert ingredient.thumbnail == "https://test.com/thumbnail.png"
+    assert ingredient.image == "https://test.com/image.png"
 
 def test_active_effect_combine():
     # Test combining multiple ActiveEffects
@@ -74,9 +76,9 @@ def test_ingredient_buff_nerf_status():
     buffed_effects = [ActiveEffect(name="Buffed", power=1.5, value=1.0)]
     nerfed_effects = [ActiveEffect(name="Nerfed", power=0.5, value=1.0)]
     
-    normal_ingredient = Ingredient(name="Normal", effects=normal_effects, farmable=True, link="", thumbnail="", value=1, weight=1.0)
-    buffed_ingredient = Ingredient(name="Buffed", effects=buffed_effects, farmable=True, link="", thumbnail="", value=1, weight=1.0)
-    nerfed_ingredient = Ingredient(name="Nerfed", effects=nerfed_effects, farmable=True, link="", thumbnail="", value=1, weight=1.0)
+    normal_ingredient = Ingredient(name="Normal", effects=normal_effects, farmable=True, link="", thumbnail="", image="", value=1, weight=1.0)
+    buffed_ingredient = Ingredient(name="Buffed", effects=buffed_effects, farmable=True, link="", thumbnail="", image="", value=1, weight=1.0)
+    nerfed_ingredient = Ingredient(name="Nerfed", effects=nerfed_effects, farmable=True, link="", thumbnail="", image="", value=1, weight=1.0)
     
     assert not normal_ingredient.buffed and not normal_ingredient.nerfed
     assert buffed_ingredient.buffed and not buffed_ingredient.nerfed
@@ -106,7 +108,8 @@ def test_yaml_loading():
     assert not nirnroot.farmable
     assert nirnroot.value == 10
     assert nirnroot.weight == pytest.approx(0.2)
-    assert nirnroot.thumbnail == "//images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png"
+    assert nirnroot.thumbnail == "https://images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png"
+    assert nirnroot.image == "https://images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/96px-SR-icon-ingredient-Nirnroot.png"
     assert any(effect.name == "Damage Health" and effect.value == pytest.approx(12.6) for effect in nirnroot.effects)
 
     # Test ingredient filtering
