@@ -104,8 +104,18 @@ def skyrim_effects():
     reverse = direction == 'desc'
     effects = sorted(AllEffectsByName.values(), key=lambda e: getattr(e, sortby), reverse=reverse)
     search_query = request.args.get('search', '').lower()
+    effect_type = request.args.get('type', '').lower()
+    school = request.args.get('school', '').lower()
+
     if search_query:
         effects = [effect for effect in effects if search_query in effect.name.lower() or search_query in effect.description.lower()]
+
+    if effect_type:
+        effects = [effect for effect in effects if effect.type.lower() == effect_type]
+
+    if school:
+        effects = [effect for effect in effects if effect.school.lower() == school]
+
     return render_template('effects.html', effects=effects, sortby=sortby, direction=direction)
 
 
