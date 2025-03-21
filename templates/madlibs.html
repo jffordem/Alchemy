@@ -7,33 +7,31 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/madlibs.css') }}">
 
-    <title>Skyrim</title>
-    <style>
-        .breadcrumb-right {
-            margin-left: auto;
-        }
-    </style>
+    <title>Madlibs</title>
 </head>
-<body>
+<body class="madlib-theme">
 
-<div class="container">
+<div class="container madlib-container">
 
     <div class="row">
         <section class="col-12">
 
-            <nav class="breadcrumb fixed-top d-flex">
-                <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
-                <span class="breadcrumb-item active">Madlibs</span>
-                <a class="breadcrumb-right" href="{{url_for('about')}}">About</a>
+            <nav class="madlib-nav d-flex">
+                <a href="{{url_for('home')}}">Home</a>
+                <span>Madlibs</span>
+                <a href="{{url_for('about')}}">About</a>
+                <a href="#" id="theme-toggle" class="ml-auto">Toggle Theme</a>
             </nav>
 
-            <div class="mt-5">
+            <div class="text-center">
                 <h1>Madlibs</h1>
 
-                <ul class="list-group">
+                <ul class="madlib-list">
                     {% for name in names %}
-                    <li class="list-group-item"><a href="{{url_for('madlibs', name=name)}}">{{name}}</a></li>
+                    <li><a href="{{url_for('madlibs', name=name)}}">{{name}}</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -45,5 +43,33 @@
         </section>
     </div>
 </div>
+
+<script>
+    // Theme toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check if user has a saved preference
+        const savedTheme = localStorage.getItem('madlibTheme');
+        if (savedTheme === 'skyrim') {
+            body.classList.remove('madlib-theme');
+            body.classList.add('skyrim-theme');
+        }
+        
+        themeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (body.classList.contains('madlib-theme')) {
+                body.classList.remove('madlib-theme');
+                body.classList.add('skyrim-theme');
+                localStorage.setItem('madlibTheme', 'skyrim');
+            } else {
+                body.classList.remove('skyrim-theme');
+                body.classList.add('madlib-theme');
+                localStorage.setItem('madlibTheme', 'madlib');
+            }
+        });
+    });
+</script>
 </body>
 </html>

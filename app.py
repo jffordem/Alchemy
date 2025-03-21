@@ -181,7 +181,18 @@ def madlibs(name):
 def about():
     version = os.getenv('APP_VERSION', '1.0.0')
     build_date = os.getenv('BUILD_DATE', '2023-01-01')
-    return render_template('about.html', version=version, build_date=build_date)
+    
+    # Determine theme based on referrer
+    referrer = request.referrer
+    theme = "skyrim"  # Default theme
+    
+    if referrer:
+        if "/madlibs" in referrer:
+            theme = "madlib"
+        elif "/skyrim" in referrer:
+            theme = "skyrim"
+    
+    return render_template('about.html', version=version, build_date=build_date, theme=theme)
 
 
 if __name__ == '__main__':

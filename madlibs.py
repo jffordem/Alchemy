@@ -3,6 +3,7 @@ from typing import Optional
 import yaml
 import argparse
 from pydantic import BaseModel
+import re
 
 __doc__ = """
 This module provides a simple madlib generator.  It is used by the Flask app to generate random text for the user to enjoy.
@@ -62,6 +63,10 @@ def _all(s):
             result += ch
         else:
             temp += ch
+    
+    # Apply highlighting to madlib placeholders [WORD]
+    result = re.sub(r'\[(.*?)\]', r'<span class="madlib-word">[\1]</span>', result)
+    
     return result
 
 def _any(s):
