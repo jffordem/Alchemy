@@ -106,6 +106,9 @@ def skyrim_effects():
     effect_type = request.args.get('type', '').lower()
     school = request.args.get('school', '').lower()
     pred = pred_true
+    
+    # Set a default title
+    page_title = "EFFECTS"
 
     if search_query:
         search_terms = [term.strip().lower() for term in search_query.split(' ')]
@@ -113,13 +116,17 @@ def skyrim_effects():
 
     if effect_type:
         pred = pred_and(pred, lambda effect: effect.type.lower() == effect_type)
+        # Update title for type filter
+        page_title = f"{effect_type.upper()} EFFECTS"
 
     if school:
         pred = pred_and(pred, lambda effect: effect.school.lower() == school)
+        # School filter takes precedence over type filter for the title
+        page_title = f"{school.upper()} EFFECTS"
 
     effects = sorted(get_effects_by_filter(pred), key=lambda e: getattr(e, sortby), reverse=reverse)
 
-    return render_template('effects.html', effects=effects, sortby=sortby, direction=direction)
+    return render_template('effects.html', effects=effects, sortby=sortby, direction=direction, page_title=page_title)
 
 
 @app.route("/skyrim/effects/<string:name>")

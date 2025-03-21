@@ -255,4 +255,35 @@ a:hover {
     h1 {
         font-size: 1.8rem;
     }
+}
+
+/* Skyrim Title */
+.skyrim-title {
+    font-family: 'SkyrimFont', 'Cinzel', serif;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--skyrim-primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.skyrim-title::before,
+.skyrim-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background: var(--skyrim-border);
+}
+
+.skyrim-title::before {
+    left: -20px;
+}
+
+.skyrim-title::after {
+    right: -20px;
 } 
