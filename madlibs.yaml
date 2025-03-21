@@ -112,7 +112,7 @@
     Stack Overflow's final form|
     the IDE that coding bootcamps don't want you to know about).
 
-- name: Magic 8 Ball
+- name: Coding Magic 8 Ball
   ref: ~
   text: >
     You shake the magic 8 ball and ask: "Will my code (compile|run|deploy|merge|refactor|debug) successfully?"
@@ -126,3 +126,13 @@
     It is decidedly so, but first you must (commit your changes|pull the latest code|update your branch|clean your workspace)|
     Don't count on it, unless you're willing to (rewrite it in Rust|start from scratch|hire a consultant|learn assembly)|
     Most likely, after you (fix the syntax error|update the API key|check the permissions|clear the browser cache)).
+
+- name: Classic Magic 8 Ball
+  ref: https://en.wikipedia.org/wiki/Magic_8_Ball
+  text: >
+    Will I (get a promotion|meet the love of my life|become a millionaire|travel the world|win the lottery|find true happiness) this year?
+
+    (It is certain|It is decidedly so|Without a doubt|Yes definitely|You may rely on it|As I see it, yes|Most likely|Outlook good|Yes|
+      Signs point to yes|Reply hazy, try again|Ask again later|Better not tell you now|Cannot predict now|Concentrate and ask again|
+      Don't count on it|My reply is no|My sources say no|Outlook not so good|Very doubtful).
+    

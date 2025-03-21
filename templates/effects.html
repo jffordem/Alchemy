@@ -7,46 +7,63 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skyrim.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <title>Skyrim</title>
-
-    <style>
-        .breadcrumb-right {
-            margin-left: auto;
-        }
-        .fa-sort-up, .fa-sort-down {
-            margin-left: 5px;
-        }
-    </style>
+    <title>Skyrim Effects</title>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">Skyrim Alchemy</h1>
+            <div class="my-4" style="height: 2px; background: linear-gradient(90deg, rgba(131, 109, 69, 0) 0%, rgba(131, 109, 69, 0.8) 50%, rgba(131, 109, 69, 0) 100%);"></div>
+        </div>
+    </div>
 
-        <div class="row">
-            <section class="col-12">
-    
-                <nav class="breadcrumb fixed-top d-flex">
-                    <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
-                    <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
-                    <span class="breadcrumb-item active">Effects</span>
-                    <a class="breadcrumb-right" href="{{url_for('about')}}">About</a>
-                </nav>
+    <div class="row">
+        <section class="col-12">
+            <nav class="skyrim-nav d-flex">
+                <a href="{{url_for('home')}}" class="ml-3">Home</a>
+                <a href="{{url_for('skyrim')}}" class="mx-2">Skyrim Alchemy</a>
+                <span class="mx-2">Effects</span>
+                <a href="{{url_for('about')}}" class="ml-auto mr-3">About</a>
+            </nav>
 
-                <div class="mt-5">
-                    <h1>Effects</h1>
+            <div class="mt-4">
+                <h2 class="text-center mb-4">Effects</h2>
 
-                    <!-- Search bar -->
-                    <form method="get" action="{{ url_for('skyrim_effects') }}" class="form-inline mb-3">
-                        <input type="text" name="search" class="form-control mr-2" placeholder="Search effects" value="{{ request.args.get('search', '') }}">
-                        <button type="submit" class="btn btn-primary mr-2">Search</button>
-                        <a href="{{ url_for('skyrim_effects') }}" class="btn btn-secondary">Clear</a>
-                    </form>
-                    <!-- End of search bar -->
-
+                <!-- Search bar -->
+                <form method="get" action="{{ url_for('skyrim_effects') }}" class="mb-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <input type="text" name="search" class="form-control" placeholder="Search effects" value="{{ request.args.get('search', '') }}">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-skyrim mr-2">
+                                        <i class="fas fa-search mr-1"></i> Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <a href="{{ url_for('skyrim_effects') }}" class="btn btn-skyrim">
+                                <i class="fas fa-times mr-1"></i> Clear
+                            </a>
+                        </div>
+                    </div>
+                </form>
+                <!-- End of search bar -->
+                
+                <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -59,27 +76,31 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- sort? -->
                             {% for effect in effects %}
                             <tr>
-                                <td><a href="{{url_for('skyrim_effect', name=effect.name)}}">{{effect.name}}</a></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="skyrim-icon icon-effect mr-2"></span>
+                                        <a href="{{url_for('skyrim_effect', name=effect.name)}}">{{effect.name}}</a>
+                                    </div>
+                                </td>
                                 <td>{{effect.description}}</td>
                                 <td><a href="{{url_for('skyrim_effects', school=effect.school)}}">{{effect.school}}</a></td>
                                 <td><a href="{{url_for('skyrim_effects', type=effect.type)}}">{{effect.type}}</a></td>
                                 <td>{{effect.cost}}</td>
-                                <td><a href="{{effect.link_url}}" target="_blank">UESP</a></td>
+                                <td><a href="{{effect.link_url}}" target="_blank" class="btn btn-sm btn-skyrim">UESP</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
                 </div>
+            </div>
 
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</section>
-</div>
-
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </section>
     </div>
+</div>
 </body>
 </html>

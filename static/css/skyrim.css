@@ -1,0 +1,258 @@
+@font-face {
+    font-family: 'SkyrimFont';
+    src: url('../fonts/darks-skyrim-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --skyrim-primary: #d3bc8d;
+    --skyrim-secondary: #3d3d3d;
+    --skyrim-dark: #1f1f1f;
+    --skyrim-bg: #060606;
+    --skyrim-highlight: #b09c71;
+    --skyrim-border: #836d45;
+    --skyrim-magic: #5195db;
+    --skyrim-health: #a83232;
+    --skyrim-stamina: #32a852;
+}
+
+body {
+    background-color: var(--skyrim-bg);
+    background: linear-gradient(to bottom, #1a1a1a 0%, #0a0a0a 100%);
+    background-attachment: fixed;
+    color: var(--skyrim-primary);
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==");
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.container {
+    background-color: rgba(6, 6, 6, 0.8);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--skyrim-border);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'SkyrimFont', 'Cinzel', serif;
+    color: var(--skyrim-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+a {
+    color: var(--skyrim-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--skyrim-highlight);
+    text-decoration: none;
+}
+
+/* Navigation & Breadcrumbs */
+.skyrim-nav {
+    border-top: 2px solid var(--skyrim-border);
+    border-bottom: 2px solid var(--skyrim-border);
+    padding: 10px 0;
+    margin: 10px 0 20px 0;
+    font-family: 'SkyrimFont', 'Cinzel', serif;
+    text-transform: uppercase;
+}
+
+.skyrim-nav::before,
+.skyrim-nav::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(131, 109, 69, 0) 0%, rgba(131, 109, 69, 0.8) 50%, rgba(131, 109, 69, 0) 100%);
+    margin: 5px 0;
+}
+
+.breadcrumb {
+    background: rgba(31, 31, 31, 0.6);
+    border: 1px solid var(--skyrim-border);
+    border-radius: 0;
+}
+
+.breadcrumb-item {
+    color: var(--skyrim-primary);
+}
+
+.breadcrumb-item.active {
+    color: var(--skyrim-highlight);
+}
+
+/* Buttons */
+.btn-skyrim {
+    background-color: var(--skyrim-secondary);
+    color: var(--skyrim-primary);
+    border: 1px solid var(--skyrim-border);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-skyrim:hover {
+    background-color: var(--skyrim-highlight);
+    color: var(--skyrim-dark);
+}
+
+/* Tables */
+.table {
+    background-color: rgba(31, 31, 31, 0.6);
+    color: var(--skyrim-primary);
+    border: 1px solid var(--skyrim-border);
+}
+
+.table th {
+    background-color: rgba(61, 61, 61, 0.7);
+    color: var(--skyrim-primary);
+    border-bottom: 2px solid var(--skyrim-border);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(31, 31, 31, 0.8);
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(31, 31, 31, 0.5);
+}
+
+.table td, .table th {
+    border-top: 1px solid var(--skyrim-border);
+    vertical-align: middle;
+}
+
+/* List Groups */
+.list-group-item {
+    background-color: rgba(31, 31, 31, 0.6);
+    color: var(--skyrim-primary);
+    border: 1px solid var(--skyrim-border);
+    transition: all 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: rgba(61, 61, 61, 0.7);
+}
+
+/* Cards */
+.card {
+    background-color: rgba(31, 31, 31, 0.6);
+    border: 1px solid var(--skyrim-border);
+}
+
+.card-header {
+    background-color: rgba(61, 61, 61, 0.7);
+    border-bottom: 1px solid var(--skyrim-border);
+    font-family: 'SkyrimFont', 'Cinzel', serif;
+    text-transform: uppercase;
+}
+
+/* Forms */
+.form-control {
+    background-color: rgba(31, 31, 31, 0.6);
+    color: var(--skyrim-primary);
+    border: 1px solid var(--skyrim-border);
+}
+
+.form-control:focus {
+    background-color: rgba(31, 31, 31, 0.8);
+    color: var(--skyrim-primary);
+    border-color: var(--skyrim-highlight);
+    box-shadow: 0 0 0 0.2rem rgba(211, 188, 141, 0.25);
+}
+
+/* Icons */
+.skyrim-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.icon-potion {
+    background-image: url('../images/potion-icon.png');
+}
+
+.icon-ingredient {
+    background-image: url('../images/ingredient-icon.png');
+}
+
+.icon-effect {
+    background-image: url('../images/effect-icon.png');
+}
+
+/* Effect badges */
+.effect-badge {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.effect-positive {
+    background-color: var(--skyrim-stamina);
+}
+
+.effect-negative {
+    background-color: var(--skyrim-health);
+}
+
+.effect-magic {
+    background-color: var(--skyrim-magic);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--skyrim-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--skyrim-border);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--skyrim-highlight);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+} 
