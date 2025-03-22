@@ -67,6 +67,20 @@
                                         <td>{{ingredient.name}}</td>
                                     </tr>
                                     <tr>
+                                        <th>Category</th>
+                                        <td>
+                                            {% if ingredient.category %}
+                                            <a href="{{url_for('skyrim_ingredients', category=ingredient.category)}}" class="badge badge-pill badge-info">
+                                                <i class="fas fa-tag mr-1"></i> {{ingredient.category}}
+                                            </a>
+                                            {% else %}
+                                            <span class="badge badge-pill badge-secondary">
+                                                <i class="fas fa-question-circle mr-1"></i> Uncategorized
+                                            </span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <th>Farmable</th>
                                         <td>
                                             {% if ingredient.farmable %}

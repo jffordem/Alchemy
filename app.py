@@ -57,16 +57,27 @@ def skyrim():
 
 @app.route("/skyrim/ingredients")
 def skyrim_ingredients():
+    predicate = pred_true
+    
+    # Farmable filter
     if 'farmable' in request.args:
         farmable = { "True":True, "true":True }.get(request.args.get("farmable"), False)
-        predicate = lambda ingredient: ingredient.farmable == farmable
-    else:
-        predicate = pred_true
+        predicate = pred_and(predicate, lambda ingredient: ingredient.farmable == farmable)
 
     # Add search functionality
     if 'search' in request.args:
         search_terms = [term.strip().lower() for term in request.args.get('search').split(' ')]
         predicate = pred_and(predicate, lambda ingredient: any(term in ingredient.name.lower() for term in search_terms))
+
+    # Add category filter functionality
+    if 'category' in request.args:
+        category = request.args.get('category')
+        predicate = pred_and(predicate, lambda ingredient: ingredient.category == category)
+    
+    # Add category prefix filter functionality
+    elif 'category_prefix' in request.args:
+        prefix = request.args.get('category_prefix')
+        predicate = pred_and(predicate, lambda ingredient: ingredient.category and ingredient.category.startswith(prefix))
 
     # Get sort parameters
     sortby = request.args.get('sortby', 'name')
@@ -76,6 +87,8 @@ def skyrim_ingredients():
     # Set sort function based on sortby
     if sortby == 'name':
         sort = lambda ingredient: ingredient.name
+    elif sortby == 'category':
+        sort = lambda ingredient: ingredient.category or ""  # Handle None values when sorting
     elif sortby == 'value':
         sort = lambda ingredient: ingredient.value
     elif sortby == 'weight':

@@ -166,7 +166,7 @@
   thumbnail_url: https://images.uesp.net/thumb/f/f6/SR-icon-ingredient-Canis_Root.png/48px-SR-icon-ingredient-Canis_Root.png
   value: 5
   weight: 0.1
-- category: Minerals/Powders
+- category: Fauna/Humanoid
   effects:
   - name: Invisibility
     power: 1.0
@@ -229,7 +229,7 @@
   thumbnail_url: https://images.uesp.net/thumb/e/e1/SR-icon-ingredient-Purple_Mountain_Flower.png/48px-SR-icon-ingredient-Purple_Mountain_Flower.png
   value: 2
   weight: 0.1
-- category: Fauna/Animal Parts
+- category: Fauna/Monster Parts
   effects:
   - name: Weakness to Frost
     power: 1.0
@@ -376,7 +376,7 @@
   thumbnail_url: https://images.uesp.net/thumb/5/50/SR-icon-ingredient-Jazbay_Grapes.png/48px-SR-icon-ingredient-Jazbay_Grapes.png
   value: 1
   weight: 0.2
-- category: Minerals/Powders
+- category: Fauna/Animal Parts
   effects:
   - name: Damage Stamina
     power: 1.0
@@ -481,7 +481,7 @@
   thumbnail_url: https://images.uesp.net/thumb/3/38/SR-icon-ingredient-Blue_Mountain_Flower.png/48px-SR-icon-ingredient-Blue_Mountain_Flower.png
   value: 2
   weight: 0.1
-- category: Flora/Plants
+- category: Fauna/Insects
   effects:
   - name: Damage Stamina
     power: 1.0
@@ -565,7 +565,7 @@
   thumbnail_url: https://images.uesp.net/thumb/9/99/SR-icon-ingredient-Torchbug_Thorax.png/48px-SR-icon-ingredient-Torchbug_Thorax.png
   value: 1
   weight: 0.1
-- category: Flora/Plants
+- category: Fauna/Animal Parts
   effects:
   - name: Resist Magic
     power: 1.0
@@ -607,7 +607,7 @@
   thumbnail_url: https://images.uesp.net/thumb/4/4e/SR-icon-ingredient-Small_Antlers.png/48px-SR-icon-ingredient-Small_Antlers.png
   value: 2
   weight: 0.1
-- category: Flora/Plants
+- category: Flora/Fungi
   effects:
   - name: Weakness to Fire
     power: 1.0
@@ -838,7 +838,7 @@
   thumbnail_url: https://images.uesp.net/thumb/1/18/SR-icon-ingredient-Scaly_Pholiota.png/48px-SR-icon-ingredient-Scaly_Pholiota.png
   value: 4
   weight: 0.25
-- category: Flora/Plants
+- category: Crafted/Processed
   effects:
   - name: Weakness to Magic
     power: 1.0
@@ -901,7 +901,7 @@
   thumbnail_url: https://images.uesp.net/thumb/7/77/SR-icon-ingredient-Imp_Stool.png/48px-SR-icon-ingredient-Imp_Stool.png
   value: 0
   weight: 0.3
-- category: Flora/Plants
+- category: Fauna/Animal Parts
   effects:
   - name: Restore Stamina
     power: 1.0
@@ -985,7 +985,7 @@
   thumbnail_url: https://images.uesp.net/thumb/7/78/SR-icon-ingredient-Grass_Pod.png/48px-SR-icon-ingredient-Grass_Pod.png
   value: 1
   weight: 0.1
-- category: Fauna/Monster Parts
+- category: Flora/Fungi
   effects:
   - name: Ravage Health
     power: 1.0
@@ -1384,7 +1384,7 @@
   thumbnail_url: https://images.uesp.net/thumb/4/48/SR-icon-ingredient-Moon_Sugar.png/48px-SR-icon-ingredient-Moon_Sugar.png
   value: 50
   weight: 0.25
-- category: Fauna/Humanoid
+- category: Flora/Fungi
   effects:
   - name: Damage Magicka
     power: 1.0
@@ -1426,7 +1426,7 @@
   thumbnail_url: https://images.uesp.net/thumb/d/d3/SR-icon-ingredient-Snowberries.png/48px-SR-icon-ingredient-Snowberries.png
   value: 4
   weight: 0.1
-- category: Fauna/Monster Parts
+- category: Fauna/Humanoid
   effects:
   - name: Damage Stamina
     power: 1.0
@@ -1489,7 +1489,7 @@
   thumbnail_url: https://images.uesp.net/thumb/b/bc/SR-icon-ingredient-Giants_Toe.png/48px-SR-icon-ingredient-Giants_Toe.png
   value: 20
   weight: 1
-- category: Flora/Plants
+- category: Fauna/Animal Parts
   effects:
   - name: Restore Health
     power: 1.0
@@ -1510,7 +1510,7 @@
   thumbnail_url: https://images.uesp.net/thumb/f/fc/SR-icon-ingredient-Rock_Warbler_Egg.png/48px-SR-icon-ingredient-Rock_Warbler_Egg.png
   value: 2
   weight: 0.5
-- category: Flora/Plants
+- category: Flora/Fungi
   effects:
   - name: Resist Fire
     power: 1.0
@@ -1531,7 +1531,7 @@
   thumbnail_url: https://images.uesp.net/thumb/7/76/SR-icon-ingredient-Fly_Amanita.png/48px-SR-icon-ingredient-Fly_Amanita.png
   value: 2
   weight: 0.1
-- category: Flora/Plants
+- category: Fauna/Fish
   effects:
   - name: Restore Stamina
     power: 1.0
@@ -2077,7 +2077,7 @@
   thumbnail_url: https://images.uesp.net/thumb/6/6f/SR-icon-ingredient-Nightshade.png/48px-SR-icon-ingredient-Nightshade.png
   value: 8
   weight: 0.1
-- category: Flora/Plants
+- category: Fauna/Fish
   effects:
   - name: Damage Health
     power: 2.5

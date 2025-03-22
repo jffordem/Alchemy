@@ -63,6 +63,32 @@
                             </button>
                         </div>
                     </div>
+                    
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="category-filters d-flex flex-wrap">
+                                <span class="mr-2 mt-1">Categories:</span>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Flora/') }}" class="badge badge-pill badge-info mr-2 mt-1">
+                                    <i class="fas fa-leaf mr-1"></i> Flora
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Fauna/') }}" class="badge badge-pill badge-info mr-2 mt-1">
+                                    <i class="fas fa-paw mr-1"></i> Fauna
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Minerals/') }}" class="badge badge-pill badge-info mr-2 mt-1">
+                                    <i class="fas fa-gem mr-1"></i> Minerals
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Magical/') }}" class="badge badge-pill badge-info mr-2 mt-1">
+                                    <i class="fas fa-magic mr-1"></i> Magical
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Crafted/') }}" class="badge badge-pill badge-info mr-2 mt-1">
+                                    <i class="fas fa-hammer mr-1"></i> Crafted
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', farmable=true) }}" class="badge badge-pill badge-success mr-2 mt-1">
+                                    <i class="fas fa-seedling mr-1"></i> Farmable
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </form>
                 
                 <div class="table-responsive">
@@ -70,7 +96,7 @@
                         <thead>
                             <tr>
                                 <th><a href="{{url_for('skyrim_ingredients', sortby='name', direction='desc' if sortby == 'name' and direction == 'asc' else 'asc')}}">Name {% if sortby == 'name' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='farmable', direction='desc' if sortby == 'farmable' and direction == 'asc' else 'asc')}}">Farmable {% if sortby == 'farmable' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='category', direction='desc' if sortby == 'category' and direction == 'asc' else 'asc')}}">Category {% if sortby == 'category' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th><a href="{{url_for('skyrim_ingredients', sortby='weight', direction='desc' if sortby == 'weight' and direction == 'asc' else 'asc')}}">Weight {% if sortby == 'weight' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th><a href="{{url_for('skyrim_ingredients', sortby='value', direction='desc' if sortby == 'value' and direction == 'asc' else 'asc')}}">Value {% if sortby == 'value' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th>Modifiers</th>
@@ -86,7 +112,7 @@
                                         <a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a>
                                     </div>
                                 </td>
-                                <td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}"><i class="fas fa-check text-success"></i></a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}"><i class="fas fa-times text-danger"></i></a>{% endif %}</td>
+                                <td>{% if ingredient.category %}<span class="badge badge-info">{{ingredient.category}}</span>{% else %}<span class="badge badge-secondary">Uncategorized</span>{% endif %}</td>
                                 <td>{{ingredient.weight}}</td>
                                 <td><i class="fas fa-coins mr-1 text-warning"></i> {{ingredient.value}}</td>
                                 <td class="text-center">
