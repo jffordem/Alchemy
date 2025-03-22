@@ -26,7 +26,8 @@
     "project_context": {
         "name": "Alchemy",
         "description": "A Python application for working with potions, ingredients, and effects in an alchemy system",
-        "technologies": ["Python", "Flask", "YAML", "JSON"]
+        "technologies": ["Python", "Flask", "YAML", "JSON"],
+        "environment": "Python scripts must be run using Poetry (either 'poetry run python' or from inside a 'poetry shell')"
     },
     "code_standards": {
         "python": {

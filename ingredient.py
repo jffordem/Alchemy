@@ -103,6 +103,7 @@ class Ingredient(BaseModel):
     weight: float
     thumbnail_url: str
     image_url: str
+    category: str
 
     def has_effect(self, effect_name: str) -> bool:
         """Check if this ingredient has an effect of the given name."""
@@ -176,3 +177,24 @@ def get_ingredient_by_name(name: str) -> Ingredient:
 
 def get_ingredients_by_filter(predicate):
     return [ingredient for ingredient in AllIngredientsByName.values() if predicate(ingredient)]
+
+def get_all_categories():
+    """Get a set of all unique categories present in the loaded ingredients."""
+    return {
+        ingredient.category 
+        for ingredient in AllIngredientsByName.values() 
+        if ingredient.category is not None
+    }
+
+def get_ingredients_by_category(category: str, exact_match: bool = False):
+    """Get all ingredients with the specified category.
+    
+    Args:
+        category: The category to filter by
+        exact_match: If True, requires an exact category match.
+                    If False, matches any ingredient whose category starts with the given string.
+    """
+    if exact_match:
+        return get_ingredients_by_filter(lambda i: i.category == category)
+    else:
+        return get_ingredients_by_filter(lambda i: i.category and i.category.startswith(category))
