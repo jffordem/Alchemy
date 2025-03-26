@@ -92,6 +92,22 @@
                     </table>
                 </div>
 
+                <!-- Add pagination indicator -->
+                {% if is_truncated|default(false) %}
+                <div class="text-center mb-4">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="text-muted mr-3">
+                            <i class="fas fa-info-circle"></i> 
+                            Showing {{ potions|length }} of {{ total_potions|default('many') }} potions
+                        </div>
+                        <a href="{{url_for('skyrim_potions', ingredients=current_filter|default('all'), limit=(limit|default(100) + 100))}}" 
+                           class="btn" style="background-color: var(--skyrim-secondary); color: var(--skyrim-primary); border: 1px solid var(--skyrim-accent);">
+                            <i class="fas fa-flask mr-1"></i> View More Potions
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card mb-4">

@@ -158,8 +158,12 @@ def skyrim_potions_api():
     return json.dumps({'potions': potions, 'ingredients': ingredient_names})
 
 
-@app.route('/skyrim/potions', methods=['GET'])
+@app.route('/skyrim/potions')
 def skyrim_potions():
+    # Get query parameters with defaults
+    ingredients_filter = request.args.get('ingredients', 'random')
+    limit = int(request.args.get('limit', 100))
+    
     def get_ingredients() -> list[Ingredient]:
         if 'ingredients' in request.args:
             ingredients = request.args.get('ingredients')
@@ -171,10 +175,27 @@ def skyrim_potions():
             ingredients = list(AllIngredientsByName.values())
             random.shuffle(ingredients)
             return ingredients[:5]
-    limit = 100
+    
     ingredients = get_ingredients()
-    potions = Potion.brew(ingredients)
-    return render_template('potions.html', potions=potions[:limit], ingredients=ingredients)
+    
+    # Fetch all matching potions for pagination calculations
+    all_matching_potions = Potion.brew(ingredients)
+    total_potions = len(all_matching_potions)
+    
+    # Get the limited subset of potions for display
+    potions = all_matching_potions[:limit]
+    
+    # Determine if results are truncated
+    is_truncated = total_potions > limit
+    
+    # Render template with pagination variables
+    return render_template('potions.html', 
+                          potions=potions, 
+                          ingredients=ingredients,
+                          is_truncated=is_truncated,
+                          total_potions=total_potions,
+                          current_filter=ingredients_filter,
+                          limit=limit)
 
 
 @app.route('/skyrim/potions', methods=['POST'])
