@@ -113,7 +113,7 @@
                                     </div>
                                 </td>
                                 <td>{% if ingredient.category %}<span class="badge badge-info">{{ingredient.category}}</span>{% else %}<span class="badge badge-secondary">Uncategorized</span>{% endif %}</td>
-                                <td>{{ingredient.weight}}</td>
+                                <td><i class="fas fa-weight-hanging mr-1 text-secondary"></i> {{ingredient.weight}}</td>
                                 <td><i class="fas fa-coins mr-1 text-warning"></i> {{ingredient.value}}</td>
                                 <td class="text-center">
                                     {% if ingredient.buffed %}<span class="badge badge-success badge-pill" title="Buffed"><i class="fas fa-arrow-up"></i></span>{% endif %}

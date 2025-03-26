@@ -87,7 +87,7 @@
                                 <td>{{effect.description}}</td>
                                 <td><a href="{{url_for('skyrim_effects', school=effect.school)}}">{{effect.school}}</a></td>
                                 <td><a href="{{url_for('skyrim_effects', type=effect.type)}}">{{effect.type}}</a></td>
-                                <td>{{effect.cost}}</td>
+                                <td><i class="fas fa-coins mr-1 text-warning"></i> {{effect.cost}}</td>
                                 <td><a href="{{effect.link_url}}" target="_blank" class="btn btn-sm btn-skyrim">UESP</a></td>
                             </tr>
                             {% endfor %}
