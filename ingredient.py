@@ -198,3 +198,16 @@ def get_ingredients_by_category(category: str, exact_match: bool = False):
         return get_ingredients_by_filter(lambda i: i.category == category)
     else:
         return get_ingredients_by_filter(lambda i: i.category and i.category.startswith(category))
+
+def get_best_ingredients():
+    names = [
+        'Nordic Barnacle',
+        'Salmon Roe',
+        'Garlic',
+        "Giant's Toe",
+        "Imp Stool",
+        "Mora Tapinella",
+        "Swamp Fungal Pod",
+        "Creep Cluster",
+    ]
+    return [get_ingredient_by_name(name) for name in names]

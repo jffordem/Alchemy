@@ -47,6 +47,8 @@
                             <tr>
                                 <th>Ingredients</th>
                                 <th class="text-center">Value</th>
+                                <th class="text-center">Cost</th>
+                                <th class="text-center">Efficiency</th>
                                 <th>Effects</th>
                             </tr>
                         </thead>
@@ -64,6 +66,16 @@
                                     {% endfor %}
                                 </td>
                                 <td class="text-center"><i class="fas fa-coins mr-1 text-warning"></i> {{potion.value}}</td>
+                                <td class="text-center"><i class="fas fa-shopping-basket mr-1 text-success"></i> {{potion.cost|default(0)}}</td>
+                                <td class="text-center">
+                                    {% if potion.cost and potion.cost > 0 %}
+                                        <span class="badge badge-pill badge-{% if (potion.value / potion.cost) > 4 %}success{% elif (potion.value / potion.cost) > 2 %}info{% else %}secondary{% endif %}">
+                                            {{ "%.1f"|format(potion.value / potion.cost) }}x
+                                        </span>
+                                    {% else %}
+                                        <span class="badge badge-pill badge-dark">N/A</span>
+                                    {% endif %}
+                                </td>
                                 <td>
                                     {% for active_effect in potion.active_effects %}
                                     <div class="d-inline-block mb-1">
@@ -120,6 +132,11 @@
                                     <a href="{{url_for('skyrim_potions', ingredients='all', limit=100)}}" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <i class="fas fa-globe mr-2"></i>
                                         <span>Potions with all ingredients</span>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </a>
+                                    <a href="{{url_for('skyrim_potions', ingredients='best', limit=100)}}" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <i class="fas fa-coins mr-2"></i>
+                                        <span>Highest value potions</span>
                                         <i class="fas fa-chevron-right ml-auto"></i>
                                     </a>
                                     <a href="{{url_for('skyrim_potions')}}" class="list-group-item list-group-item-action d-flex align-items-center">

@@ -4,7 +4,7 @@ import random
 import json
 
 from madlibs import AllMadlibsByName
-from ingredient import AllIngredientsByName, Ingredient, get_ingredients_by_filter, get_ingredient_by_name
+from ingredient import AllIngredientsByName, Ingredient, get_best_ingredients, get_ingredients_by_filter, get_ingredient_by_name
 from effect import AllEffectsByName, get_effect_by_name, get_effects_by_filter
 from potion import Potion
 
@@ -165,6 +165,7 @@ def skyrim_potions():
             ingredients = request.args.get('ingredients')
             if ingredients == "all": return list(AllIngredientsByName.keys())
             if ingredients == "farmable": return [ ingredient for ingredient in AllIngredientsByName.values() if ingredient.farmable]
+            if ingredients == "best": return get_best_ingredients()
             return [ get_ingredient_by_name(name) for name in ingredients.split(',') ]
         else:
             ingredients = list(AllIngredientsByName.values())
@@ -194,7 +195,7 @@ def madlibs(name):
     if name in AllMadlibsByName:
         item = AllMadlibsByName[name]
         return render_template('madlib.html', name=name, lines=item.render(), ref=item.ref)
-    return NOT_FOUND_MESSAGE, 404
+    return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
 
 
 @app.route("/about")

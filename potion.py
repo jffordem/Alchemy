@@ -44,6 +44,7 @@ class Potion(BaseModel):
     active_effects: list[ActiveEffect]
     ingredients: list[Ingredient]
     value: float
+    cost: float = 0.0  # The total cost of ingredients used
 
     def __hash__(self):
         return sum(hash(ingredient) for ingredient in self.ingredients)
@@ -58,6 +59,14 @@ class Potion(BaseModel):
     def ingredients_key(self) -> str:
         """Create a unique key based on sorted ingredient names."""
         return ",".join(sorted(ingredient.name for ingredient in self.ingredients))
+    
+    @property
+    def efficiency(self) -> float:
+        """Calculate the efficiency ratio (value/cost) of the potion.
+        Higher efficiency means better value for the cost."""
+        if self.cost == 0:
+            return 0.0  # Avoid division by zero
+        return self.value / self.cost
 
     @staticmethod
     def find_duplicates(potions: list['Potion']) -> Iterator['Potion']:
@@ -150,7 +159,8 @@ class Potion(BaseModel):
             active_effects: list[ActiveEffect] = Ingredient.combine(active_ingredients)
             if len(active_effects) > 0:
                 value = Effect.get_value(active_effects)
-                potions.append(Potion(active_effects=active_effects, ingredients=active_ingredients, value=value))
+                cost = sum(ingredient.value for ingredient in active_ingredients)
+                potions.append(Potion(active_effects=active_effects, ingredients=active_ingredients, value=value, cost=cost))
         
         potions.sort(key=lambda potion: potion.value, reverse=True)
         return potions
