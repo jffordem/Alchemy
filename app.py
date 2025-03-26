@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from flask import Flask, request, send_from_directory, render_template
 import random
 import json
@@ -39,7 +40,6 @@ def pred_or(*predicates):
 
 app = Flask(__name__)
 
-
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
@@ -48,6 +48,12 @@ def favicon():
 @app.route("/")
 def home():
     return render_template('index.html')
+
+
+@app.route("/reload")
+def reload():
+    Path("app.py").touch()
+    return render_template('index.html', message="Reloading...")
 
 
 @app.route("/skyrim")
