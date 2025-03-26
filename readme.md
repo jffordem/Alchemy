@@ -86,7 +86,7 @@ docker build -t alchemy .
 To run the Flask server in a Docker container:
 
 ```bash
-docker run -p 8088:8088 alchemy
+docker run --name Alchemy -p 8088:8088 -d alchemy
 ```
 
 ## Skyrim Muffle

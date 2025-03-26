@@ -8,7 +8,7 @@ def start(c):
 @task
 def start_debug(c):
     "invoke start-debug"
-    c.run('flask run --debugger --reload')
+    c.run('flask run --debugger --reload --extra-files="**/*.html"')
 
 @task
 def docker_build(c):
