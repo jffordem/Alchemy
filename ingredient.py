@@ -4,6 +4,8 @@ from functools import reduce
 import json
 import yaml
 
+from effect import Effect
+
 __doc__ = """
 Skyrim ingredients are the raw materials used to brew potions.  Each ingredient has a 
 name, a list of ActiveEffects that it can produce, a value, and a weight.  Some 
@@ -211,3 +213,8 @@ def get_best_ingredients():
         "Creep Cluster",
     ]
     return [get_ingredient_by_name(name) for name in names]
+
+def get_ingredients_with_effect(effect: Effect | str) -> list[Ingredient]:
+    """Get all ingredients that have the specified effect."""
+    effect_name = effect.name if isinstance(effect, Effect) else effect
+    return get_ingredients_by_filter(lambda ingredient: ingredient.has_effect(effect_name))

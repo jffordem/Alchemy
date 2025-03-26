@@ -4,7 +4,7 @@ import random
 import json
 
 from madlibs import AllMadlibsByName
-from ingredient import AllIngredientsByName, Ingredient, get_best_ingredients, get_ingredients_by_filter, get_ingredient_by_name
+from ingredient import AllIngredientsByName, Ingredient, get_best_ingredients, get_ingredients_by_filter, get_ingredient_by_name, get_ingredients_with_effect
 from effect import AllEffectsByName, get_effect_by_name, get_effects_by_filter
 from potion import Potion
 
@@ -146,7 +146,7 @@ def skyrim_effects():
 def skyrim_effect(name):
     item = get_effect_by_name(name)
     if item:
-        return render_template('effect.html', effect=item)
+        return render_template('effect.html', effect=item, ingredients=get_ingredients_with_effect(item))
     else:
         return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
 
@@ -164,19 +164,24 @@ def skyrim_potions():
     ingredients_filter = request.args.get('ingredients', 'random')
     limit = int(request.args.get('limit', 100))
     
-    def get_ingredients() -> list[Ingredient]:
+    # Generate a descriptive title based on the filter
+    def get_ingredients() -> tuple[str, list[Ingredient]]:
         if 'ingredients' in request.args:
             ingredients = request.args.get('ingredients')
-            if ingredients == "all": return list(AllIngredientsByName.keys())
-            if ingredients == "farmable": return [ ingredient for ingredient in AllIngredientsByName.values() if ingredient.farmable]
-            if ingredients == "best": return get_best_ingredients()
-            return [ get_ingredient_by_name(name) for name in ingredients.split(',') ]
+            if ingredients == "all":
+                return "All Potions", list(AllIngredientsByName.keys())
+            if ingredients == "farmable":
+                return "Farmable Potions", [ingredient for ingredient in AllIngredientsByName.values() if ingredient.farmable]
+            if ingredients == "best":
+                return "Valuable Potions", get_best_ingredients()
+            # Custom ingredient selection
+            return "Potions", [get_ingredient_by_name(name) for name in ingredients.split(',')]
         else:
             ingredients = list(AllIngredientsByName.values())
             random.shuffle(ingredients)
-            return ingredients[:5]
+            return "Random Potions", ingredients[:5]
     
-    ingredients = get_ingredients()
+    page_title, ingredients = get_ingredients()
     
     # Fetch all matching potions for pagination calculations
     all_matching_potions = Potion.brew(ingredients)
@@ -195,7 +200,8 @@ def skyrim_potions():
                           is_truncated=is_truncated,
                           total_potions=total_potions,
                           current_filter=ingredients_filter,
-                          limit=limit)
+                          limit=limit,
+                          page_title=page_title)
 
 
 @app.route('/skyrim/potions', methods=['POST'])

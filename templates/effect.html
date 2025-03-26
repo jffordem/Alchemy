@@ -86,6 +86,40 @@
                 </div>
             </div>
 
+            <!-- Ingredients with this effect -->
+            <div class="mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0 text-center">
+                                    <span class="skyrim-icon icon-ingredient"></span>
+                                    Ingredients with {{effect.name}}
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                {% if ingredients %}
+                                <div class="row">
+                                    {% for ingredient in ingredients %}
+                                    <div class="col-md-4 col-sm-6 mb-3">
+                                        <div class="ingredient-card p-2 text-center">
+                                            <a href="{{ url_for('skyrim_ingredient', name=ingredient.name) }}" class="text-decoration-none">
+                                                <img src="{{ingredient.thumbnail_url}}" alt="{{ingredient.name}}" class="mr-2" style="width: 32px; height: 32px; object-fit: contain; background-color: rgba(0,0,0,0.2); border-radius: 4px; padding: 2px;">
+                                                <h5>{{ ingredient.name }}</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                <p class="text-center">No ingredients found with this effect.</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
