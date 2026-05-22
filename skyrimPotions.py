@@ -1,12 +1,4 @@
-from potion import Potion
-from ingredient import AllIngredientsByName, get_ingredient_by_name, get_ingredients_by_filter
-from rich.console import Console
-from rich.table import Table
-from rich.progress import track
-import argparse
-from enum import Enum
-
-__doc__ = '''
+'''
 Utility script for displaying potion information in a tabular format.
 All core potion functionality has been moved to the Potion class.
 
@@ -17,6 +9,14 @@ Usage:
     python skyrimPotions.py -s effects          # Sort by number of effects
     python skyrimPotions.py -f ingredients.txt   # Read ingredients from file
 '''
+
+from potion import Potion
+from ingredient import AllIngredientsByName, get_ingredient_by_name, get_ingredients_by_filter
+from rich.console import Console
+from rich.table import Table
+from rich.progress import track
+import argparse
+from enum import Enum
 
 class SortColumn(str, Enum):
     """Sort columns for potion display."""

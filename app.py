@@ -1,3 +1,18 @@
+"""
+Then configure Flask.
+
+```cmd
+$ set FLASK_APP=app
+$ set FLASK_ENV=development
+```
+
+Then you can start the service.  It will be at http://localhost:5000 by default.
+
+```cmd
+$ flask run
+```
+"""
+
 import os
 from pathlib import Path
 from flask import Flask, request, send_from_directory, render_template
@@ -12,21 +27,6 @@ from potion import Potion
 NOT_FOUND_MESSAGE = "Not Found"
 NOT_FOUND_STATUS = 404
 DEFAULT_PORT = 5000
-
-__doc__ = """
-Then configure Flask.
-
-```cmd
-$ set FLASK_APP=app
-$ set FLASK_ENV=development
-```
-
-Then you can start the service.  It will be at http://localhost:5000 by default.
-
-```cmd
-$ flask run
-```
-"""
 
 # better place for these predicate functions?
 def pred_true(_):

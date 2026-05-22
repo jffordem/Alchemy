@@ -1,9 +1,4 @@
-import math
-from pydantic import BaseModel
-import json
-import yaml
-
-__doc__ = '''
+'''
 An effect is a magical property that can be applied to a potion.  Each effect 
 has a name, a description, a school, a type, a cost, a duration, and a 
 magnitude.  The value of an effect is calculated based on the cost, duration, 
@@ -41,6 +36,12 @@ Usage:
     effect = get_effect_by_name("Restore Health")
     print(effect.value, effect.verbose)
 '''
+
+import math
+from pydantic import BaseModel
+import json
+import yaml
+
 
 class Effect(BaseModel):
     name: str

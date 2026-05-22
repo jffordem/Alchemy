@@ -1,12 +1,4 @@
-from pydantic import BaseModel
-from typing import Callable, Iterator, TypeVar, Any
-from effect import Effect
-from ingredient import Ingredient, ActiveEffect, get_ingredient_by_name
-from itertools import combinations as itertools_combinations
-from math import comb
-from rich.progress import track as iterate
-
-__doc__ = """
+"""
 Potions are created by combining ingredients.  Each ingredient has a list of effects
 that it can produce when combined with other ingredients.  The value of a potion is
 calculated based on the effects it produces.  The brew method takes a list of
@@ -17,6 +9,14 @@ Usage:
     potions = Potion.brew(["Wheat", "Garlic"])
     print(potions)
 """
+
+from pydantic import BaseModel
+from typing import Callable, Iterator, TypeVar, Any
+from effect import Effect
+from ingredient import Ingredient, ActiveEffect, get_ingredient_by_name
+from itertools import combinations as itertools_combinations
+from math import comb
+from rich.progress import track as iterate
 
 def iterate(items, **kwargs):
     """This is the 'non-progress bar' iterator.  Useful for embedded behavior (like web server)."""

@@ -1,14 +1,14 @@
+"""
+This module provides a simple madlib generator.  It is used by the Flask app to generate random text for the user to enjoy.
+This version doesn't require the text to be a data structure.  It just requires alternate clauses to be in parens and separated by a slash.
+"""
+
 import random
 from typing import Optional
 import yaml
 import argparse
 from pydantic import BaseModel
 import re
-
-__doc__ = """
-This module provides a simple madlib generator.  It is used by the Flask app to generate random text for the user to enjoy.
-This version doesn't require the text to be a data structure.  It just requires alternate clauses to be in parens and separated by a slash.
-"""
 
 class Madlib(BaseModel):
     """A madlib is a simple game where you fill in the blanks with random words.  The text is a string with alternate clauses in parens separated by a slash."""

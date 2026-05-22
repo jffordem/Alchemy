@@ -1,12 +1,4 @@
-from pydantic import BaseModel
-from collections import defaultdict
-from functools import reduce
-import json
-import yaml
-
-from effect import Effect
-
-__doc__ = """
+"""
 Skyrim ingredients are the raw materials used to brew potions.  Each ingredient has a 
 name, a list of ActiveEffects that it can produce, a value, and a weight.  Some 
 ingredients are farmable, meaning they can be grown or harvested, while others 
@@ -51,6 +43,13 @@ Usage:
     print(active_effects)
 """
 
+from pydantic import BaseModel
+from collections import defaultdict
+from functools import reduce
+import json
+import yaml
+
+from effect import Effect
 
 def group_by(iterable, get_key):
     groups = defaultdict(list)
