@@ -7,31 +7,49 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skyrim.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <title>Skyrim</title>
+    <title>Skyrim Potions</title>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">Skyrim Alchemy</h1>
+            <div class="my-4" style="height: 2px; background: linear-gradient(90deg, rgba(131, 109, 69, 0) 0%, rgba(131, 109, 69, 0.8) 50%, rgba(131, 109, 69, 0) 100%);"></div>
+        </div>
+    </div>
 
-        <div class="row">
-            <section class="col-12">
-    
-                <nav class="breadcrumb fixed-top">
-                    <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
-                    <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
-                    <span class="breadcrumb-item active">Potions</span>
-                </nav>
+    <div class="row">
+        <section class="col-12">
+            <nav class="skyrim-nav d-flex">
+                <a href="{{url_for('home')}}" class="ml-3">Home</a>
+                <a href="{{url_for('skyrim')}}" class="ml-3">Skyrim Alchemy</a>
+                <span class="ml-3">Potions</span>
+                <a href="{{url_for('about')}}" class="ml-auto mr-3">About</a>
+            </nav>
 
-                <div class="mt-5">
-                    <h1>Potions</h1>
-
-                    <table class="table table-striped mb-3">
+            <div class="mt-4">
+                <h2 class="text-center mb-4">{{page_title}}</h2>
+                
+                <div class="table-responsive mb-4">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Ingredients</th><th>Value</th><th>Effects</th>
+                                <th>Ingredients</th>
+                                <th class="text-center">Value</th>
+                                <th class="text-center" style="min-width: 100px;">Cost</th>
+                                <th class="text-center">Efficiency</th>
+                                <th>Effects</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,35 +57,121 @@
                             <tr>
                                 <td>
                                     {% for ingredient in potion.ingredients %}
-                                    <a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a>{{ ", " if not loop.last else "" }}
+                                    <div class="d-inline-block mb-1">
+                                        <a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}" class="badge badge-pill" style="background-color: var(--skyrim-secondary); color: var(--skyrim-primary); padding: 8px 12px; margin-right: 5px; white-space: normal;">
+                                            <img src="{{ingredient.thumbnail_url}}" alt="{{ingredient.name}}" style="width: 20px; height: 20px; object-fit: contain; background-color: rgba(0,0,0,0.2); border-radius: 4px; padding: 2px; margin-right: 5px;">
+                                            {{ingredient.name}}
+                                        </a>
+                                    </div>
                                     {% endfor %}
                                 </td>
-                                <td>{{potion.value}}</td>
+                                <td class="text-center"><i class="fas fa-coins mr-1 text-warning"></i> {{potion.value}}</td>
+                                <td class="text-center"><i class="fas fa-shopping-basket mr-1 text-success"></i> {{potion.cost|default(0)}}</td>
+                                <td class="text-center">
+                                    {% if potion.cost and potion.cost > 0 %}
+                                        <span class="badge badge-pill badge-{% if (potion.value / potion.cost) > 4 %}success{% elif (potion.value / potion.cost) > 2 %}info{% else %}secondary{% endif %}">
+                                            {{ "%.1f"|format(potion.value / potion.cost) }}x
+                                        </span>
+                                    {% else %}
+                                        <span class="badge badge-pill badge-dark">N/A</span>
+                                    {% endif %}
+                                </td>
                                 <td>
                                     {% for active_effect in potion.active_effects %}
-                                    <a href="{{url_for('skyrim_effect', name=active_effect.name)}}">{{active_effect.name}}</a>{{ ", " if not loop.last else "" }}
+                                    <div class="d-inline-block mb-1">
+                                        <a href="{{url_for('skyrim_effect', name=active_effect.name)}}" class="badge badge-pill effect-badge-pill" style="background-color: var(--skyrim-magic); color: white; padding: 8px 12px; margin-right: 5px; white-space: normal;">
+                                            <i class="fas fa-magic mr-1"></i>
+                                            {{active_effect.name}}
+                                        </a>
+                                    </div>
                                     {% endfor %}
                                 </td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
-    
-                    <h2>Ingredients</h2>
-                    <ul class="list-group mb-5">
-                        {% for ingredient in ingredients %}
-                        <li class="list-group-item"><a href="{{url_for('skyrim_ingredient', name=ingredient)}}">{{ingredient}}</a></li>
-                        {% endfor %}
-                    </ul>
-    
                 </div>
-                <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->
 
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            </section>
-        </div>
+                <!-- Add pagination indicator -->
+                {% if is_truncated|default(false) %}
+                <div class="text-center mb-4">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="text-muted mr-3">
+                            <i class="fas fa-info-circle"></i> 
+                            Showing {{ potions|length }} of {{ total_potions|default('many') }} potions
+                        </div>
+                        <a href="{{url_for('skyrim_potions', ingredients=current_filter|default('all'), limit=(limit|default(100) + 100))}}" 
+                           class="btn" style="background-color: var(--skyrim-secondary); color: var(--skyrim-primary); border: 1px solid var(--skyrim-accent);">
+                            <i class="fas fa-flask mr-1"></i> View More Potions
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h3 class="mb-0">
+                                    <span class="skyrim-icon icon-ingredient"></span>
+                                    Ingredients
+                                </h3>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="list-group list-group-flush">
+                                    {% for ingredient in ingredients %}
+                                    <a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <img src="{{ingredient.thumbnail_url}}" alt="{{ingredient.name}}" class="mr-2" style="width: 32px; height: 32px; object-fit: contain; background-color: rgba(0,0,0,0.2); border-radius: 4px; padding: 2px;">
+                                        <span>{{ingredient.name}}</span>
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h3 class="mb-0">
+                                    <span class="skyrim-icon icon-potion"></span>
+                                    More Potions
+                                </h3>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="list-group list-group-flush">
+                                    <a href="{{url_for('skyrim_potions', ingredients='farmable', limit=100)}}" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <i class="fas fa-seedling mr-2"></i>
+                                        <span>Potions with farmable ingredients</span>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </a>
+                                    <a href="{{url_for('skyrim_potions', ingredients='all', limit=100)}}" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <i class="fas fa-globe mr-2"></i>
+                                        <span>Potions with all ingredients</span>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </a>
+                                    <a href="{{url_for('skyrim_potions', ingredients='best', limit=100)}}" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <i class="fas fa-coins mr-2"></i>
+                                        <span>Highest value potions</span>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </a>
+                                    <a href="{{url_for('skyrim_potions')}}" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <i class="fas fa-random mr-2"></i>
+                                        <span>Potions with random 5 ingredients</span>
+                                        <i class="fas fa-chevron-right ml-auto"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </section>
     </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,104 @@
+name,value,weight,farmable,effect_1_name,effect_1_power,effect_1_value,effect_2_name,effect_2_power,effect_2_value,effect_3_name,effect_3_power,effect_3_value
+Nirnroot,10,0.2,False,Damage Health,1.0,12.6,Damage Stamina,1.0,1.0,Invisibility,1.0,1.0
+Emperor Parasol Moss,1,0.25,False,Damage Health,1.0,1.0,Fortify Magicka,0.5,1.0,Regenerate Health,1.5,19.7
+Honeycomb,5,0.2,False,Restore Stamina,1.0,1.0,Fortify Block,0.5,1.0,Fortify Light Armor,1.0,1.0
+Swamp Fungal Pod,5,0.2,True,Resist Shock,1.0,1.0,Lingering Damage Magicka,1.0,1.0,Paralysis,1.0,1.0
+Deathbell,4,0.2,True,Damage Health,1.5,1.6,Ravage Stamina,1.0,2.1,Slow,1.0,1.0
+Hawk Feathers,15,0.1,False,Cure Disease,1.0,0.36,Fortify Light Armor,1.0,1.0,Fortify One-handed,1.0,1.0
+Human Heart,0,1,False,Damage Health,1.0,1.0,Damage Magicka Regen,1.0,1.0,Damage Magicka,1.0,1.0
+Canis Root,5,0.1,True,Damage Stamina,1.0,1.0,Fortify Marksman,1.0,1.0,Fortify One-Handed,1.0,1.0
+Vampire Dust,25,0.2,False,Invisibility,1.0,1.0,Regenerate Health,1.0,1.0,Restore Magicka,1.0,1.0
+Blue Butterfly Wing,2,0.1,False,Damage Stamina,1.0,1.0,Damage Magicka Regen,1.0,1.0,Fortify Conjuration,1.0,1.0
+Purple Mountain Flower,2,0.1,True,Restore Stamina,1.0,1.0,Fortify Sneak,1.0,1.0,Lingering Damage Magicka,1.0,1.0
+Ice Wraith Teeth,30,0.25,False,Weakness to Frost,1.0,1.0,Fortify Heavy Armor,1.0,1.0,Invisibility,1.0,1.0
+Blue Dartwing,1,0.1,False,Resist Shock,1.0,1.0,Restore Health,1.0,1.0,Fortify Pickpocket,1.0,1.0
+Taproot,15,0.5,False,Weakness to Magic,1.0,1.0,Fortify Illusion,1.0,1.0,Regenerate Magicka,1.0,1.0
+Pearl,2,0.1,False,Restore Stamina,1.0,1.0,Restore Magicka,1.0,1.0,Fortify Block,1.0,1.0
+Juniper Berries,1,0.1,True,Weakness to Fire,1.0,1.0,Regenerate Health,1.0,1.0,Fortify Marksman,1.0,1.0
+Hanging Moss,1,0.25,False,Damage Magicka,1.0,1.0,Damage Magicka Regen,1.0,1.0,Fortify Health,1.0,1.0
+Jazbay Grapes,1,0.2,True,Weakness to Magic,1.0,1.0,Fortify Magicka,1.0,1.0,Regenerate Magicka,1.0,1.0
+Bone Meal,5,0.5,False,Damage Stamina,1.0,1.0,Fortify Conjuration,1.0,1.0,Resist Fire,1.0,1.0
+Creep Cluster,1,0.2,True,Restore Magicka,1.0,1.0,Fortify Carry Weight,1.0,1.0,Damage Stamina Regen,1.0,1.0
+Garlic,1,0.25,True,Resist Poison,1.0,1.0,Fortify Stamina,1.0,1.0,Regenerate Magicka,1.0,1.0
+Hawk Beak,15,0.25,False,Restore Stamina,1.0,1.0,Resist Frost,1.0,1.0,Fortify Carry Weight,1.0,1.0
+Blue Mountain Flower,2,0.1,True,Restore Health,1.0,1.0,Fortify Conjuration,1.0,1.0,Fortify Health,1.0,1.0
+Spider Egg,5,0.2,False,Damage Stamina,1.0,1.0,Damage Magicka Regen,1.0,1.0,Fortify Lockpicking,1.0,1.0
+Powdered Mammoth Tusk,2,0.1,False,Restore Stamina,1.0,1.0,Weakness to Fire,1.0,1.0,Fortify Sneak,1.0,1.0
+Void Salts,125,0.2,False,Weakness to Shock,1.0,1.0,Resist Magic,1.0,1.0,Damage Health,1.0,1.0
+Torchbug Thorax,1,0.1,False,Restore Stamina,1.0,1.0,Lingering Damage Magicka,1.0,1.0,Weakness to Magic,1.0,1.0
+Chicken's Egg,2,0.5,False,Resist Magic,1.0,1.0,Waterbreathing,1.0,1.0,Damage Magicka Regen,1.0,1.0
+Small Antlers,2,0.1,False,Weakness to Poison,1.0,1.0,Fortify Restoration,1.0,1.0,Lingering Damage Stamina,1.0,1.0
+Bleeding Crown,10,0.3,True,Weakness to Fire,1.0,1.0,Fortify Block,1.0,1.0,Weakness to Poison,1.0,1.0
+Thistle Branch,1,0.1,True,Resist Frost,1.0,1.0,Ravage Stamina,1.0,1.0,Resist Poison,0.75,1.0
+Abecean Longfin,15,0.5,False,Weakness to Frost,1.0,1.0,Fortify Sneak,1.0,1.0,Weakness to Poison,1.0,1.0
+Mudcrab Chitin,2,0.25,False,Restore Stamina,1.0,1.0,Cure Disease,1.0,1.0,Resist Poison,1.0,1.0
+Histcarp,6,0.25,False,Restore Stamina,1.0,1.0,Fortify Magicka,1.0,1.0,Damage Stamina Regen,1.0,1.0
+Beehive Husk,5,1,False,Resist Poison,0.5,1.0,Fortify Light Armor,1.0,1.0,Fortify Sneak,1.0,1.0
+Poison Bloom,5,0.25,False,Damage Health,1.5,1.6,Fortify Carry Weight,1.0,1.0,Slow,1.0,1.0
+Dragon's Tongue,5,0.1,True,Resist Fire,1.0,1.0,Fortify Barter,1.0,1.0,Fortify Illusion,1.0,1.0
+Troll Fat,15,1,False,Resist Poison,1.0,1.0,Fortify Two-handed,1.0,1.0,Frenzy,1.0,1.0
+Orange Dartwing,1,0.1,False,Restore Stamina,1.0,1.0,Ravage Magicka,1.0,1.0,Fortify Pickpocket,1.0,1.0
+Scaly Pholiota,4,0.25,True,Weakness to Magic,1.0,1.0,Fortify Illusion,1.0,1.0,Regenerate Stamina,1.0,1.0
+Dwarven Oil,15,0.25,False,Weakness to Magic,1.0,1.0,Regenerate Magicka,1.0,1.0,Fortify Illusion,1.0,1.0
+Cyrodilic Spadetail,15,0.25,False,Damage Stamina,1.0,1.0,Fear,1.0,1.0,Fortify Restoration,1.0,1.0
+Imp Stool,0,0.3,True,Damage Health,1.0,1.0,Paralysis,1.0,1.0,Lingering Damage Health,1.0,1.0
+Pine Thrush Egg,2,0.5,False,Restore Stamina,1.0,1.0,Fortify Lockpicking,1.0,1.0,Weakness to Poison,1.0,1.0
+Glowing Mushroom,5,0.2,True,Resist Shock,1.0,1.0,Fortify Destruction,1.0,1.0,Fortify Smithing,1.0,1.0
+Slaughterfish Egg,3,0.2,False,Resist Poison,1.0,1.0,Fortify Pickpocket,1.0,1.0,Lingering Damage Health,1.0,1.0
+Grass Pod,1,0.1,True,Resist Poison,1.0,1.0,Ravage Magicka,1.0,1.0,Fortify Alteration,1.0,1.0
+Giant Lichen,5,0.25,True,Ravage Health,1.0,1.0,Weakness to Poison,1.0,1.0,Weakness to Shock,1.0,1.0
+Small Pearl,2,0.1,False,Restore Stamina,1.0,1.0,Fortify One-handed,1.0,1.0,Fortify Restoration,1.0,1.0
+Nordic Barnacle,5,0.2,False,Damage Magicka,1.0,1.0,Waterbreathing,1.0,1.0,Regenerate Health,1.0,1.0
+Butterfly Wing,3,0.1,False,Restore Health,1.0,1.0,Lingering Damage Stamina,1.0,1.0,Fortify Barter,1.0,1.0
+Hagraven Feathers,20,0.1,False,Damage Magicka,1.0,1.0,Frenzy,1.0,1.0,Fortify Conjuration,1.0,1.0
+Frost Salts,100,0.25,False,Weakness to Fire,1.0,1.0,Resist Frost,1.0,1.0,Restore Magicka,1.0,1.0
+Mora Tapinella,4,0.25,True,Restore Magicka,1.0,1.0,Lingering Damage Health,1.0,1.0,Regenerate Stamina,1.0,1.0
+Sabre Cat Tooth,2,0.1,False,Restore Stamina,1.0,1.0,Fortify Heavy Armor,1.0,1.0,Fortify Smithing,1.0,1.0
+Bear Claws,2,0.1,False,Restore Stamina,0.8,1.0,Fortify Health,1.0,1.0,Fortify One-Handed,1.0,1.0
+Luna Moth Wing,5,0.1,False,Damage Magicka,1.0,1.0,Fortify Light Armor,1.0,1.0,Regenerate Health,1.0,1.0
+Eye of Sabre Cat,2,0.1,False,Restore Stamina,1.0,1.0,Damage Magicka,1.0,1.0,Ravage Health,1.0,1.0
+Glow Dust,20,0.5,False,Damage Magicka,1.0,1.0,Fortify Destruction,1.0,1.0,Damage Magicka Regen,1.0,1.0
+Fire Salts,50,0.25,False,Weakness to Frost,1.0,1.0,Restore Magicka,1.0,1.0,Resist Fire,1.0,1.0
+Human Flesh,1,0.25,False,Damage Health,1.0,1.0,Paralysis,1.0,1.0,Restore Magicka,1.0,1.0
+Blisterwort,12,0.2,True,Damage Stamina,1.0,1.0,Restore Health,0.6,1.0,Frenzy,1.0,1.0
+Red Mountain Flower,2,0.1,True,Restore Magicka,1.0,1.0,Ravage Magicka,1.0,1.0,Fortify Magicka,1.0,1.0
+Crimson Nirnroot,10,0.2,False,Damage Health,3.0,1.0,Invisibility,1.0,1.0,Damage Stamina,3.0,1.0
+Jarrin Root,10,0.5,False,Damage Health,100.0,1.0,Damage Stamina,1.0,1.0,Damage Magicka,1.0,1.0
+Moon Sugar,50,0.25,False,Weakness to Fire,1.0,1.0,Resist Frost,1.0,1.0,Restore Magicka,1.0,1.0
+Namira's Rot,0,0.25,True,Damage Magicka,1.0,1.0,Fear,1.0,1.0,Fortify Lockpicking,1.0,1.0
+Snowberries,4,0.1,True,Resist Fire,1.0,1.0,Fortify Enchanting,1.0,1.0,Resist Frost,1.0,1.0
+Berit's Ashes,5,0.2,False,Damage Stamina,1.0,1.0,Resist Fire,1.0,1.0,Fortify Conjuration,1.0,1.0
+Charred Skeever Hide,1,0.5,False,Restore Stamina,1.0,1.0,Resist Poison,1.0,1.0,Cure Disease,1.0,0.36
+Giant's Toe,20,1,False,Damage Stamina,1.0,1.0,Fortify Carry Weight,1.0,5.9,Fortify Health,1.0,1.0
+Rock Warbler Egg,2,0.5,False,Restore Health,1.0,1.0,Fortify One-handed,1.0,1.0,Damage Stamina,1.0,1.0
+Fly Amanita,2,0.1,True,Resist Fire,1.0,1.0,Frenzy,1.0,1.0,Fortify Two-handed,1.0,1.0
+Silverside Perch,15,0.25,False,Restore Stamina,1.0,1.0,Damage Stamina Regen,1.0,1.0,Ravage Health,1.0,1.0
+Boar Tusk,20,0.5,False,Fortify Stamina,1.25,5.9,Fortify Health,1.0,5.9,Ravage Magicka,1.0,1.0
+Lavender,1,0.1,True,Resist Magic,1.0,1.0,Fortify Stamina,1.0,1.0,Ravage Magicka,1.0,1.0
+Hagraven Claw,20,0.25,False,Resist Magic,1.0,1.0,Lingering Damage Magicka,1.0,1.0,Fortify Enchanting,1.0,1.0
+Salt Pile,2,0.2,False,Weakness to Magic,1.0,1.0,Fortify Restoration,1.0,1.0,Slow,1.0,1.0
+Ectoplasm,25,0.1,False,Restore Magicka,1.0,1.0,Fortify Destruction,0.8,1.0,Fortify Magicka,1.0,1.0
+White Cap,0,0.3,True,Weakness to Frost,1.0,1.0,Fortify Heavy Armor,1.0,1.0,Restore Magicka,1.0,1.0
+Tundra Cotton,1,0.1,True,Resist Magic,1.0,1.0,Fortify Magicka,1.0,1.0,Fortify Block,1.0,1.0
+Large Antlers,2,0.1,False,Restore Stamina,1.0,1.0,Fortify Stamina,1.0,1.0,Slow,1.0,1.0
+Frost Mirriam,1,0.1,False,Resist Frost,1.0,1.0,Fortify Sneak,1.0,1.0,Ravage Magicka,1.0,1.0
+Wisp Wrappings,2,0.1,False,Restore Stamina,1.0,1.0,Fortify Destruction,1.0,1.0,Fortify Carry Weight,1.0,1.0
+Netch Jelly,20,0.5,False,Paralysis,1.0,1.0,Fortify Carry Weight,1.0,1.0,Restore Stamina,2.0,1.0
+Salmon Roe,5,0.2,False,Restore Stamina,0.4,1.0,Waterbreathing,1.0,15.4,Fortify Magicka,12.5,1.05
+Hawk's Egg,5,0.5,False,Resist Magicka,1.0,1.0,Damage Magicka Regen,1.0,1.0,Waterbreathing,1.0,1.0
+Ashen Grass Pod,1,0.1,False,Resist Fire,1.34,1.0,Weakness to Shock,1.0,1.0,Fortify Lockpicking,1.0,1.0
+Wheat,5,0.1,True,Restore Health,1.0,1.0,Fortify Health,1.0,1.0,Damage Stamina Regen,1.0,1.0
+Trama Root,1,0.2,True,Weakness to Shock,1.0,1.0,Fortify Carry Weight,1.0,1.0,Damage Magicka,1.0,1.0
+Burnt Spriggan Wood,20,0.5,False,Weakness to Fire,1.0,1.0,Fortify Alteration,1.0,1.0,Damage Magicka Regen,1.0,1.0
+Ash Hopper Jelly,20,0.25,False,Restore Health,1.0,1.0,Fortify Light Armor,1.0,1.0,Resist Shock,1.0,1.0
+Elves Ear,10,0.1,True,Restore Magicka,1.0,1.0,Weakness to Frost,1.0,1.0,Fortify Marksman,1.0,1.0
+Spriggan Sap,15,0.2,False,Damage Magicka Regen,1.0,1.0,Fortify Enchanting,1.0,1.0,Fortify Smithing,1.0,1.0
+Slaughterfish Scales,3,0.2,False,Resist Frost,1.0,1.0,Lingering Damage Health,1.0,1.0,Fortify Heavy Armor,1.0,1.0
+Briar Heart,20,0.5,False,Restore Magicka,1.0,1.0,Fortify Block,0.5,1.0,Paralysis,1.0,1.0
+Bee,3,0.1,False,Restore Stamina,1.0,1.0,Ravage Stamina,1.0,1.0,Regenerate Stamina,1.0,1.0
+Falmer Ear,10,0.2,False,Damage Health,1.0,1.0,Frenzy,1.0,1.0,Resist Poison,1.0,1.0
+Nightshade,8,0.1,True,Damage Health,1.0,1.0,Damage Magicka Regen,1.0,1.0,Lingering Damage Stamina,1.0,1.0
+River Betty,15,0.25,False,Damage Health,2.5,34.5,Fortify Alteration,1.0,1.0,Slow,1.0,1.0
+Daedra Heart,250,0.5,False,Damage Stamina Regen,1.0,1.0,Damage Magicka,1.0,1.0,Restore Health,1.0,1.0
+Skeever Tail,3,0.2,False,Damage Stamina Regen,1.0,1.0,Ravage Health,1.0,1.0,Damage Health,1.0,1.0
+Chaurus Eggs,10,0.2,False,Weakness to Poison,1.0,1.0,Fortify Stamina,1.0,1.0,Damage Magicka,1.0,1.0

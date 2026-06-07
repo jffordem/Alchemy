@@ -42,6 +42,53 @@ void loop() {
 }
 ```
 
+## Flask Server
+
+To start the Flask web interface:
+
+1. Make sure you have Python and Flask installed
+2. Navigate to the project directory
+3. Run the Flask server:
+```bash
+python app.py
+```
+
+The server will start on http://localhost:5000. You can access the following endpoints:
+- `/`: Main page showing potion combinations
+- `/potions`: View all possible potion combinations
+- `/ingredients`: View available ingredients
+
+This can also be started with Invoke:
+
+Normal start:
+```bash
+invoke start
+```
+
+Debug start:
+```bash
+invoke debug
+```
+
+Unit tests:
+```bash
+invoke test
+```
+
+## Docker Container
+
+To rebuild the docker container:
+
+```bash
+docker build -t alchemy .
+```
+
+To run the Flask server in a Docker container:
+
+```bash
+docker run --name Alchemy -p 8088:8088 -d alchemy
+```
+
 ## Skyrim Muffle
 
 [Muffle](https://en.uesp.net/wiki/Skyrim:Muffle_(effect)) increases your Illusion XP by a crazy amount.  Casting Muffle a few hundred times is enough to roll Illusion up to 100.  Take your level-ups and use Legendary to set Illusion back to 15.  Repeat.  If you don't want to wear out your mouse, you can get an inexpensive microcontroller - like the Arduino Leonardo - that does HID inputs.  You can then program it to do all that tedious clicking for you.
@@ -62,4 +109,3 @@ void loop() {
   Mouse.release(MOUSE_LEFT);
   delay(1500);
 }
-```

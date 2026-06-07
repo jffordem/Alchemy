@@ -7,39 +7,42 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/madlibs.css') }}">
 
-    <title>Skyrim</title>
+    <title>Madlib - {{name}}</title>
 </head>
-<body>
+<body class="madlib-theme">
 
-<div class="container">
-
+<div class="container madlib-container">
     
     <div class="row">
         <section class="col-12">
 
-            <nav class="breadcrumb fixed-top">
-                <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
-                <a class="breadcrumb-item" href="{{url_for('all_madlibs')}}">Madlibs</a>
-                <span class="breadcrumb-item active">{{name}}</span>
+            <nav class="madlib-nav d-flex">
+                <a href="{{url_for('home')}}">Home</a>
+                <a href="{{url_for('all_madlibs')}}">Madlibs</a>
+                <span>{{name}}</span>
+                <a href="{{url_for('about')}}">About</a>
+                <a href="#" id="theme-toggle" class="ml-auto">Toggle Theme</a>
             </nav>
 
-            <div class="mt-5">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
+            <div class="text-center">
+                <div class="madlib-content">
+                    <div class="madlib-header">
                         {% if ref %}
                         <h1><a href="{{ref}}">{{name}}</a></h1>
                         {% else %}
                         <h1>{{name}}</h1>
                         {% endif %}
                     </div>
-                    <div class="panel-body">
+                    <div class="madlib-body">
                         {% for line in lines %}
-                        <p>{{line}}</p>
+                        <p>{{ line|safe }}</p>
                         {% endfor %}
                     </div>
-                    <div class="panel-footer">
-                        <a href="{{url_for('madlibs', name=name)}}" class="btn btn-primary">Next</a>
+                    <div class="madlib-footer">
+                        <a href="{{url_for('madlibs', name=name)}}" class="madlib-btn">Generate New</a>
                     </div>
                 </div>
             </div>
@@ -50,5 +53,40 @@
         </section>
     </div>
 </div>
+
+<script>
+    // Add fun animation classes to madlib words
+    document.addEventListener('DOMContentLoaded', function() {
+        const paragraphs = document.querySelectorAll('.madlib-body p');
+        paragraphs.forEach(p => {
+            // Find placeholders like [NOUN], [VERB], etc.
+            p.innerHTML = p.innerHTML.replace(/\[(.*?)\]/g, '<span class="madlib-word">[$1]</span>');
+        });
+        
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check if user has a saved preference
+        const savedTheme = localStorage.getItem('madlibTheme');
+        if (savedTheme === 'skyrim') {
+            body.classList.remove('madlib-theme');
+            body.classList.add('skyrim-theme');
+        }
+        
+        themeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (body.classList.contains('madlib-theme')) {
+                body.classList.remove('madlib-theme');
+                body.classList.add('skyrim-theme');
+                localStorage.setItem('madlibTheme', 'skyrim');
+            } else {
+                body.classList.remove('skyrim-theme');
+                body.classList.add('madlib-theme');
+                localStorage.setItem('madlibTheme', 'madlib');
+            }
+        });
+    });
+</script>
 </body>
 </html>

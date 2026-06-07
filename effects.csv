@@ -1,0 +1,57 @@
+name,description,school,type,cost,mag,dur
+Lingering Damage Health,Causes {mag} points of poison damage for {dur} seconds.,Destruction,Offensive,12,1,10
+Fortify Marksman,Bows do {mag}% more damage for {dur} seconds.,Restoration,Offensive,0.5,4,60
+Fortify Destruction,Destruction spells are {mag}% stronger for {dur} seconds.,Restoration,Defensive,0.5,5,60
+Ravage Magicka,Concentrated poison damages maximum magicka by {mag} points.,Destruction,Offensive,1,2,10
+Fortify Smithing,For {dur} seconds weapon and armor improving is {mag}% better.,Restoration,Defensive,0.75,4,30
+Fortify One-Handed,One-handed weapons do {mag}% more damage for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Weakness to Shock,Target is {mag}% weaker to shock damage for {dur} seconds.,Destruction,Offensive,0.7,3,30
+Frenzy,Creatures and people up to level {mag} will attack anything nearby for {dur} seconds.,Illusion,Offensive,15,1,10
+Fortify Sneak,You are {mag}% harder to detect for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Fortify Stamina,Stamina is increased by {mag} points for {dur} seconds.,Restoration,Defensive,0.3,4,60
+Cure Disease,Cures all diseases.,Restoration,Restorative,0.5,5,0
+Fortify Conjuration,Conjurations spells last {mag}% longer for {dur} seconds.,Restoration,Defensive,0.25,5,60
+Restore Magicka,Restore {mag} points of Magicka.,Restoration,Restorative,0.6,5,0
+Damage Magicka,Drains the target's Magicka by {mag} points.,Destruction,Offensive,2.2,3,0
+Paralysis,Target is paralyzed for {dur} seconds.,Alteration,Offensive,500,0,1
+Regenerate Stamina,Stamina regenerates {mag}% faster for {dur} seconds.,Restoration,Restorative,0.1,5,300
+Fortify Heavy Armor,Increase Heavy Armor skill by {mag} points for {dur} seconds.,Restoration,Defensive,0.5,2,60
+Weakness to Fire,Target is {mag}% weaker to fire damage for {dur} seconds.,Destruction,Offensive,0.6,3,30
+Slow,Target moves at 50% speed for {dur} seconds.,Destruction,Offensive,1,50,5
+Fortify Health,Health is increased by {mag} points for {dur} seconds.,Restoration,Defensive,0.35,4,60
+Regenerate Magicka,Magicka regenerates {mag}% faster for {dur} seconds.,Restoration,Restorative,0.1,5,300
+Regenerate Health,Health regenerates {mag}% faster for {dur} seconds.,Restoration,Restorative,0.1,5,300
+Invisibility,Invisibility for {dur} seconds.,Illusion,Defensive,100,0,4
+Restore Health,Restore {mag} points of Health.,Restoration,Restorative,0.5,5,0
+Fortify Enchanting,For {dur} seconds items are enchanted {mag}% stronger.,Restoration,Defensive,0.6,1,30
+Lingering Damage Magicka,Drains the target's Magicka by {mag} points per second for {dur} seconds.,Destruction,Offensive,10,1,10
+Weakness to Magic,Target is {mag}% weaker to magic for {dur} seconds.,Destruction,Offensive,1,2,30
+Fortify Magicka,Magicka is increased by {mag} points for {dur} seconds.,Restoration,Defensive,0.3,4,60
+Weakness to Poison,Target is {mag}% weaker to poison for {dur} seconds.,Destruction,Offensive,1,2,30
+Fortify Block,Blocking absorbs {mag}% more damage for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Fortify Illusion,Illusion spells are {mag}% stronger for {dur} seconds.,Restoration,Defensive,0.4,4,60
+Fortify Carry Weight,Carrying capacity increases by {mag} for {dur} seconds.,Restoration,Defensive,0.15,4,300
+Fortify Lockpicking,Lockpicking is {mag}% easier for {dur} seconds.,Restoration,Defensive,0.5,2,30
+Damage Health,Causes {mag} points of poison damage.,Destruction,Offensive,3,2,1
+Damage Stamina,Drain the target's Stamina by {mag} points.,Destruction,Offensive,1.8,3,0
+Resist Poison,Resist {mag}% of poison for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Fear,Creatures and people up to level {mag} flee from combat for {dur} seconds.,Illusion,Other,5,1,30
+Resist Frost,Resist {mag}% of frost damage for {dur} seconds.,Restoration,Defensive,0.5,3,60
+Ravage Health,Causes {mag} points of concentrated poison damage.,Destruction,Offensive,0.4,2,10
+Resist Fire,Resist {mag}% of fire damage for {dur} seconds.,Restoration,Defensive,0.5,3,60
+Lingering Damage Stamina,Drain the target's Stamina by {mag} points per second for {dur} seconds.,Destruction,Offensive,1.8,1,10
+Fortify Pickpocket,Pickpocketing is {mag}% easier for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Resist Magic,Resist {mag}% of magic for {dur} seconds.,Restoration,Defensive,1,1,60
+Fortify Restoration,Restoration spells are {mag}% stronger for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Fortify One-handed,One-handed weapons do {mag}% more damage for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Resist Shock,Resist {mag}% of shock damage for {dur} seconds.,Restoration,Defensive,0.5,3,60
+Ravage Stamina,Concentrated poison damages maximum stamina by {mag} points.,Destruction,Offensive,1.6,2,10
+Fortify Light Armor,Increases Light Armor skill by {mag} points for {dur} seconds.,Restoration,Defensive,0.5,2,60
+Fortify Alteration,Alteration spells last {mag}% longer for {dur} seconds.,Restoration,Defensive,0.2,4,60
+Fortify Two-handed,Two-handed weapons do {mag}% more damage for {dur} seconds.,Restoration,Defensive,0.5,4,60
+Damage Stamina Regen,Decrease the target's Stamina regeneration by {mag}% for {dur} seconds.,Destruction,Offensive,0.3,100,5
+Restore Stamina,Restore {mag} Stamina.,Restoration,Restorative,0.6,5,0
+Damage Magicka Regen,Decrease the target's Magicka regeneration by {mag}% for {dur} seconds.,Destruction,Offensive,0.5,100,5
+Weakness to Frost,Target is {mag}% weaker to frost damage for {dur} seconds.,Destruction,Offensive,0.5,3,30
+Waterbreathing,Can breathe underwater for {dur} seconds.,Alteration,Defensive,30,0,5
+Fortify Barter,You haggle for {mag}% better prices for {dur} seconds.,Restoration,Defensive,2,1,30

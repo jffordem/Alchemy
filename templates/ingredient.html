@@ -7,60 +7,145 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skyrim.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <title>Skyrim</title>
+    <title>Skyrim - {{ingredient.name}}</title>
 </head>
 <body>
 
 <div class="container">
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">Skyrim Alchemy</h1>
+            <div class="my-4" style="height: 2px; background: linear-gradient(90deg, rgba(131, 109, 69, 0) 0%, rgba(131, 109, 69, 0.8) 50%, rgba(131, 109, 69, 0) 100%);"></div>
+        </div>
+    </div>
 
     <div class="row">
         <section class="col-12">
-
-            <nav class="breadcrumb fixed-top">
-                <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
-                <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
-                <a class="breadcrumb-item" href="{{url_for('skyrim_ingredients')}}">Ingredients</a>
-                <span class="breadcrumb-item active">{{ingredient.name}}</span>
+            <nav class="skyrim-nav d-flex">
+                <a href="{{url_for('home')}}" class="ml-3">Home</a>
+                <a href="{{url_for('skyrim')}}" class="ml-3">Skyrim Alchemy</a>
+                <a href="{{url_for('skyrim_ingredients')}}" class="ml-3">Ingredients</a>
+                <span class="ml-3">{{ingredient.name}}</span>
+                <a href="{{url_for('about')}}" class="ml-auto mr-3">About</a>
             </nav>
 
-            <div class="mt-5">
-                <h1>{{ingredient.name}}</h1>
+            <div class="mt-4">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <img src="{{ingredient.image_url}}" alt="{{ingredient.name}}" class="img-fluid mb-3" style="max-height: 200px; background-color: rgba(0,0,0,0.2); border-radius: 4px; padding: 10px;">
+                                <h3 class="card-title">{{ingredient.name}}</h3>
+                                <div class="mt-3">
+                                    <a href="{{ingredient.link_url}}" target="_blank" class="btn btn-skyrim">UESP Wiki</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="mb-0">
+                                    <span class="skyrim-icon icon-ingredient"></span>
+                                    Ingredient Details
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <tr>
+                                        <th style="width: 25%">Name</th>
+                                        <td>{{ingredient.name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Category</th>
+                                        <td>
+                                            {% if ingredient.category %}
+                                            <a href="{{url_for('skyrim_ingredients', category=ingredient.category)}}" class="badge badge-pill badge-info">
+                                                <i class="fas fa-tag mr-1"></i> {{ingredient.category}}
+                                            </a>
+                                            {% else %}
+                                            <span class="badge badge-pill badge-secondary">
+                                                <i class="fas fa-question-circle mr-1"></i> Uncategorized
+                                            </span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Farmable</th>
+                                        <td>
+                                            {% if ingredient.farmable %}
+                                            <a href="{{url_for('skyrim_ingredients', farmable=true)}}" class="badge badge-pill badge-success">
+                                                <i class="fas fa-check mr-1"></i> Yes
+                                            </a>
+                                            {% else %}
+                                            <a href="{{url_for('skyrim_ingredients', farmable=false)}}" class="badge badge-pill badge-danger">
+                                                <i class="fas fa-times mr-1"></i> No
+                                            </a>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Weight</th>
+                                        <td><i class="fas fa-weight-hanging mr-1 text-secondary"></i> {{ingredient.weight}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Value</th>
+                                        <td><i class="fas fa-coins mr-1 text-warning"></i> {{ingredient.value}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
 
-                <table class="table">
-                    <tr>
-                        <th>Name</th><td>{{ingredient.name}}</td>
-                    </tr>
-                    <tr>
-                        <th>Farmable</th><td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}">False</a>{% endif %}</td>
-                    </tr>
-                    <tr>
-                        <th>Weight</th><td>{{ingredient.weight}}</td>
-                    </tr>
-                    <tr>
-                        <th>Value</th><td>{{ingredient.value}}</td>
-                    </tr>
-                    {% for i in range(4) %}
-                    <tr>
-                        <th>Effect {{i+1}}</th><td><a href="{{url_for('skyrim_effect', name=ingredient.effects[i].name)}}">{{ingredient.effects[i].name}}</a> 
-                            {% if ingredient.effects[i].power != 1.0 %}<span class="badge badge-info badge-pill">^{{ingredient.effects[i].power}}</span>{% endif %}
-                            {% if ingredient.effects[i].value != 1.0 %}<span class="badge badge-success badge-pill">${{ingredient.effects[i].value}}</span>{% endif %}</td>
-                        <!-- link to effect -->
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        <th>Link</th><td><a href="{{ingredient.link}}">UESP</a></td>
-                    </tr>
-                </table>
-
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h2 class="mb-0">
+                                    <span class="skyrim-icon icon-effect"></span>
+                                    Effects
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group">
+                                    {% for i in range(4) %}
+                                    <div class="list-group-item d-flex align-items-center">
+                                        <div>
+                                            <a href="{{url_for('skyrim_effect', name=ingredient.effects[i].name)}}" class="mr-2">
+                                                {{ingredient.effects[i].name}}
+                                            </a>
+                                            {% if ingredient.effects[i].power != 1.0 %}
+                                            <span class="badge badge-info badge-pill" title="Power multiplier">
+                                                <i class="fas fa-arrow-up mr-1"></i>{{ingredient.effects[i].power}}
+                                            </span>
+                                            {% endif %}
+                                            {% if ingredient.effects[i].value != 1.0 %}
+                                            <span class="badge badge-success badge-pill" title="Value multiplier">
+                                                <i class="fas fa-dollar-sign mr-1"></i>{{ingredient.effects[i].value}}
+                                            </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </section>
+    </div>
 </div>
 </body>
 </html>

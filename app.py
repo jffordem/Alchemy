@@ -1,22 +1,32 @@
-from flask import Flask, request, send_from_directory, render_template
-import random
-import json, os
-
-from madlibs import AllMadlibsByName
-from ingredient import AllIngredientsByName, get_ingredients_by_filter, get_ingredient_by_name
-from effect import AllEffectsByName, get_effect_by_name, get_effects_by_filter
-from potion import Potion
-
-__doc__ = """
+"""
 Then configure Flask.
 
-C:> set FLASK_APP=app
-C:> set FLASK_ENV=development
+```cmd
+$ set FLASK_APP=app
+$ set FLASK_ENV=development
+```
 
 Then you can start the service.  It will be at http://localhost:5000 by default.
 
-C:> flask run
+```cmd
+$ flask run
+```
 """
+
+import os
+from pathlib import Path
+from flask import Flask, request, send_from_directory, render_template
+import random
+import json
+
+from madlibs import AllMadlibsByName
+from ingredient import AllIngredientsByName, Ingredient, get_best_ingredients, get_ingredients_by_filter, get_ingredient_by_name, get_ingredients_with_effect
+from effect import AllEffectsByName, get_effect_by_name, get_effects_by_filter
+from potion import Potion
+
+NOT_FOUND_MESSAGE = "Not Found"
+NOT_FOUND_STATUS = 404
+DEFAULT_PORT = 5000
 
 # better place for these predicate functions?
 def pred_true(_):
@@ -30,7 +40,6 @@ def pred_or(*predicates):
 
 app = Flask(__name__)
 
-
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
@@ -41,6 +50,12 @@ def home():
     return render_template('index.html')
 
 
+@app.route("/reload")
+def reload():
+    Path("app.py").touch()
+    return render_template('index.html', message="Reloading...")
+
+
 @app.route("/skyrim")
 def skyrim():
     return render_template('skyrim.html')
@@ -48,77 +63,159 @@ def skyrim():
 
 @app.route("/skyrim/ingredients")
 def skyrim_ingredients():
+    predicate = pred_true
+    
+    # Farmable filter
     if 'farmable' in request.args:
         farmable = { "True":True, "true":True }.get(request.args.get("farmable"), False)
-        predicate = lambda ingredient: ingredient.farmable == farmable
+        predicate = pred_and(predicate, lambda ingredient: ingredient.farmable == farmable)
+
+    # Add search functionality
+    if 'search' in request.args:
+        search_terms = [term.strip().lower() for term in request.args.get('search').split(' ')]
+        predicate = pred_and(predicate, lambda ingredient: any(term in ingredient.name.lower() for term in search_terms))
+
+    # Add category filter functionality
+    if 'category' in request.args:
+        category = request.args.get('category')
+        predicate = pred_and(predicate, lambda ingredient: ingredient.category == category)
+    
+    # Add category prefix filter functionality
+    elif 'category_prefix' in request.args:
+        prefix = request.args.get('category_prefix')
+        predicate = pred_and(predicate, lambda ingredient: ingredient.category and ingredient.category.startswith(prefix))
+
+    # Get sort parameters
+    sortby = request.args.get('sortby', 'name')
+    direction = request.args.get('direction', 'asc')
+    reverse = direction == 'desc'
+
+    # Set sort function based on sortby
+    if sortby == 'name':
+        sort = lambda ingredient: ingredient.name
+    elif sortby == 'category':
+        sort = lambda ingredient: ingredient.category or ""  # Handle None values when sorting
+    elif sortby == 'value':
+        sort = lambda ingredient: ingredient.value
+    elif sortby == 'weight':
+        sort = lambda ingredient: ingredient.weight
     else:
-        predicate = pred_true
-    # sort = { 'field': 'value', 'reverse': True }
-    # if 'sortby' in request.args:
-    #     sort = { 'field': request.args.get('sortby'), 'reverse': False }
+        sort = lambda ingredient: ingredient.name
+
     ingredients = get_ingredients_by_filter(predicate)
-    #ingredients.sort(key=lambda ingredient: ingredient[sort['field']], reverse=sort['reverse'])
-    return render_template('ingredients.html', ingredients=ingredients)
+    ingredients.sort(key=sort, reverse=reverse)
+    return render_template('ingredients.html', ingredients=ingredients, sortby=sortby, direction=direction)
 
 
-@app.route("/skyrim/ingredients/<name>")
+@app.route("/skyrim/ingredients/<string:name>")
 def skyrim_ingredient(name):
     item = get_ingredient_by_name(name)
     if item:
         return render_template('ingredient.html', ingredient=item)
     else:
-        return "Not Found", 404
+        return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
 
 
 @app.route("/skyrim/effects")
 def skyrim_effects():
-    if 'school' in request.args:
-        school = request.args.get('school')
-        match_school = lambda effect: effect.school == school
-    else:
-        match_school = pred_true
-    if 'type' in request.args:
-        effect_type = request.args.get('type')
-        match_type = lambda effect: effect.type == effect_type
-    else:
-        match_type = pred_true
-    effects = get_effects_by_filter(pred_and(match_school, match_type))
-    #effects.sort(key=lambda effect: effect.cost, reverse=True)
-    return render_template('effects.html', effects=effects)
+    sortby = request.args.get('sortby', 'name')
+    direction = request.args.get('direction', 'asc')
+    reverse = direction == 'desc'
+    search_query = request.args.get('search', '').lower()
+    effect_type = request.args.get('type', '').lower()
+    school = request.args.get('school', '').lower()
+    pred = pred_true
+    
+    # Set a default title
+    page_title = "EFFECTS"
+
+    if search_query:
+        search_terms = [term.strip().lower() for term in search_query.split(' ')]
+        pred = pred_and(pred, lambda effect: any(term in effect.name.lower() for term in search_terms) or any(term in effect.description.lower() for term in search_terms))
+
+    if effect_type:
+        pred = pred_and(pred, lambda effect: effect.type.lower() == effect_type)
+        # Update title for type filter
+        page_title = f"{effect_type.upper()} EFFECTS"
+
+    if school:
+        pred = pred_and(pred, lambda effect: effect.school.lower() == school)
+        # School filter takes precedence over type filter for the title
+        page_title = f"{school.upper()} EFFECTS"
+
+    effects = sorted(get_effects_by_filter(pred), key=lambda e: getattr(e, sortby), reverse=reverse)
+
+    return render_template('effects.html', effects=effects, sortby=sortby, direction=direction, page_title=page_title)
 
 
-@app.route("/skyrim/effects/<name>")
+@app.route("/skyrim/effects/<string:name>")
 def skyrim_effect(name):
     item = get_effect_by_name(name)
     if item:
-        return render_template('effect.html', effect=item)
+        return render_template('effect.html', effect=item, ingredients=get_ingredients_with_effect(item))
     else:
-        return "Not Found", 404
+        return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
 
 
 @app.route('/api/skyrim/potions', methods=['GET'])
 def skyrim_potions_api():
-    ingredients = request.args.get('ingredients').split(',')
-    potions = Potion.brew(ingredients)
-    return json.dumps({'potions': potions, 'ingredients': ingredients})
+    ingredient_names = request.args.get('ingredients').split(',')
+    potions = Potion.brew(ingredient_names)
+    return json.dumps({'potions': potions, 'ingredients': ingredient_names})
 
 
 @app.route('/skyrim/potions')
 def skyrim_potions():
-    def getIngredients():
+    # Get query parameters with defaults
+    ingredients_filter = request.args.get('ingredients', 'random')
+    limit = int(request.args.get('limit', 100))
+    
+    # Generate a descriptive title based on the filter
+    def get_ingredients() -> tuple[str, list[Ingredient]]:
         if 'ingredients' in request.args:
             ingredients = request.args.get('ingredients')
-            if ingredients == "all": return list(AllIngredientsByName.keys())
-            if ingredients == "farmable": return [ ingredient.name for ingredient in AllIngredientsByName.values() if ingredient.farmable]
-            return ingredients.split(',')
+            if ingredients == "all":
+                return "All Potions", list(AllIngredientsByName.keys())
+            if ingredients == "farmable":
+                return "Farmable Potions", [ingredient for ingredient in AllIngredientsByName.values() if ingredient.farmable]
+            if ingredients == "best":
+                return "Valuable Potions", get_best_ingredients()
+            # Custom ingredient selection
+            return "Potions", [get_ingredient_by_name(name) for name in ingredients.split(',')]
         else:
-            ingredients = list(AllIngredientsByName.keys())
+            ingredients = list(AllIngredientsByName.values())
             random.shuffle(ingredients)
-            return ingredients[:5]
-    limit = 100
-    ingredients = getIngredients()
+            return "Random Potions", ingredients[:5]
+    
+    page_title, ingredients = get_ingredients()
+    
+    # Fetch all matching potions for pagination calculations
+    all_matching_potions = Potion.brew(ingredients)
+    total_potions = len(all_matching_potions)
+    
+    # Get the limited subset of potions for display
+    potions = all_matching_potions[:limit]
+    
+    # Determine if results are truncated
+    is_truncated = total_potions > limit
+    
+    # Render template with pagination variables
+    return render_template('potions.html', 
+                          potions=potions, 
+                          ingredients=ingredients,
+                          is_truncated=is_truncated,
+                          total_potions=total_potions,
+                          current_filter=ingredients_filter,
+                          limit=limit,
+                          page_title=page_title)
+
+
+@app.route('/skyrim/potions', methods=['POST'])
+def skyrim_potions_post():
+    ingredient_names = request.form.get('ingredients', '').split(',')
+    ingredients = [get_ingredient_by_name(name) for name in ingredient_names if get_ingredient_by_name(name)]
     potions = Potion.brew(ingredients)
-    return render_template('potions.html', potions=potions[:limit], ingredients=ingredients)
+    return render_template('potions.html', potions=potions, ingredients=ingredients)
 
 
 @app.route("/madlibs")
@@ -126,13 +223,33 @@ def all_madlibs():
     return render_template('madlibs.html', names=AllMadlibsByName.keys())
 
 
-@app.route("/madlibs/<name>")
+@app.route("/madlibs/<string:name>")
 def madlibs(name):
     if name in AllMadlibsByName:
         item = AllMadlibsByName[name]
         return render_template('madlib.html', name=name, lines=item.render(), ref=item.ref)
-    return "Not Found", 404
+    return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+@app.route("/about")
+def about():
+    version = os.getenv('APP_VERSION', '1.0.0')
+    build_date = os.getenv('BUILD_DATE', '2023-01-01')
+    
+    # Determine theme based on referrer
+    referrer = request.referrer
+    theme = "skyrim"  # Default theme
+    
+    if referrer:
+        if "/madlibs" in referrer:
+            theme = "madlib"
+        elif "/skyrim" in referrer:
+            theme = "skyrim"
+    
+    return render_template('about.html', version=version, build_date=build_date, theme=theme)
+
+
+if __name__ == '__main__':
+    # Use PORT environment variable if set (e.g., in Docker), otherwise default to 5000
+    port = int(os.environ.get('PORT', DEFAULT_PORT))
+    app.run(host='0.0.0.0', port=port)

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skyrim.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/madlibs.css') }}">
+    <title>About</title>
+    <style>
+        .breadcrumb-right {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body class="{{ theme }}-theme">
+    <div class="container {{ theme }}-container">
+        <div class="row">
+            <section class="col-12">
+                <nav class="{{ theme }}-nav d-flex">
+                    {% if theme == 'madlib' %}
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('all_madlibs') }}">Madlibs</a>
+                    {% elif theme == 'skyrim' %}
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('skyrim') }}">Skyrim</a>
+                    {% endif %}
+                    <span>About</span>
+                    <a href="#" id="theme-toggle" class="ml-auto">Toggle Theme</a>
+                </nav>
+
+                <div class="text-center">
+                    <h1>About This App</h1>
+                    
+                    {% if theme == 'madlib' %}
+                    <div class="madlib-content">
+                        <ul class="madlib-list">
+                            <li>Version: {{ version }}</li>
+                            <li>Build Date: {{ build_date }}</li>
+                        </ul>
+                        
+                        <div class="mt-4">
+                            <p>This application features both <span class="madlib-word">Madlibs</span> and <span class="madlib-word">Skyrim Alchemy</span> components!</p>
+                            <p>You can toggle between themes using the Theme Toggle button on Madlibs pages.</p>
+                        </div>
+                        
+                        <div class="madlib-footer mt-4">
+                            <a href="javascript:history.back()" class="madlib-btn">Go Back</a>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="card">
+                        <div class="card-header">
+                            Application Information
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Version: {{ version }}</li>
+                            <li class="list-group-item">Build Date: {{ build_date }}</li>
+                        </ul>
+                        <div class="card-footer">
+                            <p>This application features both Skyrim Alchemy and Madlibs components.</p>
+                            <a href="javascript:history.back()" class="btn btn-skyrim">Go Back</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                
+                <script>
+                    // Theme management and animations
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Check for user's theme preference first
+                        const savedTheme = localStorage.getItem('madlibTheme');
+                        const body = document.body;
+                        const container = document.querySelector('.container');
+                        const nav = document.querySelector('nav');
+                        
+                        if (savedTheme) {
+                            // Override server-provided theme with user preference
+                            if (savedTheme === 'skyrim') {
+                                body.classList.remove('madlib-theme');
+                                body.classList.add('skyrim-theme');
+                                container.classList.remove('madlib-container');
+                                container.classList.add('skyrim-container');
+                                nav.classList.remove('madlib-nav');
+                                nav.classList.add('skyrim-nav');
+                            } else if (savedTheme === 'madlib') {
+                                body.classList.remove('skyrim-theme');
+                                body.classList.add('madlib-theme');
+                                container.classList.remove('skyrim-container');
+                                container.classList.add('madlib-container');
+                                nav.classList.remove('skyrim-nav');
+                                nav.classList.add('madlib-nav');
+                            }
+                        }
+                        
+                        // Setup madlib word animations
+                        if (body.classList.contains('madlib-theme')) {
+                            const madlibWords = document.querySelectorAll('.madlib-word');
+                            madlibWords.forEach(word => {
+                                word.addEventListener('mouseover', function() {
+                                    this.style.animationPlayState = 'running';
+                                });
+                                word.addEventListener('mouseout', function() {
+                                    this.style.animationPlayState = 'paused';
+                                });
+                            });
+                        }
+                        
+                        // Theme toggle functionality
+                        const themeToggle = document.getElementById('theme-toggle');
+                        
+                        themeToggle.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            if (body.classList.contains('madlib-theme')) {
+                                body.classList.remove('madlib-theme');
+                                body.classList.add('skyrim-theme');
+                                container.classList.remove('madlib-container');
+                                container.classList.add('skyrim-container');
+                                nav.classList.remove('madlib-nav');
+                                nav.classList.add('skyrim-nav');
+                                localStorage.setItem('madlibTheme', 'skyrim');
+                            } else {
+                                body.classList.remove('skyrim-theme');
+                                body.classList.add('madlib-theme');
+                                container.classList.remove('skyrim-container');
+                                container.classList.add('madlib-container');
+                                nav.classList.remove('skyrim-nav');
+                                nav.classList.add('madlib-nav');
+                                localStorage.setItem('madlibTheme', 'madlib');
+                            }
+                            
+                            // Refresh page to ensure all elements adapt to the new theme
+                            location.reload();
+                        });
+                    });
+                </script>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

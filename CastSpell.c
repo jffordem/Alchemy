@@ -1,5 +1,6 @@
 #include <Mouse.h>
 void setup() {
+  delay(5000); // wait 5 seconds so that you can reprogram
   Mouse.begin();
 }
 void loop() {

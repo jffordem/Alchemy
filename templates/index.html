@@ -7,26 +7,48 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skyrim.css') }}">
 
-    <title>Skyrim</title>
+    <title>Skyrim Alchemy</title>
 </head>
 <body>
 
 <div class="container">
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">Skyrim Alchemy</h1>
+            <div class="my-4" style="height: 2px; background: linear-gradient(90deg, rgba(131, 109, 69, 0) 0%, rgba(131, 109, 69, 0.8) 50%, rgba(131, 109, 69, 0) 100%);"></div>
+        </div>
+    </div>
 
     <div class="row">
         <section class="col-12">
-
-            <nav class="breadcrumb fixed-top">
-                <span class="breadcrumb-item active">Home</span>
+            <nav class="skyrim-nav d-flex">
+                <span class="ml-3 mr-auto">Home</span>
+                <a href="{{url_for('about')}}" class="mr-3">About</a>
             </nav>
 
-            <div class="mt-5">
-                <h1>Crafting Database</H1>
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="{{url_for('skyrim')}}">Skyrim Alchemy</a></li>
-                    <li class="list-group-item"><a href="{{url_for('all_madlibs')}}">Madlibs</a></li>
-                </ul>
+            <div class="mt-4">
+                <h2 class="text-center mb-4">Crafting Database</h2>
+                <div class="list-group">
+                    <a href="{{url_for('skyrim')}}" class="list-group-item d-flex align-items-center">
+                        <span class="skyrim-icon icon-potion"></span>
+                        <span>Skyrim Alchemy</span>
+                        <i class="fas fa-chevron-right ml-auto"></i>
+                    </a>
+                    <a href="{{url_for('all_madlibs')}}" class="list-group-item d-flex align-items-center">
+                        <i class="fas fa-book mr-2"></i>
+                        <span>Madlibs</span>
+                        <i class="fas fa-chevron-right ml-auto"></i>
+                    </a>
+                </div>
             </div>
 
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

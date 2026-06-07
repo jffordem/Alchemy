@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "jfordemwalt-sandbox"
+name = "jfordemwalt-alchemy"
 version = "0.1.0"
 description = ""
-authors = ["James Fordemwalt <jfordemwalt@clearwateranalytics.com>"]
+authors = ["James Fordemwalt <jffordem@gmail.com>"]
 readme = "README.md"
 package-mode = false
 
@@ -17,12 +17,11 @@ uvicorn = "^0.32.0"
 pydantic = "^2.9.2"
 pyyaml = "^6.0.2"
 pytest = "^8.3.3"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.13.3"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tools.pytest.ini_options]
-markers = [
-    "webtest: a test that requires a specific webserver to pass",
-]
+[tool.poetry.scripts]

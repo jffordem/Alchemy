@@ -7,43 +7,117 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skyrim.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <title>Skyrim</title>
+    <title>Skyrim - {{effect.name}}</title>
 </head>
 <body>
 
 <div class="container">
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">Skyrim Alchemy</h1>
+            <div class="my-4" style="height: 2px; background: linear-gradient(90deg, rgba(131, 109, 69, 0) 0%, rgba(131, 109, 69, 0.8) 50%, rgba(131, 109, 69, 0) 100%);"></div>
+        </div>
+    </div>
 
     <div class="row">
         <section class="col-12">
-
-            <nav class="breadcrumb fixed-top">
-                <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
-                <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
-                <a class="breadcrumb-item" href="{{url_for('skyrim_effects')}}">Effects</a>
-                <span class="breadcrumb-item active">{{effect.name}}</span>
+            <nav class="skyrim-nav d-flex">
+                <a href="{{url_for('home')}}" class="ml-3">Home</a>
+                <a href="{{url_for('skyrim')}}" class="ml-3">Skyrim Alchemy</a>
+                <a href="{{url_for('skyrim_effects')}}" class="ml-3">Effects</a>
+                <span class="ml-3">{{effect.name}}</span>
+                <a href="{{url_for('about')}}" class="ml-auto mr-3">About</a>
             </nav>
 
-            <div class="mt-5">
+            <div class="mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="mb-0 text-center">
+                                    <span class="skyrim-icon icon-effect"></span>
+                                    {{effect.name}}
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <tr>
+                                        <th style="width: 25%">Name</th>
+                                        <td>{{effect.name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>{{effect.description}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>School</th>
+                                        <td>
+                                            <a href="{{url_for('skyrim_effects', school=effect.school)}}" class="badge badge-pill" style="background-color: var(--skyrim-magic); color: white;">
+                                                {{effect.school}}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Type</th>
+                                        <td>
+                                            <a href="{{url_for('skyrim_effects', type=effect.type)}}" class="badge badge-pill" style="background-color: var(--skyrim-secondary); color: var(--skyrim-primary);">
+                                                {{effect.type}}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Link</th>
+                                        <td><a href="{{effect.link_url}}" target="_blank" class="btn btn-skyrim">UESP Wiki</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <h1>{{effect.name}}</h1>
-
-                <table class="table">
-                    <tr>
-                        <th>Name</th><td>{{effect.name}}</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th><td>{{effect.description}}</td><!-- add template stuff -->
-                    </tr>
-                    <tr>
-                        <th>School</th><td><a href="{{url_for('skyrim_effects', school=effect.school)}}">{{effect.school}}</a></td>
-                    </tr>
-                    <tr>
-                        <th>Type</th><td><a href="{{url_for('skyrim_effects', type=effect.type)}}">{{effect.type}}</a></td>
-                    </tr>
-                </table>
+            <!-- Ingredients with this effect -->
+            <div class="mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0 text-center">
+                                    <span class="skyrim-icon icon-ingredient"></span>
+                                    Ingredients with {{effect.name}}
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                {% if ingredients %}
+                                <div class="row">
+                                    {% for ingredient in ingredients %}
+                                    <div class="col-md-4 col-sm-6 mb-3">
+                                        <div class="ingredient-card p-2 text-center">
+                                            <a href="{{ url_for('skyrim_ingredient', name=ingredient.name) }}" class="text-decoration-none">
+                                                <img src="{{ingredient.thumbnail_url}}" alt="{{ingredient.name}}" class="mr-2" style="width: 32px; height: 32px; object-fit: contain; background-color: rgba(0,0,0,0.2); border-radius: 4px; padding: 2px;">
+                                                <h5>{{ ingredient.name }}</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                <p class="text-center">No ingredients found with this effect.</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

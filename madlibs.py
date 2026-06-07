@@ -1,13 +1,14 @@
+"""
+This module provides a simple madlib generator.  It is used by the Flask app to generate random text for the user to enjoy.
+This version doesn't require the text to be a data structure.  It just requires alternate clauses to be in parens and separated by a slash.
+"""
+
 import random
 from typing import Optional
 import yaml
 import argparse
 from pydantic import BaseModel
-
-__doc__ = """
-This module provides a simple madlib generator.  It is used by the Flask app to generate random text for the user to enjoy.
-This version doesn't require the text to be a data structure.  It just requires alternate clauses to be in parens and separated by a slash.
-"""
+import re
 
 class Madlib(BaseModel):
     """A madlib is a simple game where you fill in the blanks with random words.  The text is a string with alternate clauses in parens separated by a slash."""
@@ -62,6 +63,10 @@ def _all(s):
             result += ch
         else:
             temp += ch
+    
+    # Apply highlighting to madlib placeholders [WORD]
+    result = re.sub(r'\[(.*?)\]', r'<span class="madlib-word">[\1]</span>', result)
+    
     return result
 
 def _any(s):
@@ -75,7 +80,7 @@ def _any(s):
         elif ch == ')':
             temp += ch
             i -= 1
-        elif i == 0 and ch == '/':
+        elif i == 0 and ch == '|':
             result.append(_all(temp))
             temp = ""
         else:

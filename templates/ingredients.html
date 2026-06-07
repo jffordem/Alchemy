@@ -7,33 +7,98 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skyrim.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <title>Skyrim</title>
+    <title>Skyrim Ingredients</title>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">Skyrim Alchemy</h1>
+            <div class="my-4" style="height: 2px; background: linear-gradient(90deg, rgba(131, 109, 69, 0) 0%, rgba(131, 109, 69, 0.8) 50%, rgba(131, 109, 69, 0) 100%);"></div>
+        </div>
+    </div>
 
-        <div class="row">
-            <section class="col-12">
-    
-                <nav class="breadcrumb fixed-top">
-                    <a class="breadcrumb-item" href="{{url_for('home')}}">Home</a>
-                    <a class="breadcrumb-item" href="{{url_for('skyrim')}}">Skyrim Alchemy</a>
-                    <span class="breadcrumb-item active">Ingredients</span>
-                </nav>
+    <div class="row">
+        <section class="col-12">
+            <nav class="skyrim-nav d-flex">
+                <a href="{{url_for('home')}}" class="ml-3">Home</a>
+                <a href="{{url_for('skyrim')}}" class="ml-3">Skyrim Alchemy</a>
+                <span class="ml-3">Ingredients</span>
+                <a href="{{url_for('about')}}" class="ml-auto mr-3">About</a>
+            </nav>
 
-                <nav class="mt-5">
-                    <h1>Ingredients</h1>
+            <div class="mt-4">
+                <h2 class="text-center mb-4">Ingredients</h2>
+                
+                <form method="post" action="{{ url_for('skyrim_potions') }}" class="mb-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <input type="text" name="search" class="form-control" placeholder="Search ingredients" value="{{ request.args.get('search', '') }}">
+                                <div class="input-group-append">
+                                    <button type="submit" formaction="{{ url_for('skyrim_ingredients') }}" formmethod="get" class="btn btn-skyrim mr-2">
+                                        <i class="fas fa-search mr-1"></i> Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <a href="{{ url_for('skyrim_ingredients') }}" class="btn btn-skyrim mr-2">
+                                <i class="fas fa-times mr-1"></i> Clear
+                            </a>
+                            <input type="hidden" name="ingredients" value="{{ ingredients | map(attribute='name') | join(',') }}">
+                            <button type="submit" class="btn btn-skyrim">
+                                <i class="fas fa-flask mr-1"></i> Brew
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="category-filters d-flex flex-wrap">
+                                <span class="mr-2 mt-1">Categories:</span>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Flora/') }}" class="badge badge-pill badge-info mr-2 mt-1 d-inline-flex align-items-center">
+                                    <i class="fas fa-leaf mr-1"></i> Flora
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Fauna/') }}" class="badge badge-pill badge-info mr-2 mt-1 d-inline-flex align-items-center">
+                                    <i class="fas fa-paw mr-1"></i> Fauna
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Minerals/') }}" class="badge badge-pill badge-info mr-2 mt-1 d-inline-flex align-items-center">
+                                    <i class="fas fa-gem mr-1"></i> Minerals
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Magical/') }}" class="badge badge-pill badge-info mr-2 mt-1 d-inline-flex align-items-center">
+                                    <i class="fas fa-magic mr-1"></i> Magical
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', category_prefix='Crafted/') }}" class="badge badge-pill badge-info mr-2 mt-1 d-inline-flex align-items-center">
+                                    <i class="fas fa-hammer mr-1"></i> Crafted
+                                </a>
+                                <a href="{{ url_for('skyrim_ingredients', farmable=true) }}" class="badge badge-pill badge-success mr-2 mt-1 d-inline-flex align-items-center">
+                                    <i class="fas fa-seedling mr-1"></i> Farmable
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='name')}}">Name</a></th>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='farmable')}}">Farmable</a></th>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='weight')}}">Weight</a></th>
-                                <th><a href="{{url_for('skyrim_ingredients', sortby='value')}}">Value</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='name', direction='desc' if sortby == 'name' and direction == 'asc' else 'asc')}}">Name {% if sortby == 'name' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='category', direction='desc' if sortby == 'category' and direction == 'asc' else 'asc')}}">Category {% if sortby == 'category' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='weight', direction='desc' if sortby == 'weight' and direction == 'asc' else 'asc')}}">Weight {% if sortby == 'weight' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
+                                <th><a href="{{url_for('skyrim_ingredients', sortby='value', direction='desc' if sortby == 'value' and direction == 'asc' else 'asc')}}">Value {% if sortby == 'value' %}<i class="fas fa-sort-{{ 'up' if direction == 'asc' else 'down' }}"></i>{% endif %}</a></th>
                                 <th>Modifiers</th>
                                 <th>Link</th>
                             </tr>
@@ -41,29 +106,32 @@
                         <tbody>
                             {% for ingredient in ingredients %}
                             <tr>
-                                <td><a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a></td>
-                                <td>{% if ingredient.farmable %}<a href="{{url_for('skyrim_ingredients', farmable=true)}}">True</a>{% else %}<a href="{{url_for('skyrim_ingredients', farmable=false)}}">False</a>{% endif %}</td>
-                                <td>{{ingredient.weight}}</td>
-                                <td>{{ingredient.value}}</td>
-                                <td style="text-align: center">
-                                    {% if ingredient.buffed %}<span class="badge badge-success badge-pill">*</span>{% endif %}
-                                    {% if ingredient.nerfed %}<span class="badge badge-danger badge-pill">*</span>{% endif %}
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ingredient.thumbnail_url}}" alt="{{ingredient.name}}" class="mr-2" style="width: 32px; height: 32px; object-fit: contain; background-color: rgba(0,0,0,0.2); border-radius: 4px; padding: 2px;">
+                                        <a href="{{url_for('skyrim_ingredient', name=ingredient.name)}}">{{ingredient.name}}</a>
+                                    </div>
                                 </td>
-                                <td><a href="{{ingredient.link}}">UESP</a></td>
+                                <td>{% if ingredient.category %}<span class="badge badge-info">{{ingredient.category}}</span>{% else %}<span class="badge badge-secondary">Uncategorized</span>{% endif %}</td>
+                                <td><i class="fas fa-weight-hanging mr-1 text-secondary"></i> {{ingredient.weight}}</td>
+                                <td><i class="fas fa-coins mr-1 text-warning"></i> {{ingredient.value}}</td>
+                                <td class="text-center">
+                                    {% if ingredient.buffed %}<span class="badge badge-success badge-pill" title="Buffed"><i class="fas fa-arrow-up"></i></span>{% endif %}
+                                    {% if ingredient.nerfed %}<span class="badge badge-danger badge-pill" title="Nerfed"><i class="fas fa-arrow-down"></i></span>{% endif %}
+                                </td>
+                                <td><a href="{{ingredient.link_url}}" target="_blank" class="btn btn-sm btn-skyrim">UESP</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
+                </div>
+            </div>
 
-                    <!-- h3><a href="{{url_for('skyrim')}}">Back to Skyrim</a></h3 -->
-                </nav>
-
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-            </section>
-        </div>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </section>
     </div>
+</div>
 </body>
 </html>

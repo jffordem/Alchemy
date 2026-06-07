@@ -1,0 +1,49 @@
+{
+    "version": 1,
+    "include": [
+        "*.py",
+        "*.yaml",
+        "*.json",
+        "*.txt",
+        "*.md",
+        "*.toml",
+        "*.lock",
+        "*.c",
+        "templates/*",
+        "static/*",
+        "Dockerfile"
+    ],
+    "exclude": [
+        "__pycache__/*",
+        ".git/*",
+        ".pytest_cache/*",
+        "*.pyc",
+        ".vscode/*"
+    ],
+    "context_lines": 250,
+    "max_files_to_read": 50,
+    "max_file_size_kb": 1000,
+    "project_context": {
+        "name": "Alchemy",
+        "description": "A Python application for working with potions, ingredients, and effects in an alchemy system",
+        "technologies": ["Python", "Flask", "YAML", "JSON"],
+        "environment": "Python scripts must be run using Poetry (either 'poetry run python' or from inside a 'poetry shell')"
+    },
+    "code_standards": {
+        "python": {
+            "style": "Follow PEP 8 standards",
+            "testing": "Include unit tests for all core functionality",
+            "documentation": "Use docstrings for classes and functions"
+        }
+    },
+    "architecture": {
+        "core_modules": ["potion.py", "ingredient.py", "effect.py", "app.py"],
+        "data_files": ["ingredients.yaml", "effects.yaml", "alchemyData.json"],
+        "test_files": ["test_potion.py", "test_ingredient.py", "test_effect.py"]
+    },
+    "behavior": {
+        "code_generation": "Keep consistent with existing patterns in the codebase",
+        "suggestions": "Prioritize Python best practices and existing project conventions",
+        "documentation": "Provide clear, concise explanations of complex logic"
+    }
+} 

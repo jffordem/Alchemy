@@ -1,10 +1,4 @@
-from pydantic import BaseModel
-from collections import defaultdict
-from functools import reduce
-import json
-import yaml
-
-__doc__ = """
+"""
 Skyrim ingredients are the raw materials used to brew potions.  Each ingredient has a 
 name, a list of ActiveEffects that it can produce, a value, and a weight.  Some 
 ingredients are farmable, meaning they can be grown or harvested, while others 
@@ -23,7 +17,7 @@ YAML format for ingredients:
       power: 1.0
       value: 1.0
   farmable: true
-  link: "URL"
+  link_url: "URL"
   value: 1
   weight: 1.0
 
@@ -37,7 +31,7 @@ Example ingredient:
       power: 1.0
       value: 1.0
   farmable: true
-  link: "https://en.uesp.net/wiki/Skyrim:Wheat"
+  link_url: "https://en.uesp.net/wiki/Skyrim:Wheat"
   value: 5
   weight: 0.1
 
@@ -49,6 +43,13 @@ Usage:
     print(active_effects)
 """
 
+from pydantic import BaseModel
+from collections import defaultdict
+from functools import reduce
+import json
+import yaml
+
+from effect import Effect
 
 def group_by(iterable, get_key):
     groups = defaultdict(list)
@@ -98,9 +99,12 @@ class Ingredient(BaseModel):
     name: str
     effects: list[ActiveEffect]
     farmable: bool
-    link: str
+    link_url: str
     value: int
     weight: float
+    thumbnail_url: str
+    image_url: str
+    category: str
 
     def has_effect(self, effect_name: str) -> bool:
         """Check if this ingredient has an effect of the given name."""
@@ -174,3 +178,42 @@ def get_ingredient_by_name(name: str) -> Ingredient:
 
 def get_ingredients_by_filter(predicate):
     return [ingredient for ingredient in AllIngredientsByName.values() if predicate(ingredient)]
+
+def get_all_categories():
+    """Get a set of all unique categories present in the loaded ingredients."""
+    return {
+        ingredient.category 
+        for ingredient in AllIngredientsByName.values() 
+        if ingredient.category is not None
+    }
+
+def get_ingredients_by_category(category: str, exact_match: bool = False):
+    """Get all ingredients with the specified category.
+    
+    Args:
+        category: The category to filter by
+        exact_match: If True, requires an exact category match.
+                    If False, matches any ingredient whose category starts with the given string.
+    """
+    if exact_match:
+        return get_ingredients_by_filter(lambda i: i.category == category)
+    else:
+        return get_ingredients_by_filter(lambda i: i.category and i.category.startswith(category))
+
+def get_best_ingredients():
+    names = [
+        'Nordic Barnacle',
+        'Salmon Roe',
+        'Garlic',
+        "Giant's Toe",
+        "Imp Stool",
+        "Mora Tapinella",
+        "Swamp Fungal Pod",
+        "Creep Cluster",
+    ]
+    return [get_ingredient_by_name(name) for name in names]
+
+def get_ingredients_with_effect(effect: Effect | str) -> list[Ingredient]:
+    """Get all ingredients that have the specified effect."""
+    effect_name = effect.name if isinstance(effect, Effect) else effect
+    return get_ingredients_by_filter(lambda ingredient: ingredient.has_effect(effect_name))
