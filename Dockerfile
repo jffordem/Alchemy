@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set port for Docker
-ENV PORT=8088
-EXPOSE 8088
+ENV PORT=8080
+EXPOSE 8080
 
 # Create a non-root user for security
 RUN useradd -m appuser

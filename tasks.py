@@ -27,7 +27,7 @@ def docker_stop(c):
 def docker_run(c):
     "invoke docker-run"
     docker_stop(c)
-    c.run('docker run --name alchemy -p 8088:8088 -d alchemy')
+    c.run('docker run --name alchemy -p 8080:8080 -d alchemy')
 
 @task
 def docker_push(c):
