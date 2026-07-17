@@ -47,7 +47,7 @@ class Potion(BaseModel):
     cost: float = 0.0  # The total cost of ingredients used
 
     def __hash__(self):
-        return sum(hash(ingredient) for ingredient in self.ingredients)
+        return hash(str(self))
 
     def __str__(self):
         effect_names = sorted([effect.name for effect in self.active_effects])
