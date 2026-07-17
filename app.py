@@ -109,11 +109,11 @@ def skyrim_ingredients():
 
 @app.route("/skyrim/ingredients/<string:name>")
 def skyrim_ingredient(name):
-    item = get_ingredient_by_name(name)
-    if item:
-        return render_template('ingredient.html', ingredient=item)
-    else:
+    try:
+        item = get_ingredient_by_name(name)
+    except ValueError:
         return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
+    return render_template('ingredient.html', ingredient=item)
 
 
 @app.route("/skyrim/effects")
@@ -143,25 +143,39 @@ def skyrim_effects():
         # School filter takes precedence over type filter for the title
         page_title = f"{school.upper()} EFFECTS"
 
-    effects = sorted(get_effects_by_filter(pred), key=lambda e: getattr(e, sortby), reverse=reverse)
+    sort_keys = {
+        'name': lambda effect: effect.name,
+        'description': lambda effect: effect.description,
+        'school': lambda effect: effect.school,
+        'type': lambda effect: effect.type,
+        'cost': lambda effect: effect.cost,
+    }
+    sort = sort_keys.get(sortby, sort_keys['name'])
+    effects = sorted(get_effects_by_filter(pred), key=sort, reverse=reverse)
 
     return render_template('effects.html', effects=effects, sortby=sortby, direction=direction, page_title=page_title)
 
 
 @app.route("/skyrim/effects/<string:name>")
 def skyrim_effect(name):
-    item = get_effect_by_name(name)
-    if item:
-        return render_template('effect.html', effect=item, ingredients=get_ingredients_with_effect(item))
-    else:
+    try:
+        item = get_effect_by_name(name)
+    except KeyError:
         return NOT_FOUND_MESSAGE, NOT_FOUND_STATUS
+    return render_template('effect.html', effect=item, ingredients=get_ingredients_with_effect(item))
 
 
 @app.route('/api/skyrim/potions', methods=['GET'])
 def skyrim_potions_api():
-    ingredient_names = request.args.get('ingredients').split(',')
-    potions = Potion.brew(ingredient_names)
-    return json.dumps({'potions': potions, 'ingredients': ingredient_names})
+    ingredients_param = request.args.get('ingredients')
+    if not ingredients_param:
+        return json.dumps({'error': "Missing required 'ingredients' parameter"}), 400
+    ingredient_names = ingredients_param.split(',')
+    try:
+        potions = Potion.brew(ingredient_names)
+    except ValueError as e:
+        return json.dumps({'error': str(e)}), 400
+    return json.dumps({'potions': [potion.model_dump() for potion in potions], 'ingredients': ingredient_names})
 
 
 @app.route('/skyrim/potions')
@@ -175,13 +189,19 @@ def skyrim_potions():
         if 'ingredients' in request.args:
             ingredients = request.args.get('ingredients')
             if ingredients == "all":
-                return "All Potions", list(AllIngredientsByName.keys())
+                return "All Potions", list(AllIngredientsByName.values())
             if ingredients == "farmable":
                 return "Farmable Potions", [ingredient for ingredient in AllIngredientsByName.values() if ingredient.farmable]
             if ingredients == "best":
                 return "Valuable Potions", get_best_ingredients()
-            # Custom ingredient selection
-            return "Potions", [get_ingredient_by_name(name) for name in ingredients.split(',')]
+            # Custom ingredient selection; silently skip names that don't match a known ingredient
+            selected = []
+            for name in ingredients.split(','):
+                try:
+                    selected.append(get_ingredient_by_name(name))
+                except ValueError:
+                    pass
+            return "Potions", selected
         else:
             ingredients = list(AllIngredientsByName.values())
             random.shuffle(ingredients)
@@ -213,7 +233,12 @@ def skyrim_potions():
 @app.route('/skyrim/potions', methods=['POST'])
 def skyrim_potions_post():
     ingredient_names = request.form.get('ingredients', '').split(',')
-    ingredients = [get_ingredient_by_name(name) for name in ingredient_names if get_ingredient_by_name(name)]
+    ingredients = []
+    for name in ingredient_names:
+        try:
+            ingredients.append(get_ingredient_by_name(name))
+        except ValueError:
+            pass
     potions = Potion.brew(ingredients)
     return render_template('potions.html', potions=potions, ingredients=ingredients)
 
