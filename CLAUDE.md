@@ -102,10 +102,6 @@ domain model — routes filter/sort/paginate using composable predicate function
   high-value list via `get_best_ingredients()`), a comma-separated ingredient list, or is omitted for
   a random 5-ingredient sample; supports `limit` for pagination. Also accepts POST from a form.
   `GET /api/skyrim/potions` returns the JSON equivalent (`ingredients` required, comma-separated).
-- `/madlibs`, `/madlibs/<name>` — an unrelated bundled feature (see [madlibs.py](madlibs.py)): a
-  mad-libs-style text generator driven by [madlibs.yaml](madlibs.yaml), where alternate clauses are
-  written as parenthesized, `|`-separated options and expanded via the recursive `_all`/`_any`
-  functions.
 
 `app/models/` and `app/routes/` exist but are currently **empty** — they read as a planned
 blueprint-style refactor that hasn't happened; don't assume code lives there.
