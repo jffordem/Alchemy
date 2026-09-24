@@ -131,6 +131,47 @@ blueprint-style refactor that hasn't happened; don't assume code lives there.
 `CastSpell.c` and `WoodChopper.c` are Arduino Leonardo sketches for automating in-game grinding
 (documented in `readme.md`) — no relationship to the Flask app or Python code, not part of the build.
 
+## Deployment Plan
+
+Not yet deployed. The goal is a static site on GitHub Pages, matching the sibling projects
+MorseGames and QuizMe (TypeScript strict + Vite, `base: "./"`, Vitest, and a
+`.github/workflows/deploy.yml` that runs `npm ci && npm run build` and publishes `dist/` with
+`actions/deploy-pages`). GitHub Pages can't run Flask, so the Python server can't be deployed as is.
+
+1. **Refactor to TypeScript/Vite.** Port `Effect`, `Ingredient.combine`, and `Potion.brew` to pure
+   TS modules with no DOM access. Convert `ingredients.yaml`/`effects.yaml` to JSON, or load them
+   through a Vite YAML plugin, so the data is bundled at build time. Replace the Flask query-param
+   routes with client-side views. Use hash routing, or a `404.html` fallback, so deep links work on
+   Pages.
+2. **Replace static images with links.** Ingredient images already hotlink to `images.uesp.net` via
+   `image_url`/`thumbnail_url`. Do the same for the three committed icons in `static/images/`
+   (from game-icons.net), so the repo ships no third-party image files.
+3. **Include appropriate attribution.** Add a footer or credits line (and a README section), e.g.:
+   "Unofficial fan project. The Elder Scrolls V: Skyrim and its assets are © Bethesda Softworks.
+   Ingredient/effect data and images courtesy of UESP (CC BY-SA). Icons by Lorc via game-icons.net
+   (CC BY 3.0)." Keep the site non-commercial (no ads or donation links). Include a `TERMS.md`, as
+   MorseGames and QuizMe do, that carries the full attribution, the unofficial/fan-project
+   disclaimer, and terms of use, and link to it from the site footer.
+
+Additional steps:
+
+- **Brewing performance.** There are 412 ingredients, and C(412, 3) ≈ 11.6M three-ingredient
+  combinations. The `ingredients=all` mode is too heavy for the browser's main thread. Run it in a
+  Web Worker, cap or page the results, or precompute them at build time.
+- **Parity tests.** Port the pytest suites to Vitest. Generate golden fixtures from the Python
+  `Potion.brew` output (effects, power, value) so the TS port has to match the existing model
+  before the Python version is retired.
+- **Verify hotlinks from the deployed origin.** Make sure UESP images actually load when the page is
+  served from `*.github.io`, since some wikis block by referrer. Add an `onerror` fallback to a
+  placeholder so a broken image doesn't break the layout.
+- **Branch and CI setup.** This repo uses `master` while the siblings deploy on pushes to `main`.
+  Rename the branch or adjust the workflow trigger, enable Pages (source: GitHub Actions), and
+  consider a `ci.yml` for PRs.
+- **Decide what stays in Python.** The JSON API (`/api/skyrim/potions`), the Rich CLI, Docker, and
+  the legacy scraping scripts don't carry over to a static site. Keep them alongside the TS app,
+  move them to a `python/` folder, or drop them. Remove `download_resources.py` references to the
+  unused Skyrim logo/wallpaper either way.
+
 ## Conventions
 
 - snake_case for variables/functions, PascalCase for classes.
