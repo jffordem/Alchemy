@@ -4,7 +4,7 @@
 - YAML
 
 ## Dependencies Management
-- Poetry
+- uv
 
 ## Testing
 - Pytest
