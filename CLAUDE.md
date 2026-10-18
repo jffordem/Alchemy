@@ -13,13 +13,14 @@ front-end/Flask experimentation built on a working domain model.
 
 ## Commands
 
-All Python must run via Poetry (either `poetry run python` or inside `poetry shell`). A
-`requirements.txt` also exists purely for the Docker image (plain `pip install`) — keep it in sync
-with `pyproject.toml` if dependencies change.
+Dependencies are managed with uv: `pyproject.toml` declares them and `uv.lock` pins exact versions
+(the Docker image installs from the same lockfile). Run Python via `uv run ...` (e.g. `uv run invoke
+test`) or activate `.venv` after `uv sync`. Add/remove dependencies with `uv add` / `uv remove` so the
+lockfile stays in sync; dev-only tools (pytest, invoke) live in the `dev` dependency group.
 
 ```bash
-# Install dependencies
-poetry install
+# Install dependencies (creates .venv, includes dev group)
+uv sync
 
 # Run dev server (localhost:5000)
 invoke start

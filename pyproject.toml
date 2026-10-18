@@ -1,27 +1,27 @@
-[tool.poetry]
+[project]
 name = "jfordemwalt-alchemy"
 version = "0.1.0"
-description = ""
-authors = ["James Fordemwalt <jffordem@gmail.com>"]
-readme = "README.md"
-package-mode = false
+description = "Skyrim alchemy potion simulator"
+authors = [{ name = "James Fordemwalt", email = "jffordem@gmail.com" }]
+readme = "readme.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "flask>=3.0.3,<4.0.0",
+    "pymongo>=4.10.1,<5.0.0",
+    "pandas>=2.2.3,<3.0.0",
+    "rich>=13.9.4,<14.0.0",
+    "uvicorn>=0.32.0,<0.33.0",
+    "pydantic>=2.9.2,<3.0.0",
+    "pyyaml>=6.0.2,<7.0.0",
+    "requests>=2.32.3,<3.0.0",
+    "beautifulsoup4>=4.13.3,<5.0.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-flask = "^3.0.3"
-pymongo = "^4.10.1"
-pandas = "^2.2.3"
-rich = "^13.9.4"
-invoke = "^2.2.0"
-uvicorn = "^0.32.0"
-pydantic = "^2.9.2"
-pyyaml = "^6.0.2"
-pytest = ">=8.3.3,<10.0.0"
-requests = "^2.32.3"
-beautifulsoup4 = "^4.13.3"
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3,<10.0.0",
+    "invoke>=2.2.0,<3.0.0",
+]
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
+[tool.uv]
+package = false
